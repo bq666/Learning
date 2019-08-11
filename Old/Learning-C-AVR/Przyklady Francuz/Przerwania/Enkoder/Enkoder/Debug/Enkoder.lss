@@ -1,0 +1,477 @@
+
+Enkoder.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00000276  0000030a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000276  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000000a  00800100  00800100  0000030a  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000030a  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000068  00000000  00000000  0000033a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000393  00000000  00000000  000003a2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000001f7  00000000  00000000  00000735  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000001ab  00000000  00000000  0000092c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000fc  00000000  00000000  00000ad8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000020f  00000000  00000000  00000bd4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000221  00000000  00000000  00000de3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000058  00000000  00000000  00001004  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 3a 00 	jmp	0x74	; 0x74 <__ctors_end>
+   4:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+   8:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+   c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  10:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  14:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  18:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  1c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  20:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  24:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  28:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  2c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  30:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  34:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  38:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__vector_14>
+  3c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  40:	0c 94 95 00 	jmp	0x12a	; 0x12a <__vector_16>
+  44:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  48:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  4c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  50:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  54:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  58:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  5c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  60:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  64:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+
+00000068 <__trampolines_end>:
+  68:	c0 f9       	bld	r28, 0
+  6a:	a4 b0       	in	r10, 0x04	; 4
+  6c:	99 92       	st	Y+, r9
+  6e:	82 f8       	bld	r8, 2
+  70:	80 90 bf 00 	lds	r8, 0x00BF
+
+00000074 <__ctors_end>:
+  74:	11 24       	eor	r1, r1
+  76:	1f be       	out	0x3f, r1	; 63
+  78:	cf ef       	ldi	r28, 0xFF	; 255
+  7a:	d8 e0       	ldi	r29, 0x08	; 8
+  7c:	de bf       	out	0x3e, r29	; 62
+  7e:	cd bf       	out	0x3d, r28	; 61
+
+00000080 <__do_copy_data>:
+  80:	11 e0       	ldi	r17, 0x01	; 1
+  82:	a0 e0       	ldi	r26, 0x00	; 0
+  84:	b1 e0       	ldi	r27, 0x01	; 1
+  86:	e6 e7       	ldi	r30, 0x76	; 118
+  88:	f2 e0       	ldi	r31, 0x02	; 2
+  8a:	02 c0       	rjmp	.+4      	; 0x90 <__do_copy_data+0x10>
+  8c:	05 90       	lpm	r0, Z+
+  8e:	0d 92       	st	X+, r0
+  90:	a0 30       	cpi	r26, 0x00	; 0
+  92:	b1 07       	cpc	r27, r17
+  94:	d9 f7       	brne	.-10     	; 0x8c <__do_copy_data+0xc>
+
+00000096 <__do_clear_bss>:
+  96:	21 e0       	ldi	r18, 0x01	; 1
+  98:	a0 e0       	ldi	r26, 0x00	; 0
+  9a:	b1 e0       	ldi	r27, 0x01	; 1
+  9c:	01 c0       	rjmp	.+2      	; 0xa0 <.do_clear_bss_start>
+
+0000009e <.do_clear_bss_loop>:
+  9e:	1d 92       	st	X+, r1
+
+000000a0 <.do_clear_bss_start>:
+  a0:	aa 30       	cpi	r26, 0x0A	; 10
+  a2:	b2 07       	cpc	r27, r18
+  a4:	e1 f7       	brne	.-8      	; 0x9e <.do_clear_bss_loop>
+  a6:	0e 94 10 01 	call	0x220	; 0x220 <main>
+  aa:	0c 94 39 01 	jmp	0x272	; 0x272 <_exit>
+
+000000ae <__bad_interrupt>:
+  ae:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000b2 <ReadEncoder>:
+	static int8_t last;
+	static uint8_t laststate;
+	static uint8_t counters[2];	//Tablica zawierajπca liczniki
+	int8_t newpos, diff;
+	
+	uint8_t state=PINB;
+  b2:	83 b1       	in	r24, 0x03	; 3
+	if(((state^laststate) & _BV(PB0)) && (counters[0]==0))
+  b4:	90 91 03 01 	lds	r25, 0x0103
+  b8:	29 2f       	mov	r18, r25
+  ba:	28 27       	eor	r18, r24
+  bc:	20 ff       	sbrs	r18, 0
+  be:	0b c0       	rjmp	.+22     	; 0xd6 <ReadEncoder+0x24>
+  c0:	20 91 01 01 	lds	r18, 0x0101
+  c4:	21 11       	cpse	r18, r1
+  c6:	07 c0       	rjmp	.+14     	; 0xd6 <ReadEncoder+0x24>
+	{
+		counters[0]=200;
+  c8:	28 ec       	ldi	r18, 0xC8	; 200
+  ca:	20 93 01 01 	sts	0x0101, r18
+		laststate&=(~_BV(PB0));
+		laststate|=(state & _BV(PB0));
+  ce:	80 fb       	bst	r24, 0
+  d0:	90 f9       	bld	r25, 0
+  d2:	90 93 03 01 	sts	0x0103, r25
+	}
+
+	if(((state^laststate) & _BV(PB7)) && (counters[1]==0))
+  d6:	90 91 03 01 	lds	r25, 0x0103
+  da:	29 2f       	mov	r18, r25
+  dc:	28 27       	eor	r18, r24
+  de:	27 ff       	sbrs	r18, 7
+  e0:	0c c0       	rjmp	.+24     	; 0xfa <ReadEncoder+0x48>
+  e2:	20 91 02 01 	lds	r18, 0x0102
+  e6:	21 11       	cpse	r18, r1
+  e8:	08 c0       	rjmp	.+16     	; 0xfa <ReadEncoder+0x48>
+	{
+		counters[1]=200;
+  ea:	28 ec       	ldi	r18, 0xC8	; 200
+  ec:	20 93 02 01 	sts	0x0102, r18
+		laststate&=(~_BV(PB7));
+		laststate|=(state & _BV(PB7));
+  f0:	80 78       	andi	r24, 0x80	; 128
+	}
+
+	if(((state^laststate) & _BV(PB7)) && (counters[1]==0))
+	{
+		counters[1]=200;
+		laststate&=(~_BV(PB7));
+  f2:	9f 77       	andi	r25, 0x7F	; 127
+		laststate|=(state & _BV(PB7));
+  f4:	89 2b       	or	r24, r25
+  f6:	80 93 03 01 	sts	0x0103, r24
+	}
+
+	newpos=0;
+	if((PINB & _BV(PB0))==0) newpos=3;
+  fa:	18 9b       	sbis	0x03, 0	; 3
+  fc:	02 c0       	rjmp	.+4      	; 0x102 <ReadEncoder+0x50>
+		counters[1]=200;
+		laststate&=(~_BV(PB7));
+		laststate|=(state & _BV(PB7));
+	}
+
+	newpos=0;
+  fe:	80 e0       	ldi	r24, 0x00	; 0
+ 100:	01 c0       	rjmp	.+2      	; 0x104 <ReadEncoder+0x52>
+	if((PINB & _BV(PB0))==0) newpos=3;
+ 102:	83 e0       	ldi	r24, 0x03	; 3
+	if((PINB & _BV(PB7))==0) newpos^=1;	// konwersja kodu Graya na binarny
+ 104:	1f 99       	sbic	0x03, 7	; 3
+ 106:	02 c0       	rjmp	.+4      	; 0x10c <ReadEncoder+0x5a>
+ 108:	91 e0       	ldi	r25, 0x01	; 1
+ 10a:	89 27       	eor	r24, r25
+	diff=last-newpos;
+ 10c:	90 91 00 01 	lds	r25, 0x0100
+ 110:	98 1b       	sub	r25, r24
+	if(diff & 1)
+ 112:	90 ff       	sbrs	r25, 0
+ 114:	09 c0       	rjmp	.+18     	; 0x128 <ReadEncoder+0x76>
+	{				// bit 0 = krok
+		last=newpos;
+ 116:	80 93 00 01 	sts	0x0100, r24
+		enc_delta+=(diff & 2)-1;	//bit 1 - kierunek
+ 11a:	80 91 09 01 	lds	r24, 0x0109
+ 11e:	81 50       	subi	r24, 0x01	; 1
+ 120:	92 70       	andi	r25, 0x02	; 2
+ 122:	89 0f       	add	r24, r25
+ 124:	80 93 09 01 	sts	0x0109, r24
+ 128:	08 95       	ret
+
+0000012a <__vector_16>:
+volatile uint8_t LEDDIGITS[LEDDISPNO];  //Tablica zawierajπca dane do wyúwietlania
+
+static inline void ReadEncoder();       //Prototyp funkcji odczytu enkodera
+
+ISR(TIMER0_OVF_vect)
+{
+ 12a:	1f 92       	push	r1
+ 12c:	0f 92       	push	r0
+ 12e:	0f b6       	in	r0, 0x3f	; 63
+ 130:	0f 92       	push	r0
+ 132:	11 24       	eor	r1, r1
+ 134:	2f 93       	push	r18
+ 136:	3f 93       	push	r19
+ 138:	4f 93       	push	r20
+ 13a:	5f 93       	push	r21
+ 13c:	6f 93       	push	r22
+ 13e:	7f 93       	push	r23
+ 140:	8f 93       	push	r24
+ 142:	9f 93       	push	r25
+ 144:	af 93       	push	r26
+ 146:	bf 93       	push	r27
+ 148:	ef 93       	push	r30
+ 14a:	ff 93       	push	r31
+	static uint8_t LEDNO;
+
+	PORTC|=0x0F;		//Wy≥πcz wszystkie wyùwietlacze
+ 14c:	88 b1       	in	r24, 0x08	; 8
+ 14e:	8f 60       	ori	r24, 0x0F	; 15
+ 150:	88 b9       	out	0x08, r24	; 8
+	LEDNO=(LEDNO+1)%LEDDISPNO;
+ 152:	80 91 04 01 	lds	r24, 0x0104
+ 156:	90 e0       	ldi	r25, 0x00	; 0
+ 158:	01 96       	adiw	r24, 0x01	; 1
+ 15a:	83 70       	andi	r24, 0x03	; 3
+ 15c:	99 27       	eor	r25, r25
+ 15e:	80 93 04 01 	sts	0x0104, r24
+	ShowOnLED(LEDDIGITS[LEDNO]);
+ 162:	fc 01       	movw	r30, r24
+ 164:	eb 5f       	subi	r30, 0xFB	; 251
+ 166:	fe 4f       	sbci	r31, 0xFE	; 254
+ 168:	20 81       	ld	r18, Z
+const uint8_t DP=0x80;
+
+static inline void ShowOnLED(uint8_t val)
+{
+	uint8_t tmp=0xFF;
+	if((val & 0x7F)<11) tmp=DIGITS[val & 0x7F];  //Odczytaj kod znaku
+ 16a:	82 2f       	mov	r24, r18
+ 16c:	8f 77       	andi	r24, 0x7F	; 127
+ 16e:	90 e0       	ldi	r25, 0x00	; 0
+ 170:	8b 30       	cpi	r24, 0x0B	; 11
+ 172:	91 05       	cpc	r25, r1
+ 174:	2c f4       	brge	.+10     	; 0x180 <__vector_16+0x56>
+ 176:	fc 01       	movw	r30, r24
+ 178:	e8 59       	subi	r30, 0x98	; 152
+ 17a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 17c:	84 91       	lpm	r24, Z
+ 17e:	01 c0       	rjmp	.+2      	; 0x182 <__vector_16+0x58>
+static const uint8_t __flash DIGITS[11]={0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0x80, 0x90, 0xBF};
+const uint8_t DP=0x80;
+
+static inline void ShowOnLED(uint8_t val)
+{
+	uint8_t tmp=0xFF;
+ 180:	8f ef       	ldi	r24, 0xFF	; 255
+	if((val & 0x7F)<11) tmp=DIGITS[val & 0x7F];  //Odczytaj kod znaku
+	if(val & DP) tmp&=~DP;      //Sterowanie kropkπ dziesiÍtnπ na LED
+ 182:	27 fd       	sbrc	r18, 7
+ 184:	8f 77       	andi	r24, 0x7F	; 127
+	LEDPORT=tmp;
+ 186:	8b b9       	out	0x0b, r24	; 11
+	static uint8_t LEDNO;
+
+	PORTC|=0x0F;		//Wy≥πcz wszystkie wyùwietlacze
+	LEDNO=(LEDNO+1)%LEDDISPNO;
+	ShowOnLED(LEDDIGITS[LEDNO]);
+	PORTC=(PORTC & 0xF0) | (~(1<<LEDNO) & 0x0F);	//Wybierz kolejny wyùwietlacz
+ 188:	28 b1       	in	r18, 0x08	; 8
+ 18a:	81 e0       	ldi	r24, 0x01	; 1
+ 18c:	90 e0       	ldi	r25, 0x00	; 0
+ 18e:	00 90 04 01 	lds	r0, 0x0104
+ 192:	02 c0       	rjmp	.+4      	; 0x198 <__vector_16+0x6e>
+ 194:	88 0f       	add	r24, r24
+ 196:	99 1f       	adc	r25, r25
+ 198:	0a 94       	dec	r0
+ 19a:	e2 f7       	brpl	.-8      	; 0x194 <__vector_16+0x6a>
+ 19c:	80 95       	com	r24
+ 19e:	8f 70       	andi	r24, 0x0F	; 15
+ 1a0:	20 7f       	andi	r18, 0xF0	; 240
+ 1a2:	82 2b       	or	r24, r18
+ 1a4:	88 b9       	out	0x08, r24	; 8
+	ReadEncoder();    //Odczytaj stan klawiszy
+ 1a6:	0e 94 59 00 	call	0xb2	; 0xb2 <ReadEncoder>
+}
+ 1aa:	ff 91       	pop	r31
+ 1ac:	ef 91       	pop	r30
+ 1ae:	bf 91       	pop	r27
+ 1b0:	af 91       	pop	r26
+ 1b2:	9f 91       	pop	r25
+ 1b4:	8f 91       	pop	r24
+ 1b6:	7f 91       	pop	r23
+ 1b8:	6f 91       	pop	r22
+ 1ba:	5f 91       	pop	r21
+ 1bc:	4f 91       	pop	r20
+ 1be:	3f 91       	pop	r19
+ 1c0:	2f 91       	pop	r18
+ 1c2:	0f 90       	pop	r0
+ 1c4:	0f be       	out	0x3f, r0	; 63
+ 1c6:	0f 90       	pop	r0
+ 1c8:	1f 90       	pop	r1
+ 1ca:	18 95       	reti
+
+000001cc <__vector_14>:
+	PORTC|=0x0F;	//Wy≥πcz wszystkie wyùwietlacze
+}*/
+
+ISR(TIMER0_COMPA_vect, ISR_NAKED)
+{
+	PORTC|=0x01;	//Wy≥πcz wszystkie wyùwietlacze
+ 1cc:	40 9a       	sbi	0x08, 0	; 8
+	PORTC|=0x02;
+ 1ce:	41 9a       	sbi	0x08, 1	; 8
+	PORTC|=0x04;
+ 1d0:	42 9a       	sbi	0x08, 2	; 8
+	PORTC|=0x08;
+ 1d2:	43 9a       	sbi	0x08, 3	; 8
+	asm volatile("RETI\n\t"::);
+ 1d4:	18 95       	reti
+
+000001d6 <Timer0Init>:
+}
+
+void Timer0Init()
+{
+	TCCR0B=_BV(CS01);	//Preskaler CLKIO/8
+ 1d6:	82 e0       	ldi	r24, 0x02	; 2
+ 1d8:	85 bd       	out	0x25, r24	; 37
+	TIMSK0|=_BV(TOIE0);	//Odblokuj przerwanie nadmiaru timera 0
+ 1da:	ee e6       	ldi	r30, 0x6E	; 110
+ 1dc:	f0 e0       	ldi	r31, 0x00	; 0
+ 1de:	80 81       	ld	r24, Z
+ 1e0:	81 60       	ori	r24, 0x01	; 1
+ 1e2:	80 83       	st	Z, r24
+ 1e4:	08 95       	ret
+
+000001e6 <Read4StepEncoder>:
+	return val>>1;
+}
+
+int8_t Read4StepEncoder()
+{
+	ReadEncoder();
+ 1e6:	0e 94 59 00 	call	0xb2	; 0xb2 <ReadEncoder>
+	int8_t val=enc_delta;
+ 1ea:	80 91 09 01 	lds	r24, 0x0109
+	enc_delta=val & 3;
+ 1ee:	98 2f       	mov	r25, r24
+ 1f0:	93 70       	andi	r25, 0x03	; 3
+ 1f2:	90 93 09 01 	sts	0x0109, r25
+	return val>>2;
+}
+ 1f6:	85 95       	asr	r24
+ 1f8:	85 95       	asr	r24
+ 1fa:	08 95       	ret
+
+000001fc <itoLED>:
+
+void itoLED(uint16_t l)
+{
+ 1fc:	20 e0       	ldi	r18, 0x00	; 0
+ 1fe:	30 e0       	ldi	r19, 0x00	; 0
+	for(uint8_t i=0;i<LEDDISPNO;i++)
+	{
+		LEDDIGITS[i]=l%10;
+ 200:	ea e0       	ldi	r30, 0x0A	; 10
+ 202:	f0 e0       	ldi	r31, 0x00	; 0
+ 204:	bf 01       	movw	r22, r30
+ 206:	0e 94 25 01 	call	0x24a	; 0x24a <__udivmodhi4>
+ 20a:	d9 01       	movw	r26, r18
+ 20c:	ab 5f       	subi	r26, 0xFB	; 251
+ 20e:	be 4f       	sbci	r27, 0xFE	; 254
+ 210:	8c 93       	st	X, r24
+		l/=10;
+ 212:	cb 01       	movw	r24, r22
+ 214:	2f 5f       	subi	r18, 0xFF	; 255
+ 216:	3f 4f       	sbci	r19, 0xFF	; 255
+	return val>>2;
+}
+
+void itoLED(uint16_t l)
+{
+	for(uint8_t i=0;i<LEDDISPNO;i++)
+ 218:	24 30       	cpi	r18, 0x04	; 4
+ 21a:	31 05       	cpc	r19, r1
+ 21c:	99 f7       	brne	.-26     	; 0x204 <itoLED+0x8>
+	{
+		LEDDIGITS[i]=l%10;
+		l/=10;
+	}
+}
+ 21e:	08 95       	ret
+
+00000220 <main>:
+
+int main()
+{
+	LEDDDR=0xFF;		//Wszystkie piny portu sπ wyjùciem
+ 220:	8f ef       	ldi	r24, 0xFF	; 255
+ 222:	8a b9       	out	0x0a, r24	; 10
+	PORTB|=_BV(PB0) | _BV(PB0);	//W≥πcz pull up na pinie PB0 i PB7
+ 224:	28 9a       	sbi	0x05, 0	; 5
+	uint16_t liczba=1234;
+
+	DDRC|=0x0F;			//Piny PC0-PC3 jako wyjúcia
+ 226:	87 b1       	in	r24, 0x07	; 7
+ 228:	8f 60       	ori	r24, 0x0F	; 15
+ 22a:	87 b9       	out	0x07, r24	; 7
+	//Timer0InitWithDimmer();
+	Timer0Init();
+ 22c:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <Timer0Init>
+	sei();
+ 230:	78 94       	sei
+
+int main()
+{
+	LEDDDR=0xFF;		//Wszystkie piny portu sπ wyjùciem
+	PORTB|=_BV(PB0) | _BV(PB0);	//W≥πcz pull up na pinie PB0 i PB7
+	uint16_t liczba=1234;
+ 232:	c2 ed       	ldi	r28, 0xD2	; 210
+ 234:	d4 e0       	ldi	r29, 0x04	; 4
+	Timer0Init();
+	sei();
+
+	while(1)
+	{
+		liczba+=Read4StepEncoder();
+ 236:	0e 94 f3 00 	call	0x1e6	; 0x1e6 <Read4StepEncoder>
+ 23a:	c8 0f       	add	r28, r24
+ 23c:	d1 1d       	adc	r29, r1
+ 23e:	87 fd       	sbrc	r24, 7
+ 240:	da 95       	dec	r29
+		itoLED(liczba);
+ 242:	ce 01       	movw	r24, r28
+ 244:	0e 94 fe 00 	call	0x1fc	; 0x1fc <itoLED>
+ 248:	f6 cf       	rjmp	.-20     	; 0x236 <main+0x16>
+
+0000024a <__udivmodhi4>:
+ 24a:	aa 1b       	sub	r26, r26
+ 24c:	bb 1b       	sub	r27, r27
+ 24e:	51 e1       	ldi	r21, 0x11	; 17
+ 250:	07 c0       	rjmp	.+14     	; 0x260 <__udivmodhi4_ep>
+
+00000252 <__udivmodhi4_loop>:
+ 252:	aa 1f       	adc	r26, r26
+ 254:	bb 1f       	adc	r27, r27
+ 256:	a6 17       	cp	r26, r22
+ 258:	b7 07       	cpc	r27, r23
+ 25a:	10 f0       	brcs	.+4      	; 0x260 <__udivmodhi4_ep>
+ 25c:	a6 1b       	sub	r26, r22
+ 25e:	b7 0b       	sbc	r27, r23
+
+00000260 <__udivmodhi4_ep>:
+ 260:	88 1f       	adc	r24, r24
+ 262:	99 1f       	adc	r25, r25
+ 264:	5a 95       	dec	r21
+ 266:	a9 f7       	brne	.-22     	; 0x252 <__udivmodhi4_loop>
+ 268:	80 95       	com	r24
+ 26a:	90 95       	com	r25
+ 26c:	bc 01       	movw	r22, r24
+ 26e:	cd 01       	movw	r24, r26
+ 270:	08 95       	ret
+
+00000272 <_exit>:
+ 272:	f8 94       	cli
+
+00000274 <__stop_program>:
+ 274:	ff cf       	rjmp	.-2      	; 0x274 <__stop_program>

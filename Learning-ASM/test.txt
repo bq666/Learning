@@ -1,0 +1,5 @@
+/lib/firmware/usbdux/usbdux_firmware.asm
+/lib/firmware/usbdux/fx2-include.asm
+/lib/firmware/usbdux/usbduxfast_firmware.asm
+/lib/firmware/usbdux/usbduxsigma_firmware.asm
+/lib/firmware/dsp56k/bootstrap.asm

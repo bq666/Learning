@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ADCInit", "ADCInit\ADCInit.cproj", "{FDBD7E32-1A84-4DF8-A900-6445FAFAD449}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDBD7E32-1A84-4DF8-A900-6445FAFAD449}.Debug|AVR.ActiveCfg = Debug|AVR
+		{FDBD7E32-1A84-4DF8-A900-6445FAFAD449}.Debug|AVR.Build.0 = Debug|AVR
+		{FDBD7E32-1A84-4DF8-A900-6445FAFAD449}.Release|AVR.ActiveCfg = Release|AVR
+		{FDBD7E32-1A84-4DF8-A900-6445FAFAD449}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

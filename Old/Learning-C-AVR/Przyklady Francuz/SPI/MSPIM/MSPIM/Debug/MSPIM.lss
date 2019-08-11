@@ -1,0 +1,185 @@
+
+MSPIM.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  000000f0  00000164  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000000f0  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  00000164  2**0
+                  CONTENTS, READONLY
+  3 .debug_aranges 00000030  00000000  00000000  00000194  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   0000019f  00000000  00000000  000001c4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 00000152  00000000  00000000  00000363  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   00000175  00000000  00000000  000004b5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000044  00000000  00000000  0000062c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    000001a4  00000000  00000000  00000670  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    0000003e  00000000  00000000  00000814  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000020  00000000  00000000  00000852  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   8:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  10:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  14:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  18:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  1c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  20:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  24:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  28:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  2c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  30:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  34:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  38:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  3c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  40:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  44:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  48:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  4c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  50:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  54:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  58:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  5c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  60:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  64:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+  74:	0e 94 61 00 	call	0xc2	; 0xc2 <main>
+  78:	0c 94 76 00 	jmp	0xec	; 0xec <_exit>
+
+0000007c <__bad_interrupt>:
+  7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000080 <usart_MSPIM_Init>:
+	#endif
+}
+
+void usart_MSPIM_Init()
+{
+	UBRR0=0;
+  80:	e4 ec       	ldi	r30, 0xC4	; 196
+  82:	f0 e0       	ldi	r31, 0x00	; 0
+  84:	11 82       	std	Z+1, r1	; 0x01
+  86:	10 82       	st	Z, r1
+	DDRD|=_BV(PD4); //SCK jest wyjùciem
+  88:	54 9a       	sbi	0x0a, 4	; 10
+	UCSR0C=_BV(UMSEL01) | _BV(UMSEL00) | _BV(UCPHA0) | _BV(UCPOL0); //Tryb SPI 0
+  8a:	83 ec       	ldi	r24, 0xC3	; 195
+  8c:	80 93 c2 00 	sts	0x00C2, r24
+	UCSR0B=_BV(RXEN0) | _BV(TXEN0); //W≥πcz nadajnik i odbiornik
+  90:	88 e1       	ldi	r24, 0x18	; 24
+  92:	80 93 c1 00 	sts	0x00C1, r24
+
+static void uart_1M()
+{
+	#define BAUD 1000000UL
+	#include <util/setbaud.h>
+	UBRR0H=UBRRH_VALUE;
+  96:	10 92 c5 00 	sts	0x00C5, r1
+	UBRR0L=UBRRL_VALUE;
+  9a:	10 82       	st	Z, r1
+	#if USE_2X
+	UCSR0A|=_BV(U2X0);
+	#else
+	UCSR0A&=~(_BV(U2X0));
+  9c:	e0 ec       	ldi	r30, 0xC0	; 192
+  9e:	f0 e0       	ldi	r31, 0x00	; 0
+  a0:	80 81       	ld	r24, Z
+  a2:	8d 7f       	andi	r24, 0xFD	; 253
+  a4:	80 83       	st	Z, r24
+  a6:	08 95       	ret
+
+000000a8 <usart_Transmit>:
+	uart_1M(); //SzybkoúÊ transmisji 1Mbps
+}
+
+uint8_t usart_Transmit(uint8_t data)
+{
+	while(!(UCSR0A & _BV(UDRE0))); //Czy bufor jest pusty?
+  a8:	90 91 c0 00 	lds	r25, 0x00C0
+  ac:	95 ff       	sbrs	r25, 5
+  ae:	fc cf       	rjmp	.-8      	; 0xa8 <usart_Transmit>
+	UDR0=data;
+  b0:	80 93 c6 00 	sts	0x00C6, r24
+	while(!(UCSR0A & _BV(RXC0))); //Zaczekaj na odebranie bajtu
+  b4:	80 91 c0 00 	lds	r24, 0x00C0
+  b8:	87 ff       	sbrs	r24, 7
+  ba:	fc cf       	rjmp	.-8      	; 0xb4 <usart_Transmit+0xc>
+	return UDR0;
+  bc:	80 91 c6 00 	lds	r24, 0x00C6
+}
+  c0:	08 95       	ret
+
+000000c2 <main>:
+
+int main()
+{
+	uint8_t data=0;
+	PORTD|=_BV(PD2); //Pin SS dla urzπdzenia slave
+  c2:	5a 9a       	sbi	0x0b, 2	; 11
+	DDRD|=_BV(PD2);
+  c4:	52 9a       	sbi	0x0a, 2	; 10
+	usart_MSPIM_Init();
+  c6:	0e 94 40 00 	call	0x80	; 0x80 <usart_MSPIM_Init>
+	return UDR0;
+}
+
+int main()
+{
+	uint8_t data=0;
+  ca:	c0 e0       	ldi	r28, 0x00	; 0
+	PORTD|=_BV(PD2); //Pin SS dla urzπdzenia slave
+	DDRD|=_BV(PD2);
+	usart_MSPIM_Init();
+	while(1)
+	{
+		PORTD&=(~_BV(PD2)); //Zaadresuj urzπdzenie
+  cc:	5a 98       	cbi	0x0b, 2	; 11
+		usart_Transmit(data);
+  ce:	8c 2f       	mov	r24, r28
+  d0:	0e 94 54 00 	call	0xa8	; 0xa8 <usart_Transmit>
+		PORTD|=_BV(PD2); //Wy≥πcz je
+  d4:	5a 9a       	sbi	0x0b, 2	; 11
+		data^=0xFF;
+  d6:	c0 95       	com	r28
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  d8:	2f ef       	ldi	r18, 0xFF	; 255
+  da:	83 ed       	ldi	r24, 0xD3	; 211
+  dc:	90 e3       	ldi	r25, 0x30	; 48
+  de:	21 50       	subi	r18, 0x01	; 1
+  e0:	80 40       	sbci	r24, 0x00	; 0
+  e2:	90 40       	sbci	r25, 0x00	; 0
+  e4:	e1 f7       	brne	.-8      	; 0xde <main+0x1c>
+  e6:	00 c0       	rjmp	.+0      	; 0xe8 <main+0x26>
+  e8:	00 00       	nop
+  ea:	f0 cf       	rjmp	.-32     	; 0xcc <main+0xa>
+
+000000ec <_exit>:
+  ec:	f8 94       	cli
+
+000000ee <__stop_program>:
+  ee:	ff cf       	rjmp	.-2      	; 0xee <__stop_program>

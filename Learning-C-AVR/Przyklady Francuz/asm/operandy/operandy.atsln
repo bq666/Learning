@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "operandy", "operandy\operandy.cproj", "{56FC35E4-DEC1-435D-A7A5-55215E02D1A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56FC35E4-DEC1-435D-A7A5-55215E02D1A2}.Debug|AVR.ActiveCfg = Debug|AVR
+		{56FC35E4-DEC1-435D-A7A5-55215E02D1A2}.Debug|AVR.Build.0 = Debug|AVR
+		{56FC35E4-DEC1-435D-A7A5-55215E02D1A2}.Release|AVR.ActiveCfg = Release|AVR
+		{56FC35E4-DEC1-435D-A7A5-55215E02D1A2}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

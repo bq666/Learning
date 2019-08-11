@@ -1,0 +1,13 @@
+CLion : ----------------------------------------------------------------------------------------------------------
+CMakeLists.txt <--- tak jak w tym katalogu
+
+LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH   <--- dodaje do zmiennych środowiskowych /usr/local/lib
+Environment Variables <--- tudaj dodaj to co u góry ale bez export
+
+
+Consola : --------------------------------------------------------------------------------------------------------
+nasm -f elf64 sum.asm <--- najpierw skompuluj do .o
+gcc -o test tests.c my_strlen.o sum.o -lcriterion  <--- a potem wszystko do wykonywalnego
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+

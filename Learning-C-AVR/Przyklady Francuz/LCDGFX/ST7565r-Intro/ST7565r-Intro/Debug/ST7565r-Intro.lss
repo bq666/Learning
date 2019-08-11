@@ -1,0 +1,1061 @@
+
+ST7565r-Intro.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00000552  000005e6  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000552  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000202  00800100  00800100  000005e6  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000005e6  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000100  00000000  00000000  00000616  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000107d  00000000  00000000  00000716  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000412  00000000  00000000  00001793  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000541  00000000  00000000  00001ba5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  0000027c  00000000  00000000  000020e8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000044a  00000000  00000000  00002364  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000b47  00000000  00000000  000027ae  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000000d0  00000000  00000000  000032f5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   8:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  10:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  14:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  18:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  1c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  20:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  24:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  28:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  2c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  30:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  34:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  38:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  3c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  40:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  44:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  48:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  4c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  50:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  54:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  58:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  5c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  60:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  64:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_clear_bss>:
+  74:	23 e0       	ldi	r18, 0x03	; 3
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	01 c0       	rjmp	.+2      	; 0x7e <.do_clear_bss_start>
+
+0000007c <.do_clear_bss_loop>:
+  7c:	1d 92       	st	X+, r1
+
+0000007e <.do_clear_bss_start>:
+  7e:	a2 30       	cpi	r26, 0x02	; 2
+  80:	b2 07       	cpc	r27, r18
+  82:	e1 f7       	brne	.-8      	; 0x7c <.do_clear_bss_loop>
+  84:	0e 94 5a 00 	call	0xb4	; 0xb4 <main>
+  88:	0c 94 a7 02 	jmp	0x54e	; 0x54e <_exit>
+
+0000008c <__bad_interrupt>:
+  8c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000090 <SPI_init>:
+#include "SPI.h"
+#include <avr/io.h>
+
+void SPI_init()
+{
+	DDRB=_BV(PB3) | _BV(PB5);      //Piny SCK i MOSI s¹ wyjœciami
+  90:	88 e2       	ldi	r24, 0x28	; 40
+  92:	84 b9       	out	0x04, r24	; 4
+	SPCR=_BV(SPE) | _BV(MSTR)  | _BV(CPOL) | _BV(CPHA);  //Tryb SPI3, taktowanie CLK/2
+  94:	8c e5       	ldi	r24, 0x5C	; 92
+  96:	8c bd       	out	0x2c, r24	; 44
+  98:	08 95       	ret
+
+0000009a <SPI_RW_Byte>:
+	//SPSR=_BV(SPI2X);        //Taktujemy interfejs dwukrotnie szybciej
+}
+
+void SPI_RW_Byte(uint8_t byte)
+{
+	SPDR=byte;                     //Wyœlij bajt danych
+  9a:	8e bd       	out	0x2e, r24	; 46
+	while(!(SPSR & (1<<SPIF)));    //Zaczekaj a¿ bajt zostanie wys³any
+  9c:	0d b4       	in	r0, 0x2d	; 45
+  9e:	07 fe       	sbrs	r0, 7
+  a0:	fd cf       	rjmp	.-6      	; 0x9c <SPI_RW_Byte+0x2>
+	SPDR;                          //Odczytaj rejestr odbiornika dla wyzerowania SPIF
+  a2:	8e b5       	in	r24, 0x2e	; 46
+  a4:	08 95       	ret
+
+000000a6 <LCD_Init>:
+	TCCR1B=_BV(WGM12) | _BV(CS11);   //Preskaler 8, na wyjœciu otrzymamy ok. 2 kHz
+}
+
+void LCD_Init()
+{
+	SET(DDR, ST7565_RESET);   //Pin RESET
+  a6:	39 9a       	sbi	0x07, 1	; 7
+	SET(DDR, ST7565_A0);
+  a8:	3a 9a       	sbi	0x07, 2	; 7
+	SET(DDR, ST7565_SCK);
+  aa:	25 9a       	sbi	0x04, 5	; 4
+	SET(DDR, ST7565_MOSI);
+  ac:	23 9a       	sbi	0x04, 3	; 4
+	SET(DDR, ST7565_CS);
+  ae:	38 9a       	sbi	0x07, 0	; 7
+	
+	st7565r_init();           //Zainicjuj kontroler
+  b0:	0c 94 db 00 	jmp	0x1b6	; 0x1b6 <st7565r_init>
+
+000000b4 <main>:
+
+#include <util/delay.h>
+
+int main(void)
+{
+	SPI_init();
+  b4:	0e 94 48 00 	call	0x90	; 0x90 <SPI_init>
+	LCD_Init();
+  b8:	0e 94 53 00 	call	0xa6	; 0xa6 <LCD_Init>
+	//LCD_BackLight_Init();  //W³¹cz podœwietlenie
+
+	st7565r_Clear(false);
+  bc:	80 e0       	ldi	r24, 0x00	; 0
+  be:	0e 94 63 01 	call	0x2c6	; 0x2c6 <st7565r_Clear>
+
+	for(uint8_t x=0; x<128; x++)
+  c2:	c0 e0       	ldi	r28, 0x00	; 0
+	{
+		st7565r_SetPixel(x, 10, true);
+  c4:	41 e0       	ldi	r20, 0x01	; 1
+  c6:	6a e0       	ldi	r22, 0x0A	; 10
+  c8:	8c 2f       	mov	r24, r28
+  ca:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+		st7565r_SetPixel(x, 12, true);
+  ce:	41 e0       	ldi	r20, 0x01	; 1
+  d0:	6c e0       	ldi	r22, 0x0C	; 12
+  d2:	8c 2f       	mov	r24, r28
+  d4:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+		st7565r_SetPixel(x, 20, true);
+  d8:	41 e0       	ldi	r20, 0x01	; 1
+  da:	64 e1       	ldi	r22, 0x14	; 20
+  dc:	8c 2f       	mov	r24, r28
+  de:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+		st7565r_SetPixel(x, 22, true);
+  e2:	41 e0       	ldi	r20, 0x01	; 1
+  e4:	66 e1       	ldi	r22, 0x16	; 22
+  e6:	8c 2f       	mov	r24, r28
+  e8:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+	LCD_Init();
+	//LCD_BackLight_Init();  //W³¹cz podœwietlenie
+
+	st7565r_Clear(false);
+
+	for(uint8_t x=0; x<128; x++)
+  ec:	cf 5f       	subi	r28, 0xFF	; 255
+  ee:	c0 38       	cpi	r28, 0x80	; 128
+  f0:	49 f7       	brne	.-46     	; 0xc4 <main+0x10>
+		st7565r_SetPixel(x, 12, true);
+		st7565r_SetPixel(x, 20, true);
+		st7565r_SetPixel(x, 22, true);
+	}
+
+	GLCD_x=0; GLCD_y=0;
+  f2:	10 92 01 01 	sts	0x0101, r1
+  f6:	10 92 00 01 	sts	0x0100, r1
+	st7565r_LineTo(127, 31, true);
+  fa:	41 e0       	ldi	r20, 0x01	; 1
+  fc:	6f e1       	ldi	r22, 0x1F	; 31
+  fe:	8f e7       	ldi	r24, 0x7F	; 127
+ 100:	0e 94 6d 01 	call	0x2da	; 0x2da <st7565r_LineTo>
+	GLCD_x=0; GLCD_y=31;
+ 104:	10 92 01 01 	sts	0x0101, r1
+ 108:	8f e1       	ldi	r24, 0x1F	; 31
+ 10a:	80 93 00 01 	sts	0x0100, r24
+	st7565r_LineTo(127, 0, true);
+ 10e:	41 e0       	ldi	r20, 0x01	; 1
+ 110:	60 e0       	ldi	r22, 0x00	; 0
+ 112:	8f e7       	ldi	r24, 0x7F	; 127
+ 114:	0e 94 6d 01 	call	0x2da	; 0x2da <st7565r_LineTo>
+	st7565r_Circle(30, 16, 10, 3);
+ 118:	23 e0       	ldi	r18, 0x03	; 3
+ 11a:	4a e0       	ldi	r20, 0x0A	; 10
+ 11c:	60 e1       	ldi	r22, 0x10	; 16
+ 11e:	8e e1       	ldi	r24, 0x1E	; 30
+ 120:	0e 94 05 02 	call	0x40a	; 0x40a <st7565r_Circle>
+ 124:	ff cf       	rjmp	.-2      	; 0x124 <main+0x70>
+
+00000126 <st7565r_wr_data>:
+	if(state == ST_High) SET(PORT, ST7565_A0); else CLR(PORT, ST7565_A0); //PORTD_OUTSET=PIN0_bm; else PORTD_OUTCLR=PIN0_bm;
+}
+
+static inline void st7565r_CS_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_CS); else CLR(PORT, ST7565_CS); //PORTF_OUTSET=PIN3_bm; else PORTF_OUTCLR=PIN3_bm;
+ 126:	40 98       	cbi	0x08, 0	; 8
+	if(state == ST_High) SET(PORT, ST7565_RESET); else CLR(PORT, ST7565_RESET); //PORTA_OUTSET=PIN3_bm; else PORTA_OUTCLR=PIN3_bm;
+}
+
+static inline void st7565r_A0_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_A0); else CLR(PORT, ST7565_A0); //PORTD_OUTSET=PIN0_bm; else PORTD_OUTCLR=PIN0_bm;
+ 128:	42 9a       	sbi	0x08, 2	; 8
+
+static void st7565r_wr_data(uint8_t data)
+{
+	st7565r_CS_pin(ST_Low);   //Wybierz uk³ad
+	st7565r_A0_pin(ST_High);  //Wybierz tryb przesy³ania danych
+	SPI_RW_Byte(data);
+ 12a:	0e 94 4d 00 	call	0x9a	; 0x9a <SPI_RW_Byte>
+	if(state == ST_High) SET(PORT, ST7565_RESET); else CLR(PORT, ST7565_RESET); //PORTA_OUTSET=PIN3_bm; else PORTA_OUTCLR=PIN3_bm;
+}
+
+static inline void st7565r_A0_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_A0); else CLR(PORT, ST7565_A0); //PORTD_OUTSET=PIN0_bm; else PORTD_OUTCLR=PIN0_bm;
+ 12e:	42 98       	cbi	0x08, 2	; 8
+}
+
+static inline void st7565r_CS_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_CS); else CLR(PORT, ST7565_CS); //PORTF_OUTSET=PIN3_bm; else PORTF_OUTCLR=PIN3_bm;
+ 130:	40 9a       	sbi	0x08, 0	; 8
+ 132:	08 95       	ret
+
+00000134 <st7565r_wr_cmd>:
+ 134:	40 98       	cbi	0x08, 0	; 8
+	if(state == ST_High) SET(PORT, ST7565_RESET); else CLR(PORT, ST7565_RESET); //PORTA_OUTSET=PIN3_bm; else PORTA_OUTCLR=PIN3_bm;
+}
+
+static inline void st7565r_A0_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_A0); else CLR(PORT, ST7565_A0); //PORTD_OUTSET=PIN0_bm; else PORTD_OUTCLR=PIN0_bm;
+ 136:	42 98       	cbi	0x08, 2	; 8
+
+static inline void st7565r_wr_cmd(uint8_t cmd)
+{
+	st7565r_CS_pin(ST_Low);   //Wybierz uk³ad
+	st7565r_A0_pin(ST_Low);   //Wybierz tryb przesy³ania polecenia
+	SPI_RW_Byte(cmd);		  //Wyœlij polecenie
+ 138:	0e 94 4d 00 	call	0x9a	; 0x9a <SPI_RW_Byte>
+	if(state == ST_High) SET(PORT, ST7565_A0); else CLR(PORT, ST7565_A0); //PORTD_OUTSET=PIN0_bm; else PORTD_OUTCLR=PIN0_bm;
+}
+
+static inline void st7565r_CS_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_CS); else CLR(PORT, ST7565_CS); //PORTF_OUTSET=PIN3_bm; else PORTF_OUTCLR=PIN3_bm;
+ 13c:	40 9a       	sbi	0x08, 0	; 8
+ 13e:	08 95       	ret
+
+00000140 <st7565r_reset>:
+uint8_t LCD_FrameBuffer[GFX_SCREEN_HEIGHT / 8][GFX_SCREEN_WIDTH];  //Bufor obrazu
+uint8_t GLCD_x, GLCD_y;
+
+static inline void st7565r_Reset_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_RESET); else CLR(PORT, ST7565_RESET); //PORTA_OUTSET=PIN3_bm; else PORTA_OUTCLR=PIN3_bm;
+ 140:	41 98       	cbi	0x08, 1	; 8
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 142:	85 e3       	ldi	r24, 0x35	; 53
+ 144:	8a 95       	dec	r24
+ 146:	f1 f7       	brne	.-4      	; 0x144 <st7565r_reset+0x4>
+ 148:	00 00       	nop
+ 14a:	41 9a       	sbi	0x08, 1	; 8
+ 14c:	85 e3       	ldi	r24, 0x35	; 53
+ 14e:	8a 95       	dec	r24
+ 150:	f1 f7       	brne	.-4      	; 0x14e <st7565r_reset+0xe>
+ 152:	00 00       	nop
+ 154:	08 95       	ret
+
+00000156 <st7565r_write_data_at>:
+	st7565r_wr_cmd(ST7565R_CMD_COLUMN_ADDRESS_SET_MSB | (address >> 4));
+	st7565r_wr_cmd(ST7565R_CMD_COLUMN_ADDRESS_SET_LSB | (address & 0x0F));
+}
+
+void st7565r_write_data_at(uint8_t x, uint8_t y, uint8_t data)
+{
+ 156:	1f 93       	push	r17
+ 158:	cf 93       	push	r28
+ 15a:	df 93       	push	r29
+ 15c:	1f 92       	push	r1
+ 15e:	cd b7       	in	r28, 0x3d	; 61
+ 160:	de b7       	in	r29, 0x3e	; 62
+ 162:	18 2f       	mov	r17, r24
+	st7565r_CS_pin(ST_High);
+}
+
+static inline void st7565r_set_page_address(uint8_t address)
+{
+	address&=0x0F; //Zadres to tylko 4 bity
+ 164:	6f 70       	andi	r22, 0x0F	; 15
+	st7565r_wr_cmd(ST7565R_CMD_PAGE_ADDRESS_SET | address);
+ 166:	86 2f       	mov	r24, r22
+ 168:	80 6b       	ori	r24, 0xB0	; 176
+ 16a:	49 83       	std	Y+1, r20	; 0x01
+ 16c:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+}
+
+static inline void st7565r_set_column_address(uint8_t address)
+{
+	address &= 0x7F;   //Adres to 7 najm³odszych bitów
+ 170:	81 2f       	mov	r24, r17
+ 172:	8f 77       	andi	r24, 0x7F	; 127
+	st7565r_wr_cmd(ST7565R_CMD_COLUMN_ADDRESS_SET_MSB | (address >> 4));
+ 174:	82 95       	swap	r24
+ 176:	8f 70       	andi	r24, 0x0F	; 15
+ 178:	80 61       	ori	r24, 0x10	; 16
+ 17a:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_COLUMN_ADDRESS_SET_LSB | (address & 0x0F));
+ 17e:	81 2f       	mov	r24, r17
+ 180:	8f 70       	andi	r24, 0x0F	; 15
+ 182:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+
+void st7565r_write_data_at(uint8_t x, uint8_t y, uint8_t data)
+{
+	st7565r_set_page_address(y);
+	st7565r_set_column_address(x);
+	st7565r_wr_data(data);
+ 186:	49 81       	ldd	r20, Y+1	; 0x01
+ 188:	84 2f       	mov	r24, r20
+}
+ 18a:	0f 90       	pop	r0
+ 18c:	df 91       	pop	r29
+ 18e:	cf 91       	pop	r28
+ 190:	1f 91       	pop	r17
+
+void st7565r_write_data_at(uint8_t x, uint8_t y, uint8_t data)
+{
+	st7565r_set_page_address(y);
+	st7565r_set_column_address(x);
+	st7565r_wr_data(data);
+ 192:	0c 94 93 00 	jmp	0x126	; 0x126 <st7565r_wr_data>
+
+00000196 <st7565r_set_contrast>:
+	if (onoff) st7565r_wr_cmd(ST7565R_CMD_ADC_REVERSE);
+	else st7565r_wr_cmd(ST7565R_CMD_ADC_NORMAL);
+}
+
+void st7565r_set_contrast(uint8_t contrast) //Uwaga - Ÿle dobrany kontrast (przekroczenie napiêcia) mo¿e uszkodziæ LCD
+{
+ 196:	cf 93       	push	r28
+ 198:	c8 2f       	mov	r28, r24
+	if (contrast < ST7565R_DISPLAY_CONTRAST_MIN)  contrast=ST7565R_DISPLAY_CONTRAST_MIN;
+ 19a:	85 30       	cpi	r24, 0x05	; 5
+ 19c:	20 f0       	brcs	.+8      	; 0x1a6 <st7565r_set_contrast+0x10>
+	if (contrast > ST7565R_DISPLAY_CONTRAST_MAX)  contrast=ST7565R_DISPLAY_CONTRAST_MAX;
+ 19e:	89 32       	cpi	r24, 0x29	; 41
+ 1a0:	18 f0       	brcs	.+6      	; 0x1a8 <st7565r_set_contrast+0x12>
+ 1a2:	c8 e2       	ldi	r28, 0x28	; 40
+ 1a4:	01 c0       	rjmp	.+2      	; 0x1a8 <st7565r_set_contrast+0x12>
+	else st7565r_wr_cmd(ST7565R_CMD_ADC_NORMAL);
+}
+
+void st7565r_set_contrast(uint8_t contrast) //Uwaga - Ÿle dobrany kontrast (przekroczenie napiêcia) mo¿e uszkodziæ LCD
+{
+	if (contrast < ST7565R_DISPLAY_CONTRAST_MIN)  contrast=ST7565R_DISPLAY_CONTRAST_MIN;
+ 1a6:	c5 e0       	ldi	r28, 0x05	; 5
+	if (contrast > ST7565R_DISPLAY_CONTRAST_MAX)  contrast=ST7565R_DISPLAY_CONTRAST_MAX;
+	st7565r_wr_cmd(ST7565R_CMD_ELECTRONIC_VOLUME_MODE_SET);
+ 1a8:	81 e8       	ldi	r24, 0x81	; 129
+ 1aa:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+	st7565r_wr_cmd(contrast);
+ 1ae:	8c 2f       	mov	r24, r28
+}
+ 1b0:	cf 91       	pop	r28
+void st7565r_set_contrast(uint8_t contrast) //Uwaga - Ÿle dobrany kontrast (przekroczenie napiêcia) mo¿e uszkodziæ LCD
+{
+	if (contrast < ST7565R_DISPLAY_CONTRAST_MIN)  contrast=ST7565R_DISPLAY_CONTRAST_MIN;
+	if (contrast > ST7565R_DISPLAY_CONTRAST_MAX)  contrast=ST7565R_DISPLAY_CONTRAST_MAX;
+	st7565r_wr_cmd(ST7565R_CMD_ELECTRONIC_VOLUME_MODE_SET);
+	st7565r_wr_cmd(contrast);
+ 1b2:	0c 94 9a 00 	jmp	0x134	; 0x134 <st7565r_wr_cmd>
+
+000001b6 <st7565r_init>:
+}
+
+void st7565r_init()
+{
+	st7565r_reset();
+ 1b6:	0e 94 a0 00 	call	0x140	; 0x140 <st7565r_reset>
+	st7565r_wr_cmd(ST7565R_CMD_ADC_NORMAL);              //Zwiêkszaj adres kolumny
+ 1ba:	80 ea       	ldi	r24, 0xA0	; 160
+ 1bc:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_DISPLAY_NORMAL);          //W³¹cz normalny tryb wyœwietlania (nie testowy)
+ 1c0:	86 ea       	ldi	r24, 0xA6	; 166
+ 1c2:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_REVERSE_SCAN_DIRECTION);  //Tryb sterowania elektrodami
+ 1c6:	88 ec       	ldi	r24, 0xC8	; 200
+ 1c8:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_LCD_BIAS_1_DIV_6_DUTY33); //Ustaw bias voltage na 1/6
+ 1cc:	82 ea       	ldi	r24, 0xA2	; 162
+ 1ce:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_POWER_CTRL_ALL_ON);       //W³¹cz wszystkie elementy sterownika
+ 1d2:	8f e2       	ldi	r24, 0x2F	; 47
+ 1d4:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_BOOSTER_RATIO_SET);       //Konfiguracja boostera
+ 1d8:	88 ef       	ldi	r24, 0xF8	; 248
+ 1da:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_BOOSTER_RATIO_2X_3X_4X);
+ 1de:	80 e0       	ldi	r24, 0x00	; 0
+ 1e0:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_VOLTAGE_RESISTOR_RATIO_7);
+ 1e4:	87 e2       	ldi	r24, 0x27	; 39
+ 1e6:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+	st7565r_set_contrast(0x10);
+ 1ea:	80 e1       	ldi	r24, 0x10	; 16
+ 1ec:	0e 94 cb 00 	call	0x196	; 0x196 <st7565r_set_contrast>
+}
+
+void st7565r_set_display_start_line_address(uint8_t address)
+{
+	address &= 0x3F;
+	st7565r_wr_cmd(ST7565R_CMD_START_LINE_SET | address);
+ 1f0:	80 e4       	ldi	r24, 0x40	; 64
+ 1f2:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+}
+
+static inline void st7565r_display_on(_Bool onoff)
+{
+	if(onoff) st7565r_wr_cmd(ST7565R_CMD_DISPLAY_ON);
+ 1f6:	8f ea       	ldi	r24, 0xAF	; 175
+ 1f8:	0c 94 9a 00 	jmp	0x134	; 0x134 <st7565r_wr_cmd>
+
+000001fc <st7565r_SetPixel>:
+	st7565r_display_on(true);
+}
+
+void st7565r_SetPixel(uint8_t x, uint8_t y, _Bool isSet)
+{
+	GLCD_x=x; GLCD_y=y;
+ 1fc:	80 93 01 01 	sts	0x0101, r24
+ 200:	60 93 00 01 	sts	0x0100, r22
+ 204:	96 2f       	mov	r25, r22
+ 206:	96 95       	lsr	r25
+ 208:	96 95       	lsr	r25
+ 20a:	96 95       	lsr	r25
+ 20c:	28 2f       	mov	r18, r24
+ 20e:	30 e0       	ldi	r19, 0x00	; 0
+ 210:	67 70       	andi	r22, 0x07	; 7
+	if(isSet) LCD_FrameBuffer[y >> 3][x] |= (1 << (y%8));
+ 212:	f9 01       	movw	r30, r18
+ 214:	44 23       	and	r20, r20
+ 216:	91 f0       	breq	.+36     	; 0x23c <st7565r_SetPixel+0x40>
+ 218:	40 e8       	ldi	r20, 0x80	; 128
+ 21a:	94 9f       	mul	r25, r20
+ 21c:	e0 0d       	add	r30, r0
+ 21e:	f1 1d       	adc	r31, r1
+ 220:	11 24       	eor	r1, r1
+ 222:	ee 5f       	subi	r30, 0xFE	; 254
+ 224:	fe 4f       	sbci	r31, 0xFE	; 254
+ 226:	41 e0       	ldi	r20, 0x01	; 1
+ 228:	50 e0       	ldi	r21, 0x00	; 0
+ 22a:	06 2e       	mov	r0, r22
+ 22c:	01 c0       	rjmp	.+2      	; 0x230 <st7565r_SetPixel+0x34>
+ 22e:	44 0f       	add	r20, r20
+ 230:	0a 94       	dec	r0
+ 232:	ea f7       	brpl	.-6      	; 0x22e <st7565r_SetPixel+0x32>
+ 234:	50 81       	ld	r21, Z
+ 236:	54 2b       	or	r21, r20
+ 238:	50 83       	st	Z, r21
+ 23a:	11 c0       	rjmp	.+34     	; 0x25e <st7565r_SetPixel+0x62>
+	     else LCD_FrameBuffer[y >> 3][x] &= ~(1 << (y%8));
+ 23c:	40 e8       	ldi	r20, 0x80	; 128
+ 23e:	94 9f       	mul	r25, r20
+ 240:	e0 0d       	add	r30, r0
+ 242:	f1 1d       	adc	r31, r1
+ 244:	11 24       	eor	r1, r1
+ 246:	ee 5f       	subi	r30, 0xFE	; 254
+ 248:	fe 4f       	sbci	r31, 0xFE	; 254
+ 24a:	41 e0       	ldi	r20, 0x01	; 1
+ 24c:	50 e0       	ldi	r21, 0x00	; 0
+ 24e:	01 c0       	rjmp	.+2      	; 0x252 <st7565r_SetPixel+0x56>
+ 250:	44 0f       	add	r20, r20
+ 252:	6a 95       	dec	r22
+ 254:	ea f7       	brpl	.-6      	; 0x250 <st7565r_SetPixel+0x54>
+ 256:	40 95       	com	r20
+ 258:	50 81       	ld	r21, Z
+ 25a:	45 23       	and	r20, r21
+ 25c:	40 83       	st	Z, r20
+	st7565r_write_data_at(x, y >> 3, LCD_FrameBuffer[y >> 3][x]);
+ 25e:	f9 01       	movw	r30, r18
+ 260:	40 e8       	ldi	r20, 0x80	; 128
+ 262:	94 9f       	mul	r25, r20
+ 264:	e0 0d       	add	r30, r0
+ 266:	f1 1d       	adc	r31, r1
+ 268:	11 24       	eor	r1, r1
+ 26a:	ee 5f       	subi	r30, 0xFE	; 254
+ 26c:	fe 4f       	sbci	r31, 0xFE	; 254
+ 26e:	40 81       	ld	r20, Z
+ 270:	69 2f       	mov	r22, r25
+ 272:	0c 94 ab 00 	jmp	0x156	; 0x156 <st7565r_write_data_at>
+
+00000276 <st7565r_CpyFramebuffer>:
+}
+
+void st7565r_CpyFramebuffer()
+{
+ 276:	ff 92       	push	r15
+ 278:	0f 93       	push	r16
+ 27a:	1f 93       	push	r17
+ 27c:	cf 93       	push	r28
+ 27e:	df 93       	push	r29
+ 280:	c2 e0       	ldi	r28, 0x02	; 2
+ 282:	d1 e0       	ldi	r29, 0x01	; 1
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+	for(uint8_t y=0; y < (GFX_SCREEN_HEIGHT >> 3); y++)
+ 284:	f1 2c       	mov	r15, r1
+}
+
+static inline void st7565r_set_page_address(uint8_t address)
+{
+	address&=0x0F; //Zadres to tylko 4 bity
+	st7565r_wr_cmd(ST7565R_CMD_PAGE_ADDRESS_SET | address);
+ 286:	8f 2d       	mov	r24, r15
+ 288:	80 6b       	ori	r24, 0xB0	; 176
+ 28a:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+}
+
+static inline void st7565r_set_column_address(uint8_t address)
+{
+	address &= 0x7F;   //Adres to 7 najm³odszych bitów
+	st7565r_wr_cmd(ST7565R_CMD_COLUMN_ADDRESS_SET_MSB | (address >> 4));
+ 28e:	80 e1       	ldi	r24, 0x10	; 16
+ 290:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_COLUMN_ADDRESS_SET_LSB | (address & 0x0F));
+ 294:	80 e0       	ldi	r24, 0x00	; 0
+ 296:	0e 94 9a 00 	call	0x134	; 0x134 <st7565r_wr_cmd>
+ 29a:	8e 01       	movw	r16, r28
+ 29c:	00 58       	subi	r16, 0x80	; 128
+ 29e:	1f 4f       	sbci	r17, 0xFF	; 255
+ 2a0:	fe 01       	movw	r30, r28
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+	for(uint8_t y=0; y < (GFX_SCREEN_HEIGHT >> 3); y++)
+	{
+		st7565r_set_page_address(y);
+		st7565r_set_column_address(0);
+		for(uint8_t x=0; x < GFX_SCREEN_WIDTH; x++) st7565r_wr_data(*ptr++);
+ 2a2:	c0 17       	cp	r28, r16
+ 2a4:	d1 07       	cpc	r29, r17
+ 2a6:	29 f0       	breq	.+10     	; 0x2b2 <st7565r_CpyFramebuffer+0x3c>
+ 2a8:	21 96       	adiw	r28, 0x01	; 1
+ 2aa:	80 81       	ld	r24, Z
+ 2ac:	0e 94 93 00 	call	0x126	; 0x126 <st7565r_wr_data>
+ 2b0:	f7 cf       	rjmp	.-18     	; 0x2a0 <st7565r_CpyFramebuffer+0x2a>
+}
+
+void st7565r_CpyFramebuffer()
+{
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+	for(uint8_t y=0; y < (GFX_SCREEN_HEIGHT >> 3); y++)
+ 2b2:	f3 94       	inc	r15
+ 2b4:	84 e0       	ldi	r24, 0x04	; 4
+ 2b6:	f8 12       	cpse	r15, r24
+ 2b8:	e6 cf       	rjmp	.-52     	; 0x286 <st7565r_CpyFramebuffer+0x10>
+	{
+		st7565r_set_page_address(y);
+		st7565r_set_column_address(0);
+		for(uint8_t x=0; x < GFX_SCREEN_WIDTH; x++) st7565r_wr_data(*ptr++);
+	}
+}
+ 2ba:	df 91       	pop	r29
+ 2bc:	cf 91       	pop	r28
+ 2be:	1f 91       	pop	r17
+ 2c0:	0f 91       	pop	r16
+ 2c2:	ff 90       	pop	r15
+ 2c4:	08 95       	ret
+
+000002c6 <st7565r_Clear>:
+
+void st7565r_Clear(_Bool color)
+{
+	uint8_t pix=0;
+	if(color) pix=0xff;
+ 2c6:	81 95       	neg	r24
+ 2c8:	e2 e0       	ldi	r30, 0x02	; 2
+ 2ca:	f1 e0       	ldi	r31, 0x01	; 1
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+	for(uint16_t i=0; i < GFX_SCREEN_WIDTH * (GFX_SCREEN_HEIGHT >> 3); i++) *ptr++=pix;
+ 2cc:	81 93       	st	Z+, r24
+ 2ce:	93 e0       	ldi	r25, 0x03	; 3
+ 2d0:	e2 30       	cpi	r30, 0x02	; 2
+ 2d2:	f9 07       	cpc	r31, r25
+ 2d4:	d9 f7       	brne	.-10     	; 0x2cc <st7565r_Clear+0x6>
+	st7565r_CpyFramebuffer();
+ 2d6:	0c 94 3b 01 	jmp	0x276	; 0x276 <st7565r_CpyFramebuffer>
+
+000002da <st7565r_LineTo>:
+}
+
+void st7565r_LineTo(uint8_t x, uint8_t y, _Bool isSet)
+{
+ 2da:	9f 92       	push	r9
+ 2dc:	af 92       	push	r10
+ 2de:	bf 92       	push	r11
+ 2e0:	cf 92       	push	r12
+ 2e2:	df 92       	push	r13
+ 2e4:	ef 92       	push	r14
+ 2e6:	ff 92       	push	r15
+ 2e8:	0f 93       	push	r16
+ 2ea:	1f 93       	push	r17
+ 2ec:	cf 93       	push	r28
+ 2ee:	df 93       	push	r29
+ 2f0:	98 2e       	mov	r9, r24
+ 2f2:	a6 2e       	mov	r10, r22
+ 2f4:	b4 2e       	mov	r11, r20
+    int dy = y - GLCD_y;
+ 2f6:	60 91 00 01 	lds	r22, 0x0100
+ 2fa:	ea 2d       	mov	r30, r10
+ 2fc:	f0 e0       	ldi	r31, 0x00	; 0
+ 2fe:	e6 1b       	sub	r30, r22
+ 300:	f1 09       	sbc	r31, r1
+    int dx = x - GLCD_x;
+ 302:	80 91 01 01 	lds	r24, 0x0101
+ 306:	29 2d       	mov	r18, r9
+ 308:	30 e0       	ldi	r19, 0x00	; 0
+ 30a:	28 1b       	sub	r18, r24
+ 30c:	31 09       	sbc	r19, r1
+    int8_t stepx, stepy;
+
+    if (dy < 0) { dy = -dy;  stepy = -1; } else stepy = 1;
+ 30e:	f7 ff       	sbrs	r31, 7
+ 310:	06 c0       	rjmp	.+12     	; 0x31e <st7565r_LineTo+0x44>
+ 312:	f1 95       	neg	r31
+ 314:	e1 95       	neg	r30
+ 316:	f1 09       	sbc	r31, r1
+ 318:	cc 24       	eor	r12, r12
+ 31a:	ca 94       	dec	r12
+ 31c:	02 c0       	rjmp	.+4      	; 0x322 <st7565r_LineTo+0x48>
+ 31e:	cc 24       	eor	r12, r12
+ 320:	c3 94       	inc	r12
+    if (dx < 0) { dx = -dx;  stepx = -1; } else stepx = 1;
+ 322:	37 ff       	sbrs	r19, 7
+ 324:	06 c0       	rjmp	.+12     	; 0x332 <st7565r_LineTo+0x58>
+ 326:	31 95       	neg	r19
+ 328:	21 95       	neg	r18
+ 32a:	31 09       	sbc	r19, r1
+ 32c:	dd 24       	eor	r13, r13
+ 32e:	da 94       	dec	r13
+ 330:	02 c0       	rjmp	.+4      	; 0x336 <st7565r_LineTo+0x5c>
+ 332:	dd 24       	eor	r13, r13
+ 334:	d3 94       	inc	r13
+    dy <<= 1;
+ 336:	ef 01       	movw	r28, r30
+ 338:	cc 0f       	add	r28, r28
+ 33a:	dd 1f       	adc	r29, r29
+    dx <<= 1;
+ 33c:	89 01       	movw	r16, r18
+ 33e:	00 0f       	add	r16, r16
+ 340:	11 1f       	adc	r17, r17
+
+    st7565r_SetPixel(GLCD_x, GLCD_y, isSet);
+ 342:	4b 2d       	mov	r20, r11
+ 344:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+    if (dx > dy)
+ 348:	c0 17       	cp	r28, r16
+ 34a:	d1 07       	cpc	r29, r17
+ 34c:	f4 f4       	brge	.+60     	; 0x38a <st7565r_LineTo+0xb0>
+    {
+        int fraction = dy - (dx >> 1);  // same as 2*dy - dx
+ 34e:	98 01       	movw	r18, r16
+ 350:	35 95       	asr	r19
+ 352:	27 95       	ror	r18
+ 354:	7e 01       	movw	r14, r28
+ 356:	e2 1a       	sub	r14, r18
+ 358:	f3 0a       	sbc	r15, r19
+        while (GLCD_x != x)
+ 35a:	80 91 01 01 	lds	r24, 0x0101
+ 35e:	89 15       	cp	r24, r9
+ 360:	91 f1       	breq	.+100    	; 0x3c6 <st7565r_LineTo+0xec>
+        {
+           if (fraction >= 0)
+ 362:	f7 fc       	sbrc	r15, 7
+ 364:	07 c0       	rjmp	.+14     	; 0x374 <st7565r_LineTo+0x9a>
+           {
+               GLCD_y += stepy;
+ 366:	90 91 00 01 	lds	r25, 0x0100
+ 36a:	9c 0d       	add	r25, r12
+ 36c:	90 93 00 01 	sts	0x0100, r25
+               fraction -= dx;          // same as fraction -= 2*dx
+ 370:	e0 1a       	sub	r14, r16
+ 372:	f1 0a       	sbc	r15, r17
+           }
+           GLCD_x += stepx;
+ 374:	8d 0d       	add	r24, r13
+ 376:	80 93 01 01 	sts	0x0101, r24
+           fraction += dy;              // same as fraction -= 2*dy
+ 37a:	ec 0e       	add	r14, r28
+ 37c:	fd 1e       	adc	r15, r29
+           st7565r_SetPixel(GLCD_x, GLCD_y, isSet);
+ 37e:	4b 2d       	mov	r20, r11
+ 380:	60 91 00 01 	lds	r22, 0x0100
+ 384:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+ 388:	e8 cf       	rjmp	.-48     	; 0x35a <st7565r_LineTo+0x80>
+        }
+     } else {
+        int fraction = dx - (dy >> 1);
+ 38a:	ce 01       	movw	r24, r28
+ 38c:	95 95       	asr	r25
+ 38e:	87 95       	ror	r24
+ 390:	78 01       	movw	r14, r16
+ 392:	e8 1a       	sub	r14, r24
+ 394:	f9 0a       	sbc	r15, r25
+        while (GLCD_y != y) {
+ 396:	60 91 00 01 	lds	r22, 0x0100
+ 39a:	6a 15       	cp	r22, r10
+ 39c:	a1 f0       	breq	.+40     	; 0x3c6 <st7565r_LineTo+0xec>
+           if (fraction >= 0) {
+ 39e:	f7 fc       	sbrc	r15, 7
+ 3a0:	07 c0       	rjmp	.+14     	; 0x3b0 <st7565r_LineTo+0xd6>
+               GLCD_x += stepx;
+ 3a2:	80 91 01 01 	lds	r24, 0x0101
+ 3a6:	8d 0d       	add	r24, r13
+ 3a8:	80 93 01 01 	sts	0x0101, r24
+               fraction -= dy;
+ 3ac:	ec 1a       	sub	r14, r28
+ 3ae:	fd 0a       	sbc	r15, r29
+           }
+           GLCD_y += stepy;
+ 3b0:	6c 0d       	add	r22, r12
+ 3b2:	60 93 00 01 	sts	0x0100, r22
+           fraction += dx;
+ 3b6:	e0 0e       	add	r14, r16
+ 3b8:	f1 1e       	adc	r15, r17
+           st7565r_SetPixel(GLCD_x, GLCD_y, isSet);
+ 3ba:	4b 2d       	mov	r20, r11
+ 3bc:	80 91 01 01 	lds	r24, 0x0101
+ 3c0:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+ 3c4:	e8 cf       	rjmp	.-48     	; 0x396 <st7565r_LineTo+0xbc>
+        }
+     }
+ }
+ 3c6:	df 91       	pop	r29
+ 3c8:	cf 91       	pop	r28
+ 3ca:	1f 91       	pop	r17
+ 3cc:	0f 91       	pop	r16
+ 3ce:	ff 90       	pop	r15
+ 3d0:	ef 90       	pop	r14
+ 3d2:	df 90       	pop	r13
+ 3d4:	cf 90       	pop	r12
+ 3d6:	bf 90       	pop	r11
+ 3d8:	af 90       	pop	r10
+ 3da:	9f 90       	pop	r9
+ 3dc:	08 95       	ret
+
+000003de <st7565r_DrawHLine>:
+{
+	GLCD_x=x; GLCD_y=y;
+}
+
+void st7565r_DrawHLine(uint8_t x, _Bool isSet)
+{
+ 3de:	1f 93       	push	r17
+ 3e0:	cf 93       	push	r28
+ 3e2:	df 93       	push	r29
+ 3e4:	16 2f       	mov	r17, r22
+	x+=GLCD_x;
+ 3e6:	c0 91 01 01 	lds	r28, 0x0101
+ 3ea:	d8 2f       	mov	r29, r24
+ 3ec:	dc 0f       	add	r29, r28
+    for(uint8_t x1=GLCD_x; x1<x; x1++) st7565r_SetPixel(x1, GLCD_y, isSet);
+ 3ee:	cd 17       	cp	r28, r29
+ 3f0:	40 f4       	brcc	.+16     	; 0x402 <st7565r_DrawHLine+0x24>
+ 3f2:	41 2f       	mov	r20, r17
+ 3f4:	60 91 00 01 	lds	r22, 0x0100
+ 3f8:	8c 2f       	mov	r24, r28
+ 3fa:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+ 3fe:	cf 5f       	subi	r28, 0xFF	; 255
+ 400:	f6 cf       	rjmp	.-20     	; 0x3ee <st7565r_DrawHLine+0x10>
+}
+ 402:	df 91       	pop	r29
+ 404:	cf 91       	pop	r28
+ 406:	1f 91       	pop	r17
+ 408:	08 95       	ret
+
+0000040a <st7565r_Circle>:
+
+void st7565r_Circle(uint8_t cx, uint8_t cy , uint8_t radius, uint8_t attrs)
+{
+ 40a:	5f 92       	push	r5
+ 40c:	6f 92       	push	r6
+ 40e:	7f 92       	push	r7
+ 410:	8f 92       	push	r8
+ 412:	9f 92       	push	r9
+ 414:	af 92       	push	r10
+ 416:	bf 92       	push	r11
+ 418:	cf 92       	push	r12
+ 41a:	df 92       	push	r13
+ 41c:	ef 92       	push	r14
+ 41e:	ff 92       	push	r15
+ 420:	0f 93       	push	r16
+ 422:	1f 93       	push	r17
+ 424:	cf 93       	push	r28
+ 426:	df 93       	push	r29
+ 428:	e8 2e       	mov	r14, r24
+ 42a:	b6 2e       	mov	r11, r22
+    int8_t x, y, xchange, ychange, radiusError;
+    x=radius;
+ 42c:	14 2f       	mov	r17, r20
+    y=0;
+    xchange=1-2*radius;
+ 42e:	04 2f       	mov	r16, r20
+ 430:	01 95       	neg	r16
+ 432:	00 0f       	add	r16, r16
+ 434:	0f 5f       	subi	r16, 0xFF	; 255
+    ychange=1;
+    radiusError=0;
+	_Bool isSet=attrs & 1;
+ 436:	c2 2f       	mov	r28, r18
+ 438:	c1 70       	andi	r28, 0x01	; 1
+    int8_t x, y, xchange, ychange, radiusError;
+    x=radius;
+    y=0;
+    xchange=1-2*radius;
+    ychange=1;
+    radiusError=0;
+ 43a:	f1 2c       	mov	r15, r1
+
+void st7565r_Circle(uint8_t cx, uint8_t cy , uint8_t radius, uint8_t attrs)
+{
+    int8_t x, y, xchange, ychange, radiusError;
+    x=radius;
+    y=0;
+ 43c:	d0 e0       	ldi	r29, 0x00	; 0
+    radiusError=0;
+	_Bool isSet=attrs & 1;
+
+    while(x>=y)
+    {
+        if((attrs & 2)==0)
+ 43e:	22 70       	andi	r18, 0x02	; 2
+ 440:	62 2e       	mov	r6, r18
+    xchange=1-2*radius;
+    ychange=1;
+    radiusError=0;
+	_Bool isSet=attrs & 1;
+
+    while(x>=y)
+ 442:	1d 17       	cp	r17, r29
+ 444:	0c f4       	brge	.+2      	; 0x448 <st7565r_Circle+0x3e>
+ 446:	73 c0       	rjmp	.+230    	; 0x52e <st7565r_Circle+0x124>
+ 448:	7d 2e       	mov	r7, r29
+ 44a:	7b 0c       	add	r7, r11
+ 44c:	ce 2c       	mov	r12, r14
+ 44e:	c1 1a       	sub	r12, r17
+ 450:	8b 2c       	mov	r8, r11
+ 452:	8d 1a       	sub	r8, r29
+ 454:	91 2e       	mov	r9, r17
+ 456:	9b 0c       	add	r9, r11
+ 458:	de 2c       	mov	r13, r14
+ 45a:	dd 1a       	sub	r13, r29
+ 45c:	ab 2c       	mov	r10, r11
+ 45e:	a1 1a       	sub	r10, r17
+    {
+        if((attrs & 2)==0)
+ 460:	61 10       	cpse	r6, r1
+ 462:	2d c0       	rjmp	.+90     	; 0x4be <st7565r_Circle+0xb4>
+        {
+            st7565r_SetPixel(cx+x, cy+y, isSet);
+ 464:	4c 2f       	mov	r20, r28
+ 466:	67 2d       	mov	r22, r7
+ 468:	51 2e       	mov	r5, r17
+ 46a:	5e 0c       	add	r5, r14
+ 46c:	85 2d       	mov	r24, r5
+ 46e:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+            st7565r_SetPixel(cx-x, cy+y, isSet);
+ 472:	4c 2f       	mov	r20, r28
+ 474:	67 2d       	mov	r22, r7
+ 476:	8c 2d       	mov	r24, r12
+ 478:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+            st7565r_SetPixel(cx-x, cy-y, isSet);
+ 47c:	4c 2f       	mov	r20, r28
+ 47e:	68 2d       	mov	r22, r8
+ 480:	8c 2d       	mov	r24, r12
+ 482:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+            st7565r_SetPixel(cx+x, cy-y, isSet);
+ 486:	4c 2f       	mov	r20, r28
+ 488:	68 2d       	mov	r22, r8
+ 48a:	85 2d       	mov	r24, r5
+ 48c:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+            st7565r_SetPixel(cx+y, cy+x, isSet);
+ 490:	4c 2f       	mov	r20, r28
+ 492:	69 2d       	mov	r22, r9
+ 494:	cd 2e       	mov	r12, r29
+ 496:	ce 0c       	add	r12, r14
+ 498:	8c 2d       	mov	r24, r12
+ 49a:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+            st7565r_SetPixel(cx-y, cy+x, isSet);
+ 49e:	4c 2f       	mov	r20, r28
+ 4a0:	69 2d       	mov	r22, r9
+ 4a2:	8d 2d       	mov	r24, r13
+ 4a4:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+            st7565r_SetPixel(cx-y, cy-x, isSet);
+ 4a8:	4c 2f       	mov	r20, r28
+ 4aa:	6a 2d       	mov	r22, r10
+ 4ac:	8d 2d       	mov	r24, r13
+ 4ae:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+            st7565r_SetPixel(cx+y, cy-x, isSet);
+ 4b2:	4c 2f       	mov	r20, r28
+ 4b4:	6a 2d       	mov	r22, r10
+ 4b6:	8c 2d       	mov	r24, r12
+ 4b8:	0e 94 fe 00 	call	0x1fc	; 0x1fc <st7565r_SetPixel>
+ 4bc:	24 c0       	rjmp	.+72     	; 0x506 <st7565r_Circle+0xfc>
+     }
+ }
+
+void st7565r_MoveTo(uint8_t x, uint8_t y)
+{
+	GLCD_x=x; GLCD_y=y;
+ 4be:	c0 92 01 01 	sts	0x0101, r12
+ 4c2:	70 92 00 01 	sts	0x0100, r7
+            st7565r_SetPixel(cx-y, cy+x, isSet);
+            st7565r_SetPixel(cx-y, cy-x, isSet);
+            st7565r_SetPixel(cx+y, cy-x, isSet);
+        } else
+        {
+            st7565r_MoveTo(cx-x, cy+y); st7565r_DrawHLine(2*x, isSet);
+ 4c6:	6c 2f       	mov	r22, r28
+ 4c8:	71 2e       	mov	r7, r17
+ 4ca:	77 0c       	add	r7, r7
+ 4cc:	87 2d       	mov	r24, r7
+ 4ce:	0e 94 ef 01 	call	0x3de	; 0x3de <st7565r_DrawHLine>
+     }
+ }
+
+void st7565r_MoveTo(uint8_t x, uint8_t y)
+{
+	GLCD_x=x; GLCD_y=y;
+ 4d2:	c0 92 01 01 	sts	0x0101, r12
+ 4d6:	80 92 00 01 	sts	0x0100, r8
+            st7565r_SetPixel(cx-y, cy-x, isSet);
+            st7565r_SetPixel(cx+y, cy-x, isSet);
+        } else
+        {
+            st7565r_MoveTo(cx-x, cy+y); st7565r_DrawHLine(2*x, isSet);
+            st7565r_MoveTo(cx-x, cy-y); st7565r_DrawHLine(2*x, isSet);
+ 4da:	6c 2f       	mov	r22, r28
+ 4dc:	87 2d       	mov	r24, r7
+ 4de:	0e 94 ef 01 	call	0x3de	; 0x3de <st7565r_DrawHLine>
+     }
+ }
+
+void st7565r_MoveTo(uint8_t x, uint8_t y)
+{
+	GLCD_x=x; GLCD_y=y;
+ 4e2:	d0 92 01 01 	sts	0x0101, r13
+ 4e6:	90 92 00 01 	sts	0x0100, r9
+            st7565r_SetPixel(cx+y, cy-x, isSet);
+        } else
+        {
+            st7565r_MoveTo(cx-x, cy+y); st7565r_DrawHLine(2*x, isSet);
+            st7565r_MoveTo(cx-x, cy-y); st7565r_DrawHLine(2*x, isSet);
+            st7565r_MoveTo(cx-y, cy+x); st7565r_DrawHLine(2*y, isSet);
+ 4ea:	6c 2f       	mov	r22, r28
+ 4ec:	cd 2e       	mov	r12, r29
+ 4ee:	cc 0c       	add	r12, r12
+ 4f0:	8c 2d       	mov	r24, r12
+ 4f2:	0e 94 ef 01 	call	0x3de	; 0x3de <st7565r_DrawHLine>
+     }
+ }
+
+void st7565r_MoveTo(uint8_t x, uint8_t y)
+{
+	GLCD_x=x; GLCD_y=y;
+ 4f6:	d0 92 01 01 	sts	0x0101, r13
+ 4fa:	a0 92 00 01 	sts	0x0100, r10
+        } else
+        {
+            st7565r_MoveTo(cx-x, cy+y); st7565r_DrawHLine(2*x, isSet);
+            st7565r_MoveTo(cx-x, cy-y); st7565r_DrawHLine(2*x, isSet);
+            st7565r_MoveTo(cx-y, cy+x); st7565r_DrawHLine(2*y, isSet);
+            st7565r_MoveTo(cx-y, cy-x); st7565r_DrawHLine(2*y, isSet);
+ 4fe:	6c 2f       	mov	r22, r28
+ 500:	8c 2d       	mov	r24, r12
+ 502:	0e 94 ef 01 	call	0x3de	; 0x3de <st7565r_DrawHLine>
+ 506:	df 5f       	subi	r29, 0xFF	; 255
+ 508:	8d 2f       	mov	r24, r29
+ 50a:	88 0f       	add	r24, r24
+ 50c:	81 50       	subi	r24, 0x01	; 1
+        }
+
+        y++;
+        radiusError+=ychange;
+ 50e:	f8 0e       	add	r15, r24
+        ychange+=2;
+        if(2*radiusError+xchange>0)
+ 510:	ef 2d       	mov	r30, r15
+ 512:	ee 0f       	add	r30, r30
+ 514:	ff 0b       	sbc	r31, r31
+ 516:	e0 0f       	add	r30, r16
+ 518:	f1 1d       	adc	r31, r1
+ 51a:	07 fd       	sbrc	r16, 7
+ 51c:	fa 95       	dec	r31
+ 51e:	1e 16       	cp	r1, r30
+ 520:	1f 06       	cpc	r1, r31
+ 522:	0c f0       	brlt	.+2      	; 0x526 <st7565r_Circle+0x11c>
+ 524:	8e cf       	rjmp	.-228    	; 0x442 <st7565r_Circle+0x38>
+        {
+            x--;
+ 526:	11 50       	subi	r17, 0x01	; 1
+            radiusError+=xchange;
+ 528:	f0 0e       	add	r15, r16
+            xchange+=2;
+ 52a:	0e 5f       	subi	r16, 0xFE	; 254
+ 52c:	8a cf       	rjmp	.-236    	; 0x442 <st7565r_Circle+0x38>
+        }
+    }
+}
+ 52e:	df 91       	pop	r29
+ 530:	cf 91       	pop	r28
+ 532:	1f 91       	pop	r17
+ 534:	0f 91       	pop	r16
+ 536:	ff 90       	pop	r15
+ 538:	ef 90       	pop	r14
+ 53a:	df 90       	pop	r13
+ 53c:	cf 90       	pop	r12
+ 53e:	bf 90       	pop	r11
+ 540:	af 90       	pop	r10
+ 542:	9f 90       	pop	r9
+ 544:	8f 90       	pop	r8
+ 546:	7f 90       	pop	r7
+ 548:	6f 90       	pop	r6
+ 54a:	5f 90       	pop	r5
+ 54c:	08 95       	ret
+
+0000054e <_exit>:
+ 54e:	f8 94       	cli
+
+00000550 <__stop_program>:
+ 550:	ff cf       	rjmp	.-2      	; 0x550 <__stop_program>

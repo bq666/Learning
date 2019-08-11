@@ -1,0 +1,182 @@
+
+NoiseCanceler.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  000000f4  00000188  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000000f4  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000002  00800100  00800100  00000188  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000188  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000038  00000000  00000000  000001b8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000018a  00000000  00000000  000001f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000142  00000000  00000000  0000037a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000176  00000000  00000000  000004bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000060  00000000  00000000  00000634  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000188  00000000  00000000  00000694  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000004f  00000000  00000000  0000081c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000028  00000000  00000000  0000086b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   8:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  10:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  14:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  18:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  1c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  20:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  24:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  28:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  2c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  30:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  34:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  38:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  3c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  40:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  44:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  48:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  4c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  50:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  54:	0c 94 48 00 	jmp	0x90	; 0x90 <__vector_21>
+  58:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  5c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  60:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  64:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_clear_bss>:
+  74:	21 e0       	ldi	r18, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	01 c0       	rjmp	.+2      	; 0x7e <.do_clear_bss_start>
+
+0000007c <.do_clear_bss_loop>:
+  7c:	1d 92       	st	X+, r1
+
+0000007e <.do_clear_bss_start>:
+  7e:	a2 30       	cpi	r26, 0x02	; 2
+  80:	b2 07       	cpc	r27, r18
+  82:	e1 f7       	brne	.-8      	; 0x7c <.do_clear_bss_loop>
+  84:	0e 94 6c 00 	call	0xd8	; 0xd8 <main>
+  88:	0c 94 78 00 	jmp	0xf0	; 0xf0 <_exit>
+
+0000008c <__bad_interrupt>:
+  8c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000090 <__vector_21>:
+#include <avr/interrupt.h>
+#include <util/atomic.h>
+#include <avr/sleep.h>
+
+ISR(ADC_vect)
+{
+  90:	1f 92       	push	r1
+  92:	0f 92       	push	r0
+  94:	0f b6       	in	r0, 0x3f	; 63
+  96:	0f 92       	push	r0
+  98:	11 24       	eor	r1, r1
+}
+  9a:	0f 90       	pop	r0
+  9c:	0f be       	out	0x3f, r0	; 63
+  9e:	0f 90       	pop	r0
+  a0:	1f 90       	pop	r1
+  a2:	18 95       	reti
+
+000000a4 <ADCInit>:
+
+void ADCInit()
+{
+	ADMUX=_BV(REFS1) | _BV(REFS0);    //Wewnêtrzne nap. referencyjne, kana³ 0, wyrównanie do prawej
+  a4:	80 ec       	ldi	r24, 0xC0	; 192
+  a6:	80 93 7c 00 	sts	0x007C, r24
+	ADCSRA=_BV(ADEN) | _BV(ADIE) | _BV(ADPS2) | _BV(ADPS1) | _BV(ADPS0);    //W³¹cz ADC, przerwania, preskaler 128
+  aa:	8f e8       	ldi	r24, 0x8F	; 143
+  ac:	80 93 7a 00 	sts	0x007A, r24
+  b0:	08 95       	ret
+
+000000b2 <GetADC>:
+}
+
+int GetADC()
+{
+	set_sleep_mode(SLEEP_MODE_ADC);    //Tryb noise canceller
+  b2:	83 b7       	in	r24, 0x33	; 51
+  b4:	81 7f       	andi	r24, 0xF1	; 241
+  b6:	82 60       	ori	r24, 0x02	; 2
+  b8:	83 bf       	out	0x33, r24	; 51
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {sleep_enable();};     //Odblokuj mo¿liwoœæ wejœcia w tryb sleep
+  ba:	9f b7       	in	r25, 0x3f	; 63
+    return 1;
+}
+
+static __inline__ uint8_t __iCliRetVal(void)
+{
+    cli();
+  bc:	f8 94       	cli
+  be:	83 b7       	in	r24, 0x33	; 51
+  c0:	81 60       	ori	r24, 0x01	; 1
+  c2:	83 bf       	out	0x33, r24	; 51
+    (void)__s;
+}
+
+static __inline__ void __iRestore(const  uint8_t *__s)
+{
+    SREG = *__s;
+  c4:	9f bf       	out	0x3f, r25	; 63
+	sleep_cpu();                       //WejdŸ w tryb uœpienia
+  c6:	88 95       	sleep
+	sleep_disable();                   //Zablokuj mo¿liwoœæ wejœcia w tryb sleep
+  c8:	83 b7       	in	r24, 0x33	; 51
+  ca:	8e 7f       	andi	r24, 0xFE	; 254
+  cc:	83 bf       	out	0x33, r24	; 51
+	return ADC;
+  ce:	80 91 78 00 	lds	r24, 0x0078
+  d2:	90 91 79 00 	lds	r25, 0x0079
+}
+  d6:	08 95       	ret
+
+000000d8 <main>:
+
+
+int main(void)
+{
+	sei();
+  d8:	78 94       	sei
+	ADCInit();
+  da:	0e 94 52 00 	call	0xa4	; 0xa4 <ADCInit>
+	static int res;
+	res=GetADC();
+  de:	0e 94 59 00 	call	0xb2	; 0xb2 <GetADC>
+	res=GetADC();
+  e2:	0e 94 59 00 	call	0xb2	; 0xb2 <GetADC>
+  e6:	90 93 01 01 	sts	0x0101, r25
+  ea:	80 93 00 01 	sts	0x0100, r24
+  ee:	ff cf       	rjmp	.-2      	; 0xee <main+0x16>
+
+000000f0 <_exit>:
+  f0:	f8 94       	cli
+
+000000f2 <__stop_program>:
+  f2:	ff cf       	rjmp	.-2      	; 0xf2 <__stop_program>

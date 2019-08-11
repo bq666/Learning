@@ -1,0 +1,7 @@
+
+$log PORTD
+$startlog ..\PORTD.log
+#10000
+$stoplog
+$unlog 0x2B
+$break

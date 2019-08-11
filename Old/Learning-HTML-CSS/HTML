@@ -1,0 +1,113 @@
+HTML – podstawowy dokument
+<html>
+ <head>
+ <title>Tytuł dokumentu</title>
+ </head>
+ <body>
+ Widoczny tekst
+ </body>
+</html>
+
+Nagłówki
+<h1>Największy nagłówek</h1>
+<h2> . . . </h2>
+<h3> . . . </h3>
+<h4> . . . </h4>
+<h5> . . . </h5>
+<h6>Najmniejszy nagłówek</h6>
+
+Elementy tekstu
+<p>To jest akapit</p>
+<br /> (załamanie wiersza)
+<hr /> (pozioma linia)
+<pre>Tekst preformatowany</pre> 
+
+Style logiczne
+<em>tekst uwypuklony</em>
+<strong>tekst pogrubiony</strong>
+<code>Kod komputerowy</code> 
+
+Style fizyczne
+<b>Tekst pogrubiony</b>
+<i>Tekst napisany kursywą</i>
+
+Odsyłacze, Obrazki
+<a href="http://www.example.com/">to
+jest odsyłacz</a>
+<a href="http://www.example.com/"><img
+src="URL" alt="tekst alternatywny"></a>
+<a href="mailto:webmaster@example.com">
+Wyślij maila</a>
+Kotwice:
+<a name="tips">Przydatne porady</a>
+<a href="#tips">Skocz do porad</a>
+
+Lista nieuporządkowana
+<ul>
+ <li>pierwszy element</li>
+ <li>drugi element</li>
+</ul>
+
+Lista uporządkowana
+<ol>
+ <li>pierwszy element</li>
+ <li>drugi element</li>
+</ol>
+
+Lista definicji
+<dl>
+<dt>pierwszy wyraz</dt>
+<dd>definicja</dd>
+<dt>drugi wyraz</dt>
+<dd>definicja</dd>
+</dl>
+
+Tabele
+<table border="1">
+<tr>
+<th>nagłówek</th>
+<th>nagłówek</th>
+</tr>
+<tr>
+<td>tekst</td>
+<td>tekst</td>
+</tr>
+</table>
+
+Formularze
+<form
+action="http://www.example.com/test.asp"
+method="post/get">
+<input type="text" name="lastname"
+value="Nixon" size="30" maxlength="50">
+<input type="password">
+<input type="checkbox"
+checked="checked">
+<input type="radio" checked="checked">
+<input type="submit">
+<input type="reset">
+<input type="hidden">
+<select>
+<option>jabłka
+<option selected="selected">banany
+<option>czereśnie
+</select>
+<textarea name="Comment" rows="60"
+cols="20"></textarea>
+</form>
+
+Encje
+&lt; to to samo co <
+&gt; to to samo co >
+&#169; to to samo co © 
+
+Inne elementy
+<!-- to jest komentarz -->
+<blockquote>
+Tekst cytowany.
+</blockquote>
+<address>
+Adres 1<br>
+Adres 2<br>
+City<br>
+</address>

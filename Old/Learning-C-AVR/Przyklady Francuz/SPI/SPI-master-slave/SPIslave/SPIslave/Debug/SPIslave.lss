@@ -1,0 +1,469 @@
+
+SPIslave.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  000002e8  0000037c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000002e8  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000011  00800100  00800100  0000037c  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000037c  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000068  00000000  00000000  000003ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000310  00000000  00000000  00000414  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000250  00000000  00000000  00000724  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000025a  00000000  00000000  00000974  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000120  00000000  00000000  00000bd0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000020f  00000000  00000000  00000cf0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000001f0  00000000  00000000  00000eff  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000048  00000000  00000000  000010ef  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   8:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   c:	0c 94 0e 01 	jmp	0x21c	; 0x21c <__vector_3>
+  10:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  14:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  18:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  1c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  20:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  24:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  28:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  2c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  30:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  34:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  38:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  3c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  40:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  44:	0c 94 d0 00 	jmp	0x1a0	; 0x1a0 <__vector_17>
+  48:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  4c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  50:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  54:	0c 94 48 00 	jmp	0x90	; 0x90 <__vector_21>
+  58:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  5c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  60:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  64:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_clear_bss>:
+  74:	21 e0       	ldi	r18, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	01 c0       	rjmp	.+2      	; 0x7e <.do_clear_bss_start>
+
+0000007c <.do_clear_bss_loop>:
+  7c:	1d 92       	st	X+, r1
+
+0000007e <.do_clear_bss_start>:
+  7e:	a1 31       	cpi	r26, 0x11	; 17
+  80:	b2 07       	cpc	r27, r18
+  82:	e1 f7       	brne	.-8      	; 0x7c <.do_clear_bss_loop>
+  84:	0e 94 2a 01 	call	0x254	; 0x254 <main>
+  88:	0c 94 72 01 	jmp	0x2e4	; 0x2e4 <_exit>
+
+0000008c <__bad_interrupt>:
+  8c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000090 <__vector_21>:
+#include "lm35.h"
+
+volatile uint32_t ADCVal[LM35NO];
+
+ISR(ADC_vect, ISR_NOBLOCK)
+{
+  90:	78 94       	sei
+  92:	1f 92       	push	r1
+  94:	0f 92       	push	r0
+  96:	0f b6       	in	r0, 0x3f	; 63
+  98:	0f 92       	push	r0
+  9a:	11 24       	eor	r1, r1
+  9c:	2f 93       	push	r18
+  9e:	3f 93       	push	r19
+  a0:	8f 93       	push	r24
+  a2:	9f 93       	push	r25
+  a4:	af 93       	push	r26
+  a6:	bf 93       	push	r27
+  a8:	ef 93       	push	r30
+  aa:	ff 93       	push	r31
+ static uint32_t ADCaccum;
+ static uint8_t sampleno;
+ static uint8_t LM35No;
+
+ ADCaccum+=ADC;
+  ac:	20 91 78 00 	lds	r18, 0x0078
+  b0:	30 91 79 00 	lds	r19, 0x0079
+  b4:	80 91 02 01 	lds	r24, 0x0102
+  b8:	90 91 03 01 	lds	r25, 0x0103
+  bc:	a0 91 04 01 	lds	r26, 0x0104
+  c0:	b0 91 05 01 	lds	r27, 0x0105
+  c4:	82 0f       	add	r24, r18
+  c6:	93 1f       	adc	r25, r19
+  c8:	a1 1d       	adc	r26, r1
+  ca:	b1 1d       	adc	r27, r1
+  cc:	80 93 02 01 	sts	0x0102, r24
+  d0:	90 93 03 01 	sts	0x0103, r25
+  d4:	a0 93 04 01 	sts	0x0104, r26
+  d8:	b0 93 05 01 	sts	0x0105, r27
+ sampleno++;
+  dc:	20 91 01 01 	lds	r18, 0x0101
+  e0:	2f 5f       	subi	r18, 0xFF	; 255
+  e2:	20 93 01 01 	sts	0x0101, r18
+ if(sampleno==NOOFSAMPLES)
+  e6:	20 38       	cpi	r18, 0x80	; 128
+  e8:	21 f5       	brne	.+72     	; 0x132 <__vector_21+0xa2>
+ {
+  ADCVal[LM35No]=ADCaccum;
+  ea:	20 91 00 01 	lds	r18, 0x0100
+  ee:	30 e0       	ldi	r19, 0x00	; 0
+  f0:	f9 01       	movw	r30, r18
+  f2:	ee 0f       	add	r30, r30
+  f4:	ff 1f       	adc	r31, r31
+  f6:	ee 0f       	add	r30, r30
+  f8:	ff 1f       	adc	r31, r31
+  fa:	e8 5f       	subi	r30, 0xF8	; 248
+  fc:	fe 4f       	sbci	r31, 0xFE	; 254
+  fe:	80 83       	st	Z, r24
+ 100:	91 83       	std	Z+1, r25	; 0x01
+ 102:	a2 83       	std	Z+2, r26	; 0x02
+ 104:	b3 83       	std	Z+3, r27	; 0x03
+  ADCaccum=0;
+ 106:	10 92 02 01 	sts	0x0102, r1
+ 10a:	10 92 03 01 	sts	0x0103, r1
+ 10e:	10 92 04 01 	sts	0x0104, r1
+ 112:	10 92 05 01 	sts	0x0105, r1
+  sampleno=0;
+ 116:	10 92 01 01 	sts	0x0101, r1
+  LM35No=(LM35No+1)%LM35NO;
+ 11a:	c9 01       	movw	r24, r18
+ 11c:	01 96       	adiw	r24, 0x01	; 1
+ 11e:	81 70       	andi	r24, 0x01	; 1
+ 120:	99 27       	eor	r25, r25
+ 122:	80 93 00 01 	sts	0x0100, r24
+  ADMUX=((ADMUX & 0b11110000) | LM35No);
+ 126:	90 91 7c 00 	lds	r25, 0x007C
+ 12a:	90 7f       	andi	r25, 0xF0	; 240
+ 12c:	98 2b       	or	r25, r24
+ 12e:	90 93 7c 00 	sts	0x007C, r25
+ }
+ ADCSRA|=_BV(ADSC); //Rozpocznij konwersjê
+ 132:	80 91 7a 00 	lds	r24, 0x007A
+ 136:	80 64       	ori	r24, 0x40	; 64
+ 138:	80 93 7a 00 	sts	0x007A, r24
+}
+ 13c:	ff 91       	pop	r31
+ 13e:	ef 91       	pop	r30
+ 140:	bf 91       	pop	r27
+ 142:	af 91       	pop	r26
+ 144:	9f 91       	pop	r25
+ 146:	8f 91       	pop	r24
+ 148:	3f 91       	pop	r19
+ 14a:	2f 91       	pop	r18
+ 14c:	0f 90       	pop	r0
+ 14e:	0f be       	out	0x3f, r0	; 63
+ 150:	0f 90       	pop	r0
+ 152:	1f 90       	pop	r1
+ 154:	18 95       	reti
+
+00000156 <ADC_init>:
+
+void ADC_init()
+{
+	ADMUX=_BV(REFS0) | _BV(REFS1);	//Wew. Ÿród³o referencyjne, kana³ 0, wyrównanie do prawej
+ 156:	80 ec       	ldi	r24, 0xC0	; 192
+ 158:	80 93 7c 00 	sts	0x007C, r24
+	ADCSRA=_BV(ADEN) | _BV(ADIE) | _BV(ADPS2) | _BV(ADPS1) | _BV(ADPS0);	//W³¹cz ADC, przerwania, preskaler 128
+ 15c:	ea e7       	ldi	r30, 0x7A	; 122
+ 15e:	f0 e0       	ldi	r31, 0x00	; 0
+ 160:	8f e8       	ldi	r24, 0x8F	; 143
+ 162:	80 83       	st	Z, r24
+	ADCSRA|=_BV(ADSC); //Rozpocznij konwersjê
+ 164:	80 81       	ld	r24, Z
+ 166:	80 64       	ori	r24, 0x40	; 64
+ 168:	80 83       	st	Z, r24
+ 16a:	08 95       	ret
+
+0000016c <GetTemperature>:
+}
+
+uint16_t GetTemperature(uint8_t LMno)
+{
+ uint32_t adc;
+ ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
+ 16c:	9f b7       	in	r25, 0x3f	; 63
+    return 1;
+}
+
+static __inline__ uint8_t __iCliRetVal(void)
+{
+    cli();
+ 16e:	f8 94       	cli
+ {
+  adc=ADCVal[LMno];
+ 170:	24 e0       	ldi	r18, 0x04	; 4
+ 172:	82 9f       	mul	r24, r18
+ 174:	f0 01       	movw	r30, r0
+ 176:	11 24       	eor	r1, r1
+ 178:	e8 5f       	subi	r30, 0xF8	; 248
+ 17a:	fe 4f       	sbci	r31, 0xFE	; 254
+ 17c:	20 81       	ld	r18, Z
+ 17e:	31 81       	ldd	r19, Z+1	; 0x01
+ 180:	42 81       	ldd	r20, Z+2	; 0x02
+ 182:	53 81       	ldd	r21, Z+3	; 0x03
+    (void)__s;
+}
+
+static __inline__ void __iRestore(const  uint8_t *__s)
+{
+    SREG = *__s;
+ 184:	9f bf       	out	0x3f, r25	; 63
+ }
+
+ return (adc*11000UL)/(1024UL*NOOFSAMPLES);
+ 186:	a8 ef       	ldi	r26, 0xF8	; 248
+ 188:	ba e2       	ldi	r27, 0x2A	; 42
+ 18a:	0e 94 44 01 	call	0x288	; 0x288 <__muluhisi3>
+ 18e:	21 e1       	ldi	r18, 0x11	; 17
+ 190:	96 95       	lsr	r25
+ 192:	87 95       	ror	r24
+ 194:	77 95       	ror	r23
+ 196:	67 95       	ror	r22
+ 198:	2a 95       	dec	r18
+ 19a:	d1 f7       	brne	.-12     	; 0x190 <GetTemperature+0x24>
+}
+ 19c:	cb 01       	movw	r24, r22
+ 19e:	08 95       	ret
+
+000001a0 <__vector_17>:
+#include "LM35.h"
+
+uint8_t byteno;
+
+ISR(SPI_STC_vect)
+{
+ 1a0:	1f 92       	push	r1
+ 1a2:	0f 92       	push	r0
+ 1a4:	0f b6       	in	r0, 0x3f	; 63
+ 1a6:	0f 92       	push	r0
+ 1a8:	11 24       	eor	r1, r1
+ 1aa:	2f 93       	push	r18
+ 1ac:	3f 93       	push	r19
+ 1ae:	4f 93       	push	r20
+ 1b0:	5f 93       	push	r21
+ 1b2:	6f 93       	push	r22
+ 1b4:	7f 93       	push	r23
+ 1b6:	8f 93       	push	r24
+ 1b8:	9f 93       	push	r25
+ 1ba:	af 93       	push	r26
+ 1bc:	bf 93       	push	r27
+ 1be:	ef 93       	push	r30
+ 1c0:	ff 93       	push	r31
+	static uint16_t temperature;
+	
+	if(byteno==0) temperature=GetTemperature(SPDR);
+ 1c2:	80 91 10 01 	lds	r24, 0x0110
+ 1c6:	81 11       	cpse	r24, r1
+ 1c8:	07 c0       	rjmp	.+14     	; 0x1d8 <__vector_17+0x38>
+ 1ca:	8e b5       	in	r24, 0x2e	; 46
+ 1cc:	0e 94 b6 00 	call	0x16c	; 0x16c <GetTemperature>
+ 1d0:	90 93 07 01 	sts	0x0107, r25
+ 1d4:	80 93 06 01 	sts	0x0106, r24
+	SPDR=((uint8_t*)&temperature)[byteno];
+ 1d8:	e0 91 10 01 	lds	r30, 0x0110
+ 1dc:	f0 e0       	ldi	r31, 0x00	; 0
+ 1de:	ea 5f       	subi	r30, 0xFA	; 250
+ 1e0:	fe 4f       	sbci	r31, 0xFE	; 254
+ 1e2:	80 81       	ld	r24, Z
+ 1e4:	8e bd       	out	0x2e, r24	; 46
+	byteno=(byteno+1) % 3;
+ 1e6:	80 91 10 01 	lds	r24, 0x0110
+ 1ea:	90 e0       	ldi	r25, 0x00	; 0
+ 1ec:	01 96       	adiw	r24, 0x01	; 1
+ 1ee:	63 e0       	ldi	r22, 0x03	; 3
+ 1f0:	70 e0       	ldi	r23, 0x00	; 0
+ 1f2:	0e 94 30 01 	call	0x260	; 0x260 <__divmodhi4>
+ 1f6:	80 93 10 01 	sts	0x0110, r24
+}
+ 1fa:	ff 91       	pop	r31
+ 1fc:	ef 91       	pop	r30
+ 1fe:	bf 91       	pop	r27
+ 200:	af 91       	pop	r26
+ 202:	9f 91       	pop	r25
+ 204:	8f 91       	pop	r24
+ 206:	7f 91       	pop	r23
+ 208:	6f 91       	pop	r22
+ 20a:	5f 91       	pop	r21
+ 20c:	4f 91       	pop	r20
+ 20e:	3f 91       	pop	r19
+ 210:	2f 91       	pop	r18
+ 212:	0f 90       	pop	r0
+ 214:	0f be       	out	0x3f, r0	; 63
+ 216:	0f 90       	pop	r0
+ 218:	1f 90       	pop	r1
+ 21a:	18 95       	reti
+
+0000021c <__vector_3>:
+
+ISR(PCINT0_vect)
+{
+ 21c:	1f 92       	push	r1
+ 21e:	0f 92       	push	r0
+ 220:	0f b6       	in	r0, 0x3f	; 63
+ 222:	0f 92       	push	r0
+ 224:	11 24       	eor	r1, r1
+	byteno=0;
+ 226:	10 92 10 01 	sts	0x0110, r1
+}
+ 22a:	0f 90       	pop	r0
+ 22c:	0f be       	out	0x3f, r0	; 63
+ 22e:	0f 90       	pop	r0
+ 230:	1f 90       	pop	r1
+ 232:	18 95       	reti
+
+00000234 <SPI_slave_init>:
+
+void SPI_slave_init()
+{
+	DDRB|=_BV(PB4);	//Pin MISO jako wyjœcie
+ 234:	24 9a       	sbi	0x04, 4	; 4
+	SPCR=_BV(SPE) | _BV(SPIE); //Tryb master, CLK/4, przerwania
+ 236:	80 ec       	ldi	r24, 0xC0	; 192
+ 238:	8c bd       	out	0x2c, r24	; 44
+	SPSR;
+ 23a:	8d b5       	in	r24, 0x2d	; 45
+	SPDR; //Skasuj flagê SPIF
+ 23c:	8e b5       	in	r24, 0x2e	; 46
+	PCMSK0|=_BV(PCINT2); //Odblokuj przerwanie PCINT2
+ 23e:	eb e6       	ldi	r30, 0x6B	; 107
+ 240:	f0 e0       	ldi	r31, 0x00	; 0
+ 242:	80 81       	ld	r24, Z
+ 244:	84 60       	ori	r24, 0x04	; 4
+ 246:	80 83       	st	Z, r24
+	PCICR|=_BV(PCIE0);
+ 248:	e8 e6       	ldi	r30, 0x68	; 104
+ 24a:	f0 e0       	ldi	r31, 0x00	; 0
+ 24c:	80 81       	ld	r24, Z
+ 24e:	81 60       	ori	r24, 0x01	; 1
+ 250:	80 83       	st	Z, r24
+ 252:	08 95       	ret
+
+00000254 <main>:
+}
+
+int main()
+{
+	SPI_slave_init();
+ 254:	0e 94 1a 01 	call	0x234	; 0x234 <SPI_slave_init>
+	sei();
+ 258:	78 94       	sei
+	ADC_init();
+ 25a:	0e 94 ab 00 	call	0x156	; 0x156 <ADC_init>
+ 25e:	ff cf       	rjmp	.-2      	; 0x25e <main+0xa>
+
+00000260 <__divmodhi4>:
+ 260:	97 fb       	bst	r25, 7
+ 262:	07 2e       	mov	r0, r23
+ 264:	16 f4       	brtc	.+4      	; 0x26a <__divmodhi4+0xa>
+ 266:	00 94       	com	r0
+ 268:	07 d0       	rcall	.+14     	; 0x278 <__divmodhi4_neg1>
+ 26a:	77 fd       	sbrc	r23, 7
+ 26c:	09 d0       	rcall	.+18     	; 0x280 <__divmodhi4_neg2>
+ 26e:	0e 94 4f 01 	call	0x29e	; 0x29e <__udivmodhi4>
+ 272:	07 fc       	sbrc	r0, 7
+ 274:	05 d0       	rcall	.+10     	; 0x280 <__divmodhi4_neg2>
+ 276:	3e f4       	brtc	.+14     	; 0x286 <__divmodhi4_exit>
+
+00000278 <__divmodhi4_neg1>:
+ 278:	90 95       	com	r25
+ 27a:	81 95       	neg	r24
+ 27c:	9f 4f       	sbci	r25, 0xFF	; 255
+ 27e:	08 95       	ret
+
+00000280 <__divmodhi4_neg2>:
+ 280:	70 95       	com	r23
+ 282:	61 95       	neg	r22
+ 284:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00000286 <__divmodhi4_exit>:
+ 286:	08 95       	ret
+
+00000288 <__muluhisi3>:
+ 288:	0e 94 63 01 	call	0x2c6	; 0x2c6 <__umulhisi3>
+ 28c:	a5 9f       	mul	r26, r21
+ 28e:	90 0d       	add	r25, r0
+ 290:	b4 9f       	mul	r27, r20
+ 292:	90 0d       	add	r25, r0
+ 294:	a4 9f       	mul	r26, r20
+ 296:	80 0d       	add	r24, r0
+ 298:	91 1d       	adc	r25, r1
+ 29a:	11 24       	eor	r1, r1
+ 29c:	08 95       	ret
+
+0000029e <__udivmodhi4>:
+ 29e:	aa 1b       	sub	r26, r26
+ 2a0:	bb 1b       	sub	r27, r27
+ 2a2:	51 e1       	ldi	r21, 0x11	; 17
+ 2a4:	07 c0       	rjmp	.+14     	; 0x2b4 <__udivmodhi4_ep>
+
+000002a6 <__udivmodhi4_loop>:
+ 2a6:	aa 1f       	adc	r26, r26
+ 2a8:	bb 1f       	adc	r27, r27
+ 2aa:	a6 17       	cp	r26, r22
+ 2ac:	b7 07       	cpc	r27, r23
+ 2ae:	10 f0       	brcs	.+4      	; 0x2b4 <__udivmodhi4_ep>
+ 2b0:	a6 1b       	sub	r26, r22
+ 2b2:	b7 0b       	sbc	r27, r23
+
+000002b4 <__udivmodhi4_ep>:
+ 2b4:	88 1f       	adc	r24, r24
+ 2b6:	99 1f       	adc	r25, r25
+ 2b8:	5a 95       	dec	r21
+ 2ba:	a9 f7       	brne	.-22     	; 0x2a6 <__udivmodhi4_loop>
+ 2bc:	80 95       	com	r24
+ 2be:	90 95       	com	r25
+ 2c0:	bc 01       	movw	r22, r24
+ 2c2:	cd 01       	movw	r24, r26
+ 2c4:	08 95       	ret
+
+000002c6 <__umulhisi3>:
+ 2c6:	a2 9f       	mul	r26, r18
+ 2c8:	b0 01       	movw	r22, r0
+ 2ca:	b3 9f       	mul	r27, r19
+ 2cc:	c0 01       	movw	r24, r0
+ 2ce:	a3 9f       	mul	r26, r19
+ 2d0:	70 0d       	add	r23, r0
+ 2d2:	81 1d       	adc	r24, r1
+ 2d4:	11 24       	eor	r1, r1
+ 2d6:	91 1d       	adc	r25, r1
+ 2d8:	b2 9f       	mul	r27, r18
+ 2da:	70 0d       	add	r23, r0
+ 2dc:	81 1d       	adc	r24, r1
+ 2de:	11 24       	eor	r1, r1
+ 2e0:	91 1d       	adc	r25, r1
+ 2e2:	08 95       	ret
+
+000002e4 <_exit>:
+ 2e4:	f8 94       	cli
+
+000002e6 <__stop_program>:
+ 2e6:	ff cf       	rjmp	.-2      	; 0x2e6 <__stop_program>

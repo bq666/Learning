@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\test_abnormal\;CMake Files\test_parameterize\;CMake Files\test_theory\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/bq666/Workspace/C_C++/CriterionSample"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/bq666/Workspace/C_C++/CriterionSample"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/bq666/Workspace/C_C++/CriterionSample"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_abnormal">
+				<Option output="/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/test_abnormal" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/../include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/Makefile&quot;  VERBOSE=1 test_abnormal"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_abnormal/fast">
+				<Option output="/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/test_abnormal" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/../include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/Makefile&quot;  VERBOSE=1 test_abnormal/fast"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_parameterize">
+				<Option output="/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/test_parameterize" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/../include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/Makefile&quot;  VERBOSE=1 test_parameterize"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_parameterize/fast">
+				<Option output="/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/test_parameterize" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/../include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/Makefile&quot;  VERBOSE=1 test_parameterize/fast"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_theory">
+				<Option output="/home/bq666/Workspace/C_C++/CriterionSample/test_theory/test_theory" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bq666/Workspace/C_C++/CriterionSample/test_theory"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bq666/Workspace/C_C++/CriterionSample/test_theory/../include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_theory/Makefile&quot;  VERBOSE=1 test_theory"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_theory/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_theory/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_theory/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_theory/fast">
+				<Option output="/home/bq666/Workspace/C_C++/CriterionSample/test_theory/test_theory" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bq666/Workspace/C_C++/CriterionSample/test_theory"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bq666/Workspace/C_C++/CriterionSample/test_theory/../include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_theory/Makefile&quot;  VERBOSE=1 test_theory/fast"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_theory/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_theory/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/bq666/Workspace/C_C++/CriterionSample/test_theory/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/bq666/Workspace/C_C++/CriterionSample/source/add.c">
+			<Option target="test_parameterize"/>
+		</Unit>
+		<Unit filename="/home/bq666/Workspace/C_C++/CriterionSample/source/dangerous_add.c">
+			<Option target="test_abnormal"/>
+			<Option target="test_theory"/>
+		</Unit>
+		<Unit filename="/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/test_exit.c">
+			<Option target="test_abnormal"/>
+		</Unit>
+		<Unit filename="/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/test_signal.c">
+			<Option target="test_abnormal"/>
+		</Unit>
+		<Unit filename="/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/test_parameterize.c">
+			<Option target="test_parameterize"/>
+		</Unit>
+		<Unit filename="/home/bq666/Workspace/C_C++/CriterionSample/test_theory/test_theory.c">
+			<Option target="test_theory"/>
+		</Unit>
+		<Unit filename="/home/bq666/Workspace/C_C++/CriterionSample/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test_abnormal\"/>
+		</Unit>
+		<Unit filename="/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test_parameterize\"/>
+		</Unit>
+		<Unit filename="/home/bq666/Workspace/C_C++/CriterionSample/test_theory/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test_theory\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

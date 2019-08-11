@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="JCPDP 1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option platforms="Windows;" />
+				<Option output="bin/Debug/main" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c99" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/JCPDP 1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="JCACP.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="JCACP.h" />
+		<Unit filename="JCPDP.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="JCPDP_1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="JCPDP_1.h" />
+		<Unit filename="JCSP.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="JCSP.h" />
+		<Unit filename="Stale.h" />
+		<Unit filename="Wskazniki.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Wskazniki.h" />
+		<Unit filename="Zmienne.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Zmienne.h" />
+		<Unit filename="czescb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="czescb.h" />
+		<Unit filename="czescc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="hotel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="hotel.h" />
+		<Unit filename="jezyk_c_ansi.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

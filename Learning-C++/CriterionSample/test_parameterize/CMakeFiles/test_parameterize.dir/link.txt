@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/test_parameterize.dir/__/source/add.c.o CMakeFiles/test_parameterize.dir/test_parameterize.c.o  -o test_parameterize -lcriterion 

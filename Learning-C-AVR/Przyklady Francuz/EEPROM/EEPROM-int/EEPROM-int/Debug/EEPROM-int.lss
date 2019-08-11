@@ -1,0 +1,266 @@
+
+EEPROM-int.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000018  00800100  000001e4  00000298  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000001e4  00000000  00000000  000000b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000006  00800118  00800118  000002b0  2**0
+                  ALLOC
+  3 .eeprom       0000000c  00810000  00810000  000002b0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .comment      00000030  00000000  00000000  000002bc  2**0
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000030  00000000  00000000  000002ec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000204  00000000  00000000  0000031c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000121  00000000  00000000  00000520  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000015e  00000000  00000000  00000641  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000008c  00000000  00000000  000007a0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000019a  00000000  00000000  0000082c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000016a  00000000  00000000  000009c6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000020  00000000  00000000  00000b30  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   8:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  10:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  14:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  18:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  1c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  20:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  24:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  2c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  30:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  34:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  38:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  3c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  40:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  44:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  48:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  4c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  50:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  54:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  58:	0c 94 53 00 	jmp	0xa6	; 0xa6 <__vector_22>
+  5c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  60:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  64:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	e4 ee       	ldi	r30, 0xE4	; 228
+  7c:	f1 e0       	ldi	r31, 0x01	; 1
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+  84:	a8 31       	cpi	r26, 0x18	; 24
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <__do_copy_data+0xc>
+
+0000008a <__do_clear_bss>:
+  8a:	21 e0       	ldi	r18, 0x01	; 1
+  8c:	a8 e1       	ldi	r26, 0x18	; 24
+  8e:	b1 e0       	ldi	r27, 0x01	; 1
+  90:	01 c0       	rjmp	.+2      	; 0x94 <.do_clear_bss_start>
+
+00000092 <.do_clear_bss_loop>:
+  92:	1d 92       	st	X+, r1
+
+00000094 <.do_clear_bss_start>:
+  94:	ae 31       	cpi	r26, 0x1E	; 30
+  96:	b2 07       	cpc	r27, r18
+  98:	e1 f7       	brne	.-8      	; 0x92 <.do_clear_bss_loop>
+  9a:	0e 94 d0 00 	call	0x1a0	; 0x1a0 <main>
+  9e:	0c 94 f0 00 	jmp	0x1e0	; 0x1e0 <_exit>
+
+000000a2 <__bad_interrupt>:
+  a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a6 <__vector_22>:
+uint8_t *EEPROMPtr;                  //WskaŸnik do zapisywanego bloku
+uint8_t *SRAMPtr;                    //WskaŸnik do danych w SRAM
+volatile uint16_t EEPROMWrBytes;     //Liczba bajtów do zapisu
+
+ISR(EE_READY_vect )
+{
+  a6:	1f 92       	push	r1
+  a8:	0f 92       	push	r0
+  aa:	0f b6       	in	r0, 0x3f	; 63
+  ac:	0f 92       	push	r0
+  ae:	11 24       	eor	r1, r1
+  b0:	2f 93       	push	r18
+  b2:	3f 93       	push	r19
+  b4:	4f 93       	push	r20
+  b6:	5f 93       	push	r21
+  b8:	6f 93       	push	r22
+  ba:	7f 93       	push	r23
+  bc:	8f 93       	push	r24
+  be:	9f 93       	push	r25
+  c0:	af 93       	push	r26
+  c2:	bf 93       	push	r27
+  c4:	ef 93       	push	r30
+  c6:	ff 93       	push	r31
+	eeprom_write_byte(EEPROMPtr, *SRAMPtr);
+  c8:	e0 91 1c 01 	lds	r30, 0x011C
+  cc:	f0 91 1d 01 	lds	r31, 0x011D
+  d0:	60 81       	ld	r22, Z
+  d2:	80 91 1a 01 	lds	r24, 0x011A
+  d6:	90 91 1b 01 	lds	r25, 0x011B
+  da:	0e 94 e2 00 	call	0x1c4	; 0x1c4 <__eewr_byte_m328p>
+	EECR|=_BV(EERIE); //W³¹cz przerwania EEPROM
+  de:	fb 9a       	sbi	0x1f, 3	; 31
+	EEPROMPtr++; SRAMPtr++;
+  e0:	80 91 1a 01 	lds	r24, 0x011A
+  e4:	90 91 1b 01 	lds	r25, 0x011B
+  e8:	01 96       	adiw	r24, 0x01	; 1
+  ea:	90 93 1b 01 	sts	0x011B, r25
+  ee:	80 93 1a 01 	sts	0x011A, r24
+  f2:	80 91 1c 01 	lds	r24, 0x011C
+  f6:	90 91 1d 01 	lds	r25, 0x011D
+  fa:	01 96       	adiw	r24, 0x01	; 1
+  fc:	90 93 1d 01 	sts	0x011D, r25
+ 100:	80 93 1c 01 	sts	0x011C, r24
+	EEPROMWrBytes--;
+ 104:	80 91 18 01 	lds	r24, 0x0118
+ 108:	90 91 19 01 	lds	r25, 0x0119
+ 10c:	01 97       	sbiw	r24, 0x01	; 1
+ 10e:	90 93 19 01 	sts	0x0119, r25
+ 112:	80 93 18 01 	sts	0x0118, r24
+	if(EEPROMWrBytes) EECR|=_BV(EERIE); //W³¹cz przerwania EEPROM
+ 116:	80 91 18 01 	lds	r24, 0x0118
+ 11a:	90 91 19 01 	lds	r25, 0x0119
+ 11e:	89 2b       	or	r24, r25
+ 120:	09 f0       	breq	.+2      	; 0x124 <__vector_22+0x7e>
+ 122:	fb 9a       	sbi	0x1f, 3	; 31
+}
+ 124:	ff 91       	pop	r31
+ 126:	ef 91       	pop	r30
+ 128:	bf 91       	pop	r27
+ 12a:	af 91       	pop	r26
+ 12c:	9f 91       	pop	r25
+ 12e:	8f 91       	pop	r24
+ 130:	7f 91       	pop	r23
+ 132:	6f 91       	pop	r22
+ 134:	5f 91       	pop	r21
+ 136:	4f 91       	pop	r20
+ 138:	3f 91       	pop	r19
+ 13a:	2f 91       	pop	r18
+ 13c:	0f 90       	pop	r0
+ 13e:	0f be       	out	0x3f, r0	; 63
+ 140:	0f 90       	pop	r0
+ 142:	1f 90       	pop	r1
+ 144:	18 95       	reti
+
+00000146 <EEPROM_write_int>:
+
+void EEPROM_write_int(uint8_t *src, uint8_t *dst, uint16_t size)
+{
+ 146:	fc 01       	movw	r30, r24
+ 148:	cb 01       	movw	r24, r22
+	while(EEPROMWrBytes); //Czekaj na zakoñczenie poprzednich operacji
+ 14a:	20 91 18 01 	lds	r18, 0x0118
+ 14e:	30 91 19 01 	lds	r19, 0x0119
+ 152:	23 2b       	or	r18, r19
+ 154:	d1 f7       	brne	.-12     	; 0x14a <EEPROM_write_int+0x4>
+	EEPROMPtr=dst;
+ 156:	90 93 1b 01 	sts	0x011B, r25
+ 15a:	80 93 1a 01 	sts	0x011A, r24
+	SRAMPtr=src;
+ 15e:	f0 93 1d 01 	sts	0x011D, r31
+ 162:	e0 93 1c 01 	sts	0x011C, r30
+	EEPROMWrBytes=size-1;
+ 166:	41 50       	subi	r20, 0x01	; 1
+ 168:	51 09       	sbc	r21, r1
+ 16a:	50 93 19 01 	sts	0x0119, r21
+ 16e:	40 93 18 01 	sts	0x0118, r20
+	eeprom_write_byte(EEPROMPtr, *SRAMPtr);
+ 172:	60 81       	ld	r22, Z
+ 174:	0e 94 e2 00 	call	0x1c4	; 0x1c4 <__eewr_byte_m328p>
+	EEPROMPtr++; SRAMPtr++;
+ 178:	80 91 1a 01 	lds	r24, 0x011A
+ 17c:	90 91 1b 01 	lds	r25, 0x011B
+ 180:	01 96       	adiw	r24, 0x01	; 1
+ 182:	90 93 1b 01 	sts	0x011B, r25
+ 186:	80 93 1a 01 	sts	0x011A, r24
+ 18a:	80 91 1c 01 	lds	r24, 0x011C
+ 18e:	90 91 1d 01 	lds	r25, 0x011D
+ 192:	01 96       	adiw	r24, 0x01	; 1
+ 194:	90 93 1d 01 	sts	0x011D, r25
+ 198:	80 93 1c 01 	sts	0x011C, r24
+	EECR|=_BV(EERIE); //W³¹cz przerwania EEPROM
+ 19c:	fb 9a       	sbi	0x1f, 3	; 31
+ 19e:	08 95       	ret
+
+000001a0 <main>:
+
+char napis[12] EEMEM;
+
+int main(void)
+{
+	sei();
+ 1a0:	78 94       	sei
+	EEPROM_write_int((uint8_t*)"Test EEPROM", (uint8_t*)napis, 12);
+ 1a2:	4c e0       	ldi	r20, 0x0C	; 12
+ 1a4:	50 e0       	ldi	r21, 0x00	; 0
+ 1a6:	60 e0       	ldi	r22, 0x00	; 0
+ 1a8:	70 e0       	ldi	r23, 0x00	; 0
+ 1aa:	80 e0       	ldi	r24, 0x00	; 0
+ 1ac:	91 e0       	ldi	r25, 0x01	; 1
+ 1ae:	0e 94 a3 00 	call	0x146	; 0x146 <EEPROM_write_int>
+	EEPROM_write_int((uint8_t*)"Nowy zapis", (uint8_t*)napis, 11);
+ 1b2:	4b e0       	ldi	r20, 0x0B	; 11
+ 1b4:	50 e0       	ldi	r21, 0x00	; 0
+ 1b6:	60 e0       	ldi	r22, 0x00	; 0
+ 1b8:	70 e0       	ldi	r23, 0x00	; 0
+ 1ba:	8c e0       	ldi	r24, 0x0C	; 12
+ 1bc:	91 e0       	ldi	r25, 0x01	; 1
+ 1be:	0e 94 a3 00 	call	0x146	; 0x146 <EEPROM_write_int>
+ 1c2:	ff cf       	rjmp	.-2      	; 0x1c2 <main+0x22>
+
+000001c4 <__eewr_byte_m328p>:
+ 1c4:	26 2f       	mov	r18, r22
+
+000001c6 <__eewr_r18_m328p>:
+ 1c6:	f9 99       	sbic	0x1f, 1	; 31
+ 1c8:	fe cf       	rjmp	.-4      	; 0x1c6 <__eewr_r18_m328p>
+ 1ca:	1f ba       	out	0x1f, r1	; 31
+ 1cc:	92 bd       	out	0x22, r25	; 34
+ 1ce:	81 bd       	out	0x21, r24	; 33
+ 1d0:	20 bd       	out	0x20, r18	; 32
+ 1d2:	0f b6       	in	r0, 0x3f	; 63
+ 1d4:	f8 94       	cli
+ 1d6:	fa 9a       	sbi	0x1f, 2	; 31
+ 1d8:	f9 9a       	sbi	0x1f, 1	; 31
+ 1da:	0f be       	out	0x3f, r0	; 63
+ 1dc:	01 96       	adiw	r24, 0x01	; 1
+ 1de:	08 95       	ret
+
+000001e0 <_exit>:
+ 1e0:	f8 94       	cli
+
+000001e2 <__stop_program>:
+ 1e2:	ff cf       	rjmp	.-2      	; 0x1e2 <__stop_program>

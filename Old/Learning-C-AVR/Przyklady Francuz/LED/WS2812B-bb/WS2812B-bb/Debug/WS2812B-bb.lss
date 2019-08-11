@@ -1,0 +1,359 @@
+
+WS2812B-bb.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00000178  000001ec  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000178  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000001ec  2**0
+                  CONTENTS, READONLY
+  3 .debug_aranges 00000038  00000000  00000000  0000021c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00000464  00000000  00000000  00000254  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000001c1  00000000  00000000  000006b8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   00000223  00000000  00000000  00000879  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000054  00000000  00000000  00000a9c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00000214  00000000  00000000  00000af0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    000001ba  00000000  00000000  00000d04  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000090  00000000  00000000  00000ebe  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   8:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  10:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  14:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  18:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  1c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  20:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  24:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  28:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  2c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  30:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  34:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  38:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  3c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  40:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  44:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  48:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  4c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  50:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  54:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  58:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  5c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  60:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  64:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+  74:	0e 94 65 00 	call	0xca	; 0xca <main>
+  78:	0c 94 ba 00 	jmp	0x174	; 0x174 <_exit>
+
+0000007c <__bad_interrupt>:
+  7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000080 <WS2812B_init>:
+#define WS2812B_PIN D, 1    //Pon na który wysy³ane s¹ dane
+#define LEDNO   30           //Liczba LEDów
+
+void WS2812B_init()
+{
+	CLR(PORT, WS2812B_PIN);
+  80:	59 98       	cbi	0x0b, 1	; 11
+	SET(DDR, WS2812B_PIN);   //Pin jest wyjœciem
+  82:	51 9a       	sbi	0x0a, 1	; 10
+  84:	08 95       	ret
+
+00000086 <WS2812B_reset>:
+}
+
+void WS2812B_reset()
+{
+	CLR(PORT, WS2812B_PIN);
+  86:	59 98       	cbi	0x0b, 1	; 11
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  88:	87 ec       	ldi	r24, 0xC7	; 199
+  8a:	90 e0       	ldi	r25, 0x00	; 0
+  8c:	01 97       	sbiw	r24, 0x01	; 1
+  8e:	f1 f7       	brne	.-4      	; 0x8c <WS2812B_reset+0x6>
+  90:	00 c0       	rjmp	.+0      	; 0x92 <WS2812B_reset+0xc>
+  92:	00 00       	nop
+  94:	08 95       	ret
+
+00000096 <WS2812B_send>:
+		CLR(PORT, WS2812B_PIN);
+		_delay_loop_2(8*F_CPU/10000000UL/3);		
+	}
+	
+	uint8_t cnt=8;
+	while(cnt--)
+  96:	99 e0       	ldi	r25, 0x09	; 9
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+  98:	24 e0       	ldi	r18, 0x04	; 4
+  9a:	30 e0       	ldi	r19, 0x00	; 0
+    can be achieved.
+*/
+void
+_delay_loop_1(uint8_t __count)
+{
+	__asm__ volatile (
+  9c:	51 e0       	ldi	r21, 0x01	; 1
+  9e:	91 50       	subi	r25, 0x01	; 1
+  a0:	99 f0       	breq	.+38     	; 0xc8 <WS2812B_send+0x32>
+
+void WS2812B_send(uint8_t byte)
+{
+	void WS2812B_sendOne()
+	{
+		SET(PORT, WS2812B_PIN);
+  a2:	59 9a       	sbi	0x0b, 1	; 11
+	}
+	
+	uint8_t cnt=8;
+	while(cnt--)
+	{
+		if(byte & 0x80) WS2812B_sendOne();
+  a4:	87 ff       	sbrs	r24, 7
+  a6:	08 c0       	rjmp	.+16     	; 0xb8 <WS2812B_send+0x22>
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+  a8:	f9 01       	movw	r30, r18
+  aa:	31 97       	sbiw	r30, 0x01	; 1
+  ac:	f1 f7       	brne	.-4      	; 0xaa <WS2812B_send+0x14>
+{
+	void WS2812B_sendOne()
+	{
+		SET(PORT, WS2812B_PIN);
+		_delay_loop_2(8*F_CPU/10000000UL/3);
+		CLR(PORT, WS2812B_PIN);
+  ae:	59 98       	cbi	0x0b, 1	; 11
+    can be achieved.
+*/
+void
+_delay_loop_1(uint8_t __count)
+{
+	__asm__ volatile (
+  b0:	45 2f       	mov	r20, r21
+  b2:	4a 95       	dec	r20
+  b4:	f1 f7       	brne	.-4      	; 0xb2 <WS2812B_send+0x1c>
+  b6:	06 c0       	rjmp	.+12     	; 0xc4 <WS2812B_send+0x2e>
+	
+	void WS2812B_sendZero()
+	{
+		SET(PORT, WS2812B_PIN);
+
+		asm volatile ("nop"); asm volatile ("nop"); 
+  b8:	00 00       	nop
+  ba:	00 00       	nop
+		CLR(PORT, WS2812B_PIN);
+  bc:	59 98       	cbi	0x0b, 1	; 11
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+  be:	f9 01       	movw	r30, r18
+  c0:	31 97       	sbiw	r30, 0x01	; 1
+  c2:	f1 f7       	brne	.-4      	; 0xc0 <WS2812B_send+0x2a>
+	uint8_t cnt=8;
+	while(cnt--)
+	{
+		if(byte & 0x80) WS2812B_sendOne();
+		    else WS2812B_sendZero();
+		byte<<=1;
+  c4:	88 0f       	add	r24, r24
+  c6:	eb cf       	rjmp	.-42     	; 0x9e <WS2812B_send+0x8>
+	}
+}
+  c8:	08 95       	ret
+
+000000ca <main>:
+
+int main(void)
+{
+	WS2812B_init();
+  ca:	0e 94 40 00 	call	0x80	; 0x80 <WS2812B_init>
+	WS2812B_reset();
+  ce:	0e 94 43 00 	call	0x86	; 0x86 <WS2812B_reset>
+  d2:	c5 e0       	ldi	r28, 0x05	; 5
+	
+	for(uint8_t x=0; x < 5; x++) 
+	 {
+		 WS2812B_send(255);
+  d4:	8f ef       	ldi	r24, 0xFF	; 255
+  d6:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+		 WS2812B_send(255);
+  da:	8f ef       	ldi	r24, 0xFF	; 255
+  dc:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+		 WS2812B_send(0);
+  e0:	80 e0       	ldi	r24, 0x00	; 0
+  e2:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+  e6:	c1 50       	subi	r28, 0x01	; 1
+int main(void)
+{
+	WS2812B_init();
+	WS2812B_reset();
+	
+	for(uint8_t x=0; x < 5; x++) 
+  e8:	a9 f7       	brne	.-22     	; 0xd4 <main+0xa>
+  ea:	c5 e0       	ldi	r28, 0x05	; 5
+		 WS2812B_send(0);
+	 }
+	 
+	for(uint8_t x=0; x < 5; x++) 
+	 {
+		 WS2812B_send(255);
+  ec:	8f ef       	ldi	r24, 0xFF	; 255
+  ee:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+		 WS2812B_send(0);
+  f2:	80 e0       	ldi	r24, 0x00	; 0
+  f4:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+		 WS2812B_send(0);
+  f8:	80 e0       	ldi	r24, 0x00	; 0
+  fa:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+  fe:	c1 50       	subi	r28, 0x01	; 1
+		 WS2812B_send(255);
+		 WS2812B_send(255);
+		 WS2812B_send(0);
+	 }
+	 
+	for(uint8_t x=0; x < 5; x++) 
+ 100:	a9 f7       	brne	.-22     	; 0xec <main+0x22>
+ 102:	c5 e0       	ldi	r28, 0x05	; 5
+		 WS2812B_send(0);
+	 }
+	
+	for(uint8_t x=0; x < 5; x++) 
+	 {
+		 WS2812B_send(0);
+ 104:	80 e0       	ldi	r24, 0x00	; 0
+ 106:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+		 WS2812B_send(255);
+ 10a:	8f ef       	ldi	r24, 0xFF	; 255
+ 10c:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+		 WS2812B_send(0);
+ 110:	80 e0       	ldi	r24, 0x00	; 0
+ 112:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+ 116:	c1 50       	subi	r28, 0x01	; 1
+		 WS2812B_send(255);
+		 WS2812B_send(0);
+		 WS2812B_send(0);
+	 }
+	
+	for(uint8_t x=0; x < 5; x++) 
+ 118:	a9 f7       	brne	.-22     	; 0x104 <main+0x3a>
+ 11a:	c5 e0       	ldi	r28, 0x05	; 5
+		 WS2812B_send(0);
+	 }
+
+	for(uint8_t x=0; x < 5; x++) 
+	 {
+		 WS2812B_send(0);
+ 11c:	80 e0       	ldi	r24, 0x00	; 0
+ 11e:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+		 WS2812B_send(0);
+ 122:	80 e0       	ldi	r24, 0x00	; 0
+ 124:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+		 WS2812B_send(255);
+ 128:	8f ef       	ldi	r24, 0xFF	; 255
+ 12a:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+ 12e:	c1 50       	subi	r28, 0x01	; 1
+		 WS2812B_send(0);
+		 WS2812B_send(255);
+		 WS2812B_send(0);
+	 }
+
+	for(uint8_t x=0; x < 5; x++) 
+ 130:	a9 f7       	brne	.-22     	; 0x11c <main+0x52>
+ 132:	de e1       	ldi	r29, 0x1E	; 30
+	uint8_t offset=0;
+	uint8_t delta=256/LEDNO;
+	
+    while(1)
+    {
+        WS2812B_reset();	
+ 134:	0e 94 43 00 	call	0x86	; 0x86 <WS2812B_reset>
+ 138:	0c 2f       	mov	r16, r28
+ 13a:	88 e0       	ldi	r24, 0x08	; 8
+ 13c:	d8 9f       	mul	r29, r24
+ 13e:	00 0d       	add	r16, r0
+ 140:	11 24       	eor	r1, r1
+		while(cnt--)
+ 142:	10 e0       	ldi	r17, 0x00	; 0
+ 144:	18 50       	subi	r17, 0x08	; 8
+ 146:	dd 23       	and	r29, r29
+ 148:	61 f0       	breq	.+24     	; 0x162 <main+0x98>
+		{
+			WS2812B_send(cnt*delta+offset);
+ 14a:	80 2f       	mov	r24, r16
+ 14c:	81 0f       	add	r24, r17
+ 14e:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+			WS2812B_send(0);
+ 152:	80 e0       	ldi	r24, 0x00	; 0
+ 154:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+			WS2812B_send(0);
+ 158:	80 e0       	ldi	r24, 0x00	; 0
+ 15a:	0e 94 4b 00 	call	0x96	; 0x96 <WS2812B_send>
+ 15e:	d1 50       	subi	r29, 0x01	; 1
+ 160:	f1 cf       	rjmp	.-30     	; 0x144 <main+0x7a>
+		}
+		offset+=delta;
+ 162:	c8 5f       	subi	r28, 0xF8	; 248
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 164:	8f e3       	ldi	r24, 0x3F	; 63
+ 166:	9c e9       	ldi	r25, 0x9C	; 156
+ 168:	01 97       	sbiw	r24, 0x01	; 1
+ 16a:	f1 f7       	brne	.-4      	; 0x168 <main+0x9e>
+ 16c:	00 c0       	rjmp	.+0      	; 0x16e <main+0xa4>
+ 16e:	00 00       	nop
+	uint8_t delta=256/LEDNO;
+	
+    while(1)
+    {
+        WS2812B_reset();	
+		while(cnt--)
+ 170:	df ef       	ldi	r29, 0xFF	; 255
+ 172:	e0 cf       	rjmp	.-64     	; 0x134 <main+0x6a>
+
+00000174 <_exit>:
+ 174:	f8 94       	cli
+
+00000176 <__stop_program>:
+ 176:	ff cf       	rjmp	.-2      	; 0x176 <__stop_program>

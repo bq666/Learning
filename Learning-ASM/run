@@ -1,0 +1,7 @@
+#!/bin/bash
+nasm -g -F stabs -f elf32 ex10.asm -o ex10.o
+#ld -g -m elf_i386 ex10.o -o ex10
+gcc -m32 ex10.o -o ex10
+./ex10
+echo $?
+#echo 'TEST'

@@ -1,0 +1,151 @@
+
+LED.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000002  00800100  000000e6  0000015a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000000e6  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  0000015c  2**0
+                  CONTENTS, READONLY
+  3 .debug_aranges 00000030  00000000  00000000  0000018c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   000000e1  00000000  00000000  000001bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000000ac  00000000  00000000  0000029d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   000000cf  00000000  00000000  00000349  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000058  00000000  00000000  00000418  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00000136  00000000  00000000  00000470  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    0000006c  00000000  00000000  000005a6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000020  00000000  00000000  00000612  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+   8:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+   c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  10:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  14:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  18:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  1c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  20:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  24:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  28:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  2c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  30:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  34:	0c 94 55 00 	jmp	0xaa	; 0xaa <__vector_13>
+  38:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  3c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  40:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  44:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  48:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  4c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  50:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  54:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  58:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  5c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  60:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  64:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	e6 ee       	ldi	r30, 0xE6	; 230
+  7c:	f0 e0       	ldi	r31, 0x00	; 0
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+  84:	a2 30       	cpi	r26, 0x02	; 2
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <__do_copy_data+0xc>
+  8a:	0e 94 6d 00 	call	0xda	; 0xda <main>
+  8e:	0c 94 71 00 	jmp	0xe2	; 0xe2 <_exit>
+
+00000092 <__bad_interrupt>:
+  92:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000096 <timer_init>:
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+void timer_init()
+{
+	TIMSK1=_BV(TOIE1);
+  96:	81 e0       	ldi	r24, 0x01	; 1
+  98:	80 93 6f 00 	sts	0x006F, r24
+	TCCR1B=_BV(CS12);  //Preskaler 256
+  9c:	84 e0       	ldi	r24, 0x04	; 4
+  9e:	80 93 81 00 	sts	0x0081, r24
+	DDRB|=(_BV(PB1) | _BV(PB2));
+  a2:	84 b1       	in	r24, 0x04	; 4
+  a4:	86 60       	ori	r24, 0x06	; 6
+  a6:	84 b9       	out	0x04, r24	; 4
+  a8:	08 95       	ret
+
+000000aa <__vector_13>:
+}
+
+ISR(TIMER1_OVF_vect)
+{
+  aa:	1f 92       	push	r1
+  ac:	0f 92       	push	r0
+  ae:	0f b6       	in	r0, 0x3f	; 63
+  b0:	0f 92       	push	r0
+  b2:	11 24       	eor	r1, r1
+  b4:	8f 93       	push	r24
+  b6:	9f 93       	push	r25
+	static uint8_t LED=0b010;
+	LED^=0b110;
+  b8:	90 91 00 01 	lds	r25, 0x0100
+  bc:	86 e0       	ldi	r24, 0x06	; 6
+  be:	98 27       	eor	r25, r24
+  c0:	90 93 00 01 	sts	0x0100, r25
+	uint8_t tmp=PORTB & 0b11111001;
+  c4:	85 b1       	in	r24, 0x05	; 5
+  c6:	89 7f       	andi	r24, 0xF9	; 249
+	PORTB=(tmp | LED);
+  c8:	89 2b       	or	r24, r25
+  ca:	85 b9       	out	0x05, r24	; 5
+}
+  cc:	9f 91       	pop	r25
+  ce:	8f 91       	pop	r24
+  d0:	0f 90       	pop	r0
+  d2:	0f be       	out	0x3f, r0	; 63
+  d4:	0f 90       	pop	r0
+  d6:	1f 90       	pop	r1
+  d8:	18 95       	reti
+
+000000da <main>:
+
+
+int main(void)
+{
+ timer_init();
+  da:	0e 94 4b 00 	call	0x96	; 0x96 <timer_init>
+ sei();
+  de:	78 94       	sei
+  e0:	ff cf       	rjmp	.-2      	; 0xe0 <main+0x6>
+
+000000e2 <_exit>:
+  e2:	f8 94       	cli
+
+000000e4 <__stop_program>:
+  e4:	ff cf       	rjmp	.-2      	; 0xe4 <__stop_program>

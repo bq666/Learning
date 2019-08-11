@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "slaveMPCM", "slaveMPCM\slaveMPCM.cproj", "{FA0D7A0E-FE8E-4CAC-A292-51BA3940251F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA0D7A0E-FE8E-4CAC-A292-51BA3940251F}.Debug|AVR.ActiveCfg = Debug|AVR
+		{FA0D7A0E-FE8E-4CAC-A292-51BA3940251F}.Debug|AVR.Build.0 = Debug|AVR
+		{FA0D7A0E-FE8E-4CAC-A292-51BA3940251F}.Release|AVR.ActiveCfg = Release|AVR
+		{FA0D7A0E-FE8E-4CAC-A292-51BA3940251F}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

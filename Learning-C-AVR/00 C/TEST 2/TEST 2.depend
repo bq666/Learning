@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1491643072 source:c:\users\bq666\desktop\c projekty\00 c\test 2\main.c
+	<stdio.h>
+	<string.h>
+	<stdint-gcc.h>
+	<inttypes.h>
+

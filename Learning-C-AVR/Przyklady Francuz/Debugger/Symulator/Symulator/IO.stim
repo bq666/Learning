@@ -1,0 +1,20 @@
+#100
+PINB = 0xff
+
+#100
+PINB = 0x00
+
+#100
+PINB = 0xff
+
+$break
+
+$repeat 10
+#10
+PINB = 0x00
+#10
+PINB = 0xff
+$endrep
+
+$break
+

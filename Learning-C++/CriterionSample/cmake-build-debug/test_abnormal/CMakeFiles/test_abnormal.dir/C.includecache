@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../test_abnormal/../include/dangerous_add.h
+stdint.h
+-
+
+/home/bq666/Workspace/C_C++/CriterionSample/source/dangerous_add.c
+stdlib.h
+-
+stdint.h
+-
+dangerous_add.h
+/home/bq666/Workspace/C_C++/CriterionSample/source/dangerous_add.h
+
+/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/test_exit.c
+criterion/criterion.h
+-
+dangerous_add.h
+/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/dangerous_add.h
+
+/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/test_signal.c
+signal.h
+-
+criterion/criterion.h
+-
+dangerous_add.h
+/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/dangerous_add.h
+

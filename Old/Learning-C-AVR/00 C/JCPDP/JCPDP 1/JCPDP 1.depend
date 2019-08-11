@@ -1,0 +1,98 @@
+# depslib dependency file v1.0
+1495379717 source:c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\main.c
+	<limits.h>
+	<float.h>
+	<stdint-gcc.h>
+	<stdbool.h>
+	<inttypes.h>
+	<stdlib.h>
+	<time.h>
+	<iso646.h>
+	<stdio.h>
+	<stddef.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	<math.h>
+	"JCACP.h"
+
+1492371496 c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\stale.h
+	"Stale.h"
+
+1492374582 source:c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\zmienne.c
+	<stdint-gcc.h>
+	<inttypes.h>
+	<stdlib.h>
+	<time.h>
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	<complex.h>
+	<math.h>
+
+1492268616 c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\zmienne.h
+
+1492430629 c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\jcsp.h
+
+1494083228 source:c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\jcsp.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	"czescb.h"
+	"czescb.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+
+1492939120 c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\hotel.h
+
+1492942243 source:c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\hotel.c
+	<stdio.h>
+	"hotel.h"
+
+1493282189 c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\wskazniki.h
+
+1493496340 source:c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\wskazniki.c
+	<limits.h>
+	<float.h>
+	<stdint-gcc.h>
+	<stdbool.h>
+	<inttypes.h>
+	<stdlib.h>
+	<time.h>
+	<iso646.h>
+	<stdio.h>
+	<stddef.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	<math.h>
+
+1494010485 source:c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\czescb.c
+	"czescb.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+
+1493993420 c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\czescb.h
+
+1493992692 source:c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\czescc.c
+
+1495022460 source:c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\jcpdp.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint-gcc.h>
+	"JCPDP_1.h"
+
+1494085967 c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\jcpdp_1.h
+
+1494083912 source:c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\jcpdp_1.c
+
+1496007588 source:c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\jcacp.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+	<string.h>
+
+1495226900 c:\users\bq666\desktop\c projekty\00 c\jcpdp\jcpdp 1\jcacp.h
+

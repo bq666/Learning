@@ -1,0 +1,1054 @@
+
+KS0108.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000c  00800100  00000756  000007ea  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000756  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000002  0080010c  0080010c  000007f6  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000007f6  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 000000b8  00000000  00000000  00000826  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000aeb  00000000  00000000  000008de  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000003d8  00000000  00000000  000013c9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000003ca  00000000  00000000  000017a1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  0000020c  00000000  00000000  00001b6c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000277  00000000  00000000  00001d78  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000009b7  00000000  00000000  00001fef  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000088  00000000  00000000  000029a6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2c 01 	jmp	0x258	; 0x258 <__ctors_end>
+   4:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+   8:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+   c:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  10:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  14:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  18:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  1c:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  20:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  24:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  28:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  2c:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  30:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  34:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  38:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  3c:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  40:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  44:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  48:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  4c:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  50:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  54:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  58:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  5c:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  60:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+  64:	0c 94 49 01 	jmp	0x292	; 0x292 <__bad_interrupt>
+
+00000068 <__trampolines_end>:
+  68:	4e 61       	ori	r20, 0x1E	; 30
+  6a:	70 69       	ori	r23, 0x90	; 144
+  6c:	73 20       	and	r7, r3
+  6e:	77 65       	ori	r23, 0x57	; 87
+  70:	20 46       	sbci	r18, 0x60	; 96
+  72:	4c 41       	sbci	r20, 0x1C	; 28
+  74:	53 48       	sbci	r21, 0x83	; 131
+	...
+
+00000077 <font5x8>:
+  77:	00 00 00 00 00 00 00 5f 00 00 00 07 00 07 00 14     ......._........
+  87:	7f 14 7f 14 24 2a 7f 2a 12 23 13 08 64 62 36 49     ....$*.*.#..db6I
+  97:	55 22 50 00 05 03 00 00 00 1c 22 41 00 00 41 22     U"P......."A..A"
+  a7:	1c 00 08 2a 1c 2a 08 08 08 3e 08 08 00 50 30 00     ...*.*...>...P0.
+  b7:	00 08 08 08 08 08 00 30 30 00 00 20 10 08 04 02     .......00.. ....
+  c7:	3e 51 49 45 3e 00 42 7f 40 00 42 61 51 49 46 21     >QIE>.B.@.BaQIF!
+  d7:	41 45 4b 31 18 14 12 7f 10 27 45 45 45 39 3c 4a     AEK1.....'EEE9<J
+  e7:	49 49 30 01 71 09 05 03 36 49 49 49 36 06 49 49     II0.q...6III6.II
+  f7:	29 1e 00 36 36 00 00 00 56 36 00 00 00 08 14 22     )..66...V6....."
+ 107:	41 14 14 14 14 14 41 22 14 08 00 02 01 51 09 06     A.....A".....Q..
+ 117:	32 49 79 41 3e 7e 11 11 11 7e 7f 49 49 49 36 3e     2IyA>~...~.III6>
+ 127:	41 41 41 22 7f 41 41 22 1c 7f 49 49 49 41 7f 09     AAA".AA"..IIIA..
+ 137:	09 01 01 3e 41 41 51 32 7f 08 08 08 7f 00 41 7f     ...>AAQ2......A.
+ 147:	41 00 20 40 41 3f 01 7f 08 14 22 41 7f 40 40 40     A. @A?...."A.@@@
+ 157:	40 7f 02 04 02 7f 7f 04 08 10 7f 3e 41 41 41 3e     @..........>AAA>
+ 167:	7f 09 09 09 06 3e 41 51 21 5e 7f 09 19 29 46 46     .....>AQ!^...)FF
+ 177:	49 49 49 31 01 01 7f 01 01 3f 40 40 40 3f 1f 20     III1.....?@@@?. 
+ 187:	40 20 1f 7f 20 18 20 7f 63 14 08 14 63 03 04 78     @ .. . .c...c..x
+ 197:	04 03 61 51 49 45 43 00 00 7f 41 41 02 04 08 10     ..aQIEC...AA....
+ 1a7:	20 41 41 7f 00 00 04 02 01 02 04 40 40 40 40 40      AA........@@@@@
+ 1b7:	00 01 02 04 00 20 54 54 54 78 7f 48 44 44 38 38     ..... TTTx.HDD88
+ 1c7:	44 44 44 20 38 44 44 48 7f 38 54 54 54 18 08 7e     DDD 8DDH.8TTT..~
+ 1d7:	09 01 02 08 14 54 54 3c 7f 08 04 04 78 00 44 7d     .....TT<....x.D}
+ 1e7:	40 00 20 40 44 3d 00 00 7f 10 28 44 00 41 7f 40     @. @D=....(D.A.@
+ 1f7:	00 7c 04 18 04 78 7c 08 04 04 78 38 44 44 44 38     .|...x|...x8DDD8
+ 207:	7c 14 14 14 08 08 14 14 18 7c 7c 08 04 04 08 48     |........||....H
+ 217:	54 54 54 20 04 3f 44 40 20 3c 40 40 20 7c 1c 20     TTT .?D@ <@@ |. 
+ 227:	40 20 1c 3c 40 30 40 3c 44 28 10 28 44 0c 50 50     @ .<@0@<D(.(D.PP
+ 237:	50 3c 44 64 54 4c 44 00 08 36 41 00 00 00 7f 00     P<DdTLD..6A.....
+ 247:	00 00 41 36 08 00 08 08 2a 1c 08 08 1c 2a 08 08     ..A6....*....*..
+	...
+
+00000258 <__ctors_end>:
+ 258:	11 24       	eor	r1, r1
+ 25a:	1f be       	out	0x3f, r1	; 63
+ 25c:	cf ef       	ldi	r28, 0xFF	; 255
+ 25e:	d8 e0       	ldi	r29, 0x08	; 8
+ 260:	de bf       	out	0x3e, r29	; 62
+ 262:	cd bf       	out	0x3d, r28	; 61
+
+00000264 <__do_copy_data>:
+ 264:	11 e0       	ldi	r17, 0x01	; 1
+ 266:	a0 e0       	ldi	r26, 0x00	; 0
+ 268:	b1 e0       	ldi	r27, 0x01	; 1
+ 26a:	e6 e5       	ldi	r30, 0x56	; 86
+ 26c:	f7 e0       	ldi	r31, 0x07	; 7
+ 26e:	02 c0       	rjmp	.+4      	; 0x274 <__do_copy_data+0x10>
+ 270:	05 90       	lpm	r0, Z+
+ 272:	0d 92       	st	X+, r0
+ 274:	ac 30       	cpi	r26, 0x0C	; 12
+ 276:	b1 07       	cpc	r27, r17
+ 278:	d9 f7       	brne	.-10     	; 0x270 <__do_copy_data+0xc>
+
+0000027a <__do_clear_bss>:
+ 27a:	21 e0       	ldi	r18, 0x01	; 1
+ 27c:	ac e0       	ldi	r26, 0x0C	; 12
+ 27e:	b1 e0       	ldi	r27, 0x01	; 1
+ 280:	01 c0       	rjmp	.+2      	; 0x284 <.do_clear_bss_start>
+
+00000282 <.do_clear_bss_loop>:
+ 282:	1d 92       	st	X+, r1
+
+00000284 <.do_clear_bss_start>:
+ 284:	ae 30       	cpi	r26, 0x0E	; 14
+ 286:	b2 07       	cpc	r27, r18
+ 288:	e1 f7       	brne	.-8      	; 0x282 <.do_clear_bss_loop>
+ 28a:	0e 94 46 02 	call	0x48c	; 0x48c <main>
+ 28e:	0c 94 a9 03 	jmp	0x752	; 0x752 <_exit>
+
+00000292 <__bad_interrupt>:
+ 292:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000296 <GLCD_puttext>:
+#include <stdlib.h>
+#include "KS0108lib.h"
+#include "graphics.h"
+
+void GLCD_puttext(const char __memx *txt)
+{
+ 296:	cf 92       	push	r12
+ 298:	df 92       	push	r13
+ 29a:	ef 92       	push	r14
+ 29c:	6b 01       	movw	r12, r22
+ 29e:	e8 2e       	mov	r14, r24
+ while(*txt) GLCD_putchar(*txt++);
+ 2a0:	fb 01       	movw	r30, r22
+ 2a2:	84 91       	lpm	r24, Z
+ 2a4:	e7 fc       	sbrc	r14, 7
+ 2a6:	80 81       	ld	r24, Z
+ 2a8:	88 23       	and	r24, r24
+ 2aa:	61 f0       	breq	.+24     	; 0x2c4 <GLCD_puttext+0x2e>
+ 2ac:	9f ef       	ldi	r25, 0xFF	; 255
+ 2ae:	c9 1a       	sub	r12, r25
+ 2b0:	d9 0a       	sbc	r13, r25
+ 2b2:	e9 0a       	sbc	r14, r25
+ 2b4:	0e 94 40 03 	call	0x680	; 0x680 <GLCD_putchar>
+ 2b8:	f6 01       	movw	r30, r12
+ 2ba:	84 91       	lpm	r24, Z
+ 2bc:	e7 fc       	sbrc	r14, 7
+ 2be:	80 81       	ld	r24, Z
+ 2c0:	81 11       	cpse	r24, r1
+ 2c2:	f4 cf       	rjmp	.-24     	; 0x2ac <GLCD_puttext+0x16>
+}
+ 2c4:	ef 90       	pop	r14
+ 2c6:	df 90       	pop	r13
+ 2c8:	cf 90       	pop	r12
+ 2ca:	08 95       	ret
+
+000002cc <GLCD_Circle>:
+
+void GLCD_Circle(uint8_t cx, uint8_t cy ,uint8_t radius)
+{
+ 2cc:	af 92       	push	r10
+ 2ce:	bf 92       	push	r11
+ 2d0:	cf 92       	push	r12
+ 2d2:	df 92       	push	r13
+ 2d4:	ef 92       	push	r14
+ 2d6:	ff 92       	push	r15
+ 2d8:	0f 93       	push	r16
+ 2da:	1f 93       	push	r17
+ 2dc:	cf 93       	push	r28
+ 2de:	df 93       	push	r29
+ 2e0:	08 2f       	mov	r16, r24
+ 2e2:	f6 2e       	mov	r15, r22
+ 2e4:	d4 2f       	mov	r29, r20
+ int8_t x, y, xchange, ychange, radiusError;
+ x=radius;
+ y=0;
+ xchange=1-2*radius;
+ 2e6:	e4 2e       	mov	r14, r20
+ 2e8:	e1 94       	neg	r14
+ 2ea:	ee 0c       	add	r14, r14
+ 2ec:	e3 94       	inc	r14
+ ychange=1;
+ radiusError=0;
+ while(x>=y)
+ 2ee:	44 23       	and	r20, r20
+ 2f0:	0c f4       	brge	.+2      	; 0x2f4 <GLCD_Circle+0x28>
+ 2f2:	49 c0       	rjmp	.+146    	; 0x386 <GLCD_Circle+0xba>
+ int8_t x, y, xchange, ychange, radiusError;
+ x=radius;
+ y=0;
+ xchange=1-2*radius;
+ ychange=1;
+ radiusError=0;
+ 2f4:	10 e0       	ldi	r17, 0x00	; 0
+{
+ int8_t x, y, xchange, ychange, radiusError;
+ x=radius;
+ y=0;
+ xchange=1-2*radius;
+ ychange=1;
+ 2f6:	dd 24       	eor	r13, r13
+ 2f8:	d3 94       	inc	r13
+
+void GLCD_Circle(uint8_t cx, uint8_t cy ,uint8_t radius)
+{
+ int8_t x, y, xchange, ychange, radiusError;
+ x=radius;
+ y=0;
+ 2fa:	c0 e0       	ldi	r28, 0x00	; 0
+ 2fc:	bc 2e       	mov	r11, r28
+ 2fe:	bf 0c       	add	r11, r15
+ xchange=1-2*radius;
+ ychange=1;
+ radiusError=0;
+ while(x>=y)
+  {
+   GLCD_SetPixel(cx+x, cy+y); 
+ 300:	6b 2d       	mov	r22, r11
+ 302:	cd 2e       	mov	r12, r29
+ 304:	c0 0e       	add	r12, r16
+ 306:	8c 2d       	mov	r24, r12
+ 308:	0e 94 70 03 	call	0x6e0	; 0x6e0 <GLCD_SetPixel>
+   GLCD_SetPixel(cx-x, cy+y); 
+ 30c:	6b 2d       	mov	r22, r11
+ 30e:	a0 2e       	mov	r10, r16
+ 310:	ad 1a       	sub	r10, r29
+ 312:	8a 2d       	mov	r24, r10
+ 314:	0e 94 70 03 	call	0x6e0	; 0x6e0 <GLCD_SetPixel>
+ 318:	bf 2c       	mov	r11, r15
+ 31a:	bc 1a       	sub	r11, r28
+   GLCD_SetPixel(cx-x, cy-y);
+ 31c:	6b 2d       	mov	r22, r11
+ 31e:	8a 2d       	mov	r24, r10
+ 320:	0e 94 70 03 	call	0x6e0	; 0x6e0 <GLCD_SetPixel>
+   GLCD_SetPixel(cx+x, cy-y); 
+ 324:	6b 2d       	mov	r22, r11
+ 326:	8c 2d       	mov	r24, r12
+ 328:	0e 94 70 03 	call	0x6e0	; 0x6e0 <GLCD_SetPixel>
+ 32c:	c0 2e       	mov	r12, r16
+ 32e:	cc 0e       	add	r12, r28
+   GLCD_SetPixel(cx+y, cy+x); 
+ 330:	bd 2e       	mov	r11, r29
+ 332:	bf 0c       	add	r11, r15
+ 334:	6b 2d       	mov	r22, r11
+ 336:	8c 2d       	mov	r24, r12
+ 338:	0e 94 70 03 	call	0x6e0	; 0x6e0 <GLCD_SetPixel>
+ 33c:	a0 2e       	mov	r10, r16
+ 33e:	ac 1a       	sub	r10, r28
+   GLCD_SetPixel(cx-y, cy+x); 
+ 340:	6b 2d       	mov	r22, r11
+ 342:	8a 2d       	mov	r24, r10
+ 344:	0e 94 70 03 	call	0x6e0	; 0x6e0 <GLCD_SetPixel>
+   GLCD_SetPixel(cx-y, cy-x); 
+ 348:	bf 2c       	mov	r11, r15
+ 34a:	bd 1a       	sub	r11, r29
+ 34c:	6b 2d       	mov	r22, r11
+ 34e:	8a 2d       	mov	r24, r10
+ 350:	0e 94 70 03 	call	0x6e0	; 0x6e0 <GLCD_SetPixel>
+   GLCD_SetPixel(cx+y, cy-x); 
+ 354:	6b 2d       	mov	r22, r11
+ 356:	8c 2d       	mov	r24, r12
+ 358:	0e 94 70 03 	call	0x6e0	; 0x6e0 <GLCD_SetPixel>
+   y++;
+ 35c:	cf 5f       	subi	r28, 0xFF	; 255
+   radiusError+=ychange;
+ 35e:	1d 0d       	add	r17, r13
+ 360:	d3 94       	inc	r13
+ 362:	d3 94       	inc	r13
+   ychange+=2;
+   if(2*radiusError+xchange>0)
+ 364:	21 2f       	mov	r18, r17
+ 366:	22 0f       	add	r18, r18
+ 368:	33 0b       	sbc	r19, r19
+ 36a:	2e 0d       	add	r18, r14
+ 36c:	31 1d       	adc	r19, r1
+ 36e:	e7 fc       	sbrc	r14, 7
+ 370:	3a 95       	dec	r19
+ 372:	12 16       	cp	r1, r18
+ 374:	13 06       	cpc	r1, r19
+ 376:	24 f4       	brge	.+8      	; 0x380 <GLCD_Circle+0xb4>
+    {
+     x--;
+ 378:	d1 50       	subi	r29, 0x01	; 1
+	 radiusError+=xchange;
+ 37a:	1e 0d       	add	r17, r14
+	 xchange+=2;
+ 37c:	e3 94       	inc	r14
+ 37e:	e3 94       	inc	r14
+ x=radius;
+ y=0;
+ xchange=1-2*radius;
+ ychange=1;
+ radiusError=0;
+ while(x>=y)
+ 380:	dc 17       	cp	r29, r28
+ 382:	0c f0       	brlt	.+2      	; 0x386 <GLCD_Circle+0xba>
+ 384:	bb cf       	rjmp	.-138    	; 0x2fc <GLCD_Circle+0x30>
+     x--;
+	 radiusError+=xchange;
+	 xchange+=2;
+	}
+  }
+}
+ 386:	df 91       	pop	r29
+ 388:	cf 91       	pop	r28
+ 38a:	1f 91       	pop	r17
+ 38c:	0f 91       	pop	r16
+ 38e:	ff 90       	pop	r15
+ 390:	ef 90       	pop	r14
+ 392:	df 90       	pop	r13
+ 394:	cf 90       	pop	r12
+ 396:	bf 90       	pop	r11
+ 398:	af 90       	pop	r10
+ 39a:	08 95       	ret
+
+0000039c <GLCD_Line>:
+
+//Kreœlenie linii algorytmem Bresenhama
+void GLCD_Line(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
+{
+ 39c:	8f 92       	push	r8
+ 39e:	9f 92       	push	r9
+ 3a0:	af 92       	push	r10
+ 3a2:	bf 92       	push	r11
+ 3a4:	cf 92       	push	r12
+ 3a6:	df 92       	push	r13
+ 3a8:	ef 92       	push	r14
+ 3aa:	ff 92       	push	r15
+ 3ac:	0f 93       	push	r16
+ 3ae:	1f 93       	push	r17
+ 3b0:	cf 93       	push	r28
+ 3b2:	df 93       	push	r29
+ 3b4:	18 2f       	mov	r17, r24
+ 3b6:	06 2f       	mov	r16, r22
+ 3b8:	f4 2e       	mov	r15, r20
+ 3ba:	e2 2e       	mov	r14, r18
+ int8_t err, e2, sx, sy;
+ int8_t dx=abs(x1-x0);
+ 3bc:	e4 2f       	mov	r30, r20
+ 3be:	f0 e0       	ldi	r31, 0x00	; 0
+ 3c0:	e8 1b       	sub	r30, r24
+ 3c2:	f1 09       	sbc	r31, r1
+ 3c4:	ef 01       	movw	r28, r30
+ 3c6:	22 f4       	brpl	.+8      	; 0x3d0 <GLCD_Line+0x34>
+ 3c8:	cc 27       	eor	r28, r28
+ 3ca:	dd 27       	eor	r29, r29
+ 3cc:	ce 1b       	sub	r28, r30
+ 3ce:	df 0b       	sbc	r29, r31
+ 3d0:	dc 2e       	mov	r13, r28
+ int8_t dy=abs(y1-y0); 
+ 3d2:	ae 2d       	mov	r26, r14
+ 3d4:	b0 e0       	ldi	r27, 0x00	; 0
+ 3d6:	a0 1b       	sub	r26, r16
+ 3d8:	b1 09       	sbc	r27, r1
+ 3da:	fd 01       	movw	r30, r26
+ 3dc:	22 f4       	brpl	.+8      	; 0x3e6 <GLCD_Line+0x4a>
+ 3de:	ee 27       	eor	r30, r30
+ 3e0:	ff 27       	eor	r31, r31
+ 3e2:	ea 1b       	sub	r30, r26
+ 3e4:	fb 0b       	sbc	r31, r27
+ 3e6:	ae 2e       	mov	r10, r30
+ 3e8:	be 2e       	mov	r11, r30
+ if(x0<x1) sx=1; else sx=-1;
+ 3ea:	1f 15       	cp	r17, r15
+ 3ec:	18 f4       	brcc	.+6      	; 0x3f4 <GLCD_Line+0x58>
+ 3ee:	99 24       	eor	r9, r9
+ 3f0:	93 94       	inc	r9
+ 3f2:	02 c0       	rjmp	.+4      	; 0x3f8 <GLCD_Line+0x5c>
+ 3f4:	99 24       	eor	r9, r9
+ 3f6:	9a 94       	dec	r9
+ if(y0<y1) sy=1; else sy=-1;
+ 3f8:	0e 15       	cp	r16, r14
+ 3fa:	18 f4       	brcc	.+6      	; 0x402 <GLCD_Line+0x66>
+ 3fc:	88 24       	eor	r8, r8
+ 3fe:	83 94       	inc	r8
+ 400:	02 c0       	rjmp	.+4      	; 0x406 <GLCD_Line+0x6a>
+ 402:	88 24       	eor	r8, r8
+ 404:	8a 94       	dec	r8
+ if(dx>dy) err=dx/2; else err=-dy/2;
+ 406:	bc 16       	cp	r11, r28
+ 408:	44 f4       	brge	.+16     	; 0x41a <GLCD_Line+0x7e>
+ 40a:	cc 2e       	mov	r12, r28
+ 40c:	cc 23       	and	r28, r28
+ 40e:	1c f4       	brge	.+6      	; 0x416 <GLCD_Line+0x7a>
+ 410:	cc 24       	eor	r12, r12
+ 412:	c3 94       	inc	r12
+ 414:	cc 0e       	add	r12, r28
+ 416:	c5 94       	asr	r12
+ 418:	0c c0       	rjmp	.+24     	; 0x432 <GLCD_Line+0x96>
+ 41a:	2b 2d       	mov	r18, r11
+ 41c:	33 27       	eor	r19, r19
+ 41e:	21 95       	neg	r18
+ 420:	0c f4       	brge	.+2      	; 0x424 <GLCD_Line+0x88>
+ 422:	30 95       	com	r19
+ 424:	c9 01       	movw	r24, r18
+ 426:	99 23       	and	r25, r25
+ 428:	0c f4       	brge	.+2      	; 0x42c <GLCD_Line+0x90>
+ 42a:	01 96       	adiw	r24, 0x01	; 1
+ 42c:	95 95       	asr	r25
+ 42e:	87 95       	ror	r24
+ 430:	c8 2e       	mov	r12, r24
+ while(1)
+  {
+   GLCD_SetPixel(x0, y0);
+   if((x0==x1) && (y0==y1)) return;
+   e2=err;
+   if(e2>-dx)
+ 432:	dd 27       	eor	r29, r29
+ 434:	c1 95       	neg	r28
+ 436:	0c f4       	brge	.+2      	; 0x43a <GLCD_Line+0x9e>
+ 438:	d0 95       	com	r29
+ 43a:	01 c0       	rjmp	.+2      	; 0x43e <GLCD_Line+0xa2>
+ 43c:	c8 2e       	mov	r12, r24
+ if(y0<y1) sy=1; else sy=-1;
+ if(dx>dy) err=dx/2; else err=-dy/2;
+ 
+ while(1)
+  {
+   GLCD_SetPixel(x0, y0);
+ 43e:	60 2f       	mov	r22, r16
+ 440:	81 2f       	mov	r24, r17
+ 442:	0e 94 70 03 	call	0x6e0	; 0x6e0 <GLCD_SetPixel>
+   if((x0==x1) && (y0==y1)) return;
+ 446:	1f 11       	cpse	r17, r15
+ 448:	02 c0       	rjmp	.+4      	; 0x44e <GLCD_Line+0xb2>
+ 44a:	0e 15       	cp	r16, r14
+ 44c:	91 f0       	breq	.+36     	; 0x472 <GLCD_Line+0xd6>
+   e2=err;
+   if(e2>-dx)
+ 44e:	ec 2d       	mov	r30, r12
+ 450:	ff 27       	eor	r31, r31
+ 452:	e7 fd       	sbrc	r30, 7
+ 454:	f0 95       	com	r31
+ 456:	ce 17       	cp	r28, r30
+ 458:	df 07       	cpc	r29, r31
+ 45a:	24 f4       	brge	.+8      	; 0x464 <GLCD_Line+0xc8>
+    { 
+     err=err-dy;
+ 45c:	8c 2d       	mov	r24, r12
+ 45e:	8a 19       	sub	r24, r10
+     x0=x0+sx;
+ 460:	19 0d       	add	r17, r9
+ 462:	01 c0       	rjmp	.+2      	; 0x466 <GLCD_Line+0xca>
+ 464:	8c 2d       	mov	r24, r12
+	} 
+   if(e2<dy)
+ 466:	cb 14       	cp	r12, r11
+ 468:	4c f7       	brge	.-46     	; 0x43c <GLCD_Line+0xa0>
+    { 
+     err=err+dx;
+ 46a:	c8 2e       	mov	r12, r24
+ 46c:	cd 0c       	add	r12, r13
+     y0=y0+sy;
+ 46e:	08 0d       	add	r16, r8
+ 470:	e6 cf       	rjmp	.-52     	; 0x43e <GLCD_Line+0xa2>
+    }
+  }
+}
+ 472:	df 91       	pop	r29
+ 474:	cf 91       	pop	r28
+ 476:	1f 91       	pop	r17
+ 478:	0f 91       	pop	r16
+ 47a:	ff 90       	pop	r15
+ 47c:	ef 90       	pop	r14
+ 47e:	df 90       	pop	r13
+ 480:	cf 90       	pop	r12
+ 482:	bf 90       	pop	r11
+ 484:	af 90       	pop	r10
+ 486:	9f 90       	pop	r9
+ 488:	8f 90       	pop	r8
+ 48a:	08 95       	ret
+
+0000048c <main>:
+#include <avr/io.h>
+#include "KS0108lib.h"
+#include "graphics.h"
+
+int main()
+{
+ 48c:	cf 93       	push	r28
+	GLCD_init();
+ 48e:	0e 94 db 02 	call	0x5b6	; 0x5b6 <GLCD_init>
+	color=0;
+ 492:	10 92 00 01 	sts	0x0100, r1
+	GLCD_cls();
+ 496:	0e 94 20 03 	call	0x640	; 0x640 <GLCD_cls>
+	for(uint8_t r=0;r<32;r++) GLCD_Circle(64, 32, r);
+ 49a:	c0 e0       	ldi	r28, 0x00	; 0
+ 49c:	4c 2f       	mov	r20, r28
+ 49e:	60 e2       	ldi	r22, 0x20	; 32
+ 4a0:	80 e4       	ldi	r24, 0x40	; 64
+ 4a2:	0e 94 66 01 	call	0x2cc	; 0x2cc <GLCD_Circle>
+ 4a6:	cf 5f       	subi	r28, 0xFF	; 255
+ 4a8:	c0 32       	cpi	r28, 0x20	; 32
+ 4aa:	c1 f7       	brne	.-16     	; 0x49c <main+0x10>
+	GLCD_goto(2,2);
+ 4ac:	62 e0       	ldi	r22, 0x02	; 2
+ 4ae:	82 e0       	ldi	r24, 0x02	; 2
+ 4b0:	0e 94 f3 02 	call	0x5e6	; 0x5e6 <GLCD_goto>
+
+	GLCD_puttext("Test LCD!!");
+ 4b4:	61 e0       	ldi	r22, 0x01	; 1
+ 4b6:	71 e0       	ldi	r23, 0x01	; 1
+ 4b8:	80 e8       	ldi	r24, 0x80	; 128
+ 4ba:	0e 94 4b 01 	call	0x296	; 0x296 <GLCD_puttext>
+	GLCD_puttext(PSTR("Napis we FLASH"));
+ 4be:	68 e6       	ldi	r22, 0x68	; 104
+ 4c0:	70 e0       	ldi	r23, 0x00	; 0
+ 4c2:	80 e0       	ldi	r24, 0x00	; 0
+ 4c4:	0e 94 4b 01 	call	0x296	; 0x296 <GLCD_puttext>
+	GLCD_Line(0,0, 127,63);
+ 4c8:	2f e3       	ldi	r18, 0x3F	; 63
+ 4ca:	4f e7       	ldi	r20, 0x7F	; 127
+ 4cc:	60 e0       	ldi	r22, 0x00	; 0
+ 4ce:	80 e0       	ldi	r24, 0x00	; 0
+ 4d0:	0e 94 ce 01 	call	0x39c	; 0x39c <GLCD_Line>
+	GLCD_Line(0,63, 127, 0);
+ 4d4:	20 e0       	ldi	r18, 0x00	; 0
+ 4d6:	4f e7       	ldi	r20, 0x7F	; 127
+ 4d8:	6f e3       	ldi	r22, 0x3F	; 63
+ 4da:	80 e0       	ldi	r24, 0x00	; 0
+ 4dc:	0e 94 ce 01 	call	0x39c	; 0x39c <GLCD_Line>
+ 4e0:	80 e0       	ldi	r24, 0x00	; 0
+ 4e2:	90 e0       	ldi	r25, 0x00	; 0
+ 4e4:	cf 91       	pop	r28
+ 4e6:	08 95       	ret
+
+000004e8 <GLCD_EnableController>:
+#define DISPLAY_STATUS_BUSY	0x80
+
+//W³¹cz wybrany kontroler poprzez zmianê linii CS
+void GLCD_EnableController(uint8_t controller)
+{
+ if(controller==0)
+ 4e8:	81 11       	cpse	r24, r1
+ 4ea:	03 c0       	rjmp	.+6      	; 0x4f2 <GLCD_EnableController+0xa>
+  {
+   CLR(PORT, KS0108_CS1); SET(PORT, KS0108_CS2);
+ 4ec:	43 98       	cbi	0x08, 3	; 8
+ 4ee:	44 9a       	sbi	0x08, 4	; 8
+ 4f0:	08 95       	ret
+  } else
+  {
+   CLR(PORT, KS0108_CS2); SET(PORT, KS0108_CS1);
+ 4f2:	44 98       	cbi	0x08, 4	; 8
+ 4f4:	43 9a       	sbi	0x08, 3	; 8
+ 4f6:	08 95       	ret
+
+000004f8 <GLCD_ReadStatus>:
+}
+
+uint8_t GLCD_ReadStatus(uint8_t controller)
+{
+ uint8_t status;
+ DATA(DDR, KS0108_DATA)=0x00;
+ 4f8:	1a b8       	out	0x0a, r1	; 10
+ SET(PORT, KS0108_RW);
+ 4fa:	41 9a       	sbi	0x08, 1	; 8
+ CLR(PORT, KS0108_RS);
+ 4fc:	40 98       	cbi	0x08, 0	; 8
+ GLCD_EnableController(controller);
+ 4fe:	0e 94 74 02 	call	0x4e8	; 0x4e8 <GLCD_EnableController>
+ SET(PORT, KS0108_E);
+ 502:	42 9a       	sbi	0x08, 2	; 8
+ asm volatile ("nop");
+ 504:	00 00       	nop
+ status=DATA(PIN, KS0108_DATA);
+ 506:	89 b1       	in	r24, 0x09	; 9
+ CLR(PORT, KS0108_E);
+ 508:	42 98       	cbi	0x08, 2	; 8
+ return status;
+}
+ 50a:	08 95       	ret
+
+0000050c <GLCD_WriteCommand>:
+{
+ while(GLCD_ReadStatus(controller) & DISPLAY_STATUS_BUSY);
+}
+
+void GLCD_WriteCommand(uint8_t cmd, uint8_t controller)
+{
+ 50c:	cf 93       	push	r28
+ 50e:	df 93       	push	r29
+ 510:	d8 2f       	mov	r29, r24
+ 512:	c6 2f       	mov	r28, r22
+}
+
+//Czekaj a¿ flaga BUSY zostanie skasowana
+static inline void GLCD_WaitUntillBusy(uint8_t controller)
+{
+ while(GLCD_ReadStatus(controller) & DISPLAY_STATUS_BUSY);
+ 514:	8c 2f       	mov	r24, r28
+ 516:	0e 94 7c 02 	call	0x4f8	; 0x4f8 <GLCD_ReadStatus>
+ 51a:	88 23       	and	r24, r24
+ 51c:	dc f3       	brlt	.-10     	; 0x514 <GLCD_WriteCommand+0x8>
+}
+
+void GLCD_WriteCommand(uint8_t cmd, uint8_t controller)
+{
+ GLCD_WaitUntillBusy(controller);
+ DATA(DDR, KS0108_DATA)=0xFF;
+ 51e:	8f ef       	ldi	r24, 0xFF	; 255
+ 520:	8a b9       	out	0x0a, r24	; 10
+ CLR(PORT, KS0108_RW);
+ 522:	41 98       	cbi	0x08, 1	; 8
+ CLR(PORT, KS0108_RS);
+ 524:	40 98       	cbi	0x08, 0	; 8
+ GLCD_EnableController(controller);
+ 526:	8c 2f       	mov	r24, r28
+ 528:	0e 94 74 02 	call	0x4e8	; 0x4e8 <GLCD_EnableController>
+ DATA(PORT, KS0108_DATA)=cmd;
+ 52c:	db b9       	out	0x0b, r29	; 11
+ SET(PORT, KS0108_E);
+ 52e:	42 9a       	sbi	0x08, 2	; 8
+ asm volatile ("nop");
+ 530:	00 00       	nop
+ CLR(PORT, KS0108_E);
+ 532:	42 98       	cbi	0x08, 2	; 8
+}
+ 534:	df 91       	pop	r29
+ 536:	cf 91       	pop	r28
+ 538:	08 95       	ret
+
+0000053a <GLCD_ReadData>:
+
+unsigned char GLCD_ReadData()
+{
+ 53a:	cf 93       	push	r28
+ uint8_t data;
+ uint8_t CS=GLCD_x/64;
+ 53c:	c0 91 0d 01 	lds	r28, 0x010D
+ 540:	c2 95       	swap	r28
+ 542:	c6 95       	lsr	r28
+ 544:	c6 95       	lsr	r28
+ 546:	c3 70       	andi	r28, 0x03	; 3
+}
+
+//Czekaj a¿ flaga BUSY zostanie skasowana
+static inline void GLCD_WaitUntillBusy(uint8_t controller)
+{
+ while(GLCD_ReadStatus(controller) & DISPLAY_STATUS_BUSY);
+ 548:	8c 2f       	mov	r24, r28
+ 54a:	0e 94 7c 02 	call	0x4f8	; 0x4f8 <GLCD_ReadStatus>
+ 54e:	88 23       	and	r24, r24
+ 550:	dc f3       	brlt	.-10     	; 0x548 <GLCD_ReadData+0xe>
+unsigned char GLCD_ReadData()
+{
+ uint8_t data;
+ uint8_t CS=GLCD_x/64;
+ GLCD_WaitUntillBusy(CS);
+ DATA(DDR, KS0108_DATA)=0x00;
+ 552:	1a b8       	out	0x0a, r1	; 10
+ SET(PORT, KS0108_RW);
+ 554:	41 9a       	sbi	0x08, 1	; 8
+ SET(PORT, KS0108_RS);
+ 556:	40 9a       	sbi	0x08, 0	; 8
+ GLCD_EnableController(CS);
+ 558:	8c 2f       	mov	r24, r28
+ 55a:	0e 94 74 02 	call	0x4e8	; 0x4e8 <GLCD_EnableController>
+ SET(PORT, KS0108_E);
+ 55e:	42 9a       	sbi	0x08, 2	; 8
+ asm volatile ("nop");
+ 560:	00 00       	nop
+ data=DATA(PIN, KS0108_DATA);
+ 562:	89 b1       	in	r24, 0x09	; 9
+ CLR(PORT, KS0108_E);
+ 564:	42 98       	cbi	0x08, 2	; 8
+ GLCD_x++;
+ 566:	90 91 0d 01 	lds	r25, 0x010D
+ 56a:	9f 5f       	subi	r25, 0xFF	; 255
+ 56c:	90 93 0d 01 	sts	0x010D, r25
+ return data;
+}
+ 570:	cf 91       	pop	r28
+ 572:	08 95       	ret
+
+00000574 <GLCD_WriteData>:
+
+void GLCD_WriteData(uint8_t byte)
+{
+ 574:	cf 93       	push	r28
+ 576:	df 93       	push	r29
+ 578:	d8 2f       	mov	r29, r24
+ uint8_t CS=GLCD_x/64;
+ 57a:	c0 91 0d 01 	lds	r28, 0x010D
+ 57e:	c2 95       	swap	r28
+ 580:	c6 95       	lsr	r28
+ 582:	c6 95       	lsr	r28
+ 584:	c3 70       	andi	r28, 0x03	; 3
+}
+
+//Czekaj a¿ flaga BUSY zostanie skasowana
+static inline void GLCD_WaitUntillBusy(uint8_t controller)
+{
+ while(GLCD_ReadStatus(controller) & DISPLAY_STATUS_BUSY);
+ 586:	8c 2f       	mov	r24, r28
+ 588:	0e 94 7c 02 	call	0x4f8	; 0x4f8 <GLCD_ReadStatus>
+ 58c:	88 23       	and	r24, r24
+ 58e:	dc f3       	brlt	.-10     	; 0x586 <GLCD_WriteData+0x12>
+
+void GLCD_WriteData(uint8_t byte)
+{
+ uint8_t CS=GLCD_x/64;
+ GLCD_WaitUntillBusy(CS);
+ DATA(DDR, KS0108_DATA)=0xFF;
+ 590:	8f ef       	ldi	r24, 0xFF	; 255
+ 592:	8a b9       	out	0x0a, r24	; 10
+ CLR(PORT, KS0108_RW);
+ 594:	41 98       	cbi	0x08, 1	; 8
+ SET(PORT, KS0108_RS);
+ 596:	40 9a       	sbi	0x08, 0	; 8
+ DATA(PORT, KS0108_DATA)=byte;
+ 598:	db b9       	out	0x0b, r29	; 11
+ GLCD_EnableController(CS);
+ 59a:	8c 2f       	mov	r24, r28
+ 59c:	0e 94 74 02 	call	0x4e8	; 0x4e8 <GLCD_EnableController>
+ SET(PORT, KS0108_E);
+ 5a0:	42 9a       	sbi	0x08, 2	; 8
+ asm volatile ("nop");
+ 5a2:	00 00       	nop
+ CLR(PORT, KS0108_E);
+ 5a4:	42 98       	cbi	0x08, 2	; 8
+ GLCD_x++;
+ 5a6:	80 91 0d 01 	lds	r24, 0x010D
+ 5aa:	8f 5f       	subi	r24, 0xFF	; 255
+ 5ac:	80 93 0d 01 	sts	0x010D, r24
+}
+ 5b0:	df 91       	pop	r29
+ 5b2:	cf 91       	pop	r28
+ 5b4:	08 95       	ret
+
+000005b6 <GLCD_init>:
+
+void GLCD_init()
+{
+ SET(DDR, KS0108_E);
+ 5b6:	3a 9a       	sbi	0x07, 2	; 7
+ SET(DDR, KS0108_RS);
+ 5b8:	38 9a       	sbi	0x07, 0	; 7
+ SET(DDR, KS0108_RW);
+ 5ba:	39 9a       	sbi	0x07, 1	; 7
+ SET(DDR, KS0108_CS1);
+ 5bc:	3b 9a       	sbi	0x07, 3	; 7
+ SET(DDR, KS0108_CS2);
+ 5be:	3c 9a       	sbi	0x07, 4	; 7
+ SET(PORT, KS0108_CS1);
+ 5c0:	43 9a       	sbi	0x08, 3	; 8
+ SET(PORT, KS0108_CS2);
+ 5c2:	44 9a       	sbi	0x08, 4	; 8
+ SET(PORT, KS0108_RESET);
+#endif
+
+ for(uint8_t i=0; i<GFX_SCREEN_WIDTH/64; i++)
+ {
+  GLCD_WriteCommand((DISPLAY_ON_CMD | ON), i);
+ 5c4:	60 e0       	ldi	r22, 0x00	; 0
+ 5c6:	8f e3       	ldi	r24, 0x3F	; 63
+ 5c8:	0e 94 86 02 	call	0x50c	; 0x50c <GLCD_WriteCommand>
+  GLCD_WriteCommand(DISPLAY_START_LINE | 0,i);
+ 5cc:	60 e0       	ldi	r22, 0x00	; 0
+ 5ce:	80 ec       	ldi	r24, 0xC0	; 192
+ 5d0:	0e 94 86 02 	call	0x50c	; 0x50c <GLCD_WriteCommand>
+ SET(PORT, KS0108_RESET);
+#endif
+
+ for(uint8_t i=0; i<GFX_SCREEN_WIDTH/64; i++)
+ {
+  GLCD_WriteCommand((DISPLAY_ON_CMD | ON), i);
+ 5d4:	61 e0       	ldi	r22, 0x01	; 1
+ 5d6:	8f e3       	ldi	r24, 0x3F	; 63
+ 5d8:	0e 94 86 02 	call	0x50c	; 0x50c <GLCD_WriteCommand>
+  GLCD_WriteCommand(DISPLAY_START_LINE | 0,i);
+ 5dc:	61 e0       	ldi	r22, 0x01	; 1
+ 5de:	80 ec       	ldi	r24, 0xC0	; 192
+ 5e0:	0e 94 86 02 	call	0x50c	; 0x50c <GLCD_WriteCommand>
+ 5e4:	08 95       	ret
+
+000005e6 <GLCD_goto>:
+ }
+}
+
+void GLCD_goto(uint8_t x, uint8_t y)
+{
+ 5e6:	1f 93       	push	r17
+ 5e8:	cf 93       	push	r28
+ 5ea:	df 93       	push	r29
+ 5ec:	d8 2f       	mov	r29, r24
+ 5ee:	c6 2f       	mov	r28, r22
+ uint8_t i;
+ GLCD_x = x;
+ 5f0:	80 93 0d 01 	sts	0x010D, r24
+ GLCD_y = y;
+ 5f4:	60 93 0c 01 	sts	0x010C, r22
+
+ for(i=0; i<GFX_SCREEN_WIDTH/64; i++)
+  {
+   GLCD_WriteCommand(DISPLAY_SET_Y, i);
+ 5f8:	60 e0       	ldi	r22, 0x00	; 0
+ 5fa:	80 e4       	ldi	r24, 0x40	; 64
+ 5fc:	0e 94 86 02 	call	0x50c	; 0x50c <GLCD_WriteCommand>
+   GLCD_WriteCommand(DISPLAY_SET_X | y, i);
+ 600:	c8 6b       	ori	r28, 0xB8	; 184
+ 602:	60 e0       	ldi	r22, 0x00	; 0
+ 604:	8c 2f       	mov	r24, r28
+ 606:	0e 94 86 02 	call	0x50c	; 0x50c <GLCD_WriteCommand>
+ GLCD_x = x;
+ GLCD_y = y;
+
+ for(i=0; i<GFX_SCREEN_WIDTH/64; i++)
+  {
+   GLCD_WriteCommand(DISPLAY_SET_Y, i);
+ 60a:	61 e0       	ldi	r22, 0x01	; 1
+ 60c:	80 e4       	ldi	r24, 0x40	; 64
+ 60e:	0e 94 86 02 	call	0x50c	; 0x50c <GLCD_WriteCommand>
+   GLCD_WriteCommand(DISPLAY_SET_X | y, i);
+ 612:	61 e0       	ldi	r22, 0x01	; 1
+ 614:	8c 2f       	mov	r24, r28
+ 616:	0e 94 86 02 	call	0x50c	; 0x50c <GLCD_WriteCommand>
+  }
+ GLCD_WriteCommand(DISPLAY_SET_Y | (x%64), (x/64));
+ 61a:	1d 2f       	mov	r17, r29
+ 61c:	12 95       	swap	r17
+ 61e:	16 95       	lsr	r17
+ 620:	16 95       	lsr	r17
+ 622:	13 70       	andi	r17, 0x03	; 3
+ 624:	8d 2f       	mov	r24, r29
+ 626:	8f 73       	andi	r24, 0x3F	; 63
+ 628:	61 2f       	mov	r22, r17
+ 62a:	80 64       	ori	r24, 0x40	; 64
+ 62c:	0e 94 86 02 	call	0x50c	; 0x50c <GLCD_WriteCommand>
+ GLCD_WriteCommand(DISPLAY_SET_X | y, (x/64));
+ 630:	61 2f       	mov	r22, r17
+ 632:	8c 2f       	mov	r24, r28
+ 634:	0e 94 86 02 	call	0x50c	; 0x50c <GLCD_WriteCommand>
+}
+ 638:	df 91       	pop	r29
+ 63a:	cf 91       	pop	r28
+ 63c:	1f 91       	pop	r17
+ 63e:	08 95       	ret
+
+00000640 <GLCD_cls>:
+
+void GLCD_cls()
+{
+ 640:	1f 93       	push	r17
+ 642:	cf 93       	push	r28
+ 644:	df 93       	push	r29
+ uint8_t tc=255;
+ if(color) tc=0;
+ 646:	d1 e0       	ldi	r29, 0x01	; 1
+ 648:	80 91 00 01 	lds	r24, 0x0100
+ 64c:	81 11       	cpse	r24, r1
+ 64e:	d0 e0       	ldi	r29, 0x00	; 0
+ 650:	d1 95       	neg	r29
+ for(uint8_t j=0; j<GFX_SCREEN_HEIGHT/8; j++)
+ 652:	10 e0       	ldi	r17, 0x00	; 0
+  {
+   GLCD_goto(0,j);
+ 654:	61 2f       	mov	r22, r17
+ 656:	80 e0       	ldi	r24, 0x00	; 0
+ 658:	0e 94 f3 02 	call	0x5e6	; 0x5e6 <GLCD_goto>
+   for(uint8_t i=0; i<GFX_SCREEN_WIDTH; i++) GLCD_WriteData(tc);
+ 65c:	c0 e0       	ldi	r28, 0x00	; 0
+ 65e:	8d 2f       	mov	r24, r29
+ 660:	0e 94 ba 02 	call	0x574	; 0x574 <GLCD_WriteData>
+ 664:	cf 5f       	subi	r28, 0xFF	; 255
+ 666:	c0 38       	cpi	r28, 0x80	; 128
+ 668:	d1 f7       	brne	.-12     	; 0x65e <GLCD_cls+0x1e>
+
+void GLCD_cls()
+{
+ uint8_t tc=255;
+ if(color) tc=0;
+ for(uint8_t j=0; j<GFX_SCREEN_HEIGHT/8; j++)
+ 66a:	1f 5f       	subi	r17, 0xFF	; 255
+ 66c:	18 30       	cpi	r17, 0x08	; 8
+ 66e:	91 f7       	brne	.-28     	; 0x654 <GLCD_cls+0x14>
+  {
+   GLCD_goto(0,j);
+   for(uint8_t i=0; i<GFX_SCREEN_WIDTH; i++) GLCD_WriteData(tc);
+  }
+ GLCD_x=0; GLCD_y=0;
+ 670:	10 92 0d 01 	sts	0x010D, r1
+ 674:	10 92 0c 01 	sts	0x010C, r1
+}
+ 678:	df 91       	pop	r29
+ 67a:	cf 91       	pop	r28
+ 67c:	1f 91       	pop	r17
+ 67e:	08 95       	ret
+
+00000680 <GLCD_putchar>:
+
+#if SLOW_TEXT==0
+void GLCD_putchar(char c)
+{
+ 680:	0f 93       	push	r16
+ 682:	1f 93       	push	r17
+ 684:	cf 93       	push	r28
+ 686:	df 93       	push	r29
+ const char __flash *ptr=font5x8+(5*(c-32));
+ 688:	c8 2f       	mov	r28, r24
+ 68a:	d0 e0       	ldi	r29, 0x00	; 0
+ 68c:	a0 97       	sbiw	r28, 0x20	; 32
+ 68e:	ce 01       	movw	r24, r28
+ 690:	88 0f       	add	r24, r24
+ 692:	99 1f       	adc	r25, r25
+ 694:	88 0f       	add	r24, r24
+ 696:	99 1f       	adc	r25, r25
+ 698:	c8 0f       	add	r28, r24
+ 69a:	d9 1f       	adc	r29, r25
+ 69c:	c9 58       	subi	r28, 0x89	; 137
+ 69e:	df 4f       	sbci	r29, 0xFF	; 255
+ 6a0:	8e 01       	movw	r16, r28
+ 6a2:	0b 5f       	subi	r16, 0xFB	; 251
+ 6a4:	1f 4f       	sbci	r17, 0xFF	; 255
+ for(uint8_t i=0; i<5; i++)
+  {
+   uint8_t px=*ptr++;
+ 6a6:	fe 01       	movw	r30, r28
+ 6a8:	21 96       	adiw	r28, 0x01	; 1
+ 6aa:	85 91       	lpm	r24, Z+
+   if(color==0) px^=0xFF;
+ 6ac:	90 91 00 01 	lds	r25, 0x0100
+ 6b0:	91 11       	cpse	r25, r1
+ 6b2:	01 c0       	rjmp	.+2      	; 0x6b6 <GLCD_putchar+0x36>
+ 6b4:	80 95       	com	r24
+   GLCD_WriteData(px);
+ 6b6:	0e 94 ba 02 	call	0x574	; 0x574 <GLCD_WriteData>
+
+#if SLOW_TEXT==0
+void GLCD_putchar(char c)
+{
+ const char __flash *ptr=font5x8+(5*(c-32));
+ for(uint8_t i=0; i<5; i++)
+ 6ba:	c0 17       	cp	r28, r16
+ 6bc:	d1 07       	cpc	r29, r17
+ 6be:	99 f7       	brne	.-26     	; 0x6a6 <GLCD_putchar+0x26>
+  {
+   uint8_t px=*ptr++;
+   if(color==0) px^=0xFF;
+   GLCD_WriteData(px);
+  }
+ if(color==0) GLCD_WriteData(0xFF); else GLCD_WriteData(0x00);
+ 6c0:	80 91 00 01 	lds	r24, 0x0100
+ 6c4:	81 11       	cpse	r24, r1
+ 6c6:	04 c0       	rjmp	.+8      	; 0x6d0 <GLCD_putchar+0x50>
+ 6c8:	8f ef       	ldi	r24, 0xFF	; 255
+ 6ca:	0e 94 ba 02 	call	0x574	; 0x574 <GLCD_WriteData>
+ 6ce:	03 c0       	rjmp	.+6      	; 0x6d6 <GLCD_putchar+0x56>
+ 6d0:	80 e0       	ldi	r24, 0x00	; 0
+ 6d2:	0e 94 ba 02 	call	0x574	; 0x574 <GLCD_WriteData>
+}
+ 6d6:	df 91       	pop	r29
+ 6d8:	cf 91       	pop	r28
+ 6da:	1f 91       	pop	r17
+ 6dc:	0f 91       	pop	r16
+ 6de:	08 95       	ret
+
+000006e0 <GLCD_SetPixel>:
+  GLCD_y=orig_y;
+}
+#endif
+
+void GLCD_SetPixel(uint8_t x, uint8_t y)
+{
+ 6e0:	0f 93       	push	r16
+ 6e2:	1f 93       	push	r17
+ 6e4:	cf 93       	push	r28
+ 6e6:	df 93       	push	r29
+ 6e8:	d8 2f       	mov	r29, r24
+ 6ea:	c6 2f       	mov	r28, r22
+ int8_t tmpy=y/8;
+ 6ec:	16 2f       	mov	r17, r22
+ 6ee:	16 95       	lsr	r17
+ 6f0:	16 95       	lsr	r17
+ 6f2:	16 95       	lsr	r17
+ uint8_t tmp;
+ GLCD_goto(x, tmpy);
+ 6f4:	61 2f       	mov	r22, r17
+ 6f6:	0e 94 f3 02 	call	0x5e6	; 0x5e6 <GLCD_goto>
+ tmp=GLCD_ReadData();
+ 6fa:	0e 94 9d 02 	call	0x53a	; 0x53a <GLCD_ReadData>
+ tmp=GLCD_ReadData();
+ 6fe:	0e 94 9d 02 	call	0x53a	; 0x53a <GLCD_ReadData>
+ 702:	08 2f       	mov	r16, r24
+ GLCD_goto(x, tmpy);
+ 704:	61 2f       	mov	r22, r17
+ 706:	8d 2f       	mov	r24, r29
+ 708:	0e 94 f3 02 	call	0x5e6	; 0x5e6 <GLCD_goto>
+ if(color) tmp|=_BV(y%8); else tmp&=~(_BV(y%8));
+ 70c:	80 91 00 01 	lds	r24, 0x0100
+ 710:	88 23       	and	r24, r24
+ 712:	61 f0       	breq	.+24     	; 0x72c <GLCD_SetPixel+0x4c>
+ 714:	c7 70       	andi	r28, 0x07	; 7
+ 716:	41 e0       	ldi	r20, 0x01	; 1
+ 718:	50 e0       	ldi	r21, 0x00	; 0
+ 71a:	9a 01       	movw	r18, r20
+ 71c:	02 c0       	rjmp	.+4      	; 0x722 <GLCD_SetPixel+0x42>
+ 71e:	22 0f       	add	r18, r18
+ 720:	33 1f       	adc	r19, r19
+ 722:	ca 95       	dec	r28
+ 724:	e2 f7       	brpl	.-8      	; 0x71e <GLCD_SetPixel+0x3e>
+ 726:	80 2f       	mov	r24, r16
+ 728:	82 2b       	or	r24, r18
+ 72a:	0c c0       	rjmp	.+24     	; 0x744 <GLCD_SetPixel+0x64>
+ 72c:	c7 70       	andi	r28, 0x07	; 7
+ 72e:	21 e0       	ldi	r18, 0x01	; 1
+ 730:	30 e0       	ldi	r19, 0x00	; 0
+ 732:	b9 01       	movw	r22, r18
+ 734:	02 c0       	rjmp	.+4      	; 0x73a <GLCD_SetPixel+0x5a>
+ 736:	66 0f       	add	r22, r22
+ 738:	77 1f       	adc	r23, r23
+ 73a:	ca 95       	dec	r28
+ 73c:	e2 f7       	brpl	.-8      	; 0x736 <GLCD_SetPixel+0x56>
+ 73e:	60 95       	com	r22
+ 740:	80 2f       	mov	r24, r16
+ 742:	86 23       	and	r24, r22
+ GLCD_WriteData(tmp);
+ 744:	0e 94 ba 02 	call	0x574	; 0x574 <GLCD_WriteData>
+}
+ 748:	df 91       	pop	r29
+ 74a:	cf 91       	pop	r28
+ 74c:	1f 91       	pop	r17
+ 74e:	0f 91       	pop	r16
+ 750:	08 95       	ret
+
+00000752 <_exit>:
+ 752:	f8 94       	cli
+
+00000754 <__stop_program>:
+ 754:	ff cf       	rjmp	.-2      	; 0x754 <__stop_program>

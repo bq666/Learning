@@ -1,0 +1,194 @@
+
+intvectortable-case2.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  000000a8  0000011c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000000a8  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  0000011c  2**0
+                  CONTENTS, READONLY
+  3 .debug_aranges 00000058  00000000  00000000  00000150  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00000110  00000000  00000000  000001a8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 00000056  00000000  00000000  000002b8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   000001ac  00000000  00000000  0000030e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000024  00000000  00000000  000004bc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00000156  00000000  00000000  000004e0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_ranges 00000040  00000000  00000000  00000638  2**3
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+
+	.section .vectors,"ax",@progbits
+	.global	__vectors
+	.func	__vectors
+__vectors:
+	XJMP	__init
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+	vector	__vector_1
+   4:	4b c0       	rjmp	.+150    	; 0x9c <__bad_interrupt>
+   6:	00 00       	nop
+	vector	__vector_2
+   8:	49 c0       	rjmp	.+146    	; 0x9c <__bad_interrupt>
+   a:	00 00       	nop
+	vector	__vector_3
+   c:	47 c0       	rjmp	.+142    	; 0x9c <__bad_interrupt>
+   e:	00 00       	nop
+	vector	__vector_4
+  10:	45 c0       	rjmp	.+138    	; 0x9c <__bad_interrupt>
+  12:	00 00       	nop
+	vector	__vector_5
+  14:	43 c0       	rjmp	.+134    	; 0x9c <__bad_interrupt>
+  16:	00 00       	nop
+	vector	__vector_6
+  18:	41 c0       	rjmp	.+130    	; 0x9c <__bad_interrupt>
+  1a:	00 00       	nop
+	vector	__vector_7
+  1c:	3f c0       	rjmp	.+126    	; 0x9c <__bad_interrupt>
+  1e:	00 00       	nop
+	vector	__vector_8
+  20:	3d c0       	rjmp	.+122    	; 0x9c <__bad_interrupt>
+  22:	00 00       	nop
+	vector	__vector_9
+  24:	3b c0       	rjmp	.+118    	; 0x9c <__bad_interrupt>
+  26:	00 00       	nop
+	vector	__vector_10
+  28:	39 c0       	rjmp	.+114    	; 0x9c <__bad_interrupt>
+  2a:	00 00       	nop
+	vector	__vector_11
+  2c:	37 c0       	rjmp	.+110    	; 0x9c <__bad_interrupt>
+  2e:	00 00       	nop
+	vector	__vector_12
+  30:	35 c0       	rjmp	.+106    	; 0x9c <__bad_interrupt>
+  32:	00 00       	nop
+	vector	__vector_13
+  34:	33 c0       	rjmp	.+102    	; 0x9c <__bad_interrupt>
+  36:	00 00       	nop
+	vector	__vector_14
+  38:	31 c0       	rjmp	.+98     	; 0x9c <__bad_interrupt>
+  3a:	00 00       	nop
+	vector	__vector_15
+  3c:	2f c0       	rjmp	.+94     	; 0x9c <__bad_interrupt>
+  3e:	00 00       	nop
+	vector	__vector_16
+  40:	2d c0       	rjmp	.+90     	; 0x9c <__bad_interrupt>
+  42:	00 00       	nop
+	vector	__vector_17
+  44:	2b c0       	rjmp	.+86     	; 0x9c <__bad_interrupt>
+  46:	00 00       	nop
+	vector	__vector_18
+  48:	29 c0       	rjmp	.+82     	; 0x9c <__bad_interrupt>
+  4a:	00 00       	nop
+	vector	__vector_19
+  4c:	27 c0       	rjmp	.+78     	; 0x9c <__bad_interrupt>
+  4e:	00 00       	nop
+	vector	__vector_20
+  50:	25 c0       	rjmp	.+74     	; 0x9c <__bad_interrupt>
+  52:	00 00       	nop
+	vector	__vector_21
+  54:	23 c0       	rjmp	.+70     	; 0x9c <__bad_interrupt>
+  56:	00 00       	nop
+	vector	__vector_22
+  58:	21 c0       	rjmp	.+66     	; 0x9c <__bad_interrupt>
+  5a:	00 00       	nop
+	vector	__vector_23
+  5c:	1f c0       	rjmp	.+62     	; 0x9c <__bad_interrupt>
+  5e:	00 00       	nop
+	vector	__vector_24
+  60:	1d c0       	rjmp	.+58     	; 0x9c <__bad_interrupt>
+  62:	00 00       	nop
+	vector	__vector_25
+  64:	1b c0       	rjmp	.+54     	; 0x9c <__bad_interrupt>
+  66:	00 00       	nop
+	vector	__vector_26
+  68:	19 c0       	rjmp	.+50     	; 0x9c <__bad_interrupt>
+  6a:	00 00       	nop
+	vector	__vector_27
+  6c:	17 c0       	rjmp	.+46     	; 0x9c <__bad_interrupt>
+  6e:	00 00       	nop
+	vector	__vector_28
+  70:	15 c0       	rjmp	.+42     	; 0x9c <__bad_interrupt>
+  72:	00 00       	nop
+	vector	__vector_29
+  74:	13 c0       	rjmp	.+38     	; 0x9c <__bad_interrupt>
+  76:	00 00       	nop
+	vector	__vector_30
+  78:	11 c0       	rjmp	.+34     	; 0x9c <__bad_interrupt>
+  7a:	00 00       	nop
+	vector	__vector_31
+  7c:	0f c0       	rjmp	.+30     	; 0x9c <__bad_interrupt>
+  7e:	00 00       	nop
+	vector	__vector_32
+  80:	0d c0       	rjmp	.+26     	; 0x9c <__bad_interrupt>
+  82:	00 00       	nop
+	vector	__vector_33
+  84:	0b c0       	rjmp	.+22     	; 0x9c <__bad_interrupt>
+  86:	00 00       	nop
+	vector	__vector_34
+  88:	09 c0       	rjmp	.+18     	; 0x9c <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+	   should be set to the highest address available for malloc().  */
+	.weak	__heap_end
+	.set	__heap_end, 0
+
+	.section .init2,"ax",@progbits
+	clr	__zero_reg__
+  8c:	11 24       	eor	r1, r1
+	out	AVR_STATUS_ADDR, __zero_reg__
+  8e:	1f be       	out	0x3f, r1	; 63
+	ldi	r28,lo8(__stack)
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+#ifdef _HAVE_AVR_STACK_POINTER_HI
+	ldi	r29,hi8(__stack)
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+	out	AVR_STACK_POINTER_HI_ADDR, r29
+  94:	de bf       	out	0x3e, r29	; 62
+#endif	/* _HAVE_AVR_STACK_POINTER_HI */
+	out	AVR_STACK_POINTER_LO_ADDR, r28
+  96:	cd bf       	out	0x3d, r28	; 61
+
+	.section .init9,"ax",@progbits
+#ifdef __AVR_ASM_ONLY__
+	XJMP	main
+#else	/* !__AVR_ASM_ONLY__ */
+	XCALL	main
+  98:	02 d0       	rcall	.+4      	; 0x9e <main>
+	XJMP	exit
+  9a:	04 c0       	rjmp	.+8      	; 0xa4 <_exit>
+
+0000009c <__bad_interrupt>:
+	.global	__bad_interrupt
+	.func	__bad_interrupt
+__bad_interrupt:
+	.weak	__vector_default
+	.set	__vector_default, __vectors
+	XJMP	__vector_default
+  9c:	b1 cf       	rjmp	.-158    	; 0x0 <__vectors>
+
+0000009e <main>:
+#include <avr\boot.h>
+
+int main()
+{
+
+  9e:	80 e0       	ldi	r24, 0x00	; 0
+  a0:	90 e0       	ldi	r25, 0x00	; 0
+  a2:	08 95       	ret
+
+000000a4 <_exit>:
+  a4:	f8 94       	cli
+
+000000a6 <__stop_program>:
+  a6:	ff cf       	rjmp	.-2      	; 0xa6 <__stop_program>

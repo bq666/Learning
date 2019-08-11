@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "LCDAlfaAnim", "LCDAlfaAnim\LCDAlfaAnim.cproj", "{645873A8-1564-4B68-8FBD-6A38C8C5D3A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{645873A8-1564-4B68-8FBD-6A38C8C5D3A6}.Debug|AVR.ActiveCfg = Debug|AVR
+		{645873A8-1564-4B68-8FBD-6A38C8C5D3A6}.Debug|AVR.Build.0 = Debug|AVR
+		{645873A8-1564-4B68-8FBD-6A38C8C5D3A6}.Release|AVR.ActiveCfg = Release|AVR
+		{645873A8-1564-4B68-8FBD-6A38C8C5D3A6}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+# Nmap 7.70 scan initiated Wed Aug  7 22:58:43 2019 as: nmap -sP -oG ping-sweep-raw 192.168.0.0/24
+Host: 192.168.0.1 ()	Status: Up
+Host: 192.168.0.94 ()	Status: Up
+Host: 192.168.0.101 ()	Status: Up
+Host: 192.168.0.129 ()	Status: Up
+# Nmap done at Wed Aug  7 22:58:45 2019 -- 256 IP addresses (4 hosts up) scanned in 2.33 seconds

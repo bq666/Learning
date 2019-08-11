@@ -1,0 +1,7 @@
+/opt/clion-2019.1.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE= -G "CodeBlocks - Unix Makefiles" /home/bq666/Workspace/MyCMake
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.14.5 or higher is required.  You are running version 3.14.3
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/bq666/Workspace/MyCMake/CMakeFiles/CMakeOutput.log".

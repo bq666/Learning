@@ -1,0 +1,343 @@
+
+Enkoder-Debounce.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  000001c8  0000025c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000001c8  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000005  00800100  00800100  0000025c  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000025c  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000048  00000000  00000000  0000028c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000320  00000000  00000000  000002d4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000001a0  00000000  00000000  000005f4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000001e6  00000000  00000000  00000794  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000074  00000000  00000000  0000097c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000223  00000000  00000000  000009f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000191  00000000  00000000  00000c13  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000038  00000000  00000000  00000da4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 3a 00 	jmp	0x74	; 0x74 <__ctors_end>
+   4:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+   8:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+   c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  10:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  14:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  18:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  1c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  20:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  24:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  28:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  2c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  30:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  34:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  38:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  3c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  40:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  44:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  48:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  4c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  50:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  54:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  58:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  5c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  60:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  64:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+
+00000068 <__trampolines_end>:
+  68:	c0 f9       	bld	r28, 0
+  6a:	a4 b0       	in	r10, 0x04	; 4
+  6c:	99 92       	st	Y+, r9
+  6e:	82 f8       	bld	r8, 2
+  70:	80 90 bf 00 	lds	r8, 0x00BF
+
+00000074 <__ctors_end>:
+  74:	11 24       	eor	r1, r1
+  76:	1f be       	out	0x3f, r1	; 63
+  78:	cf ef       	ldi	r28, 0xFF	; 255
+  7a:	d8 e0       	ldi	r29, 0x08	; 8
+  7c:	de bf       	out	0x3e, r29	; 62
+  7e:	cd bf       	out	0x3d, r28	; 61
+
+00000080 <__do_copy_data>:
+  80:	11 e0       	ldi	r17, 0x01	; 1
+  82:	a0 e0       	ldi	r26, 0x00	; 0
+  84:	b1 e0       	ldi	r27, 0x01	; 1
+  86:	e8 ec       	ldi	r30, 0xC8	; 200
+  88:	f1 e0       	ldi	r31, 0x01	; 1
+  8a:	02 c0       	rjmp	.+4      	; 0x90 <__do_copy_data+0x10>
+  8c:	05 90       	lpm	r0, Z+
+  8e:	0d 92       	st	X+, r0
+  90:	a0 30       	cpi	r26, 0x00	; 0
+  92:	b1 07       	cpc	r27, r17
+  94:	d9 f7       	brne	.-10     	; 0x8c <__do_copy_data+0xc>
+
+00000096 <__do_clear_bss>:
+  96:	21 e0       	ldi	r18, 0x01	; 1
+  98:	a0 e0       	ldi	r26, 0x00	; 0
+  9a:	b1 e0       	ldi	r27, 0x01	; 1
+  9c:	01 c0       	rjmp	.+2      	; 0xa0 <.do_clear_bss_start>
+
+0000009e <.do_clear_bss_loop>:
+  9e:	1d 92       	st	X+, r1
+
+000000a0 <.do_clear_bss_start>:
+  a0:	a5 30       	cpi	r26, 0x05	; 5
+  a2:	b2 07       	cpc	r27, r18
+  a4:	e1 f7       	brne	.-8      	; 0x9e <.do_clear_bss_loop>
+  a6:	0e 94 ca 00 	call	0x194	; 0x194 <main>
+  aa:	0c 94 e2 00 	jmp	0x1c4	; 0x1c4 <_exit>
+
+000000ae <__bad_interrupt>:
+  ae:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000b2 <ShowOnLED>:
+const uint8_t DP=0x80;
+
+void ShowOnLED(uint8_t val)
+{
+	uint8_t tmp=0xFF;
+	if((val & 0x7F)<11) tmp=DIGITS[val & 0x7F];  //Odczytaj kod znaku
+  b2:	28 2f       	mov	r18, r24
+  b4:	2f 77       	andi	r18, 0x7F	; 127
+  b6:	30 e0       	ldi	r19, 0x00	; 0
+  b8:	2b 30       	cpi	r18, 0x0B	; 11
+  ba:	31 05       	cpc	r19, r1
+  bc:	2c f4       	brge	.+10     	; 0xc8 <ShowOnLED+0x16>
+  be:	f9 01       	movw	r30, r18
+  c0:	e8 59       	subi	r30, 0x98	; 152
+  c2:	ff 4f       	sbci	r31, 0xFF	; 255
+  c4:	94 91       	lpm	r25, Z
+  c6:	01 c0       	rjmp	.+2      	; 0xca <ShowOnLED+0x18>
+static const uint8_t __flash DIGITS[11]={0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0x80, 0x90, 0xBF};
+const uint8_t DP=0x80;
+
+void ShowOnLED(uint8_t val)
+{
+	uint8_t tmp=0xFF;
+  c8:	9f ef       	ldi	r25, 0xFF	; 255
+	if((val & 0x7F)<11) tmp=DIGITS[val & 0x7F];  //Odczytaj kod znaku
+	if(val & DP) tmp&=~DP;      //Sterowanie kropk¹ dziesiêtn¹ na LED
+  ca:	87 fd       	sbrc	r24, 7
+  cc:	9f 77       	andi	r25, 0x7F	; 127
+	LEDPORT=tmp;
+  ce:	9b b9       	out	0x0b, r25	; 11
+  d0:	08 95       	ret
+
+000000d2 <ReadEncoder>:
+	static int8_t last;
+	static uint8_t laststate;
+	static uint8_t counters[2];	//Tablica zawieraj¹ca liczniki
+	int8_t newpos, diff;
+	
+	uint8_t state=PINB;
+  d2:	83 b1       	in	r24, 0x03	; 3
+	if(((state^laststate) & _BV(PB0)) && (counters[0]==0))
+  d4:	90 91 03 01 	lds	r25, 0x0103
+  d8:	29 2f       	mov	r18, r25
+  da:	28 27       	eor	r18, r24
+  dc:	20 ff       	sbrs	r18, 0
+  de:	0b c0       	rjmp	.+22     	; 0xf6 <ReadEncoder+0x24>
+  e0:	20 91 01 01 	lds	r18, 0x0101
+  e4:	21 11       	cpse	r18, r1
+  e6:	07 c0       	rjmp	.+14     	; 0xf6 <ReadEncoder+0x24>
+	{
+		counters[0]=200;
+  e8:	28 ec       	ldi	r18, 0xC8	; 200
+  ea:	20 93 01 01 	sts	0x0101, r18
+		laststate&=(~_BV(PB0));
+		laststate|=(state & _BV(PB0));
+  ee:	80 fb       	bst	r24, 0
+  f0:	90 f9       	bld	r25, 0
+  f2:	90 93 03 01 	sts	0x0103, r25
+	}
+
+	if(((state^laststate) & _BV(PB7)) && (counters[1]==0))
+  f6:	90 91 03 01 	lds	r25, 0x0103
+  fa:	29 2f       	mov	r18, r25
+  fc:	28 27       	eor	r18, r24
+  fe:	27 ff       	sbrs	r18, 7
+ 100:	0c c0       	rjmp	.+24     	; 0x11a <ReadEncoder+0x48>
+ 102:	20 91 02 01 	lds	r18, 0x0102
+ 106:	21 11       	cpse	r18, r1
+ 108:	08 c0       	rjmp	.+16     	; 0x11a <ReadEncoder+0x48>
+	{
+		counters[1]=200;
+ 10a:	28 ec       	ldi	r18, 0xC8	; 200
+ 10c:	20 93 02 01 	sts	0x0102, r18
+		laststate&=(~_BV(PB7));
+		laststate|=(state & _BV(PB7));
+ 110:	80 78       	andi	r24, 0x80	; 128
+	}
+
+	if(((state^laststate) & _BV(PB7)) && (counters[1]==0))
+	{
+		counters[1]=200;
+		laststate&=(~_BV(PB7));
+ 112:	9f 77       	andi	r25, 0x7F	; 127
+		laststate|=(state & _BV(PB7));
+ 114:	89 2b       	or	r24, r25
+ 116:	80 93 03 01 	sts	0x0103, r24
+	}
+
+	uint8_t przerwa=0;
+	for(uint8_t c=0;c<2;c++)
+	if(counters[c])
+ 11a:	80 91 01 01 	lds	r24, 0x0101
+ 11e:	88 23       	and	r24, r24
+ 120:	29 f0       	breq	.+10     	; 0x12c <ReadEncoder+0x5a>
+	{
+		counters[c]--;
+ 122:	81 50       	subi	r24, 0x01	; 1
+ 124:	80 93 01 01 	sts	0x0101, r24
+		przerwa=1;			//Robimy opóŸnienie tylko jeœli któryœ z liczników by³ !=0
+ 128:	81 e0       	ldi	r24, 0x01	; 1
+ 12a:	01 c0       	rjmp	.+2      	; 0x12e <ReadEncoder+0x5c>
+		laststate|=(state & _BV(PB7));
+	}
+
+	uint8_t przerwa=0;
+	for(uint8_t c=0;c<2;c++)
+	if(counters[c])
+ 12c:	80 e0       	ldi	r24, 0x00	; 0
+ 12e:	90 91 02 01 	lds	r25, 0x0102
+ 132:	99 23       	and	r25, r25
+ 134:	21 f0       	breq	.+8      	; 0x13e <ReadEncoder+0x6c>
+	{
+		counters[c]--;
+ 136:	91 50       	subi	r25, 0x01	; 1
+ 138:	90 93 02 01 	sts	0x0102, r25
+ 13c:	02 c0       	rjmp	.+4      	; 0x142 <ReadEncoder+0x70>
+		przerwa=1;			//Robimy opóŸnienie tylko jeœli któryœ z liczników by³ !=0
+	}
+	if(przerwa) _delay_ms(1);
+ 13e:	88 23       	and	r24, r24
+ 140:	31 f0       	breq	.+12     	; 0x14e <ReadEncoder+0x7c>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 142:	8f e9       	ldi	r24, 0x9F	; 159
+ 144:	9f e0       	ldi	r25, 0x0F	; 15
+ 146:	01 97       	sbiw	r24, 0x01	; 1
+ 148:	f1 f7       	brne	.-4      	; 0x146 <ReadEncoder+0x74>
+ 14a:	00 c0       	rjmp	.+0      	; 0x14c <ReadEncoder+0x7a>
+ 14c:	00 00       	nop
+
+	newpos=0;
+	if((PINB & _BV(PB0))==0) newpos=3;
+ 14e:	18 9b       	sbis	0x03, 0	; 3
+ 150:	02 c0       	rjmp	.+4      	; 0x156 <ReadEncoder+0x84>
+		counters[c]--;
+		przerwa=1;			//Robimy opóŸnienie tylko jeœli któryœ z liczników by³ !=0
+	}
+	if(przerwa) _delay_ms(1);
+
+	newpos=0;
+ 152:	80 e0       	ldi	r24, 0x00	; 0
+ 154:	01 c0       	rjmp	.+2      	; 0x158 <ReadEncoder+0x86>
+	if((PINB & _BV(PB0))==0) newpos=3;
+ 156:	83 e0       	ldi	r24, 0x03	; 3
+	if((PINB & _BV(PB7))==0) newpos^=1;	// konwersja kodu Graya na binarny
+ 158:	1f 99       	sbic	0x03, 7	; 3
+ 15a:	02 c0       	rjmp	.+4      	; 0x160 <ReadEncoder+0x8e>
+ 15c:	91 e0       	ldi	r25, 0x01	; 1
+ 15e:	89 27       	eor	r24, r25
+	diff=last-newpos;
+ 160:	90 91 00 01 	lds	r25, 0x0100
+ 164:	98 1b       	sub	r25, r24
+	if(diff & 1)
+ 166:	90 ff       	sbrs	r25, 0
+ 168:	09 c0       	rjmp	.+18     	; 0x17c <ReadEncoder+0xaa>
+	{				// bit 0 = krok
+		last=newpos;
+ 16a:	80 93 00 01 	sts	0x0100, r24
+		enc_delta+=(diff & 2)-1;	//bit 1 - kierunek
+ 16e:	80 91 04 01 	lds	r24, 0x0104
+ 172:	81 50       	subi	r24, 0x01	; 1
+ 174:	92 70       	andi	r25, 0x02	; 2
+ 176:	89 0f       	add	r24, r25
+ 178:	80 93 04 01 	sts	0x0104, r24
+ 17c:	08 95       	ret
+
+0000017e <Read4StepEncoder>:
+	return val>>1;
+}
+
+int8_t Read4StepEncoder()
+{
+	ReadEncoder();
+ 17e:	0e 94 69 00 	call	0xd2	; 0xd2 <ReadEncoder>
+	int8_t val=enc_delta;
+ 182:	80 91 04 01 	lds	r24, 0x0104
+	enc_delta=val & 3;
+ 186:	98 2f       	mov	r25, r24
+ 188:	93 70       	andi	r25, 0x03	; 3
+ 18a:	90 93 04 01 	sts	0x0104, r25
+	return val>>2;
+}
+ 18e:	85 95       	asr	r24
+ 190:	85 95       	asr	r24
+ 192:	08 95       	ret
+
+00000194 <main>:
+
+int main()
+{
+	LEDDDR=0xFF;		//Wszystkie piny portu s¹ wyjœciem
+ 194:	8f ef       	ldi	r24, 0xFF	; 255
+ 196:	8a b9       	out	0x0a, r24	; 10
+	PORTB|=_BV(PB0) | _BV(PB7);	//W³¹cz pull up na pinie PB0 i PB7
+ 198:	85 b1       	in	r24, 0x05	; 5
+ 19a:	81 68       	ori	r24, 0x81	; 129
+ 19c:	85 b9       	out	0x05, r24	; 5
+	uint8_t x=0;
+ 19e:	c0 e0       	ldi	r28, 0x00	; 0
+
+
+	while(1)
+	{
+		ShowOnLED(x);
+ 1a0:	8c 2f       	mov	r24, r28
+ 1a2:	0e 94 59 00 	call	0xb2	; 0xb2 <ShowOnLED>
+		switch(Read4StepEncoder())
+ 1a6:	0e 94 bf 00 	call	0x17e	; 0x17e <Read4StepEncoder>
+ 1aa:	8f 3f       	cpi	r24, 0xFF	; 255
+ 1ac:	19 f0       	breq	.+6      	; 0x1b4 <main+0x20>
+ 1ae:	81 30       	cpi	r24, 0x01	; 1
+ 1b0:	29 f0       	breq	.+10     	; 0x1bc <main+0x28>
+ 1b2:	f6 cf       	rjmp	.-20     	; 0x1a0 <main+0xc>
+		{
+			case -1 :	if(x>0) x-=1; break;
+ 1b4:	cc 23       	and	r28, r28
+ 1b6:	a1 f3       	breq	.-24     	; 0x1a0 <main+0xc>
+ 1b8:	c1 50       	subi	r28, 0x01	; 1
+ 1ba:	f2 cf       	rjmp	.-28     	; 0x1a0 <main+0xc>
+			case 0  :	break;
+			case 1  :	if(x<9) x+=1; break;
+ 1bc:	c9 30       	cpi	r28, 0x09	; 9
+ 1be:	80 f7       	brcc	.-32     	; 0x1a0 <main+0xc>
+ 1c0:	cf 5f       	subi	r28, 0xFF	; 255
+ 1c2:	ee cf       	rjmp	.-36     	; 0x1a0 <main+0xc>
+
+000001c4 <_exit>:
+ 1c4:	f8 94       	cli
+
+000001c6 <__stop_program>:
+ 1c6:	ff cf       	rjmp	.-2      	; 0x1c6 <__stop_program>

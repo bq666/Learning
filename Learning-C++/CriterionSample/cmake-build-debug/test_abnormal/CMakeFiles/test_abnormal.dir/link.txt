@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/test_abnormal.dir/__/source/dangerous_add.c.o CMakeFiles/test_abnormal.dir/test_exit.c.o CMakeFiles/test_abnormal.dir/test_signal.c.o  -o test_abnormal -lcriterion 

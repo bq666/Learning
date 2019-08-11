@@ -1,0 +1,2037 @@
+# DO NOT EDIT -- generated automagically by make depend
+# Source: $Id: Makefile.in,v 1.330 2000/02/11 23:59:44 andreas Exp $
+
+Agent.o: Agent.C assert.h config.h \
+ sigName.h Agent.h \
+ strclass.h rxclass.h bool.h AgentM.h TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h
+AgentM.o: AgentM.C AgentM.h \
+ config.h TypeInfo.h \
+ bool.h assert.h \
+ Agent.h \
+ strclass.h rxclass.h HandlerL.h compare.h \
+ UniqueId.h SignalB.h \
+ config.h
+AliasGE.o: AliasGE.C AliasGE.h ArcGraphE.h LineGraphE.h GraphEdge.h \
+ UniqueId.h \
+ bool.h config.h Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h DataLink.h GraphGC.h \
+ explicit.h EdgeA.h
+AlignBox.o: AlignBox.C assert.h config.h \
+ misc.h AlignBox.h CompositeB.h Box.h strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h
+ArcBox.o: ArcBox.C ArcBox.h LineBox.h PrimitiveB.h Box.h assert.h \
+ config.h \
+ strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h printBox.h \
+ config.h
+ArcGraphE.o: ArcGraphE.C ArcGraphE.h LineGraphE.h GraphEdge.h \
+ UniqueId.h \
+ bool.h config.h Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h DataLink.h GraphGC.h \
+ explicit.h EdgeA.h HintGraphN.h \
+ RegionGN.h PosGraphN.h GraphNode.h GraphNodeI.h printBox.h \
+ pi.h hypot.h \
+ config.h
+ArgField.o: ArgField.C ArgField.h \
+ HandlerL.h compare.h bool.h config.h \
+ assert.h \
+ strclass.h \
+ rxclass.h \
+ verify.h \
+ charsets.h MString.h AppData.h version.h OnOff.h BindingS.h buttons.h \
+ string-fun.h tabs.h ComboBox.h StringA.h VarArray.h DynArray.h
+ArgNode.o: ArgNode.C \
+ assert.h config.h \
+ VSLLib.h strclass.h rxclass.h bool.h VSEFlags.h \
+ TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h ArgNode.h VSLNode.h VSLBuiltin.h \
+ DummyNode.h DummyBox.h VSLDef.h
+AsyncAgent.o: AsyncAgent.C AsyncAgent.h assert.h config.h \
+ Agent.h \
+ strclass.h \
+ rxclass.h bool.h AgentM.h TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h TimeOut.h misc.h
+AutoRaise.o: AutoRaise.C AutoRaise.h \
+ bool.h config.h frame.h longName.h strclass.h \
+ rxclass.h assert.h
+BinBox.o: BinBox.C BinBox.h HatBox.h Box.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h
+Box.o: Box.C \
+ assert.h config.h \
+ return.h \
+ Box.h strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h TagBox.h MarkBox.h THatBox.h HatBox.h \
+ VSEFlags.h
+BoxD.o: BoxD.C BoxD.h
+BoxEdgeA.o: BoxEdgeA.C BoxEdgeA.h EdgeA.h Box.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h GraphGC.h \
+ explicit.h
+BoxExtend.o: BoxExtend.C BoxExtend.h BoxPoint.h BoxC.h \
+ BoxD.h \
+ bool.h config.h \
+ misc.h
+BoxGraphN.o: BoxGraphN.C BoxGraphN.h RegionGN.h PosGraphN.h \
+ GraphNode.h GraphNodeI.h UniqueId.h \
+ bool.h config.h Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h DataLink.h GraphGC.h \
+ explicit.h GraphEdge.h MarkBox.h \
+ THatBox.h HatBox.h printBox.h CompositeB.h ColorBox.h \
+ config.h
+BoxPoint.o: BoxPoint.C BoxPoint.h BoxC.h \
+ BoxD.h \
+ bool.h config.h \
+ config.h
+BoxRegion.o: BoxRegion.C BoxRegion.h \
+ misc.h BoxPoint.h BoxC.h \
+ BoxD.h bool.h config.h BoxSize.h
+BoxSize.o: BoxSize.C BoxSize.h BoxPoint.h BoxC.h \
+ BoxD.h \
+ bool.h config.h \
+ misc.h
+BreakPM.o: BreakPM.C BreakPM.h Map.h bool.h config.h assert.h \
+ BreakPoint.h \
+ strclass.h \
+ rxclass.h GDBAgent.h TTYAgent.h LiterateA.h \
+ AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h
+BreakPoint.o: BreakPoint.C BreakPoint.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ GDBAgent.h TTYAgent.h LiterateA.h \
+ AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h cook.h string-fun.h \
+ comm-manag.h ddd.h \
+ dbx-lookup.h question.h regexps.h \
+ index.h value-read.h DispValueT.h
+BuiltinCN.o: BuiltinCN.C assert.h config.h \
+ VSLLib.h strclass.h \
+ rxclass.h bool.h VSEFlags.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLBuiltin.h VSLNode.h TrueBox.h \
+ BuiltinCN.h CallNode.h VSLDefList.h VSLDef.h DefCallN.h ListNode.h \
+ TrueNode.h ConstNode.h
+COPYING.gz.o: COPYING.gz.C
+CallNode.o: CallNode.C assert.h config.h \
+ VSLLib.h strclass.h \
+ rxclass.h bool.h VSEFlags.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLNode.h VSLBuiltin.h CallNode.h \
+ VSLDefList.h VSLDef.h ConstNode.h
+ChunkQueue.o: ChunkQueue.C ChunkQueue.h \
+ TypeInfo.h config.h \
+ assert.h \
+ config.h
+CodeCache.o: CodeCache.C \
+ CodeCache.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ VarArray.h DynArray.h
+ColorBox.o: ColorBox.C ColorBox.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ Box.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h THatBox.h HatBox.h \
+ config.h
+ComboBox.o: ComboBox.C ComboBox.h \
+ StringA.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ VarArray.h DynArray.h frame.h charsets.h \
+ MString.h \
+ verify.h wm.h TimeOut.h AutoRaise.h \
+ config.h
+Command.o: Command.C Command.h GDBAgent.h TTYAgent.h LiterateA.h \
+ assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h question.h comm-manag.h status.h Delay.h \
+ MString.h \
+ exectty.h cmdtty.h findParent.h \
+ history.h HistoryF.h Assoc.h ddd.h \
+ cook.h Queue.h windows.h TimeOut.h AppData.h version.h OnOff.h \
+ BindingS.h disp-read.h \
+ config.h
+CompositeB.o: CompositeB.C assert.h config.h \
+ misc.h CompositeB.h Box.h strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h
+ConstNode.o: ConstNode.C \
+ assert.h config.h \
+ VSLLib.h strclass.h \
+ rxclass.h bool.h VSEFlags.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLNode.h VSLBuiltin.h ConstNode.h
+DataDisp.o: DataDisp.C DataDisp.h \
+ ArgField.h HandlerL.h compare.h bool.h config.h assert.h \
+ strclass.h \
+ rxclass.h BoxSize.h BoxPoint.h BoxC.h \
+ BoxD.h misc.h Command.h GDBAgent.h \
+ TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h DynArray.h VoidArray.h \
+ question.h Delay.h ExitCB.h GraphEdit.h HelpCB.h \
+ MString.h IntArray.h MakeMenu.h \
+ VSEFlags.h VSLLib.h StringBox.h Box.h BoxWeight.h BoxRegion.h \
+ BoxExtend.h PrintGC.h Widget.h DataLink.h PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h MarkBox.h THatBox.h HatBox.h events.h \
+ string-fun.h AliasGE.h ArcGraphE.h LineGraphE.h GraphEdge.h GraphGC.h \
+ explicit.h EdgeA.h AppData.h version.h OnOff.h BindingS.h ComboBox.h \
+ DestroyCB.h DispGraph.h Graph.h GraphNode.h GraphNodeI.h PosGraphN.h \
+ GraphNPA.h DispNodeM.h Map.h DispNode.h BoxGraphN.h RegionGN.h \
+ DispValue.h DispValueA.h DispValueT.h StringSA.h SourceO.h Assoc.h \
+ DispBox.h VSLArgList.h HistoryD.h IntIntAA.h LessTifH.h PannedGE.h \
+ PosBuffer.h ProgressM.h status.h ScrolledGE.h SmartC.h StringMap.h \
+ TimeOut.h UndoBuffer.h UndoBE.h buttons.h charsets.h cmdtty.h \
+ comm-manag.h converters.h cook.h ddd.h \
+ deref.h disp-read.h history.h HistoryF.h logo.h mydialogs.h post.h \
+ regexps.h settings.h options.h toolbar.h value-read.h verify.h \
+ windows.h wm.h \
+ config.h
+DataLength.o: DataLength.C DataLength.h \
+ TypeInfo.h config.h \
+ assert.h \
+ config.h
+DefCallN.o: DefCallN.C assert.h config.h \
+ VSLLib.h strclass.h rxclass.h bool.h VSEFlags.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLDef.h VSLNode.h VSLBuiltin.h \
+ VSLDefList.h CallNode.h DefCallN.h BuiltinCN.h ArgNode.h DummyNode.h \
+ DummyBox.h
+Delay.o: Delay.C Delay.h \
+ TypeInfo.h config.h \
+ VarArray.h DynArray.h assert.h \
+ bool.h longName.h strclass.h \
+ rxclass.h HelpCB.h \
+ MString.h \
+ $(srcdir)/../icons/cursors/time16.xbm \
+ $(srcdir)/../icons/cursors/time16m.xbm
+DestroyCB.o: DestroyCB.C DestroyCB.h \
+ TimeOut.h \
+ config.h
+DiagBox.o: DiagBox.C \
+ PrimitiveB.h Box.h assert.h config.h \
+ strclass.h rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h StringBox.h FontTable.h \
+ DiagBox.h
+DispBox.o: DispBox.C assert.h config.h \
+ DispBox.h strclass.h \
+ rxclass.h bool.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h VSLLib.h VSEFlags.h StringBox.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLArgList.h DispValue.h DispValueA.h \
+ VarArray.h DynArray.h DispValueT.h StringSA.h SourceO.h Assoc.h \
+ ColorBox.h DispNode.h GraphNode.h \
+ GraphNodeI.h GraphGC.h explicit.h GraphEdge.h HandlerL.h compare.h \
+ BoxGraphN.h RegionGN.h PosGraphN.h GDBAgent.h TTYAgent.h LiterateA.h \
+ AsyncAgent.h Agent.h \
+ AgentM.h \
+ SignalB.h DataLength.h \
+ StringA.h VoidArray.h cook.h ddd.h \
+ status.h Delay.h MString.h shorten.h string-fun.h tabs.h version.h \
+ regexps.h ddd.vsl.h
+DispBuffer.o: DispBuffer.C DispBuffer.h bool.h config.h strclass.h \
+ rxclass.h assert.h \
+ cook.h disp-read.h GDBAgent.h TTYAgent.h \
+ LiterateA.h \
+ AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h comm-manag.h ddd.h \
+ config.h
+DispGraph.o: DispGraph.C DispGraph.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ Graph.h GraphGC.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h Box.h \
+ BoxSize.h misc.h BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h \
+ TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h explicit.h GraphNode.h GraphNodeI.h \
+ GraphEdge.h HandlerL.h compare.h LineGraphE.h EdgeA.h PosGraphN.h \
+ GraphNPA.h VarArray.h DynArray.h DispNodeM.h Map.h DispNode.h \
+ BoxGraphN.h RegionGN.h MarkBox.h THatBox.h HatBox.h DispValue.h \
+ DispValueA.h DispValueT.h StringSA.h SourceO.h Assoc.h \
+ pi.h hypot.h AppData.h version.h OnOff.h BindingS.h GraphEdit.h \
+ AliasGE.h ArcGraphE.h HintGraphN.h VoidArray.h regexps.h BoxEdgeA.h \
+ annotation.h GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ SignalB.h DataLength.h \
+ StringA.h DispBox.h VSLLib.h VSEFlags.h StringBox.h PrimitiveB.h \
+ FontTable.h ListBox.h CompositeB.h TagBox.h VSLArgList.h EdgeAPA.h
+DispNode.o: DispNode.C DispNode.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ GraphNode.h \
+ GraphNodeI.h UniqueId.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h DataLink.h GraphGC.h \
+ explicit.h GraphEdge.h HandlerL.h \
+ compare.h BoxGraphN.h RegionGN.h PosGraphN.h MarkBox.h THatBox.h \
+ HatBox.h DispValue.h DispValueA.h VarArray.h DynArray.h DispValueT.h \
+ StringSA.h SourceO.h Assoc.h \
+ cook.h AppData.h version.h OnOff.h \
+ BindingS.h CompositeB.h DispBox.h VSLLib.h VSEFlags.h StringBox.h \
+ PrimitiveB.h FontTable.h ListBox.h TagBox.h VSLArgList.h AliasGE.h \
+ ArcGraphE.h LineGraphE.h EdgeA.h
+DispNodeM.o: DispNodeM.C DispNodeM.h Map.h bool.h config.h assert.h \
+ DispNode.h strclass.h \
+ rxclass.h GraphNode.h GraphNodeI.h UniqueId.h Box.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h DataLink.h GraphGC.h \
+ explicit.h GraphEdge.h HandlerL.h \
+ compare.h BoxGraphN.h RegionGN.h PosGraphN.h MarkBox.h THatBox.h \
+ HatBox.h DispValue.h DispValueA.h VarArray.h DynArray.h DispValueT.h \
+ StringSA.h SourceO.h Assoc.h \
+ config.h
+DispValue.o: DispValue.C DispValue.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ DispValueA.h \
+ VarArray.h DynArray.h DispValueT.h StringSA.h SourceO.h Assoc.h Box.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h \
+ AppData.h version.h OnOff.h BindingS.h \
+ DispNode.h GraphNode.h GraphNodeI.h GraphGC.h explicit.h GraphEdge.h \
+ HandlerL.h compare.h BoxGraphN.h RegionGN.h PosGraphN.h MarkBox.h \
+ THatBox.h HatBox.h GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ SignalB.h DataLength.h \
+ StringA.h VoidArray.h PlotAgent.h IntArray.h ChunkQueue.h \
+ cook.h ddd.h deref.h fonts.h isid.h plotter.h \
+ question.h regexps.h string-fun.h value-read.h
+DispValueA.o: DispValueA.C DispValueA.h VarArray.h DynArray.h \
+ assert.h config.h \
+ bool.h
+DispValueT.o: DispValueT.C DispValueT.h \
+ config.h
+DummyBox.o: DummyBox.C assert.h config.h \
+ DummyBox.h strclass.h \
+ rxclass.h bool.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h ListBox.h CompositeB.h
+DummyNode.o: DummyNode.C assert.h config.h \
+ VSLLib.h strclass.h \
+ rxclass.h bool.h VSEFlags.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLDef.h VSLNode.h VSLBuiltin.h \
+ DummyNode.h DummyBox.h
+EdgeA.o: EdgeA.C EdgeA.h Box.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h GraphGC.h \
+ explicit.h \
+ config.h
+EdgeAPA.o: EdgeAPA.C EdgeAPA.h EdgeA.h Box.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h GraphGC.h \
+ explicit.h VarArray.h DynArray.h
+EntryType.o: EntryType.C VarArray.h DynArray.h assert.h config.h \
+ bool.h EntryType.h
+ExitCB.o: ExitCB.C \
+ findParent.h ExitCB.h verify.h
+FixBox.o: FixBox.C FixBox.h HatBox.h Box.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h
+FontFixBox.o: FontFixBox.C assert.h config.h \
+ FontFixBox.h HatBox.h Box.h strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h
+FontTable.o: FontTable.C assert.h config.h \
+ hash.h strclass.h \
+ rxclass.h bool.h \
+ FontTable.h TypeInfo.h \
+ config.h
+GDBAgent.o: GDBAgent.C GDBAgent.h TTYAgent.h LiterateA.h assert.h \
+ config.h \
+ strclass.h \
+ rxclass.h bool.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h cook.h ddd.h \
+ string-fun.h regexps.h index.h isid.h \
+ home.h value-read.h DispValueT.h
+Graph.o: Graph.C Graph.h assert.h config.h \
+ GraphGC.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h bool.h Box.h \
+ strclass.h \
+ rxclass.h BoxSize.h misc.h BoxWeight.h BoxRegion.h BoxExtend.h \
+ PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h explicit.h GraphNode.h GraphNodeI.h \
+ GraphEdge.h \
+ config.h
+GraphEdge.o: GraphEdge.C GraphEdge.h UniqueId.h \
+ bool.h config.h Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h DataLink.h GraphGC.h \
+ explicit.h GraphNode.h GraphNodeI.h \
+ printBox.h
+GraphEdit.o: GraphEdit.C \
+ events.h BoxPoint.h BoxC.h \
+ BoxD.h bool.h config.h BoxSize.h \
+ misc.h Graph.h assert.h GraphGC.h Box.h strclass.h rxclass.h \
+ BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h explicit.h GraphNode.h GraphNodeI.h \
+ GraphEdge.h GraphEditP.h \
+ GraphEdit.h HintGraphN.h RegionGN.h PosGraphN.h LineGraphE.h EdgeA.h \
+ layout.h cook.h strtoul.h TimeOut.h EdgeAPA.h VarArray.h DynArray.h \
+ GraphNPA.h
+GraphGC.o: GraphGC.C GraphGC.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h bool.h config.h \
+ Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxSize.h misc.h BoxWeight.h BoxRegion.h BoxExtend.h \
+ PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h explicit.h
+GraphNPA.o: GraphNPA.C GraphNPA.h GraphNode.h GraphNodeI.h \
+ UniqueId.h \
+ bool.h config.h Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h DataLink.h GraphGC.h \
+ explicit.h GraphEdge.h VarArray.h \
+ DynArray.h
+GraphNode.o: GraphNode.C GraphNode.h GraphNodeI.h UniqueId.h \
+ bool.h config.h Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h DataLink.h GraphGC.h \
+ explicit.h GraphEdge.h
+HandlerL.o: HandlerL.C assert.h config.h \
+ HandlerL.h compare.h bool.h
+HatBox.o: HatBox.C assert.h config.h \
+ HatBox.h Box.h strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h
+HelpCB.o: HelpCB.C config.h Agent.h \
+ strclass.h rxclass.h bool.h assert.h \
+ AgentM.h TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h ComboBox.h \
+ StringA.h VarArray.h DynArray.h \
+ DestroyCB.h HelpCB.h \
+ MString.h MakeMenu.h SmartC.h TimeOut.h \
+ ddd.h \
+ findParent.h isid.h longName.h toolbar.h \
+ ArgField.h windows.h misc.h \
+ LessTifH.h cook.h events.h \
+ BoxPoint.h BoxC.h BoxD.h BoxSize.h exit.h ExitCB.h simpleMenu.h \
+ verify.h Delay.h IntArray.h wm.h post.h mydialogs.h charsets.h
+HintGraphN.o: HintGraphN.C HintGraphN.h RegionGN.h PosGraphN.h \
+ GraphNode.h GraphNodeI.h UniqueId.h \
+ bool.h config.h Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h DataLink.h GraphGC.h \
+ explicit.h GraphEdge.h \
+ config.h
+HistoryD.o: HistoryD.C HistoryD.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ GDBAgent.h \
+ TTYAgent.h LiterateA.h \
+ AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h cook.h ddd.h \
+ disp-read.h history.h HistoryF.h Assoc.h \
+ regexps.h string-fun.h
+HistoryF.o: HistoryF.C HistoryF.h bool.h config.h strclass.h \
+ rxclass.h assert.h \
+ Assoc.h \
+ config.h
+InitImage.o: InitImage.C InitImage.h \
+ config.h assert.h \
+ config.h
+IntIntAA.o: IntIntAA.C IntIntAA.h Assoc.h bool.h config.h assert.h \
+ IntArray.h VarArray.h DynArray.h strclass.h \
+ rxclass.h TextPosA.h \
+ config.h
+LabelH.o: LabelH.C \
+ LabelHP.h LabelH.h
+LessTifH.o: LessTifH.C LessTifH.h \
+ config.h
+LetNode.o: LetNode.C assert.h config.h \
+ VSLLib.h strclass.h rxclass.h bool.h VSEFlags.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLNode.h VSLBuiltin.h CallNode.h \
+ VSLDefList.h VSLDef.h LetNode.h ListNode.h TrueNode.h ConstNode.h \
+ TrueBox.h ArgNode.h DummyNode.h DummyBox.h MatchBox.h
+LineBox.o: LineBox.C LineBox.h PrimitiveB.h Box.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h \
+ config.h
+LineGESI.o: LineGESI.C LineGESI.h BoxRegion.h \
+ misc.h BoxPoint.h BoxC.h \
+ BoxD.h bool.h config.h BoxSize.h \
+ GraphGC.h \
+ Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxWeight.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h explicit.h \
+ pi.h hypot.h
+LineGraphE.o: LineGraphE.C LineGraphE.h GraphEdge.h UniqueId.h \
+ bool.h config.h Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h DataLink.h GraphGC.h \
+ explicit.h EdgeA.h \
+ pi.h hypot.h \
+ GraphNode.h GraphNodeI.h LineGESI.h \
+ printBox.h
+ListBox.o: ListBox.C assert.h config.h \
+ ListBox.h \
+ CompositeB.h Box.h \
+ strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h BoxD.h BoxSize.h misc.h \
+ BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h VSEFlags.h
+ListNode.o: ListNode.C assert.h config.h \
+ return.h misc.h VSLLib.h strclass.h \
+ rxclass.h bool.h VSEFlags.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLNode.h VSLBuiltin.h ListNode.h \
+ ArgNode.h DummyNode.h DummyBox.h TrueNode.h ConstNode.h TrueBox.h \
+ VSLDef.h
+LiterateA.o: LiterateA.C config.h \
+ bool.h LiterateA.h assert.h \
+ strclass.h \
+ rxclass.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h ChunkQueue.h \
+ config.h
+MString.o: MString.C MString.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ config.h
+MakeMenu.o: MakeMenu.C MakeMenu.h \
+ bool.h config.h StringA.h strclass.h \
+ rxclass.h assert.h \
+ VarArray.h DynArray.h MString.h \
+ TimeOut.h misc.h string-fun.h charsets.h \
+ wm.h \
+ LessTifH.h verify.h findParent.h frame.h ComboBox.h SpinBox.h \
+ AutoRaise.h
+Map.o: Map.C Map.h bool.h config.h assert.h \
+ config.h
+MarkBox.o: MarkBox.C MarkBox.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ Box.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h THatBox.h HatBox.h
+MatchBox.o: MatchBox.C assert.h config.h \
+ MatchBox.h strclass.h \
+ rxclass.h bool.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h DummyBox.h ListBox.h CompositeB.h
+MemCheck.o: MemCheck.C MemCheck.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ config.h
+MinMaxA.o: MinMaxA.C MinMaxA.h \
+ Assoc.h bool.h config.h assert.h \
+ config.h
+NEWS.gz.o: NEWS.gz.C
+NameNode.o: NameNode.C assert.h config.h \
+ VSLLib.h strclass.h \
+ rxclass.h bool.h VSEFlags.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h NameNode.h VSLNode.h VSLBuiltin.h \
+ ArgNode.h DummyNode.h DummyBox.h VSLDef.h
+PannedGE.o: PannedGE.C config.h misc.h PannedGE.h GraphEdit.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h bool.h \
+ verify.h strclass.h \
+ rxclass.h assert.h \
+ Graph.h GraphGC.h Box.h BoxSize.h BoxWeight.h BoxRegion.h BoxExtend.h \
+ PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h explicit.h GraphNode.h GraphNodeI.h \
+ GraphEdge.h \
+ PannedGEP.h \
+ config.h
+PlotAgent.o: PlotAgent.C PlotAgent.h LiterateA.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h StringA.h \
+ VarArray.h DynArray.h IntArray.h PrintGC.h ChunkQueue.h \
+ cook.h version.h \
+ config.h
+PlotArea.o: PlotArea.C PlotArea.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ ChunkQueue.h \
+ TypeInfo.h \
+ cook.h \
+ config.h
+PosBuffer.o: PosBuffer.C assert.h config.h \
+ cook.h strclass.h \
+ rxclass.h bool.h AppData.h \
+ version.h OnOff.h BindingS.h PosBuffer.h \
+ comm-manag.h GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h string-fun.h ddd.h \
+ SourceView.h Assoc.h MakeMenu.h IntIntAA.h IntArray.h TextPosA.h \
+ ArgField.h BreakPM.h Map.h BreakPoint.h CodeCache.h \
+ Delay.h StringSA.h SourceO.h MString.h regexps.h \
+ index.h cmdtty.h
+PosGraphN.o: PosGraphN.C PosGraphN.h GraphNode.h GraphNodeI.h \
+ UniqueId.h \
+ bool.h config.h Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h DataLink.h GraphGC.h \
+ explicit.h GraphEdge.h
+PrimitiveB.o: PrimitiveB.C PrimitiveB.h Box.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h \
+ printBox.h
+PrintGC.o: PrintGC.C PrintGC.h bool.h config.h TypeInfo.h \
+ config.h
+ProgressM.o: ProgressM.C ProgressM.h bool.h config.h strclass.h \
+ rxclass.h assert.h \
+ status.h Delay.h \
+ TypeInfo.h \
+ VarArray.h DynArray.h MString.h \
+ Command.h GDBAgent.h TTYAgent.h \
+ LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VoidArray.h \
+ question.h DispValue.h DispValueA.h DispValueT.h StringSA.h SourceO.h \
+ Assoc.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h DataLink.h charsets.h \
+ ddd.h \
+ string-fun.h verify.h version.h wm.h \
+ config.h
+ReadLineA.o: ReadLineA.C ReadLineA.h LiterateA.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h
+RefreshDI.o: RefreshDI.C RefreshDI.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ status.h Delay.h \
+ TypeInfo.h \
+ VarArray.h DynArray.h MString.h \
+ config.h
+RegionGN.o: RegionGN.C \
+ RegionGN.h PosGraphN.h GraphNode.h \
+ GraphNodeI.h UniqueId.h bool.h config.h Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h DataLink.h GraphGC.h explicit.h GraphEdge.h printBox.h
+ScrolledGE.o: ScrolledGE.C \
+ ScrolleGEP.h \
+ ScrolledGE.h GraphEdit.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h bool.h config.h verify.h \
+ strclass.h \
+ rxclass.h assert.h
+SignalB.o: SignalB.C SignalB.h \
+ assert.h config.h \
+ config.h
+SignalC.o: SignalC.C \
+ SignalC.h AgentM.h config.h TypeInfo.h \
+ bool.h assert.h \
+ sigName.h
+SlopeBox.o: SlopeBox.C SlopeBox.h LineBox.h PrimitiveB.h Box.h \
+ assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h printBox.h \
+ config.h
+SmartC.o: SmartC.C SmartC.h StringA.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ VarArray.h \
+ DynArray.h
+SourceView.o: SourceView.C SourceView.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ Assoc.h MakeMenu.h StringA.h VarArray.h \
+ DynArray.h IntIntAA.h IntArray.h TextPosA.h ArgField.h HandlerL.h \
+ compare.h GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ UniqueId.h SignalB.h DataLength.h \
+ VoidArray.h BreakPM.h Map.h BreakPoint.h \
+ CodeCache.h Delay.h StringSA.h SourceO.h \
+ MString.h AppData.h version.h OnOff.h BindingS.h ComboBox.h Command.h \
+ question.h DataDisp.h BoxSize.h BoxPoint.h BoxC.h \
+ BoxD.h misc.h ExitCB.h GraphEdit.h \
+ HelpCB.h VSEFlags.h VSLLib.h StringBox.h \
+ Box.h BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h Widget.h \
+ DataLink.h PrimitiveB.h FontTable.h ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h events.h string-fun.h DestroyCB.h \
+ HistoryD.h InitImage.h PosBuffer.h RefreshDI.h status.h TimeOut.h \
+ UndoBuffer.h UndoBE.h buttons.h charsets.h cmdtty.h cook.h cwd.h \
+ dbx-lookup.h ddd.h \
+ deref.h disp-read.h editing.h file.h filetype.h \
+ fortranize.h history.h HistoryF.h index.h \
+ isid.h java.h logo.h mydialogs.h options.h post.h regexps.h shell.h \
+ shorten.h strtoul.h tabs.h verify.h windows.h wm.h \
+ LessTifH.h \
+ $(srcdir)/../icons/glyphs/arrow.xbm \
+ $(srcdir)/../icons/glyphs/greyarrow.xbm $(srcdir)/../icons/glyphs/pastarrow.xbm \
+ $(srcdir)/../icons/glyphs/signalarrow.xbm $(srcdir)/../icons/glyphs/dragarrow.xbm \
+ $(srcdir)/../icons/glyphs/stop.xbm $(srcdir)/../icons/glyphs/greystop.xbm \
+ $(srcdir)/../icons/glyphs/dragstop.xbm $(srcdir)/../icons/glyphs/cond.xbm \
+ $(srcdir)/../icons/glyphs/greycond.xbm $(srcdir)/../icons/glyphs/dragcond.xbm \
+ $(srcdir)/../icons/glyphs/temp.xbm $(srcdir)/../icons/glyphs/greytemp.xbm \
+ $(srcdir)/../icons/glyphs/dragtemp.xbm
+SpinBox.o: SpinBox.C SpinBox.h \
+ assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h string-fun.h verify.h TimeOut.h \
+ config.h
+StatArray.o: StatArray.C StatArray.h VarArray.h DynArray.h assert.h \
+ config.h \
+ bool.h \
+ config.h
+StringA.o: StringA.C StringA.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ VarArray.h \
+ DynArray.h
+StringBox.o: StringBox.C StringBox.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ Box.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h PrimitiveB.h FontTable.h \
+ printBox.h cook.h \
+ VSEFlags.h
+StringMap.o: StringMap.C StringMap.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ Map.h
+StringSA.o: StringSA.C StringSA.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ SourceO.h Assoc.h
+Swallower.o: Swallower.C Swallower.h \
+ SwallowerP.h \
+ assert.h config.h \
+ XErrorB.h bool.h
+THatBox.o: THatBox.C THatBox.h HatBox.h Box.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h
+TTYAgent.o: TTYAgent.C TTYAgent.h LiterateA.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ config.h
+TagBox.o: TagBox.C assert.h config.h \
+ TagBox.h strclass.h \
+ rxclass.h bool.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h MarkBox.h THatBox.h HatBox.h \
+ VSEFlags.h
+TestNode.o: TestNode.C assert.h config.h \
+ VSLLib.h strclass.h \
+ rxclass.h bool.h VSEFlags.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLNode.h VSLBuiltin.h CallNode.h \
+ VSLDefList.h VSLDef.h TestNode.h ListNode.h TrueNode.h ConstNode.h \
+ TrueBox.h
+TimeOut.o: TimeOut.C TimeOut.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ config.h
+Tool.o: Tool.C Tool.h \
+ AppData.h \
+ version.h OnOff.h BindingS.h \
+ Delay.h TypeInfo.h config.h \
+ VarArray.h DynArray.h assert.h \
+ bool.h DestroyCB.h buttons.h strclass.h \
+ rxclass.h decoration.h verify.h windows.h
+TrueBox.o: TrueBox.C TrueBox.h bool.h config.h Box.h assert.h \
+ strclass.h \
+ rxclass.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h PrimitiveB.h
+TrueNode.o: TrueNode.C TrueNode.h ConstNode.h assert.h config.h \
+ VSLNode.h TypeInfo.h \
+ VSLBuiltin.h strclass.h \
+ rxclass.h bool.h ListBox.h \
+ CompositeB.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h \
+ Widget.h UniqueId.h DataLink.h ListNode.h TrueBox.h PrimitiveB.h \
+ StringBox.h FontTable.h \
+ config.h
+TypeInfo.o: TypeInfo.C TypeInfo.h config.h \
+ hash.h
+UndoBE.o: UndoBE.C UndoBE.h StringSA.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ SourceO.h Assoc.h \
+ VarArray.h DynArray.h
+UndoBuffer.o: UndoBuffer.C UndoBuffer.h bool.h config.h UndoBE.h \
+ StringSA.h strclass.h \
+ rxclass.h assert.h \
+ SourceO.h Assoc.h VarArray.h DynArray.h \
+ string-fun.h IntArray.h BreakPoint.h \
+ GDBAgent.h TTYAgent.h LiterateA.h \
+ AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VoidArray.h \
+ Command.h question.h DataDisp.h \
+ ArgField.h BoxSize.h BoxPoint.h BoxC.h \
+ BoxD.h misc.h Delay.h ExitCB.h \
+ GraphEdit.h HelpCB.h MString.h \
+ MakeMenu.h VSEFlags.h VSLLib.h StringBox.h Box.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h DataLink.h PrimitiveB.h \
+ FontTable.h ListBox.h CompositeB.h TagBox.h MarkBox.h THatBox.h \
+ HatBox.h events.h SourceView.h IntIntAA.h TextPosA.h BreakPM.h Map.h \
+ CodeCache.h buttons.h cook.h ddd.h \
+ disp-read.h index.h regexps.h status.h
+UniqueId.o: UniqueId.C UniqueId.h \
+ bool.h config.h
+VSEFlags.o: VSEFlags.C \
+ assert.h config.h strclass.h \
+ rxclass.h bool.h VSEFlags.h VSLLib.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h ListBox.h CompositeB.h TagBox.h MarkBox.h \
+ THatBox.h HatBox.h home.h
+VSLArgList.o: VSLArgList.C VSLArgList.h ListBox.h \
+ CompositeB.h assert.h config.h \
+ Box.h strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h BoxD.h BoxSize.h misc.h \
+ BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h
+VSLBuiltin.o: VSLBuiltin.C VSLBuiltin.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ ListBox.h \
+ CompositeB.h Box.h \
+ BoxPoint.h BoxC.h BoxD.h BoxSize.h misc.h \
+ BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h \
+ VSLLib.h VSEFlags.h StringBox.h PrimitiveB.h FontTable.h \
+ TagBox.h MarkBox.h THatBox.h HatBox.h AlignBox.h ArcBox.h LineBox.h \
+ BinBox.h ColorBox.h \
+ DiagBox.h FixBox.h FontFixBox.h \
+ SlopeBox.h TrueBox.h DummyBox.h
+VSLDef.o: VSLDef.C \
+ assert.h config.h hash.h VSEFlags.h bool.h \
+ strclass.h rxclass.h VSLLib.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLDef.h VSLNode.h VSLBuiltin.h \
+ VSLDefList.h MatchBox.h DummyBox.h ArgNode.h DummyNode.h
+VSLDefList.o: VSLDefList.C \
+ assert.h config.h \
+ VSEFlags.h bool.h strclass.h rxclass.h VSLLib.h \
+ TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLDef.h VSLNode.h VSLBuiltin.h \
+ VSLDefList.h
+VSLErr.o: VSLErr.C \
+ strclass.h rxclass.h config.h bool.h assert.h \
+ VSLLib.h \
+ VSEFlags.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLDef.h VSLNode.h VSLBuiltin.h
+VSLLib.o: VSLLib.C assert.h config.h \
+ hash.h VSEFlags.h bool.h strclass.h \
+ rxclass.h VSLLib.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLDef.h VSLNode.h VSLBuiltin.h \
+ VSLDefList.h DefCallN.h CallNode.h BuiltinCN.h ArgNode.h DummyNode.h \
+ DummyBox.h ListNode.h TrueNode.h ConstNode.h TrueBox.h
+VSLNode.o: VSLNode.C assert.h config.h \
+ VSLLib.h strclass.h \
+ rxclass.h bool.h VSEFlags.h TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h \
+ MarkBox.h THatBox.h HatBox.h VSLNode.h VSLBuiltin.h
+VSLRead.o: VSLRead.C my-alloca.h config.h \
+ assert.h strclass.h rxclass.h bool.h cook.h VSLBuiltin.h ListBox.h \
+ CompositeB.h Box.h BoxPoint.h BoxC.h BoxD.h \
+ BoxSize.h misc.h BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h \
+ TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h VSLLib.h VSEFlags.h StringBox.h \
+ PrimitiveB.h FontTable.h \
+ TagBox.h MarkBox.h THatBox.h \
+ HatBox.h VSLDef.h VSLNode.h VSLDefList.h TrueBox.h ConstNode.h \
+ ListNode.h TestNode.h CallNode.h TrueNode.h DefCallN.h LetNode.h \
+ ArgNode.h DummyNode.h DummyBox.h NameNode.h vsl-gramma.h vsl-lex.C \
+ vsl-gramma.C
+VoidArray.o: VoidArray.C VoidArray.h VarArray.h DynArray.h assert.h \
+ config.h \
+ bool.h
+WhatNextCB.o: WhatNextCB.C WhatNextCB.h \
+ bool.h config.h strclass.h \
+ rxclass.h assert.h \
+ Command.h GDBAgent.h TTYAgent.h LiterateA.h \
+ AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h question.h converters.h comm-manag.h ddd.h \
+ editing.h exit.h ExitCB.h file.h \
+ regexps.h status.h Delay.h MString.h verify.h version.h wm.h \
+ AppData.h OnOff.h BindingS.h DataDisp.h ArgField.h BoxSize.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h misc.h GraphEdit.h HelpCB.h \
+ IntArray.h MakeMenu.h VSEFlags.h \
+ VSLLib.h StringBox.h Box.h BoxWeight.h BoxRegion.h BoxExtend.h \
+ PrintGC.h Widget.h DataLink.h PrimitiveB.h FontTable.h ListBox.h \
+ CompositeB.h TagBox.h MarkBox.h THatBox.h HatBox.h events.h \
+ string-fun.h DestroyCB.h SourceView.h Assoc.h IntIntAA.h TextPosA.h \
+ BreakPM.h Map.h BreakPoint.h CodeCache.h \
+ StringSA.h SourceO.h UndoBuffer.h UndoBE.h \
+ config.h
+WidgetSA.o: WidgetSA.C WidgetSA.h \
+ Assoc.h bool.h config.h assert.h \
+ strclass.h \
+ rxclass.h
+XErrorB.o: XErrorB.C XErrorB.h \
+ bool.h config.h assert.h \
+ config.h
+annotation.o: annotation.C annotation.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ GDBAgent.h \
+ TTYAgent.h LiterateA.h \
+ AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h ddd.h \
+ cook.h isid.h
+args.o: args.C args.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ Delay.h TypeInfo.h \
+ VarArray.h DynArray.h HelpCB.h \
+ MString.h StringA.h Command.h GDBAgent.h \
+ TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ VoidArray.h question.h \
+ SourceView.h Assoc.h MakeMenu.h IntIntAA.h IntArray.h TextPosA.h \
+ ArgField.h BreakPM.h Map.h BreakPoint.h CodeCache.h \
+ StringSA.h SourceO.h ddd.h \
+ disp-read.h file.h mydialogs.h charsets.h options.h cook.h regexps.h \
+ string-fun.h verify.h wm.h \
+ config.h
+bug.o: bug.C \
+ assert.h config.h \
+ config.h
+buttons.o: buttons.C buttons.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ AppData.h \
+ version.h OnOff.h BindingS.h Command.h \
+ GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h question.h DataDisp.h ArgField.h BoxSize.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h misc.h Delay.h ExitCB.h \
+ GraphEdit.h HelpCB.h MString.h \
+ IntArray.h MakeMenu.h VSEFlags.h VSLLib.h StringBox.h Box.h \
+ BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h Widget.h DataLink.h \
+ PrimitiveB.h FontTable.h ListBox.h CompositeB.h TagBox.h MarkBox.h \
+ THatBox.h HatBox.h events.h string-fun.h DestroyCB.h LessTifH.h \
+ SourceView.h Assoc.h IntIntAA.h TextPosA.h BreakPM.h Map.h \
+ BreakPoint.h CodeCache.h StringSA.h SourceO.h \
+ TimeOut.h UndoBuffer.h UndoBE.h args.h charsets.h comm-manag.h cook.h \
+ ctrl.h ddd.h \
+ disp-read.h editing.h fortranize.h history.h HistoryF.h isid.h \
+ regexps.h select.h settings.h options.h shorten.h source.h status.h \
+ verify.h windows.h wm.h \
+ config.h
+charsets.o: charsets.C charsets.h MString.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ config.h
+cmdtty.o: cmdtty.C cmdtty.h bool.h config.h strclass.h \
+ rxclass.h assert.h \
+ AppData.h \
+ version.h OnOff.h BindingS.h GDBAgent.h \
+ TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h ReadLineA.h SourceView.h Assoc.h MakeMenu.h \
+ IntIntAA.h IntArray.h TextPosA.h ArgField.h BreakPM.h Map.h \
+ BreakPoint.h CodeCache.h Delay.h StringSA.h \
+ SourceO.h MString.h ddd.h \
+ editing.h exit.h ExitCB.h
+comm-manag.o: comm-manag.C comm-manag.h GDBAgent.h TTYAgent.h \
+ LiterateA.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h AppData.h \
+ version.h OnOff.h BindingS.h Command.h \
+ question.h DataDisp.h ArgField.h BoxSize.h BoxPoint.h BoxC.h \
+ BoxD.h misc.h Delay.h ExitCB.h \
+ GraphEdit.h HelpCB.h MString.h \
+ IntArray.h MakeMenu.h VSEFlags.h VSLLib.h StringBox.h Box.h \
+ BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h Widget.h DataLink.h \
+ PrimitiveB.h FontTable.h ListBox.h CompositeB.h TagBox.h MarkBox.h \
+ THatBox.h HatBox.h events.h string-fun.h DispBuffer.h DispValue.h \
+ DispValueA.h DispValueT.h StringSA.h SourceO.h Assoc.h PosBuffer.h \
+ UndoBuffer.h UndoBE.h SourceView.h IntIntAA.h TextPosA.h BreakPM.h \
+ Map.h BreakPoint.h CodeCache.h TimeOut.h \
+ buttons.h cmdtty.h cook.h dbx-lookup.h ddd.h \
+ disp-read.h editing.h exectty.h exit.h file.h history.h HistoryF.h \
+ home.h index.h options.h post.h regexps.h settings.h shell.h \
+ windows.h
+compare.o: compare.C compare.h
+complete.o: complete.C complete.h \
+ AppData.h \
+ version.h OnOff.h BindingS.h Delay.h TypeInfo.h config.h \
+ VarArray.h DynArray.h assert.h \
+ bool.h SmartC.h StringA.h strclass.h \
+ rxclass.h ddd.h \
+ disp-read.h GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ VoidArray.h editing.h \
+ isid.h post.h question.h regexps.h string-fun.h \
+ config.h
+configinfo.o: configinfo.C configinfo.h
+converters.o: converters.C \
+ bool.h config.h home.h BindingS.h OnOff.h \
+ strclass.h \
+ rxclass.h assert.h charsets.h MString.h \
+ StringSA.h SourceO.h Assoc.h \
+ string-fun.h \
+ converters.h
+cook.o: cook.C \
+ bool.h config.h \
+ cook.h strclass.h rxclass.h assert.h \
+ config.h
+ctrl.o: ctrl.C ctrl.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ cook.h \
+ config.h
+cwd.o: cwd.C cwd.h bool.h config.h strclass.h \
+ rxclass.h assert.h \
+ config.h
+cxxtest.o: cxxtest.C config.h bool.h \
+ config.h
+data.o: data.C data.h \
+ DataDisp.h \
+ ArgField.h HandlerL.h compare.h bool.h config.h assert.h \
+ strclass.h \
+ rxclass.h BoxSize.h BoxPoint.h BoxC.h \
+ BoxD.h misc.h Command.h GDBAgent.h \
+ TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h DynArray.h VoidArray.h \
+ question.h Delay.h ExitCB.h GraphEdit.h HelpCB.h \
+ MString.h IntArray.h MakeMenu.h \
+ VSEFlags.h VSLLib.h StringBox.h Box.h BoxWeight.h BoxRegion.h \
+ BoxExtend.h PrintGC.h Widget.h DataLink.h PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h MarkBox.h THatBox.h HatBox.h events.h \
+ string-fun.h ddd.h \
+ status.h
+dbx-lookup.o: dbx-lookup.C dbx-lookup.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ StringSA.h \
+ SourceO.h Assoc.h cook.h ddd.h \
+ post.h misc.h question.h regexps.h \
+ index.h string-fun.h GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h SourceView.h MakeMenu.h IntIntAA.h IntArray.h \
+ TextPosA.h ArgField.h BreakPM.h Map.h BreakPoint.h CodeCache.h \
+ Delay.h MString.h
+ddd.o: ddd.C config.h ddd.h strclass.h \
+ rxclass.h bool.h assert.h \
+ Sash.h \
+ LessTifH.h AgentM.h \
+ TypeInfo.h \
+ AppData.h version.h OnOff.h BindingS.h ArgField.h HandlerL.h \
+ compare.h DataDisp.h BoxSize.h BoxPoint.h BoxC.h \
+ BoxD.h misc.h Command.h GDBAgent.h \
+ TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ UniqueId.h \
+ SignalB.h DataLength.h \
+ StringA.h VarArray.h DynArray.h VoidArray.h question.h Delay.h \
+ ExitCB.h GraphEdit.h HelpCB.h MString.h IntArray.h MakeMenu.h \
+ VSEFlags.h VSLLib.h StringBox.h Box.h BoxWeight.h BoxRegion.h \
+ BoxExtend.h PrintGC.h Widget.h DataLink.h PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h MarkBox.h THatBox.h HatBox.h events.h \
+ string-fun.h DestroyCB.h DispGraph.h Graph.h GraphGC.h explicit.h \
+ GraphNode.h GraphNodeI.h GraphEdge.h LineGraphE.h EdgeA.h PosGraphN.h \
+ GraphNPA.h DispNodeM.h Map.h DispNode.h BoxGraphN.h RegionGN.h \
+ DispValue.h DispValueA.h DispValueT.h StringSA.h SourceO.h Assoc.h \
+ DispBox.h VSLArgList.h HistoryD.h LabelH.h PlotAgent.h ChunkQueue.h \
+ SourceView.h IntIntAA.h TextPosA.h BreakPM.h BreakPoint.h CodeCache.h \
+ Swallower.h TimeOut.h UndoBuffer.h UndoBE.h \
+ XErrorB.h args.h buttons.h charsets.h cmdtty.h comm-manag.h \
+ complete.h converters.h cook.h data.h dbx-lookup.h deref.h \
+ disp-read.h editing.h environ.h examine.h exectty.h exit.h expired.h \
+ file.h filetype.h findParent.h fonts.h \
+ frame.h gdbinit.h getrlimit.h \
+ history.h HistoryF.h home.h host.h \
+ hostname.h logo.h logplayer.h longName.h mainloop.h options.h post.h \
+ print.h regexps.h resources.h sashes.h select.h selection.h session.h \
+ settings.h shell.h shorten.h show.h simpleMenu.h source.h status.h \
+ tictactoe.h tips.h toolbar.h ungrab.h verify.h windows.h wm.h \
+ xconfig.h
+ddd.info.txt.gz.o: ddd.info.txt.gz.C
+debugged.o: debugged.C debugged.h bool.h config.h strclass.h \
+ rxclass.h assert.h \
+ string-fun.h \
+ config.h
+decoration.o: decoration.C decoration.h \
+ bool.h config.h \
+ DestroyCB.h MString.h strclass.h \
+ rxclass.h assert.h \
+ frame.h verify.h version.h wm.h
+deref.o: deref.C deref.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ GDBAgent.h \
+ TTYAgent.h LiterateA.h \
+ AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h ddd.h \
+ buttons.h disp-read.h question.h \
+ regexps.h string-fun.h
+disp-read.o: disp-read.C assert.h config.h \
+ disp-read.h strclass.h \
+ rxclass.h bool.h GDBAgent.h TTYAgent.h LiterateA.h \
+ AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h value-read.h DispValueT.h string-fun.h cook.h \
+ regexps.h AppData.h \
+ version.h OnOff.h BindingS.h \
+ config.h
+editing.o: editing.C editing.h \
+ bool.h config.h strclass.h \
+ rxclass.h assert.h \
+ AppData.h \
+ version.h OnOff.h BindingS.h ArgField.h \
+ HandlerL.h compare.h Command.h GDBAgent.h TTYAgent.h LiterateA.h \
+ AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h DynArray.h VoidArray.h \
+ question.h DataDisp.h BoxSize.h BoxPoint.h BoxC.h \
+ BoxD.h misc.h Delay.h ExitCB.h \
+ GraphEdit.h HelpCB.h MString.h \
+ IntArray.h MakeMenu.h VSEFlags.h VSLLib.h StringBox.h Box.h \
+ BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h Widget.h DataLink.h \
+ PrimitiveB.h FontTable.h ListBox.h CompositeB.h TagBox.h MarkBox.h \
+ THatBox.h HatBox.h events.h string-fun.h SourceView.h Assoc.h \
+ IntIntAA.h TextPosA.h BreakPM.h Map.h BreakPoint.h CodeCache.h \
+ StringSA.h SourceO.h TimeOut.h args.h cmdtty.h \
+ complete.h cook.h ctrl.h ddd.h \
+ history.h HistoryF.h post.h regexps.h status.h \
+ config.h
+environ.o: environ.C environ.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ StringA.h \
+ VarArray.h DynArray.h shell.h
+events.o: events.C events.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h bool.h config.h \
+ BoxSize.h misc.h
+examine.o: examine.C examine.h \
+ bool.h config.h ddd.h strclass.h \
+ rxclass.h assert.h \
+ disp-read.h GDBAgent.h TTYAgent.h \
+ LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h history.h HistoryF.h Assoc.h string-fun.h \
+ verify.h wm.h ArgField.h Command.h question.h Delay.h DestroyCB.h \
+ HelpCB.h MString.h HistoryD.h MakeMenu.h \
+ config.h
+exectty.o: exectty.C exectty.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ AppData.h \
+ version.h OnOff.h BindingS.h Command.h \
+ GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h question.h Delay.h MString.h charsets.h cook.h \
+ ddd.h \
+ disp-read.h fonts.h logo.h post.h regexps.h shell.h status.h \
+ string-fun.h verify.h windows.h wm.h \
+ $(srcdir)/../termcap/termcap.h
+exit.o: exit.C exit.h \
+ bool.h config.h ExitCB.h \
+ AgentM.h \
+ TypeInfo.h \
+ assert.h AppData.h \
+ version.h OnOff.h BindingS.h DestroyCB.h \
+ GDBAgent.h TTYAgent.h LiterateA.h strclass.h \
+ rxclass.h AsyncAgent.h Agent.h \
+ HandlerL.h \
+ compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h DynArray.h VoidArray.h \
+ HelpCB.h MString.h TimeOut.h charsets.h \
+ Command.h question.h cmdtty.h converters.h ddd.h \
+ exectty.h findParent.h filetype.h fonts.h \
+ history.h HistoryF.h Assoc.h host.h longName.h mainloop.h misc.h \
+ options.h post.h session.h shell.h sigName.h status.h Delay.h \
+ string-fun.h verify.h windows.h wm.h \
+ config.h
+expired.o: expired.C expired.h bool.h config.h strclass.h \
+ rxclass.h assert.h \
+ version.h \
+ config.h
+file.o: file.C file.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ StringA.h VarArray.h DynArray.h AppData.h \
+ version.h OnOff.h BindingS.h GDBAgent.h \
+ TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ VoidArray.h MString.h \
+ Delay.h DestroyCB.h ExitCB.h HelpCB.h \
+ SmartC.h SourceView.h Assoc.h MakeMenu.h IntIntAA.h IntArray.h \
+ TextPosA.h ArgField.h BreakPM.h Map.h BreakPoint.h CodeCache.h \
+ StringSA.h SourceO.h Command.h question.h cook.h \
+ ddd.h \
+ filetype.h glob.h history.h HistoryF.h \
+ java.h mydialogs.h charsets.h post.h regexps.h shell.h status.h \
+ string-fun.h uniquify.h verify.h wm.h \
+ config.h
+fileSBF.o: fileSBF.C fileSBF.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ MString.h
+filetype.o: filetype.C filetype.h bool.h config.h strclass.h \
+ rxclass.h assert.h \
+ regexps.h
+findParent.o: findParent.C \
+ findParent.h longName.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ config.h
+findWindow.o: findWindow.C findWindow.h \
+ bool.h config.h XErrorB.h assert.h \
+ config.h
+fonts.o: fonts.C fonts.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ AppData.h \
+ version.h OnOff.h BindingS.h charsets.h \
+ MString.h DestroyCB.h LessTifH.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h StringSA.h \
+ SourceO.h Assoc.h converters.h cook.h ddd.h \
+ events.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h shell.h \
+ status.h Delay.h VarArray.h DynArray.h string-fun.h post.h TimeOut.h \
+ config.h
+fortranize.o: fortranize.C fortranize.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ ddd.h \
+ deref.h GDBAgent.h TTYAgent.h \
+ LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h buttons.h regexps.h disp-read.h
+frame.o: frame.C frame.h \
+ bool.h config.h XErrorB.h assert.h \
+ config.h
+gdbinit.o: gdbinit.C gdbinit.h GDBAgent.h TTYAgent.h LiterateA.h \
+ assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h AppData.h \
+ version.h OnOff.h BindingS.h \
+ filetype.h shell.h \
+ string-fun.h ddd.h SourceView.h Assoc.h MakeMenu.h IntIntAA.h \
+ IntArray.h TextPosA.h ArgField.h BreakPM.h Map.h BreakPoint.h \
+ CodeCache.h Delay.h StringSA.h SourceO.h MString.h TimeOut.h
+glob.o: glob.C my-alloca.h config.h my-dirent.h \
+ glob.h \
+ config.h
+grabtest.o: grabtest.C \
+ config.h
+hash.o: hash.C hash.h
+history.o: history.C history.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ StringA.h \
+ VarArray.h DynArray.h HistoryF.h Assoc.h \
+ AppData.h \
+ version.h OnOff.h BindingS.h ComboBox.h \
+ Command.h GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ VoidArray.h question.h \
+ Delay.h DestroyCB.h HelpCB.h MString.h \
+ MakeMenu.h SmartC.h SourceView.h IntIntAA.h IntArray.h TextPosA.h \
+ ArgField.h BreakPM.h Map.h BreakPoint.h CodeCache.h \
+ StringSA.h SourceO.h args.h cook.h cwd.h ddd.h \
+ disp-read.h editing.h filetype.h home.h \
+ logo.h misc.h mydialogs.h charsets.h post.h regexps.h shell.h \
+ status.h string-fun.h uniquify.h verify.h wm.h \
+ config.h
+home.o: home.C home.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ config.h
+hostname.o: hostname.C hostname.h config.h bool.h \
+ config.h
+huffdecode.o: huffdecode.C strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ config.h
+huffencode.o: huffencode.C \
+ assert.h config.h strclass.h rxclass.h \
+ bool.h cook.h DynArray.h
+index.o: index.C index.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ misc.h \
+ config.h
+isid.o: isid.C isid.h bool.h config.h \
+ config.h
+java.o: java.C java.h StringA.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ VarArray.h \
+ DynArray.h SmartC.h SourceView.h \
+ Assoc.h MakeMenu.h IntIntAA.h IntArray.h \
+ TextPosA.h ArgField.h HandlerL.h compare.h GDBAgent.h TTYAgent.h \
+ LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ UniqueId.h SignalB.h DataLength.h \
+ VoidArray.h BreakPM.h Map.h BreakPoint.h \
+ CodeCache.h Delay.h StringSA.h SourceO.h \
+ MString.h StatArray.h \
+ cook.h ddd.h \
+ filetype.h glob.h regexps.h status.h
+layout.o: layout.C layout.h assert.h config.h \
+ config.h
+logo.o: logo.C logo.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ version.h MString.h \
+ Xpm.h \
+ string-fun.h AppData.h OnOff.h BindingS.h cook.h LessTifH.h \
+ InitImage.h $(srcdir)/../icons/ddd.xbm $(srcdir)/../icons/dddmask.xbm \
+ $(srcdir)/../icons/dddsplash.xbm $(srcdir)/../icons/ddd.xpm $(srcdir)/../icons/dddsplash.xpm \
+ $(srcdir)/../icons/toolbar/breakat.xbm \
+ $(srcdir)/../icons/toolbar/clearat.xbm $(srcdir)/../icons/toolbar/cluster.xbm \
+ $(srcdir)/../icons/toolbar/delete.xbm $(srcdir)/../icons/toolbar/deref.xbm \
+ $(srcdir)/../icons/toolbar/disable.xbm $(srcdir)/../icons/toolbar/display.xbm \
+ $(srcdir)/../icons/toolbar/enable.xbm $(srcdir)/../icons/toolbar/findbwd.xbm \
+ $(srcdir)/../icons/toolbar/findfwd.xbm $(srcdir)/../icons/toolbar/hide.xbm \
+ $(srcdir)/../icons/toolbar/lookup.xbm $(srcdir)/../icons/toolbar/maketemp.xbm \
+ $(srcdir)/../icons/toolbar/newbreak.xbm $(srcdir)/../icons/toolbar/newdisplay.xbm \
+ $(srcdir)/../icons/toolbar/newwatch.xbm $(srcdir)/../icons/toolbar/plot.xbm \
+ $(srcdir)/../icons/toolbar/print.xbm $(srcdir)/../icons/toolbar/properties.xbm \
+ $(srcdir)/../icons/toolbar/rotate.xbm $(srcdir)/../icons/toolbar/set.xbm \
+ $(srcdir)/../icons/toolbar/show.xbm $(srcdir)/../icons/toolbar/uncluster.xbm \
+ $(srcdir)/../icons/toolbar/undisplay.xbm $(srcdir)/../icons/toolbar/unwatch.xbm \
+ $(srcdir)/../icons/toolbar/watch.xbm $(srcdir)/../icons/toolbar/breakat.xbmxx \
+ $(srcdir)/../icons/toolbar/clearat.xbmxx $(srcdir)/../icons/toolbar/cluster.xbmxx \
+ $(srcdir)/../icons/toolbar/delete.xbmxx $(srcdir)/../icons/toolbar/deref.xbmxx \
+ $(srcdir)/../icons/toolbar/disable.xbmxx $(srcdir)/../icons/toolbar/display.xbmxx \
+ $(srcdir)/../icons/toolbar/enable.xbmxx $(srcdir)/../icons/toolbar/findbwd.xbmxx \
+ $(srcdir)/../icons/toolbar/findfwd.xbmxx $(srcdir)/../icons/toolbar/hide.xbmxx \
+ $(srcdir)/../icons/toolbar/lookup.xbmxx $(srcdir)/../icons/toolbar/maketemp.xbmxx \
+ $(srcdir)/../icons/toolbar/newbreak.xbmxx $(srcdir)/../icons/toolbar/newdisplay.xbmxx \
+ $(srcdir)/../icons/toolbar/newwatch.xbmxx $(srcdir)/../icons/toolbar/plot.xbmxx \
+ $(srcdir)/../icons/toolbar/print.xbmxx $(srcdir)/../icons/toolbar/properties.xbmxx \
+ $(srcdir)/../icons/toolbar/rotate.xbmxx $(srcdir)/../icons/toolbar/set.xbmxx \
+ $(srcdir)/../icons/toolbar/show.xbmxx $(srcdir)/../icons/toolbar/uncluster.xbmxx \
+ $(srcdir)/../icons/toolbar/undisplay.xbmxx $(srcdir)/../icons/toolbar/unwatch.xbmxx \
+ $(srcdir)/../icons/toolbar/watch.xbmxx $(srcdir)/../icons/toolbar/breakat.xpm \
+ $(srcdir)/../icons/toolbar/clearat.xpm $(srcdir)/../icons/toolbar/cluster.xpm \
+ $(srcdir)/../icons/toolbar/delete.xpm $(srcdir)/../icons/toolbar/deref.xpm \
+ $(srcdir)/../icons/toolbar/disable.xpm $(srcdir)/../icons/toolbar/display.xpm \
+ $(srcdir)/../icons/toolbar/enable.xpm $(srcdir)/../icons/toolbar/findbwd.xpm \
+ $(srcdir)/../icons/toolbar/findfwd.xpm $(srcdir)/../icons/toolbar/hide.xpm \
+ $(srcdir)/../icons/toolbar/lookup.xpm $(srcdir)/../icons/toolbar/maketemp.xpm \
+ $(srcdir)/../icons/toolbar/newbreak.xpm $(srcdir)/../icons/toolbar/newdisplay.xpm \
+ $(srcdir)/../icons/toolbar/newwatch.xpm $(srcdir)/../icons/toolbar/plot.xpm \
+ $(srcdir)/../icons/toolbar/print.xpm $(srcdir)/../icons/toolbar/properties.xpm \
+ $(srcdir)/../icons/toolbar/rotate.xpm $(srcdir)/../icons/toolbar/set.xpm \
+ $(srcdir)/../icons/toolbar/show.xpm $(srcdir)/../icons/toolbar/uncluster.xpm \
+ $(srcdir)/../icons/toolbar/undisplay.xpm $(srcdir)/../icons/toolbar/unwatch.xpm \
+ $(srcdir)/../icons/toolbar/watch.xpm $(srcdir)/../icons/toolbar/breakat.xpmxx \
+ $(srcdir)/../icons/toolbar/clearat.xpmxx $(srcdir)/../icons/toolbar/cluster.xpmxx \
+ $(srcdir)/../icons/toolbar/delete.xpmxx $(srcdir)/../icons/toolbar/deref.xpmxx \
+ $(srcdir)/../icons/toolbar/disable.xpmxx $(srcdir)/../icons/toolbar/display.xpmxx \
+ $(srcdir)/../icons/toolbar/enable.xpmxx $(srcdir)/../icons/toolbar/findbwd.xpmxx \
+ $(srcdir)/../icons/toolbar/findfwd.xpmxx $(srcdir)/../icons/toolbar/hide.xpmxx \
+ $(srcdir)/../icons/toolbar/lookup.xpmxx $(srcdir)/../icons/toolbar/maketemp.xpmxx \
+ $(srcdir)/../icons/toolbar/newbreak.xpmxx $(srcdir)/../icons/toolbar/newdisplay.xpmxx \
+ $(srcdir)/../icons/toolbar/newwatch.xpmxx $(srcdir)/../icons/toolbar/plot.xpmxx \
+ $(srcdir)/../icons/toolbar/print.xpmxx $(srcdir)/../icons/toolbar/properties.xpmxx \
+ $(srcdir)/../icons/toolbar/rotate.xpmxx $(srcdir)/../icons/toolbar/set.xpmxx \
+ $(srcdir)/../icons/toolbar/show.xpmxx $(srcdir)/../icons/toolbar/uncluster.xpmxx \
+ $(srcdir)/../icons/toolbar/undisplay.xpmxx $(srcdir)/../icons/toolbar/unwatch.xpmxx \
+ $(srcdir)/../icons/toolbar/watch.xpmxx
+logplayer.o: logplayer.C logplayer.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ cook.h streampos.h \
+ config.h
+longName.o: longName.C \
+ longName.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ config.h
+mainloop.o: mainloop.C mainloop.h bool.h config.h exit.h \
+ ExitCB.h status.h \
+ strclass.h \
+ rxclass.h assert.h Delay.h TypeInfo.h \
+ VarArray.h DynArray.h MString.h \
+ ddd.h \
+ AppData.h version.h OnOff.h BindingS.h \
+ config.h
+mmtest.o: mmtest.C \
+ MakeMenu.h \
+ bool.h config.h StringA.h strclass.h \
+ rxclass.h assert.h VarArray.h DynArray.h
+mydialogs.o: mydialogs.C mydialogs.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ IntArray.h VarArray.h DynArray.h charsets.h \
+ MString.h \
+ verify.h DestroyCB.h HelpCB.h \
+ AppData.h version.h OnOff.h BindingS.h \
+ string-fun.h
+options.o: options.C options.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ AppData.h \
+ version.h OnOff.h BindingS.h DataDisp.h \
+ ArgField.h HandlerL.h compare.h BoxSize.h BoxPoint.h BoxC.h \
+ BoxD.h misc.h Command.h GDBAgent.h \
+ TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h DynArray.h VoidArray.h \
+ question.h Delay.h ExitCB.h GraphEdit.h HelpCB.h \
+ MString.h IntArray.h MakeMenu.h \
+ VSEFlags.h VSLLib.h StringBox.h Box.h BoxWeight.h BoxRegion.h \
+ BoxExtend.h PrintGC.h Widget.h DataLink.h PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h MarkBox.h THatBox.h HatBox.h events.h \
+ string-fun.h DestroyCB.h SourceView.h Assoc.h IntIntAA.h TextPosA.h \
+ BreakPM.h Map.h BreakPoint.h CodeCache.h \
+ StringSA.h SourceO.h TimeOut.h UndoBuffer.h UndoBE.h cook.h \
+ comm-manag.h ddd.h \
+ file.h filetype.h frame.h gdbinit.h \
+ plotter.h PlotAgent.h ChunkQueue.h post.h resources.h session.h \
+ settings.h shell.h status.h verify.h windows.h wm.h \
+ config.h
+plotter.o: plotter.C plotter.h PlotAgent.h LiterateA.h assert.h \
+ config.h \
+ strclass.h \
+ rxclass.h bool.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h StringA.h \
+ VarArray.h DynArray.h IntArray.h PrintGC.h ChunkQueue.h \
+ charsets.h MString.h \
+ cook.h ddd.h exit.h ExitCB.h \
+ findParent.h findWindow.h file.h filetype.h \
+ fonts.h AppData.h version.h OnOff.h BindingS.h post.h print.h \
+ regexps.h simpleMenu.h MakeMenu.h status.h Delay.h string-fun.h \
+ verify.h wm.h Command.h GDBAgent.h TTYAgent.h \
+ VoidArray.h question.h HelpCB.h \
+ PlotArea.h Swallower.h DispValue.h \
+ DispValueA.h DispValueT.h StringSA.h SourceO.h Assoc.h Box.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h Widget.h DataLink.h DataDisp.h ArgField.h \
+ GraphEdit.h VSEFlags.h VSLLib.h StringBox.h PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h MarkBox.h THatBox.h HatBox.h events.h \
+ DestroyCB.h TimeOut.h \
+ config.h
+post.o: post.C post.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ AppData.h \
+ version.h OnOff.h BindingS.h Command.h \
+ GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h question.h Delay.h HelpCB.h \
+ MString.h TimeOut.h charsets.h cmdtty.h \
+ ddd.h \
+ exit.h ExitCB.h findParent.h session.h string-fun.h verify.h wm.h \
+ config.h
+print.o: print.C print.h ddd.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ AppData.h version.h OnOff.h BindingS.h \
+ DataDisp.h ArgField.h HandlerL.h compare.h BoxSize.h BoxPoint.h \
+ BoxC.h \
+ BoxD.h misc.h Command.h GDBAgent.h \
+ TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h DynArray.h VoidArray.h \
+ question.h Delay.h ExitCB.h GraphEdit.h HelpCB.h \
+ MString.h IntArray.h MakeMenu.h \
+ VSEFlags.h VSLLib.h StringBox.h Box.h BoxWeight.h BoxRegion.h \
+ BoxExtend.h PrintGC.h Widget.h DataLink.h PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h MarkBox.h THatBox.h HatBox.h events.h \
+ string-fun.h DestroyCB.h DispGraph.h Graph.h GraphGC.h explicit.h \
+ GraphNode.h GraphNodeI.h GraphEdge.h LineGraphE.h EdgeA.h PosGraphN.h \
+ GraphNPA.h DispNodeM.h Map.h DispNode.h BoxGraphN.h RegionGN.h \
+ DispValue.h DispValueA.h DispValueT.h StringSA.h SourceO.h Assoc.h \
+ TimeOut.h cook.h cwd.h file.h filetype.h \
+ post.h regexps.h status.h verify.h wm.h charsets.h LessTifH.h \
+ config.h
+printBox.o: printBox.C Box.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h printBox.h eps-code.h
+question.o: question.C question.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ ddd.h \
+ AppData.h version.h OnOff.h BindingS.h \
+ GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h Delay.h TimeOut.h disp-read.h
+regexps.o: regexps.C regexps.h config.h rxclass.h bool.h assert.h \
+ misc.h rxscan.C \
+ config.h
+resources.o: resources.C resources.h \
+ version.h AppData.h \
+ OnOff.h \
+ BindingS.h stty.h config.h Ddd.ad.h
+rxclass.o: rxclass.C config.h bool.h strclass.h \
+ rxclass.h assert.h \
+ misc.h cook.h \
+ config.h
+rxscan.o: rxscan.C \
+ config.h
+sashes.o: sashes.C sashes.h \
+ Sash.h \
+ config.h
+select.o: select.C select.h Agent.h config.h \
+ strclass.h rxclass.h bool.h assert.h \
+ AgentM.h TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h \
+ Delay.h VarArray.h DynArray.h \
+ GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h DataLength.h \
+ StringA.h VoidArray.h \
+ HelpCB.h \
+ MString.h Command.h question.h ddd.h \
+ editing.h file.h mydialogs.h IntArray.h charsets.h status.h \
+ string-fun.h verify.h wm.h \
+ config.h
+selection.o: selection.C selection.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ config.h
+session.o: session.C session.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ version.h \
+ AppData.h \
+ OnOff.h BindingS.h DataDisp.h ArgField.h \
+ HandlerL.h compare.h BoxSize.h BoxPoint.h BoxC.h \
+ BoxD.h misc.h Command.h GDBAgent.h \
+ TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h TypeInfo.h \
+ UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h DynArray.h VoidArray.h \
+ question.h Delay.h ExitCB.h GraphEdit.h HelpCB.h \
+ MString.h IntArray.h MakeMenu.h \
+ VSEFlags.h VSLLib.h StringBox.h Box.h BoxWeight.h BoxRegion.h \
+ BoxExtend.h PrintGC.h Widget.h DataLink.h PrimitiveB.h FontTable.h \
+ ListBox.h CompositeB.h TagBox.h MarkBox.h THatBox.h HatBox.h events.h \
+ string-fun.h DestroyCB.h SmartC.h SourceView.h Assoc.h IntIntAA.h \
+ TextPosA.h BreakPM.h Map.h BreakPoint.h CodeCache.h \
+ StringSA.h SourceO.h charsets.h comm-manag.h \
+ disp-read.h ddd.h cook.h editing.h exit.h file.h filetype.h \
+ glob.h history.h HistoryF.h home.h \
+ hostname.h mydialogs.h options.h post.h settings.h status.h verify.h \
+ windows.h wm.h \
+ config.h
+settings.o: settings.C settings.h \
+ bool.h config.h strclass.h \
+ rxclass.h assert.h \
+ GDBAgent.h TTYAgent.h LiterateA.h \
+ AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h options.h \
+ AppData.h version.h OnOff.h BindingS.h Assoc.h \
+ ComboBox.h Command.h question.h DataDisp.h ArgField.h BoxSize.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h misc.h Delay.h ExitCB.h \
+ GraphEdit.h HelpCB.h MString.h \
+ IntArray.h MakeMenu.h VSEFlags.h VSLLib.h StringBox.h Box.h \
+ BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h Widget.h DataLink.h \
+ PrimitiveB.h FontTable.h ListBox.h CompositeB.h TagBox.h MarkBox.h \
+ THatBox.h HatBox.h events.h string-fun.h DestroyCB.h EntryType.h \
+ LessTifH.h SmartC.h SourceView.h IntIntAA.h TextPosA.h BreakPM.h \
+ Map.h BreakPoint.h CodeCache.h StringSA.h SourceO.h UndoBuffer.h \
+ UndoBE.h WidgetSA.h buttons.h cook.h comm-manag.h ddd.h \
+ editing.h mydialogs.h charsets.h logo.h regexps.h shell.h status.h \
+ verify.h wm.h
+shell.o: shell.C shell.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ ddd.h \
+ AppData.h version.h OnOff.h BindingS.h \
+ hostname.h windows.h environ.h
+shorten.o: shorten.C shorten.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ cook.h regexps.h \
+ IntArray.h VarArray.h DynArray.h
+show.o: show.C show.h ddd.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ GDBAgent.h TTYAgent.h LiterateA.h \
+ AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h AppData.h version.h OnOff.h BindingS.h \
+ SmartC.h build.h configinfo.h cook.h gdbinit.h host.h post.h \
+ regexps.h shell.h status.h Delay.h MString.h string-fun.h filetype.h \
+ Xpm.h HelpCB.h \
+ COPYING.gz.C NEWS.gz.C ddd.info.txt.gz.C
+sigName.o: sigName.C config.h \
+ strclass.h \
+ rxclass.h bool.h assert.h \
+ sigName.h
+simpleMenu.o: simpleMenu.C simpleMenu.h MakeMenu.h \
+ bool.h config.h StringA.h strclass.h \
+ rxclass.h assert.h \
+ VarArray.h DynArray.h HelpCB.h \
+ MString.h WhatNextCB.h events.h \
+ BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h exit.h \
+ ExitCB.h findParent.h tips.h show.h ddd.h \
+ GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ VoidArray.h \
+ config.h
+source.o: source.C source.h \
+ bool.h config.h SourceView.h \
+ strclass.h \
+ rxclass.h assert.h \
+ Assoc.h MakeMenu.h StringA.h VarArray.h DynArray.h IntIntAA.h \
+ IntArray.h TextPosA.h ArgField.h HandlerL.h compare.h GDBAgent.h \
+ TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ UniqueId.h SignalB.h DataLength.h \
+ VoidArray.h BreakPM.h Map.h BreakPoint.h \
+ CodeCache.h Delay.h StringSA.h SourceO.h \
+ MString.h AppData.h version.h OnOff.h BindingS.h UndoBuffer.h \
+ UndoBE.h string-fun.h TimeOut.h Command.h question.h cook.h ctrl.h \
+ dbx-lookup.h events.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h ddd.h \
+ deref.h post.h regexps.h shell.h status.h fortranize.h \
+ config.h
+status.o: status.C status.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ Delay.h \
+ TypeInfo.h \
+ VarArray.h DynArray.h MString.h \
+ Command.h GDBAgent.h TTYAgent.h \
+ LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VoidArray.h \
+ question.h DestroyCB.h HelpCB.h \
+ MakeMenu.h charsets.h cmdtty.h ddd.h \
+ findParent.h mydialogs.h IntArray.h post.h string-fun.h verify.h \
+ LessTifH.h
+strclass.o: strclass.C strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ return.h \
+ config.h
+string-fun.o: string-fun.C assert.h config.h \
+ string-fun.h strclass.h \
+ rxclass.h bool.h regexps.h \
+ config.h
+stringify.o: stringify.C \
+ config.h
+swallow.o: swallow.C findWindow.h \
+ bool.h config.h Swallower.h \
+ config.h
+tString.o: tString.C strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ config.h
+tabs.o: tabs.C tabs.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ config.h
+test-file.o: test-file.C \
+ config.h
+test-graph.o: test-graph.C assert.h config.h \
+ ScrolledGE.h GraphEdit.h BoxPoint.h \
+ BoxC.h \
+ BoxD.h bool.h PannedGE.h converters.h \
+ MakeMenu.h StringA.h strclass.h \
+ rxclass.h VarArray.h DynArray.h longName.h StringBox.h Box.h \
+ BoxSize.h misc.h BoxWeight.h BoxRegion.h BoxExtend.h PrintGC.h \
+ TypeInfo.h \
+ Widget.h UniqueId.h DataLink.h PrimitiveB.h FontTable.h AlignBox.h \
+ CompositeB.h Graph.h GraphGC.h explicit.h GraphNode.h GraphNodeI.h \
+ GraphEdge.h BoxGraphN.h RegionGN.h PosGraphN.h MarkBox.h THatBox.h \
+ HatBox.h HintGraphN.h ArcGraphE.h LineGraphE.h EdgeA.h BoxEdgeA.h
+tictactoe.o: tictactoe.C tictactoe.h \
+ $(srcdir)/../icons/tictactoe/circle.xbm \
+ $(srcdir)/../icons/tictactoe/cross.xbm $(srcdir)/../icons/tictactoe/empty.xbm \
+ Command.h \
+ GDBAgent.h TTYAgent.h LiterateA.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h question.h Delay.h DestroyCB.h HelpCB.h \
+ MString.h InitImage.h LessTifH.h \
+ TimeOut.h cook.h verify.h wm.h status.h version.h
+tips.o: tips.C tips.h \
+ AppData.h \
+ version.h OnOff.h BindingS.h Command.h GDBAgent.h TTYAgent.h \
+ LiterateA.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h question.h DestroyCB.h HelpCB.h \
+ MString.h MakeMenu.h cook.h ddd.h \
+ post.h session.h string-fun.h verify.h wm.h \
+ config.h
+toolbar.o: toolbar.C toolbar.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ MakeMenu.h \
+ StringA.h VarArray.h DynArray.h \
+ ArgField.h HandlerL.h compare.h ddd.h \
+ logo.h version.h MString.h misc.h \
+ verify.h HelpCB.h Delay.h TypeInfo.h \
+ AppData.h OnOff.h BindingS.h converters.h \
+ config.h
+ttytest.o: ttytest.C \
+ TTYAgent.h LiterateA.h assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ cook.h
+ungrab.o: ungrab.C ungrab.h bool.h config.h \
+ AppData.h version.h OnOff.h BindingS.h CodeCache.h strclass.h \
+ rxclass.h assert.h VarArray.h DynArray.h \
+ GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VoidArray.h \
+ TimeOut.h buttons.h ddd.h \
+ disp-read.h file.h post.h question.h status.h Delay.h MString.h \
+ string-fun.h windows.h verify.h Command.h HelpCB.h \
+ charsets.h wm.h
+uniquify.o: uniquify.C uniquify.h StringA.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ VarArray.h \
+ DynArray.h SmartC.h
+userinfo.o: userinfo.C config.h hostname.h bool.h \
+ hostname.C \
+ config.h
+value-read.o: value-read.C value-read.h strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ DispValueT.h \
+ string-fun.h comm-manag.h GDBAgent.h TTYAgent.h \
+ LiterateA.h \
+ AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h cook.h ddd.h \
+ regexps.h PosBuffer.h
+verify.o: verify.C \
+ verify.h \
+ config.h
+vsl-gramma.o: vsl-gramma.C \
+ config.h
+vsl-lex.o: vsl-lex.C \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h
+vsl.o: vsl.C assert.h config.h \
+ strclass.h \
+ rxclass.h bool.h \
+ DocSpace.h VSLLib.h VSEFlags.h \
+ TypeInfo.h \
+ StringBox.h Box.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h misc.h BoxWeight.h \
+ BoxRegion.h BoxExtend.h PrintGC.h Widget.h UniqueId.h DataLink.h \
+ PrimitiveB.h FontTable.h ListBox.h CompositeB.h TagBox.h MarkBox.h \
+ THatBox.h HatBox.h VSLDef.h VSLNode.h VSLBuiltin.h
+windows.o: windows.C windows.h \
+ bool.h config.h AppData.h \
+ version.h OnOff.h BindingS.h BoxRegion.h \
+ misc.h BoxPoint.h BoxC.h \
+ BoxD.h BoxSize.h DataDisp.h ArgField.h \
+ HandlerL.h compare.h assert.h \
+ strclass.h \
+ rxclass.h Command.h GDBAgent.h TTYAgent.h LiterateA.h AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h DynArray.h VoidArray.h \
+ question.h Delay.h ExitCB.h GraphEdit.h HelpCB.h \
+ MString.h IntArray.h MakeMenu.h \
+ VSEFlags.h VSLLib.h StringBox.h Box.h BoxWeight.h BoxExtend.h \
+ PrintGC.h Widget.h DataLink.h PrimitiveB.h FontTable.h ListBox.h \
+ CompositeB.h TagBox.h MarkBox.h THatBox.h HatBox.h events.h \
+ string-fun.h SourceView.h Assoc.h IntIntAA.h TextPosA.h BreakPM.h \
+ Map.h BreakPoint.h CodeCache.h StringSA.h \
+ SourceO.h TimeOut.h cmdtty.h ddd.h \
+ editing.h exectty.h exit.h findParent.h frame.h wm.h MinMaxA.h Tool.h \
+ XErrorB.h \
+ Sash.h \
+ config.h
+wm.o: wm.C wm.h \
+ strclass.h \
+ rxclass.h config.h bool.h assert.h \
+ Command.h GDBAgent.h TTYAgent.h LiterateA.h \
+ AsyncAgent.h \
+ Agent.h \
+ AgentM.h \
+ TypeInfo.h \
+ HandlerL.h compare.h UniqueId.h SignalB.h DataLength.h \
+ StringA.h VarArray.h \
+ DynArray.h VoidArray.h question.h ddd.h \
+ string-fun.h findParent.h \
+ config.h
+xconfig.o: xconfig.C xconfig.h \
+ bool.h config.h strclass.h \
+ rxclass.h assert.h cook.h \
+ filetype.h shell.h \
+ xlibdir.C
+xlibdir.o: xlibdir.C

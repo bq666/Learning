@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bq666/Workspace/MyMake/hello2.c
+hello2.h
+/home/bq666/Workspace/MyMake/hello2.h
+
+/home/bq666/Workspace/MyMake/hello2.h
+

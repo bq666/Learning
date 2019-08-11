@@ -1,0 +1,158 @@
+
+operandy.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  000000de  00000172  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000000de  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000001  00800100  00800100  00000172  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000172  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000028  00000000  00000000  000001a2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000000f4  00000000  00000000  000001ca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000000ab  00000000  00000000  000002be  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000000c7  00000000  00000000  00000369  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000050  00000000  00000000  00000430  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000154  00000000  00000000  00000480  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000009f  00000000  00000000  000005d4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000018  00000000  00000000  00000673  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   8:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  10:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  14:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  18:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  1c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  20:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  24:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  28:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  2c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  30:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  34:	0c 94 48 00 	jmp	0x90	; 0x90 <__vector_13>
+  38:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  3c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  40:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  44:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  48:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  4c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  50:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  54:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  58:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  5c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  60:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  64:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d4 e0       	ldi	r29, 0x04	; 4
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_clear_bss>:
+  74:	21 e0       	ldi	r18, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	01 c0       	rjmp	.+2      	; 0x7e <.do_clear_bss_start>
+
+0000007c <.do_clear_bss_loop>:
+  7c:	1d 92       	st	X+, r1
+
+0000007e <.do_clear_bss_start>:
+  7e:	a1 30       	cpi	r26, 0x01	; 1
+  80:	b2 07       	cpc	r27, r18
+  82:	e1 f7       	brne	.-8      	; 0x7c <.do_clear_bss_loop>
+  84:	0e 94 59 00 	call	0xb2	; 0xb2 <main>
+  88:	0c 94 6d 00 	jmp	0xda	; 0xda <_exit>
+
+0000008c <__bad_interrupt>:
+  8c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000090 <__vector_13>:
+#include <avr/interrupt.h>
+
+uint8_t x;
+
+ISR(TIMER1_OVF_vect)
+{
+  90:	1f 92       	push	r1
+  92:	0f 92       	push	r0
+  94:	0f b6       	in	r0, 0x3f	; 63
+  96:	0f 92       	push	r0
+  98:	11 24       	eor	r1, r1
+  9a:	8f 93       	push	r24
+	x++;
+  9c:	80 91 00 01 	lds	r24, 0x0100
+  a0:	8f 5f       	subi	r24, 0xFF	; 255
+  a2:	80 93 00 01 	sts	0x0100, r24
+}
+  a6:	8f 91       	pop	r24
+  a8:	0f 90       	pop	r0
+  aa:	0f be       	out	0x3f, r0	; 63
+  ac:	0f 90       	pop	r0
+  ae:	1f 90       	pop	r1
+  b0:	18 95       	reti
+
+000000b2 <main>:
+
+int main(void)
+{
+  b2:	cf 93       	push	r28
+  b4:	df 93       	push	r29
+	PORTB=0x01;       // Wybór pierwszej kolumny
+  b6:	81 e0       	ldi	r24, 0x01	; 1
+  b8:	85 b9       	out	0x05, r24	; 5
+	asm volatile("nop");
+  ba:	00 00       	nop
+	uint8_t kbd=PINB; // Odczyt wiersza
+  bc:	83 b1       	in	r24, 0x03	; 3
+
+	
+	uint8_t nibbles=0xF0;
+	asm volatile("swap %0" : "=r" (nibbles) : "0" (nibbles));
+  be:	c0 ef       	ldi	r28, 0xF0	; 240
+  c0:	c2 95       	swap	r28
+	asm volatile("swap %0" : "=y" (nibbles) : "0" (nibbles));
+  c2:	c2 95       	swap	r28
+	
+	asm volatile("swap %[nibbles]" : [nibbles] "=r" (nibbles) : "0" (nibbles));
+  c4:	c2 95       	swap	r28
+
+	uint16_t dodaj=0;
+	asm volatile("ADIW %0 , 1" : "=y" (dodaj) : "0" (dodaj));
+  c6:	c0 e0       	ldi	r28, 0x00	; 0
+  c8:	d0 e0       	ldi	r29, 0x00	; 0
+  ca:	21 96       	adiw	r28, 0x01	; 1
+
+	uint8_t value =0xff;
+	asm volatile("out %0, %1":: "I" (_SFR_IO_ADDR(PORTB)), "r" (value));
+  cc:	8f ef       	ldi	r24, 0xFF	; 255
+  ce:	85 b9       	out	0x05, r24	; 5
+  d0:	80 e0       	ldi	r24, 0x00	; 0
+  d2:	90 e0       	ldi	r25, 0x00	; 0
+  d4:	df 91       	pop	r29
+  d6:	cf 91       	pop	r28
+  d8:	08 95       	ret
+
+000000da <_exit>:
+  da:	f8 94       	cli
+
+000000dc <__stop_program>:
+  dc:	ff cf       	rjmp	.-2      	; 0xdc <__stop_program>

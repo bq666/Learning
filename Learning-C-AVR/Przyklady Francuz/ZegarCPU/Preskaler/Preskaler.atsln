@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Preskaler", "Preskaler\Preskaler.cproj", "{802B6536-0E3D-4E09-8C7B-C61C1348851B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{802B6536-0E3D-4E09-8C7B-C61C1348851B}.Debug|AVR.ActiveCfg = Debug|AVR
+		{802B6536-0E3D-4E09-8C7B-C61C1348851B}.Debug|AVR.Build.0 = Debug|AVR
+		{802B6536-0E3D-4E09-8C7B-C61C1348851B}.Release|AVR.ActiveCfg = Release|AVR
+		{802B6536-0E3D-4E09-8C7B-C61C1348851B}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

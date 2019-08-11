@@ -1,0 +1,768 @@
+
+EEPROM.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  0000044c  000004e0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000044c  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000001  00800100  00800100  000004e0  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000004e0  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 000000a8  00000000  00000000  00000510  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000008dd  00000000  00000000  000005b8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000336  00000000  00000000  00000e95  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000038d  00000000  00000000  000011cb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000001e4  00000000  00000000  00001558  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000002e2  00000000  00000000  0000173c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000006d8  00000000  00000000  00001a1e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000000a0  00000000  00000000  000020f6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   8:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  10:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  14:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  18:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  1c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  20:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  24:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  28:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  2c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  30:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  34:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  38:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  3c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  40:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  44:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  48:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  4c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  50:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  54:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  58:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  5c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  60:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  64:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_clear_bss>:
+  74:	21 e0       	ldi	r18, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	01 c0       	rjmp	.+2      	; 0x7e <.do_clear_bss_start>
+
+0000007c <.do_clear_bss_loop>:
+  7c:	1d 92       	st	X+, r1
+
+0000007e <.do_clear_bss_start>:
+  7e:	a1 30       	cpi	r26, 0x01	; 1
+  80:	b2 07       	cpc	r27, r18
+  82:	e1 f7       	brne	.-8      	; 0x7c <.do_clear_bss_loop>
+  84:	0e 94 0c 01 	call	0x218	; 0x218 <main>
+  88:	0c 94 24 02 	jmp	0x448	; 0x448 <_exit>
+
+0000008c <__bad_interrupt>:
+  8c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000090 <I2C_MEM_SetRWAddress>:
+#include "I2cbase.h"
+
+#define I2C_MEM_PAGE_SIZE 64   //Wielkoœæ strony pamiêci EEPROM
+
+void I2C_MEM_SetRWAddress(const __uint24 addr)
+{
+  90:	0f 93       	push	r16
+  92:	1f 93       	push	r17
+  94:	cf 93       	push	r28
+  96:	df 93       	push	r29
+  98:	1f 92       	push	r1
+  9a:	cd b7       	in	r28, 0x3d	; 61
+  9c:	de b7       	in	r29, 0x3e	; 62
+  9e:	16 2f       	mov	r17, r22
+	do       //Wybierz urz¹dzenie o wskazanym adresie
+	{
+		I2C_SendStartAndSelect(addr >> 16);
+  a0:	08 2f       	mov	r16, r24
+  a2:	80 2f       	mov	r24, r16
+  a4:	79 83       	std	Y+1, r23	; 0x01
+  a6:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <I2C_SendStartAndSelect>
+	} while(I2C_Error==I2C_NoACK); //Czekaj, a¿ urz¹dzenie wyœle ACK
+  aa:	80 91 00 01 	lds	r24, 0x0100
+  ae:	79 81       	ldd	r23, Y+1	; 0x01
+  b0:	84 30       	cpi	r24, 0x04	; 4
+  b2:	b9 f3       	breq	.-18     	; 0xa2 <I2C_MEM_SetRWAddress+0x12>
+
+	I2C_SendByte((uint8_t)(addr>>8));
+  b4:	87 2f       	mov	r24, r23
+  b6:	0e 94 98 01 	call	0x330	; 0x330 <I2C_SendByte>
+	I2C_SendByte((uint8_t)(addr & 0xFF));
+  ba:	81 2f       	mov	r24, r17
+}
+  bc:	0f 90       	pop	r0
+  be:	df 91       	pop	r29
+  c0:	cf 91       	pop	r28
+  c2:	1f 91       	pop	r17
+  c4:	0f 91       	pop	r16
+	{
+		I2C_SendStartAndSelect(addr >> 16);
+	} while(I2C_Error==I2C_NoACK); //Czekaj, a¿ urz¹dzenie wyœle ACK
+
+	I2C_SendByte((uint8_t)(addr>>8));
+	I2C_SendByte((uint8_t)(addr & 0xFF));
+  c6:	0c 94 98 01 	jmp	0x330	; 0x330 <I2C_SendByte>
+
+000000ca <I2C_MEM_read_byte>:
+}
+
+uint8_t I2C_MEM_read_byte(const __uint24 addr)
+{
+  ca:	cf 93       	push	r28
+  cc:	c8 2f       	mov	r28, r24
+	I2C_MEM_SetRWAddress(addr);                     //Wybierz uk³ad i adres odczytywanej komórki
+  ce:	0e 94 48 00 	call	0x90	; 0x90 <I2C_MEM_SetRWAddress>
+	I2C_SendStartAndSelect((addr >> 16) | TW_READ); //Wykonaj operacjê Current Address Read
+  d2:	8c 2f       	mov	r24, r28
+  d4:	81 60       	ori	r24, 0x01	; 1
+  d6:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <I2C_SendStartAndSelect>
+	uint8_t byte=I2C_ReceiveData_NACK();
+  da:	0e 94 b8 01 	call	0x370	; 0x370 <I2C_ReceiveData_NACK>
+extern uint8_t I2C_Error;
+inline void I2C_SetError(uint8_t err) { I2C_Error=err;};
+
+void I2C_Init();
+void I2C_Start();
+static inline void I2C_Stop() {TWCR = _BV(TWINT) | _BV(TWEN) | _BV(TWSTO);};	//Nadaj sygna³ STOP
+  de:	94 e9       	ldi	r25, 0x94	; 148
+  e0:	90 93 bc 00 	sts	0x00BC, r25
+	I2C_Stop();
+	return byte;
+}
+  e4:	cf 91       	pop	r28
+  e6:	08 95       	ret
+
+000000e8 <I2C_MEM_write_byte>:
+
+void I2C_MEM_write_byte(const __uint24 addr, uint8_t data)
+{
+  e8:	cf 93       	push	r28
+  ea:	df 93       	push	r29
+  ec:	1f 92       	push	r1
+  ee:	cd b7       	in	r28, 0x3d	; 61
+  f0:	de b7       	in	r29, 0x3e	; 62
+	I2C_MEM_SetRWAddress(addr);
+  f2:	49 83       	std	Y+1, r20	; 0x01
+  f4:	0e 94 48 00 	call	0x90	; 0x90 <I2C_MEM_SetRWAddress>
+	I2C_SendByte(data);
+  f8:	49 81       	ldd	r20, Y+1	; 0x01
+  fa:	84 2f       	mov	r24, r20
+  fc:	0e 94 98 01 	call	0x330	; 0x330 <I2C_SendByte>
+ 100:	84 e9       	ldi	r24, 0x94	; 148
+ 102:	80 93 bc 00 	sts	0x00BC, r24
+void I2C_SendAddr(uint8_t address);		//Wyœlij adres urz¹dzenia slave
+void I2C_SendByte(uint8_t byte);		//Wyœlij bajt danych do slave
+uint8_t I2C_ReceiveData_ACK();			//Odbierz bajt danych od slave, wysy³aj¹c ACK
+uint8_t I2C_ReceiveData_NACK();			//Odbierz bajt danych od slave, nie wysy³aj ACK
+static inline void I2C_WaitForComplete() {while (!(TWCR & _BV(TWINT)));};		//Zaczekaj na koniec bie¿¹cej operacji I2C
+static inline void I2C_WaitTillStopWasSent() {while (TWCR & _BV(TWSTO));};	//Zaczekaj na koniec nadawania sygna³u STOP
+ 106:	80 91 bc 00 	lds	r24, 0x00BC
+ 10a:	84 fd       	sbrc	r24, 4
+ 10c:	fc cf       	rjmp	.-8      	; 0x106 <I2C_MEM_write_byte+0x1e>
+	I2C_Stop();
+	I2C_WaitTillStopWasSent(); //Poczekaj na zakoñczenie wysy³ania sygna³u STOP
+}
+ 10e:	0f 90       	pop	r0
+ 110:	df 91       	pop	r29
+ 112:	cf 91       	pop	r28
+ 114:	08 95       	ret
+
+00000116 <I2C_MEM_read_block>:
+
+void I2C_MEM_read_block(void *dst, const __uint24 src, size_t len)
+{
+ 116:	cf 92       	push	r12
+ 118:	df 92       	push	r13
+ 11a:	ef 92       	push	r14
+ 11c:	ff 92       	push	r15
+ 11e:	0f 93       	push	r16
+ 120:	1f 93       	push	r17
+ 122:	cf 93       	push	r28
+ 124:	df 93       	push	r29
+ 126:	7c 01       	movw	r14, r24
+ 128:	16 2f       	mov	r17, r22
+ 12a:	e9 01       	movw	r28, r18
+	I2C_MEM_SetRWAddress(src);
+ 12c:	ba 01       	movw	r22, r20
+ 12e:	81 2f       	mov	r24, r17
+ 130:	0e 94 48 00 	call	0x90	; 0x90 <I2C_MEM_SetRWAddress>
+	I2C_SendStartAndSelect((src >> 16) | TW_READ);
+ 134:	81 2f       	mov	r24, r17
+ 136:	81 60       	ori	r24, 0x01	; 1
+ 138:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <I2C_SendStartAndSelect>
+	while(--len)
+ 13c:	8e 01       	movw	r16, r28
+ 13e:	67 01       	movw	r12, r14
+ 140:	01 50       	subi	r16, 0x01	; 1
+ 142:	11 09       	sbc	r17, r1
+ 144:	01 15       	cp	r16, r1
+ 146:	11 05       	cpc	r17, r1
+ 148:	31 f0       	breq	.+12     	; 0x156 <I2C_MEM_read_block+0x40>
+	{
+		*(uint8_t*)dst=I2C_ReceiveData_ACK();
+ 14a:	0e 94 a8 01 	call	0x350	; 0x350 <I2C_ReceiveData_ACK>
+ 14e:	f6 01       	movw	r30, r12
+ 150:	81 93       	st	Z+, r24
+ 152:	6f 01       	movw	r12, r30
+ 154:	f5 cf       	rjmp	.-22     	; 0x140 <I2C_MEM_read_block+0x2a>
+ 156:	21 97       	sbiw	r28, 0x01	; 1
+ 158:	ce 0d       	add	r28, r14
+ 15a:	df 1d       	adc	r29, r15
+		dst=((uint8_t*)dst)+1;
+	}
+	*(uint8_t*)dst=I2C_ReceiveData_NACK(); //Ostatni odczytywany bajt nie mo¿e zostaæ potwierdzony, co koñczy operacjê odczytu
+ 15c:	0e 94 b8 01 	call	0x370	; 0x370 <I2C_ReceiveData_NACK>
+ 160:	88 83       	st	Y, r24
+extern uint8_t I2C_Error;
+inline void I2C_SetError(uint8_t err) { I2C_Error=err;};
+
+void I2C_Init();
+void I2C_Start();
+static inline void I2C_Stop() {TWCR = _BV(TWINT) | _BV(TWEN) | _BV(TWSTO);};	//Nadaj sygna³ STOP
+ 162:	84 e9       	ldi	r24, 0x94	; 148
+ 164:	80 93 bc 00 	sts	0x00BC, r24
+	I2C_Stop();
+}
+ 168:	df 91       	pop	r29
+ 16a:	cf 91       	pop	r28
+ 16c:	1f 91       	pop	r17
+ 16e:	0f 91       	pop	r16
+ 170:	ff 90       	pop	r15
+ 172:	ef 90       	pop	r14
+ 174:	df 90       	pop	r13
+ 176:	cf 90       	pop	r12
+ 178:	08 95       	ret
+
+0000017a <I2C_MEM_write_block>:
+
+void I2C_MEM_write_block(const void *src, const __uint24 dst, size_t len)
+{
+ 17a:	6f 92       	push	r6
+ 17c:	7f 92       	push	r7
+ 17e:	8f 92       	push	r8
+ 180:	9f 92       	push	r9
+ 182:	af 92       	push	r10
+ 184:	bf 92       	push	r11
+ 186:	cf 92       	push	r12
+ 188:	df 92       	push	r13
+ 18a:	ef 92       	push	r14
+ 18c:	ff 92       	push	r15
+ 18e:	0f 93       	push	r16
+ 190:	1f 93       	push	r17
+ 192:	cf 93       	push	r28
+ 194:	df 93       	push	r29
+ 196:	ec 01       	movw	r28, r24
+ 198:	6a 01       	movw	r12, r20
+ 19a:	e6 2e       	mov	r14, r22
+ 19c:	89 01       	movw	r16, r18
+	size_t ps;
+	size_t adres=(uint16_t)dst;
+ 19e:	5a 01       	movw	r10, r20
+
+	do
+	{
+		I2C_MEM_SetRWAddress(dst);
+		ps=I2C_MEM_PAGE_SIZE - (adres % I2C_MEM_PAGE_SIZE); //Oblicz liczbê bajtów do koñca strony pamiêci
+ 1a0:	80 e4       	ldi	r24, 0x40	; 64
+ 1a2:	88 2e       	mov	r8, r24
+ 1a4:	91 2c       	mov	r9, r1
+ 1a6:	94 e9       	ldi	r25, 0x94	; 148
+ 1a8:	f9 2e       	mov	r15, r25
+	size_t ps;
+	size_t adres=(uint16_t)dst;
+
+	do
+	{
+		I2C_MEM_SetRWAddress(dst);
+ 1aa:	8e 2d       	mov	r24, r14
+ 1ac:	b6 01       	movw	r22, r12
+ 1ae:	0e 94 48 00 	call	0x90	; 0x90 <I2C_MEM_SetRWAddress>
+		ps=I2C_MEM_PAGE_SIZE - (adres % I2C_MEM_PAGE_SIZE); //Oblicz liczbê bajtów do koñca strony pamiêci
+ 1b2:	c5 01       	movw	r24, r10
+ 1b4:	8f 73       	andi	r24, 0x3F	; 63
+ 1b6:	99 27       	eor	r25, r25
+ 1b8:	94 01       	movw	r18, r8
+ 1ba:	28 1b       	sub	r18, r24
+ 1bc:	39 0b       	sbc	r19, r25
+ 1be:	c9 01       	movw	r24, r18
+		adres+=ps;   //Adres kolejnej strony pamiêci
+ 1c0:	a2 0e       	add	r10, r18
+ 1c2:	b3 1e       	adc	r11, r19
+ 1c4:	02 17       	cp	r16, r18
+ 1c6:	13 07       	cpc	r17, r19
+ 1c8:	08 f4       	brcc	.+2      	; 0x1cc <I2C_MEM_write_block+0x52>
+ 1ca:	c8 01       	movw	r24, r16
+		if(ps>len) ps=len;
+		len-=ps;
+ 1cc:	08 1b       	sub	r16, r24
+ 1ce:	19 0b       	sbc	r17, r25
+ 1d0:	3e 01       	movw	r6, r28
+ 1d2:	68 0e       	add	r6, r24
+ 1d4:	79 1e       	adc	r7, r25
+		while(ps--)
+ 1d6:	c6 15       	cp	r28, r6
+ 1d8:	d7 05       	cpc	r29, r7
+ 1da:	21 f0       	breq	.+8      	; 0x1e4 <I2C_MEM_write_block+0x6a>
+		{
+			I2C_SendByte(*(uint8_t*)src);
+ 1dc:	89 91       	ld	r24, Y+
+ 1de:	0e 94 98 01 	call	0x330	; 0x330 <I2C_SendByte>
+ 1e2:	f9 cf       	rjmp	.-14     	; 0x1d6 <I2C_MEM_write_block+0x5c>
+ 1e4:	f0 92 bc 00 	sts	0x00BC, r15
+void I2C_SendAddr(uint8_t address);		//Wyœlij adres urz¹dzenia slave
+void I2C_SendByte(uint8_t byte);		//Wyœlij bajt danych do slave
+uint8_t I2C_ReceiveData_ACK();			//Odbierz bajt danych od slave, wysy³aj¹c ACK
+uint8_t I2C_ReceiveData_NACK();			//Odbierz bajt danych od slave, nie wysy³aj ACK
+static inline void I2C_WaitForComplete() {while (!(TWCR & _BV(TWINT)));};		//Zaczekaj na koniec bie¿¹cej operacji I2C
+static inline void I2C_WaitTillStopWasSent() {while (TWCR & _BV(TWSTO));};	//Zaczekaj na koniec nadawania sygna³u STOP
+ 1e8:	80 91 bc 00 	lds	r24, 0x00BC
+ 1ec:	84 fd       	sbrc	r24, 4
+ 1ee:	fc cf       	rjmp	.-8      	; 0x1e8 <I2C_MEM_write_block+0x6e>
+			src=((uint8_t*)src)+1;
+		}
+		I2C_Stop();
+		I2C_WaitTillStopWasSent(); //Zaczekaj do koñca operacji wysy³ania danych
+	} while(len);
+ 1f0:	01 15       	cp	r16, r1
+ 1f2:	11 05       	cpc	r17, r1
+ 1f4:	11 f0       	breq	.+4      	; 0x1fa <I2C_MEM_write_block+0x80>
+ 1f6:	e3 01       	movw	r28, r6
+ 1f8:	d8 cf       	rjmp	.-80     	; 0x1aa <I2C_MEM_write_block+0x30>
+}
+ 1fa:	df 91       	pop	r29
+ 1fc:	cf 91       	pop	r28
+ 1fe:	1f 91       	pop	r17
+ 200:	0f 91       	pop	r16
+ 202:	ff 90       	pop	r15
+ 204:	ef 90       	pop	r14
+ 206:	df 90       	pop	r13
+ 208:	cf 90       	pop	r12
+ 20a:	bf 90       	pop	r11
+ 20c:	af 90       	pop	r10
+ 20e:	9f 90       	pop	r9
+ 210:	8f 90       	pop	r8
+ 212:	7f 90       	pop	r7
+ 214:	6f 90       	pop	r6
+ 216:	08 95       	ret
+
+00000218 <main>:
+	_addr|=offsetof(I2CEEPROM, EEvarname); \
+	I2C_MEM_read_block(&var, &_addr, SIZEOF(I2CEEPROM, EEvarname)); \
+}
+
+int main(void)
+{
+ 218:	cf 93       	push	r28
+ 21a:	df 93       	push	r29
+ 21c:	00 d0       	rcall	.+0      	; 0x21e <main+0x6>
+ 21e:	00 d0       	rcall	.+0      	; 0x220 <main+0x8>
+ 220:	00 d0       	rcall	.+0      	; 0x222 <main+0xa>
+ 222:	cd b7       	in	r28, 0x3d	; 61
+ 224:	de b7       	in	r29, 0x3e	; 62
+	I2C_Init();   //Zainicjuj interfejs TWI
+ 226:	0e 94 ed 01 	call	0x3da	; 0x3da <I2C_Init>
+	
+	__uint24 addr=0xAC0000UL;
+	
+	 I2C_MEM_write_byte(addr,0xab);
+ 22a:	4b ea       	ldi	r20, 0xAB	; 171
+ 22c:	60 e0       	ldi	r22, 0x00	; 0
+ 22e:	70 e0       	ldi	r23, 0x00	; 0
+ 230:	8c ea       	ldi	r24, 0xAC	; 172
+ 232:	0e 94 74 00 	call	0xe8	; 0xe8 <I2C_MEM_write_byte>
+	 addr++;
+	 I2C_MEM_write_byte(addr,0xbb);
+ 236:	4b eb       	ldi	r20, 0xBB	; 187
+ 238:	61 e0       	ldi	r22, 0x01	; 1
+ 23a:	70 e0       	ldi	r23, 0x00	; 0
+ 23c:	8c ea       	ldi	r24, 0xAC	; 172
+ 23e:	0e 94 74 00 	call	0xe8	; 0xe8 <I2C_MEM_write_byte>
+	 addr++;
+	 I2C_MEM_write_byte(addr,0xcc);
+ 242:	4c ec       	ldi	r20, 0xCC	; 204
+ 244:	62 e0       	ldi	r22, 0x02	; 2
+ 246:	70 e0       	ldi	r23, 0x00	; 0
+ 248:	8c ea       	ldi	r24, 0xAC	; 172
+ 24a:	0e 94 74 00 	call	0xe8	; 0xe8 <I2C_MEM_write_byte>
+
+	 addr=0xAC0000UL;
+	 uint8_t dana=I2C_MEM_read_byte(addr);
+ 24e:	60 e0       	ldi	r22, 0x00	; 0
+ 250:	70 e0       	ldi	r23, 0x00	; 0
+ 252:	8c ea       	ldi	r24, 0xAC	; 172
+ 254:	0e 94 65 00 	call	0xca	; 0xca <I2C_MEM_read_byte>
+ 258:	8e 83       	std	Y+6, r24	; 0x06
+	 addr++;
+	 dana=I2C_MEM_read_byte(addr);
+ 25a:	61 e0       	ldi	r22, 0x01	; 1
+ 25c:	70 e0       	ldi	r23, 0x00	; 0
+ 25e:	8c ea       	ldi	r24, 0xAC	; 172
+ 260:	0e 94 65 00 	call	0xca	; 0xca <I2C_MEM_read_byte>
+ 264:	8e 83       	std	Y+6, r24	; 0x06
+	 addr++;
+	 dana=I2C_MEM_read_byte(addr);
+ 266:	62 e0       	ldi	r22, 0x02	; 2
+ 268:	70 e0       	ldi	r23, 0x00	; 0
+ 26a:	8c ea       	ldi	r24, 0xAC	; 172
+ 26c:	0e 94 65 00 	call	0xca	; 0xca <I2C_MEM_read_byte>
+ 270:	8e 83       	std	Y+6, r24	; 0x06
+	uint8_t zmienna2;
+	char zmienna3[10];
+} I2CEEPROM;
+	
+I2CEEPROM * const pEE=0x0000;
+ uint16_t dana16=10;
+ 272:	8a e0       	ldi	r24, 0x0A	; 10
+ 274:	90 e0       	ldi	r25, 0x00	; 0
+ 276:	9d 83       	std	Y+5, r25	; 0x05
+ 278:	8c 83       	std	Y+4, r24	; 0x04
+ addr=0xAC0000 | (uint16_t)&pEE->zmienna1;
+ addr=0xAC0000 | offsetof(I2CEEPROM, zmienna1);
+ I2C_MEM_write_block(&dana16, addr, sizeof(pEE->zmienna1));
+ 27a:	22 e0       	ldi	r18, 0x02	; 2
+ 27c:	30 e0       	ldi	r19, 0x00	; 0
+ 27e:	40 e0       	ldi	r20, 0x00	; 0
+ 280:	50 e0       	ldi	r21, 0x00	; 0
+ 282:	6c ea       	ldi	r22, 0xAC	; 172
+ 284:	ce 01       	movw	r24, r28
+ 286:	04 96       	adiw	r24, 0x04	; 4
+ 288:	0e 94 bd 00 	call	0x17a	; 0x17a <I2C_MEM_write_block>
+
+ I2C_MEM_write_var(dana, zmienna1);
+ 28c:	22 e0       	ldi	r18, 0x02	; 2
+ 28e:	30 e0       	ldi	r19, 0x00	; 0
+ 290:	40 e0       	ldi	r20, 0x00	; 0
+ 292:	50 e0       	ldi	r21, 0x00	; 0
+ 294:	6c ea       	ldi	r22, 0xAC	; 172
+ 296:	ce 01       	movw	r24, r28
+ 298:	06 96       	adiw	r24, 0x06	; 6
+ 29a:	0e 94 bd 00 	call	0x17a	; 0x17a <I2C_MEM_write_block>
+ I2C_MEM_read_var(dana, zmienna1);
+ 29e:	80 e0       	ldi	r24, 0x00	; 0
+ 2a0:	90 e0       	ldi	r25, 0x00	; 0
+ 2a2:	ac ea       	ldi	r26, 0xAC	; 172
+ 2a4:	89 83       	std	Y+1, r24	; 0x01
+ 2a6:	9a 83       	std	Y+2, r25	; 0x02
+ 2a8:	ab 83       	std	Y+3, r26	; 0x03
+ 2aa:	ae 01       	movw	r20, r28
+ 2ac:	4f 5f       	subi	r20, 0xFF	; 255
+ 2ae:	5f 4f       	sbci	r21, 0xFF	; 255
+ 2b0:	66 27       	eor	r22, r22
+ 2b2:	57 fd       	sbrc	r21, 7
+ 2b4:	60 95       	com	r22
+ 2b6:	22 e0       	ldi	r18, 0x02	; 2
+ 2b8:	30 e0       	ldi	r19, 0x00	; 0
+ 2ba:	ce 01       	movw	r24, r28
+ 2bc:	06 96       	adiw	r24, 0x06	; 6
+ 2be:	0e 94 8b 00 	call	0x116	; 0x116 <I2C_MEM_read_block>
+ 2c2:	ff cf       	rjmp	.-2      	; 0x2c2 <main+0xaa>
+
+000002c4 <I2C_WaitForComplete>:
+void I2C_SetBusSpeed(uint16_t speed);	//Ustaw prêdkoœæ magistrali I2C (Prêdkoœæ wyniesie speed*100[Hz])
+void I2C_SendAddr(uint8_t address);		//Wyœlij adres urz¹dzenia slave
+void I2C_SendByte(uint8_t byte);		//Wyœlij bajt danych do slave
+uint8_t I2C_ReceiveData_ACK();			//Odbierz bajt danych od slave, wysy³aj¹c ACK
+uint8_t I2C_ReceiveData_NACK();			//Odbierz bajt danych od slave, nie wysy³aj ACK
+static inline void I2C_WaitForComplete() {while (!(TWCR & _BV(TWINT)));};		//Zaczekaj na koniec bie¿¹cej operacji I2C
+ 2c4:	80 91 bc 00 	lds	r24, 0x00BC
+ 2c8:	87 ff       	sbrs	r24, 7
+ 2ca:	fc cf       	rjmp	.-8      	; 0x2c4 <I2C_WaitForComplete>
+ 2cc:	08 95       	ret
+
+000002ce <I2C_Start>:
+	I2C_SetBusSpeed(I2CBUSCLOCK/100);
+}
+
+void I2C_Start()
+{
+	TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN);
+ 2ce:	84 ea       	ldi	r24, 0xA4	; 164
+ 2d0:	80 93 bc 00 	sts	0x00BC, r24
+	I2C_WaitForComplete();
+ 2d4:	0e 94 62 01 	call	0x2c4	; 0x2c4 <I2C_WaitForComplete>
+	if((TW_STATUS!=TW_START) && (TW_STATUS!=TW_REP_START)) I2C_SetError(I2C_STARTError);
+ 2d8:	80 91 b9 00 	lds	r24, 0x00B9
+ 2dc:	88 7f       	andi	r24, 0xF8	; 248
+ 2de:	88 30       	cpi	r24, 0x08	; 8
+ 2e0:	41 f0       	breq	.+16     	; 0x2f2 <I2C_Start+0x24>
+ 2e2:	80 91 b9 00 	lds	r24, 0x00B9
+ 2e6:	88 7f       	andi	r24, 0xF8	; 248
+ 2e8:	80 31       	cpi	r24, 0x10	; 16
+ 2ea:	19 f0       	breq	.+6      	; 0x2f2 <I2C_Start+0x24>
+#define I2C_STARTError	1
+#define I2C_NoNACK		3
+#define I2C_NoACK		4
+
+extern uint8_t I2C_Error;
+inline void I2C_SetError(uint8_t err) { I2C_Error=err;};
+ 2ec:	81 e0       	ldi	r24, 0x01	; 1
+ 2ee:	80 93 00 01 	sts	0x0100, r24
+ 2f2:	08 95       	ret
+
+000002f4 <I2C_SendAddr>:
+}
+
+void I2C_SendAddr(uint8_t address)
+{
+ 2f4:	cf 93       	push	r28
+   uint8_t Status;
+   
+   if((address & 0x01)==0) Status=TW_MT_SLA_ACK;
+ 2f6:	80 fd       	sbrc	r24, 0
+ 2f8:	02 c0       	rjmp	.+4      	; 0x2fe <I2C_SendAddr+0xa>
+ 2fa:	c8 e1       	ldi	r28, 0x18	; 24
+ 2fc:	01 c0       	rjmp	.+2      	; 0x300 <I2C_SendAddr+0xc>
+   else Status=TW_MR_SLA_ACK; 
+ 2fe:	c0 e4       	ldi	r28, 0x40	; 64
+   
+   TWDR=address; 
+ 300:	80 93 bb 00 	sts	0x00BB, r24
+   TWCR=_BV(TWINT) | _BV(TWEN);
+ 304:	84 e8       	ldi	r24, 0x84	; 132
+ 306:	80 93 bc 00 	sts	0x00BC, r24
+   I2C_WaitForComplete();
+ 30a:	0e 94 62 01 	call	0x2c4	; 0x2c4 <I2C_WaitForComplete>
+   if(TW_STATUS!=Status) I2C_SetError(I2C_NoACK); else I2C_SetError(I2C_OK);
+ 30e:	20 91 b9 00 	lds	r18, 0x00B9
+ 312:	28 7f       	andi	r18, 0xF8	; 248
+ 314:	30 e0       	ldi	r19, 0x00	; 0
+ 316:	8c 2f       	mov	r24, r28
+ 318:	90 e0       	ldi	r25, 0x00	; 0
+ 31a:	28 17       	cp	r18, r24
+ 31c:	39 07       	cpc	r19, r25
+ 31e:	21 f0       	breq	.+8      	; 0x328 <I2C_SendAddr+0x34>
+ 320:	84 e0       	ldi	r24, 0x04	; 4
+ 322:	80 93 00 01 	sts	0x0100, r24
+ 326:	02 c0       	rjmp	.+4      	; 0x32c <I2C_SendAddr+0x38>
+ 328:	10 92 00 01 	sts	0x0100, r1
+}
+ 32c:	cf 91       	pop	r28
+ 32e:	08 95       	ret
+
+00000330 <I2C_SendByte>:
+
+void I2C_SendByte(uint8_t byte)
+{
+   TWDR=byte; 
+ 330:	80 93 bb 00 	sts	0x00BB, r24
+   TWCR=_BV(TWINT) | _BV(TWEN);
+ 334:	84 e8       	ldi	r24, 0x84	; 132
+ 336:	80 93 bc 00 	sts	0x00BC, r24
+   I2C_WaitForComplete();
+ 33a:	0e 94 62 01 	call	0x2c4	; 0x2c4 <I2C_WaitForComplete>
+   if(TW_STATUS!=TW_MT_DATA_ACK) I2C_SetError(I2C_NoACK);
+ 33e:	80 91 b9 00 	lds	r24, 0x00B9
+ 342:	88 7f       	andi	r24, 0xF8	; 248
+ 344:	88 32       	cpi	r24, 0x28	; 40
+ 346:	19 f0       	breq	.+6      	; 0x34e <I2C_SendByte+0x1e>
+ 348:	84 e0       	ldi	r24, 0x04	; 4
+ 34a:	80 93 00 01 	sts	0x0100, r24
+ 34e:	08 95       	ret
+
+00000350 <I2C_ReceiveData_ACK>:
+}
+
+uint8_t I2C_ReceiveData_ACK()
+{
+  TWCR=_BV(TWEA) | _BV(TWINT) | _BV(TWEN);
+ 350:	84 ec       	ldi	r24, 0xC4	; 196
+ 352:	80 93 bc 00 	sts	0x00BC, r24
+  I2C_WaitForComplete();
+ 356:	0e 94 62 01 	call	0x2c4	; 0x2c4 <I2C_WaitForComplete>
+  if(TW_STATUS!=TW_MR_DATA_ACK) I2C_SetError(I2C_NoACK);
+ 35a:	80 91 b9 00 	lds	r24, 0x00B9
+ 35e:	88 7f       	andi	r24, 0xF8	; 248
+ 360:	80 35       	cpi	r24, 0x50	; 80
+ 362:	19 f0       	breq	.+6      	; 0x36a <I2C_ReceiveData_ACK+0x1a>
+ 364:	84 e0       	ldi	r24, 0x04	; 4
+ 366:	80 93 00 01 	sts	0x0100, r24
+  return TWDR;
+ 36a:	80 91 bb 00 	lds	r24, 0x00BB
+}
+ 36e:	08 95       	ret
+
+00000370 <I2C_ReceiveData_NACK>:
+
+uint8_t I2C_ReceiveData_NACK()
+{
+  TWCR=_BV(TWINT) | _BV(TWEN);
+ 370:	84 e8       	ldi	r24, 0x84	; 132
+ 372:	80 93 bc 00 	sts	0x00BC, r24
+  I2C_WaitForComplete();
+ 376:	0e 94 62 01 	call	0x2c4	; 0x2c4 <I2C_WaitForComplete>
+  if (TW_STATUS!=TW_MR_DATA_NACK) I2C_SetError(I2C_NoNACK);
+ 37a:	80 91 b9 00 	lds	r24, 0x00B9
+ 37e:	88 7f       	andi	r24, 0xF8	; 248
+ 380:	88 35       	cpi	r24, 0x58	; 88
+ 382:	19 f0       	breq	.+6      	; 0x38a <I2C_ReceiveData_NACK+0x1a>
+ 384:	83 e0       	ldi	r24, 0x03	; 3
+ 386:	80 93 00 01 	sts	0x0100, r24
+  return TWDR;
+ 38a:	80 91 bb 00 	lds	r24, 0x00BB
+}
+ 38e:	08 95       	ret
+
+00000390 <I2C_SetBusSpeed>:
+
+void I2C_SetBusSpeed(uint16_t speed)
+{
+	speed=(F_CPU/speed/100-16)/2;		//speed=TWBR*4^TWPS
+ 390:	9c 01       	movw	r18, r24
+ 392:	40 e0       	ldi	r20, 0x00	; 0
+ 394:	50 e0       	ldi	r21, 0x00	; 0
+ 396:	60 e0       	ldi	r22, 0x00	; 0
+ 398:	71 e7       	ldi	r23, 0x71	; 113
+ 39a:	82 e0       	ldi	r24, 0x02	; 2
+ 39c:	90 e0       	ldi	r25, 0x00	; 0
+ 39e:	0e 94 02 02 	call	0x404	; 0x404 <__udivmodsi4>
+ 3a2:	20 51       	subi	r18, 0x10	; 16
+ 3a4:	31 09       	sbc	r19, r1
+ 3a6:	41 09       	sbc	r20, r1
+ 3a8:	51 09       	sbc	r21, r1
+ 3aa:	56 95       	lsr	r21
+ 3ac:	47 95       	ror	r20
+ 3ae:	37 95       	ror	r19
+ 3b0:	27 95       	ror	r18
+	uint8_t prescaler=0;
+ 3b2:	90 e0       	ldi	r25, 0x00	; 0
+	while(speed>255)				//Oblicz wartoœæ preskalera
+ 3b4:	2f 3f       	cpi	r18, 0xFF	; 255
+ 3b6:	31 05       	cpc	r19, r1
+ 3b8:	39 f0       	breq	.+14     	; 0x3c8 <I2C_SetBusSpeed+0x38>
+ 3ba:	30 f0       	brcs	.+12     	; 0x3c8 <I2C_SetBusSpeed+0x38>
+	 {
+		prescaler++;
+ 3bc:	9f 5f       	subi	r25, 0xFF	; 255
+		speed=speed/4;
+ 3be:	36 95       	lsr	r19
+ 3c0:	27 95       	ror	r18
+ 3c2:	36 95       	lsr	r19
+ 3c4:	27 95       	ror	r18
+ 3c6:	f6 cf       	rjmp	.-20     	; 0x3b4 <I2C_SetBusSpeed+0x24>
+	 };
+	TWSR=(TWSR & (_BV(TWPS1)|_BV(TWPS0))) | prescaler;
+ 3c8:	80 91 b9 00 	lds	r24, 0x00B9
+ 3cc:	83 70       	andi	r24, 0x03	; 3
+ 3ce:	89 2b       	or	r24, r25
+ 3d0:	80 93 b9 00 	sts	0x00B9, r24
+	TWBR=speed;
+ 3d4:	20 93 b8 00 	sts	0x00B8, r18
+ 3d8:	08 95       	ret
+
+000003da <I2C_Init>:
+
+uint8_t I2C_Error;
+
+void I2C_Init()
+{
+	TWCR =_BV(TWEA) | _BV(TWEN);		//W³¹cz interfejs I2C
+ 3da:	84 e4       	ldi	r24, 0x44	; 68
+ 3dc:	80 93 bc 00 	sts	0x00BC, r24
+	I2C_SetBusSpeed(I2CBUSCLOCK/100);
+ 3e0:	84 ef       	ldi	r24, 0xF4	; 244
+ 3e2:	91 e0       	ldi	r25, 0x01	; 1
+ 3e4:	0c 94 c8 01 	jmp	0x390	; 0x390 <I2C_SetBusSpeed>
+
+000003e8 <I2C_SendStartAndSelect>:
+	TWSR=(TWSR & (_BV(TWPS1)|_BV(TWPS0))) | prescaler;
+	TWBR=speed;
+}
+
+void I2C_SendStartAndSelect(uint8_t addr)
+{
+ 3e8:	cf 93       	push	r28
+ 3ea:	df 93       	push	r29
+ 3ec:	1f 92       	push	r1
+ 3ee:	cd b7       	in	r28, 0x3d	; 61
+ 3f0:	de b7       	in	r29, 0x3e	; 62
+	I2C_Start();
+ 3f2:	89 83       	std	Y+1, r24	; 0x01
+ 3f4:	0e 94 67 01 	call	0x2ce	; 0x2ce <I2C_Start>
+	I2C_SendAddr(addr);
+ 3f8:	89 81       	ldd	r24, Y+1	; 0x01
+}
+ 3fa:	0f 90       	pop	r0
+ 3fc:	df 91       	pop	r29
+ 3fe:	cf 91       	pop	r28
+}
+
+void I2C_SendStartAndSelect(uint8_t addr)
+{
+	I2C_Start();
+	I2C_SendAddr(addr);
+ 400:	0c 94 7a 01 	jmp	0x2f4	; 0x2f4 <I2C_SendAddr>
+
+00000404 <__udivmodsi4>:
+ 404:	a1 e2       	ldi	r26, 0x21	; 33
+ 406:	1a 2e       	mov	r1, r26
+ 408:	aa 1b       	sub	r26, r26
+ 40a:	bb 1b       	sub	r27, r27
+ 40c:	fd 01       	movw	r30, r26
+ 40e:	0d c0       	rjmp	.+26     	; 0x42a <__udivmodsi4_ep>
+
+00000410 <__udivmodsi4_loop>:
+ 410:	aa 1f       	adc	r26, r26
+ 412:	bb 1f       	adc	r27, r27
+ 414:	ee 1f       	adc	r30, r30
+ 416:	ff 1f       	adc	r31, r31
+ 418:	a2 17       	cp	r26, r18
+ 41a:	b3 07       	cpc	r27, r19
+ 41c:	e4 07       	cpc	r30, r20
+ 41e:	f5 07       	cpc	r31, r21
+ 420:	20 f0       	brcs	.+8      	; 0x42a <__udivmodsi4_ep>
+ 422:	a2 1b       	sub	r26, r18
+ 424:	b3 0b       	sbc	r27, r19
+ 426:	e4 0b       	sbc	r30, r20
+ 428:	f5 0b       	sbc	r31, r21
+
+0000042a <__udivmodsi4_ep>:
+ 42a:	66 1f       	adc	r22, r22
+ 42c:	77 1f       	adc	r23, r23
+ 42e:	88 1f       	adc	r24, r24
+ 430:	99 1f       	adc	r25, r25
+ 432:	1a 94       	dec	r1
+ 434:	69 f7       	brne	.-38     	; 0x410 <__udivmodsi4_loop>
+ 436:	60 95       	com	r22
+ 438:	70 95       	com	r23
+ 43a:	80 95       	com	r24
+ 43c:	90 95       	com	r25
+ 43e:	9b 01       	movw	r18, r22
+ 440:	ac 01       	movw	r20, r24
+ 442:	bd 01       	movw	r22, r26
+ 444:	cf 01       	movw	r24, r30
+ 446:	08 95       	ret
+
+00000448 <_exit>:
+ 448:	f8 94       	cli
+
+0000044a <__stop_program>:
+ 44a:	ff cf       	rjmp	.-2      	; 0x44a <__stop_program>

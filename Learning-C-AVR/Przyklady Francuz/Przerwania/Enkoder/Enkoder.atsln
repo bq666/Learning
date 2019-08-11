@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Enkoder", "Enkoder\Enkoder.cproj", "{BFA89246-347A-4C75-AC04-23E3E67DA62F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFA89246-347A-4C75-AC04-23E3E67DA62F}.Debug|AVR.ActiveCfg = Debug|AVR
+		{BFA89246-347A-4C75-AC04-23E3E67DA62F}.Debug|AVR.Build.0 = Debug|AVR
+		{BFA89246-347A-4C75-AC04-23E3E67DA62F}.Release|AVR.ActiveCfg = Release|AVR
+		{BFA89246-347A-4C75-AC04-23E3E67DA62F}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

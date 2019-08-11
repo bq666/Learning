@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bq666/Workspace/C_C++/CriterionSample/source/add.c
+add.h
+/home/bq666/Workspace/C_C++/CriterionSample/source/add.h
+
+/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/test_parameterize.c
+stdio.h
+-
+criterion/parameterized.h
+-
+add.h
+/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/add.h
+
+test_parameterize/../include/add.h
+

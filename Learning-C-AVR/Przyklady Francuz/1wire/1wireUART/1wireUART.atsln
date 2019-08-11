@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "1wireUART", "1wireUART\1wireUART.cproj", "{BD6F1D77-743A-4A01-8E5E-F8EFA3D6F6C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD6F1D77-743A-4A01-8E5E-F8EFA3D6F6C1}.Debug|AVR.ActiveCfg = Debug|AVR
+		{BD6F1D77-743A-4A01-8E5E-F8EFA3D6F6C1}.Debug|AVR.Build.0 = Debug|AVR
+		{BD6F1D77-743A-4A01-8E5E-F8EFA3D6F6C1}.Release|AVR.ActiveCfg = Release|AVR
+		{BD6F1D77-743A-4A01-8E5E-F8EFA3D6F6C1}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

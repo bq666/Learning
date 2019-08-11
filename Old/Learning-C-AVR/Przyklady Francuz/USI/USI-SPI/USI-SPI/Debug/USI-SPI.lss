@@ -1,0 +1,202 @@
+
+USI-SPI.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000b8  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  000000b8  0000014c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000003  00800060  00800060  0000014c  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000014c  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000040  00000000  00000000  0000017c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000001e0  00000000  00000000  000001bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000166  00000000  00000000  0000039c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000001a5  00000000  00000000  00000502  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000074  00000000  00000000  000006a8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000001d2  00000000  00000000  0000071c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000088  00000000  00000000  000008ee  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000030  00000000  00000000  00000976  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	12 c0       	rjmp	.+36     	; 0x26 <__ctors_end>
+   2:	21 c0       	rjmp	.+66     	; 0x46 <__bad_interrupt>
+   4:	20 c0       	rjmp	.+64     	; 0x46 <__bad_interrupt>
+   6:	1f c0       	rjmp	.+62     	; 0x46 <__bad_interrupt>
+   8:	1e c0       	rjmp	.+60     	; 0x46 <__bad_interrupt>
+   a:	1d c0       	rjmp	.+58     	; 0x46 <__bad_interrupt>
+   c:	1c c0       	rjmp	.+56     	; 0x46 <__bad_interrupt>
+   e:	1b c0       	rjmp	.+54     	; 0x46 <__bad_interrupt>
+  10:	27 c0       	rjmp	.+78     	; 0x60 <__vector_8>
+  12:	19 c0       	rjmp	.+50     	; 0x46 <__bad_interrupt>
+  14:	18 c0       	rjmp	.+48     	; 0x46 <__bad_interrupt>
+  16:	17 c0       	rjmp	.+46     	; 0x46 <__bad_interrupt>
+  18:	16 c0       	rjmp	.+44     	; 0x46 <__bad_interrupt>
+  1a:	15 c0       	rjmp	.+42     	; 0x46 <__bad_interrupt>
+  1c:	14 c0       	rjmp	.+40     	; 0x46 <__bad_interrupt>
+  1e:	13 c0       	rjmp	.+38     	; 0x46 <__bad_interrupt>
+  20:	12 c0       	rjmp	.+36     	; 0x46 <__bad_interrupt>
+  22:	11 c0       	rjmp	.+34     	; 0x46 <__bad_interrupt>
+  24:	10 c0       	rjmp	.+32     	; 0x46 <__bad_interrupt>
+
+00000026 <__ctors_end>:
+  26:	11 24       	eor	r1, r1
+  28:	1f be       	out	0x3f, r1	; 63
+  2a:	cf e5       	ldi	r28, 0x5F	; 95
+  2c:	d1 e0       	ldi	r29, 0x01	; 1
+  2e:	de bf       	out	0x3e, r29	; 62
+  30:	cd bf       	out	0x3d, r28	; 61
+
+00000032 <__do_clear_bss>:
+  32:	20 e0       	ldi	r18, 0x00	; 0
+  34:	a0 e6       	ldi	r26, 0x60	; 96
+  36:	b0 e0       	ldi	r27, 0x00	; 0
+  38:	01 c0       	rjmp	.+2      	; 0x3c <.do_clear_bss_start>
+
+0000003a <.do_clear_bss_loop>:
+  3a:	1d 92       	st	X+, r1
+
+0000003c <.do_clear_bss_start>:
+  3c:	a3 36       	cpi	r26, 0x63	; 99
+  3e:	b2 07       	cpc	r27, r18
+  40:	e1 f7       	brne	.-8      	; 0x3a <.do_clear_bss_loop>
+  42:	25 d0       	rcall	.+74     	; 0x8e <main>
+  44:	37 c0       	rjmp	.+110    	; 0xb4 <_exit>
+
+00000046 <__bad_interrupt>:
+  46:	dc cf       	rjmp	.-72     	; 0x0 <__vectors>
+
+00000048 <USI_SPI_master_init>:
+#define SPI_DI      B, 0
+#define SPI_DO      B, 1
+
+void USI_SPI_master_init()
+{
+	SET(DDR, SPI_DO);
+  48:	b9 9a       	sbi	0x17, 1	; 23
+	SET(DDR, SPI_CLK); //Piny DO i CLK maj¹ byæ wyjœciami
+  4a:	ba 9a       	sbi	0x17, 2	; 23
+  4c:	08 95       	ret
+
+0000004e <USI_SPI_Transmit>:
+}
+
+uint8_t USI_SPI_Transmit(uint8_t data)
+{
+	USIDR=data;
+  4e:	8f b9       	out	0x0f, r24	; 15
+	USISR=_BV(USIOIF); //Wyzeruj licznik
+  50:	80 e4       	ldi	r24, 0x40	; 64
+  52:	8e b9       	out	0x0e, r24	; 14
+	do
+	{
+		USICR=_BV(USIWM0) | _BV(USICS1) | _BV(USICLK) | _BV(USITC);
+  54:	8b e1       	ldi	r24, 0x1B	; 27
+  56:	8d b9       	out	0x0d, r24	; 13
+	} while((USISR & _BV(USIOIF))==0);
+  58:	76 9b       	sbis	0x0e, 6	; 14
+  5a:	fd cf       	rjmp	.-6      	; 0x56 <USI_SPI_Transmit+0x8>
+	return USIDR;
+  5c:	8f b1       	in	r24, 0x0f	; 15
+}
+  5e:	08 95       	ret
+
+00000060 <__vector_8>:
+
+volatile uint8_t dane_in, dane_out;
+volatile uint8_t flaga;
+
+ISR(USI_OVF_vect)
+{
+  60:	1f 92       	push	r1
+  62:	0f 92       	push	r0
+  64:	0f b6       	in	r0, 0x3f	; 63
+  66:	0f 92       	push	r0
+  68:	11 24       	eor	r1, r1
+  6a:	8f 93       	push	r24
+	dane_in=USIDR;
+  6c:	8f b1       	in	r24, 0x0f	; 15
+  6e:	80 93 61 00 	sts	0x0061, r24
+	USISR=_BV(USIOIF);
+  72:	80 e4       	ldi	r24, 0x40	; 64
+  74:	8e b9       	out	0x0e, r24	; 14
+	USIDR=dane_out;
+  76:	80 91 60 00 	lds	r24, 0x0060
+  7a:	8f b9       	out	0x0f, r24	; 15
+	flaga=255;
+  7c:	8f ef       	ldi	r24, 0xFF	; 255
+  7e:	80 93 62 00 	sts	0x0062, r24
+}
+  82:	8f 91       	pop	r24
+  84:	0f 90       	pop	r0
+  86:	0f be       	out	0x3f, r0	; 63
+  88:	0f 90       	pop	r0
+  8a:	1f 90       	pop	r1
+  8c:	18 95       	reti
+
+0000008e <main>:
+
+int main()
+{
+	uint8_t x=0;
+	SET(PORT, SPI_SS);
+  8e:	d8 9a       	sbi	0x1b, 0	; 27
+	SET(DDR, SPI_SS);; //Skonfiguruj pin wykorzystywany jako SS
+  90:	d0 9a       	sbi	0x1a, 0	; 26
+	USI_SPI_master_init();
+  92:	da df       	rcall	.-76     	; 0x48 <USI_SPI_master_init>
+	flaga=255;
+}
+
+int main()
+{
+	uint8_t x=0;
+  94:	c0 e0       	ldi	r28, 0x00	; 0
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  96:	2f e3       	ldi	r18, 0x3F	; 63
+  98:	8d e0       	ldi	r24, 0x0D	; 13
+  9a:	93 e0       	ldi	r25, 0x03	; 3
+  9c:	21 50       	subi	r18, 0x01	; 1
+  9e:	80 40       	sbci	r24, 0x00	; 0
+  a0:	90 40       	sbci	r25, 0x00	; 0
+  a2:	e1 f7       	brne	.-8      	; 0x9c <main+0xe>
+  a4:	00 c0       	rjmp	.+0      	; 0xa6 <main+0x18>
+  a6:	00 00       	nop
+	USI_SPI_master_init();
+	while(1)
+	{
+		_delay_ms(1000);
+
+		CLR(PORT, SPI_SS);; //Uaktywnij pin SS urz¹dzenia slave
+  a8:	d8 98       	cbi	0x1b, 0	; 27
+		USI_SPI_Transmit(x);
+  aa:	8c 2f       	mov	r24, r28
+  ac:	d0 df       	rcall	.-96     	; 0x4e <USI_SPI_Transmit>
+		SET(PORT, SPI_SS);
+  ae:	d8 9a       	sbi	0x1b, 0	; 27
+		x^=0xFF;
+  b0:	c0 95       	com	r28
+  b2:	f1 cf       	rjmp	.-30     	; 0x96 <main+0x8>
+
+000000b4 <_exit>:
+  b4:	f8 94       	cli
+
+000000b6 <__stop_program>:
+  b6:	ff cf       	rjmp	.-2      	; 0xb6 <__stop_program>

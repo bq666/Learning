@@ -1,0 +1,358 @@
+This is ddd.info, produced by makeinfo version 4.0 from ./ddd.texi.
+
+INFO-DIR-SECTION Miscellaneous
+START-INFO-DIR-ENTRY
+* DDD: (ddd).                     The Data Display Debugger.
+END-INFO-DIR-ENTRY
+
+DDD is a graphical front-end for GDB and other command-line debuggers.
+
+This is the First Edition, 2000-02-11, of `Debugging with DDD' for DDD
+Version 3.2.1.
+
+Copyright (C) 2000 Universität Passau
+Lehrstuhl für Software-Systeme
+Innstraße 33
+D-94032 Passau
+GERMANY
+
+Distributed by
+Free Software Foundation, Inc.
+59 Temple Place - Suite 330
+Boston, MA 02111-1307
+USA
+
+DDD and this manual are available via the DDD WWW page
+(http://www.gnu.org/software/ddd/).
+
+   Permission is granted to make and distribute verbatim copies of this
+manual provided the copyright notice and this permission notice are
+preserved on all copies.
+
+   Permission is granted to copy and distribute modified versions of
+this manual under the conditions for verbatim copying, provided also
+that the sections entitled "Copying" and "GNU General Public License"
+(*note License::) are included exactly as in the original, and provided
+that the entire resulting derived work is distributed under the terms of
+a permission notice identical to this one.
+
+   Permission is granted to copy and distribute translations of this
+manual into another language, under the above conditions for modified
+versions, except that this permission notice may be stated in a
+translation approved by the Free Software Foundation.
+
+   Send questions, comments, suggestions, etc. to <ddd@gnu.org>.
+Send bug reports to <bug-ddd@gnu.org>.
+
+Indirect:
+ddd.info-1: 1585
+ddd.info-2: 39543
+ddd.info-3: 87685
+ddd.info-4: 137544
+ddd.info-5: 187284
+ddd.info-6: 235968
+ddd.info-7: 285673
+ddd.info-8: 335626
+ddd.info-9: 382029
+ddd.info-10: 426212
+
+Tag Table:
+(Indirect)
+Node: Top1585
+Node: Summary15373
+Ref: Summary-Footnote-118564
+Ref: Summary-Footnote-218721
+Node: About this Manual18821
+Node: Free Software20754
+Node: Getting DDD21588
+Node: Contributors22452
+Node: History22805
+Node: Sample Session24814
+Ref: Sample Session-Footnote-134145
+Ref: Sample Session-Footnote-234206
+Node: Sample Program34322
+Node: Invocation35503
+Node: Invoking36152
+Node: Choosing an Inferior Debugger38060
+Node: Options39543
+Node: X Options57411
+Node: Inferior Debugger Options58250
+Node: GDB Options58714
+Node: DBX and Ladebug Options59747
+Node: XDB Options60053
+Node: JDB Options60829
+Node: PYDB Options62415
+Node: Perl Options62627
+Node: Multiple Instances62901
+Node: X Warnings64379
+Node: Quitting64933
+Node: Sessions66429
+Node: Saving Sessions66802
+Ref: Saving Sessions-Footnote-168949
+Ref: Saving Sessions-Footnote-268990
+Node: Resuming Sessions69249
+Ref: Resuming Sessions-Footnote-171179
+Node: Deleting Sessions71212
+Node: Customizing Sessions71585
+Node: Remote Debugging72562
+Node: Remote Host73015
+Node: Remote Debugger73525
+Node: Customizing Remote Debugging76006
+Node: Remote Program77799
+Node: Customizing Debugger Interaction78709
+Node: Debugger Invocation79080
+Node: Debugger Initialization80714
+Node: GDB Initialization81232
+Node: DBX Initialization83017
+Node: XDB Initialization83693
+Node: JDB Initialization84348
+Node: PYDB Initialization84987
+Node: Perl Initialization85635
+Node: Finding a Place to Start86342
+Node: Opening the Selection87111
+Node: Debugger Communication87685
+Node: Windows89850
+Node: Menu Bar91259
+Node: File Menu94083
+Node: Edit Menu95678
+Node: View Menu98029
+Node: Program Menu98757
+Node: Commands Menu101512
+Node: Status Menu103232
+Node: Source Menu104270
+Node: Data Menu105647
+Node: Maintenance Menu107269
+Node: Help Menu108712
+Node: Customizing the Menu Bar109625
+Node: Auto-Raise Menus109895
+Node: Customizing the Edit Menu110681
+Node: Tool Bar112907
+Node: Customizing the Tool Bar116412
+Node: Command Tool119580
+Node: Customizing the Command Tool123530
+Node: Disabling the Command Tool123872
+Node: Customizing Tool Position124523
+Node: Customizing Tool Decoration125860
+Node: Getting Help127379
+Node: Undo and Redo129499
+Node: Customizing129981
+Node: How Customizing Works130622
+Node: Resources130832
+Ref: Resources-Footnote-1132540
+Node: Changing Resources132744
+Node: Saving Options133647
+Node: Customizing Help134025
+Node: Button tips134421
+Node: Tip of the day135157
+Node: Help Helpers135971
+Node: Customizing Undo137544
+Node: Customizing Windows138696
+Node: Splash Screen139349
+Node: Window Layout140467
+Node: Customizing Fonts143038
+Node: Toggling Windows148180
+Node: Text Fields149197
+Node: Icons149817
+Node: Adding Buttons151243
+Node: More Customizations151464
+Node: Debugger Settings152025
+Node: Navigating152963
+Node: Compiling for Debugging153426
+Ref: Compiling for Debugging-Footnote-1154836
+Node: Opening Files154926
+Node: Opening Programs155473
+Ref: Opening Programs-Footnote-1156063
+Node: Opening Core Dumps156193
+Ref: Opening Core Dumps-Footnote-1156780
+Node: Opening Source Files156835
+Node: Filtering Files157403
+Node: Looking up Items157843
+Node: Looking up Definitions158575
+Node: Textual Search159413
+Node: Looking up Previous Locations159993
+Node: Source Path160378
+Node: Customizing Source162801
+Node: Customizing Glyphs163256
+Node: Customizing Searching165092
+Node: Customizing Source Appearance165764
+Node: Customizing Source Scrolling167505
+Node: Customizing Source Lookup168073
+Node: Customizing File Filtering169326
+Node: Stopping169907
+Node: Breakpoints171228
+Node: Setting Breakpoints171674
+Node: Deleting Breakpoints174444
+Node: Disabling Breakpoints175412
+Ref: Disabling Breakpoints-Footnote-1176471
+Node: Temporary Breakpoints176522
+Ref: Temporary Breakpoints-Footnote-1177651
+Node: Editing Breakpoint Properties177703
+Ref: Editing Breakpoint Properties-Footnote-1178546
+Node: Breakpoint Conditions178621
+Node: Breakpoint Ignore Counts180155
+Ref: Breakpoint Ignore Counts-Footnote-1181290
+Node: Breakpoint Commands181371
+Ref: Breakpoint Commands-Footnote-1182786
+Node: Moving and Copying Breakpoints182863
+Ref: Moving and Copying Breakpoints-Footnote-1183510
+Node: Looking up Breakpoints183641
+Node: Editing all Breakpoints184189
+Node: Hardware-Assisted Breakpoints184754
+Node: Watchpoints185487
+Ref: Watchpoints-Footnote-1186589
+Node: Setting Watchpoints186759
+Node: Editing Watchpoint Properties187284
+Node: Editing all Watchpoints187917
+Node: Deleting Watchpoints188476
+Node: Interrupting188737
+Ref: Interrupting-Footnote-1189225
+Node: Stopping X Programs189365
+Node: Customizing Grab Checking190893
+Node: Running192547
+Node: Starting Program Execution193140
+Node: Arguments194608
+Node: Environment195462
+Ref: Environment-Footnote-1196629
+Node: Working Directory196818
+Node: Input/Output197351
+Node: Using the Execution Window199587
+Ref: Using the Execution Window-Footnote-1200895
+Node: Customizing the Execution Window200949
+Node: Attaching to a Process202300
+Ref: Attaching to a Process-Footnote-1204010
+Node: Customizing Attaching to Processes204098
+Node: Program Stop204955
+Node: Resuming Execution205786
+Node: Continuing Somewhere Else209022
+Ref: Continuing Somewhere Else-Footnote-1210575
+Ref: Continuing Somewhere Else-Footnote-2210651
+Node: Stack210811
+Node: Frames212091
+Node: Backtraces213710
+Node: Selecting a frame214534
+Ref: Selecting a frame-Footnote-1215455
+Node: Undoing Program Execution215517
+Node: Threads218688
+Ref: Threads-Footnote-1220209
+Node: Signals220271
+Node: Killing the Program224021
+Node: Examining Data224750
+Node: Value Tips226394
+Node: Printing Values227681
+Node: Displaying Values228601
+Node: Display Basics229490
+Node: Creating Single Displays230189
+Node: Selecting Displays232224
+Node: Showing and Hiding Details233448
+Node: Rotating Displays235968
+Node: Displaying Local Variables237300
+Node: Displaying Program Status237980
+Node: Refreshing the Data Window238822
+Node: Clustering239688
+Node: Creating Multiple Displays241353
+Node: Editing all Displays242406
+Node: Deleting Displays243654
+Node: Customizing Displays245317
+Node: Displaying Arrays246848
+Node: Array Slices247277
+Node: Repeated Values249113
+Node: Arrays as Tables250393
+Ref: Arrays as Tables-Footnote-1251131
+Node: Assignment251204
+Ref: Assignment-Footnote-1251990
+Node: Examining Structures252045
+Node: Dependent Values252649
+Node: Dereferencing Pointers253525
+Node: Shared Structures254558
+Node: Display Shortcuts258670
+Ref: Display Shortcuts-Footnote-1262448
+Node: Layouting the Graph262566
+Node: Moving Displays263004
+Node: Scrolling Data263816
+Node: Aligning Displays264778
+Node: Automatic Layout265292
+Node: Rotating the Graph266181
+Node: Printing the Graph266557
+Node: How Displays are Created268255
+Node: Handling Boxes268573
+Node: Building Boxes from Data271044
+Ref: Building Boxes from Data-Footnote-1273524
+Node: Customizing Display Appearance273602
+Node: Plotting Values278124
+Node: Plotting Arrays278999
+Node: Plot Appearance280536
+Node: Scalars and Composites281653
+Node: Plotting Histories283623
+Node: Printing Plots284129
+Node: Entering Plotting Commands285673
+Node: Exporting Plot Data287184
+Node: Animating Plots287788
+Node: Customizing Plots288622
+Node: Gnuplot Invocation288895
+Node: Gnuplot Settings291027
+Node: Examining Memory292014
+Node: Machine-Level Debugging294321
+Node: Machine Code294889
+Ref: Machine Code-Footnote-1296184
+Node: Machine Code Execution296244
+Node: Registers297135
+Ref: Registers-Footnote-1297688
+Node: Customizing Machine Code297770
+Node: Changing the Program299416
+Node: Editing Source Code299902
+Node: Customizing Editing300869
+Node: In-Place Editing301839
+Node: Recompiling302232
+Node: Patching302724
+Node: Commands303598
+Node: Entering Commands304276
+Node: Command Completion304890
+Node: Command History309745
+Node: TTY mode310879
+Node: Integrating DDD312120
+Node: Defining Buttons314295
+Node: Customizing Buttons316008
+Node: Defining Commands321420
+Node: GDB Simple Commands321932
+Ref: GDB Simple Commands-Footnote-1324192
+Node: GDB Argument Commands324717
+Node: Commands with Other Debuggers327045
+Node: Application Defaults329503
+Node: Actions329975
+Node: General Actions330243
+Node: Data Display Actions330686
+Node: Debugger Console Actions335626
+Node: Source Window Actions339078
+Node: Images341110
+Node: Bugs343454
+Node: Where to Send Bug Reports344254
+Node: Is it a DDD Bug?344471
+Node: How to Report Bugs345465
+Node: Bug Reports346647
+Node: Diagnostics348107
+Node: Logging348399
+Ref: Logging-Footnote-1349668
+Node: Disabling Logging349861
+Node: Debugging DDD350500
+Node: Customizing Diagnostics351556
+Node: Configuration Notes354835
+Node: GDB355342
+Node: DBX356083
+Node: Ladebug356936
+Node: XDB357131
+Node: JDB357504
+Node: Perl358378
+Node: LessTif358755
+Node: Dirty Tricks361369
+Node: Extending361629
+Node: FAQ361920
+Node: License362177
+Node: Help and Assistance381358
+Node: Label Index382029
+Node: Key Index403922
+Node: Command Index405897
+Node: Resource Index408285
+Node: File Index422161
+Node: Concept Index426212
+
+End Tag Table

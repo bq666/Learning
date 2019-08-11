@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "LCDAlfa-transact", "LCDAlfa-transact\LCDAlfa-transact.cproj", "{0CBC8F53-744D-4ACF-85D2-AC0674E26640}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CBC8F53-744D-4ACF-85D2-AC0674E26640}.Debug|AVR.ActiveCfg = Debug|AVR
+		{0CBC8F53-744D-4ACF-85D2-AC0674E26640}.Debug|AVR.Build.0 = Debug|AVR
+		{0CBC8F53-744D-4ACF-85D2-AC0674E26640}.Release|AVR.ActiveCfg = Release|AVR
+		{0CBC8F53-744D-4ACF-85D2-AC0674E26640}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

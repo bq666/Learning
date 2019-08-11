@@ -1,0 +1,626 @@
+
+LCDAlfaAnim.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  000002d0  00000364  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000002d0  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000002  00800100  00800100  00000364  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000364  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 000000b0  00000000  00000000  00000394  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000b8e  00000000  00000000  00000444  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000042e  00000000  00000000  00000fd2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000044b  00000000  00000000  00001400  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000194  00000000  00000000  0000184c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000002b5  00000000  00000000  000019e0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000005b7  00000000  00000000  00001c95  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000000a8  00000000  00000000  0000224c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   8:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  10:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  14:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  18:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  1c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  20:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  24:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  28:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  2c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  30:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  34:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  38:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  3c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  40:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  44:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  48:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  4c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  50:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  54:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  58:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  5c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  60:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  64:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_clear_bss>:
+  74:	21 e0       	ldi	r18, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	01 c0       	rjmp	.+2      	; 0x7e <.do_clear_bss_start>
+
+0000007c <.do_clear_bss_loop>:
+  7c:	1d 92       	st	X+, r1
+
+0000007e <.do_clear_bss_start>:
+  7e:	a2 30       	cpi	r26, 0x02	; 2
+  80:	b2 07       	cpc	r27, r18
+  82:	e1 f7       	brne	.-8      	; 0x7c <.do_clear_bss_loop>
+  84:	0e 94 3f 01 	call	0x27e	; 0x27e <main>
+  88:	0c 94 66 01 	jmp	0x2cc	; 0x2cc <_exit>
+
+0000008c <__bad_interrupt>:
+  8c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000090 <hd44780_outnibble>:
+ * Send one nibble out to the LCD controller.
+ */
+static void
+hd44780_outnibble(uint8_t n, uint8_t rs)
+{
+  CLR(PORT, HD44780_RW);
+  90:	5b 98       	cbi	0x0b, 3	; 11
+  if (rs)
+  92:	66 23       	and	r22, r22
+  94:	11 f0       	breq	.+4      	; 0x9a <hd44780_outnibble+0xa>
+    SET(PORT, HD44780_RS);
+  96:	5c 9a       	sbi	0x0b, 4	; 11
+  98:	01 c0       	rjmp	.+2      	; 0x9c <hd44780_outnibble+0xc>
+  else
+    CLR(PORT, HD44780_RS);
+  9a:	5c 98       	cbi	0x0b, 4	; 11
+  ASSIGN(PORT, HD44780_D4, n);
+  9c:	98 b1       	in	r25, 0x08	; 8
+  9e:	90 7f       	andi	r25, 0xF0	; 240
+  a0:	98 2b       	or	r25, r24
+  a2:	98 b9       	out	0x08, r25	; 8
+static inline uint8_t
+hd44780_pulse_e(bool readback)
+{
+  uint8_t x;
+
+  SET(PORT, HD44780_E);
+  a4:	5a 9a       	sbi	0x0b, 2	; 11
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  a6:	82 e0       	ldi	r24, 0x02	; 2
+  a8:	8a 95       	dec	r24
+  aa:	f1 f7       	brne	.-4      	; 0xa8 <hd44780_outnibble+0x18>
+  ac:	00 c0       	rjmp	.+0      	; 0xae <hd44780_outnibble+0x1e>
+#endif
+  if (readback)
+    x = READ(PIN, HD44780_D4);
+  else
+    x = 0;
+  CLR(PORT, HD44780_E);
+  ae:	5a 98       	cbi	0x0b, 2	; 11
+  b0:	08 95       	ret
+
+000000b2 <hd44780_innibble>:
+static uint8_t
+hd44780_innibble(uint8_t rs)
+{
+  uint8_t x;
+
+  SET(PORT, HD44780_RW);
+  b2:	5b 9a       	sbi	0x0b, 3	; 11
+  ASSIGN(DDR, HD44780_D4, 0x00);
+  b4:	97 b1       	in	r25, 0x07	; 7
+  b6:	90 7f       	andi	r25, 0xF0	; 240
+  b8:	97 b9       	out	0x07, r25	; 7
+  if (rs)
+  ba:	88 23       	and	r24, r24
+  bc:	11 f0       	breq	.+4      	; 0xc2 <hd44780_innibble+0x10>
+    SET(PORT, HD44780_RS);
+  be:	5c 9a       	sbi	0x0b, 4	; 11
+  c0:	01 c0       	rjmp	.+2      	; 0xc4 <hd44780_innibble+0x12>
+  else
+    CLR(PORT, HD44780_RS);
+  c2:	5c 98       	cbi	0x0b, 4	; 11
+static inline uint8_t
+hd44780_pulse_e(bool readback)
+{
+  uint8_t x;
+
+  SET(PORT, HD44780_E);
+  c4:	5a 9a       	sbi	0x0b, 2	; 11
+  c6:	82 e0       	ldi	r24, 0x02	; 2
+  c8:	8a 95       	dec	r24
+  ca:	f1 f7       	brne	.-4      	; 0xc8 <hd44780_innibble+0x16>
+  cc:	00 c0       	rjmp	.+0      	; 0xce <hd44780_innibble+0x1c>
+  __asm__ volatile("nop");
+#    endif /* F_CPU > 2000000UL */
+#  endif /* F_CPU > 1000000UL */
+#endif
+  if (readback)
+    x = READ(PIN, HD44780_D4);
+  ce:	86 b1       	in	r24, 0x06	; 6
+  else
+    x = 0;
+  CLR(PORT, HD44780_E);
+  d0:	5a 98       	cbi	0x0b, 2	; 11
+  if (rs)
+    SET(PORT, HD44780_RS);
+  else
+    CLR(PORT, HD44780_RS);
+  x = hd44780_pulse_e(true);
+  ASSIGN(DDR, HD44780_D4, 0x0F);
+  d2:	97 b1       	in	r25, 0x07	; 7
+  d4:	9f 60       	ori	r25, 0x0F	; 15
+  d6:	97 b9       	out	0x07, r25	; 7
+  CLR(PORT, HD44780_RW);
+  d8:	5b 98       	cbi	0x0b, 3	; 11
+
+  return x;
+}
+  da:	8f 70       	andi	r24, 0x0F	; 15
+  dc:	08 95       	ret
+
+000000de <hd44780_outbyte>:
+ * Send one byte to the LCD controller.  As we are in 4-bit mode, we
+ * have to send two nibbles.
+ */
+void
+hd44780_outbyte(uint8_t b, uint8_t rs)
+{
+  de:	cf 93       	push	r28
+  e0:	df 93       	push	r29
+  e2:	c8 2f       	mov	r28, r24
+  e4:	d6 2f       	mov	r29, r22
+  hd44780_outnibble(b >> 4, rs);
+  e6:	82 95       	swap	r24
+  e8:	8f 70       	andi	r24, 0x0F	; 15
+  ea:	0e 94 48 00 	call	0x90	; 0x90 <hd44780_outnibble>
+  hd44780_outnibble(b & 0xf, rs);
+  ee:	6d 2f       	mov	r22, r29
+  f0:	8c 2f       	mov	r24, r28
+  f2:	8f 70       	andi	r24, 0x0F	; 15
+}
+  f4:	df 91       	pop	r29
+  f6:	cf 91       	pop	r28
+ */
+void
+hd44780_outbyte(uint8_t b, uint8_t rs)
+{
+  hd44780_outnibble(b >> 4, rs);
+  hd44780_outnibble(b & 0xf, rs);
+  f8:	0c 94 48 00 	jmp	0x90	; 0x90 <hd44780_outnibble>
+
+000000fc <hd44780_inbyte>:
+/*
+ * Read one byte (i.e. two nibbles) from the LCD controller.
+ */
+uint8_t
+hd44780_inbyte(uint8_t rs)
+{
+  fc:	cf 93       	push	r28
+  fe:	df 93       	push	r29
+ 100:	c8 2f       	mov	r28, r24
+  uint8_t x;
+
+  x = hd44780_innibble(rs) << 4;
+ 102:	0e 94 59 00 	call	0xb2	; 0xb2 <hd44780_innibble>
+ 106:	d8 2f       	mov	r29, r24
+ 108:	d2 95       	swap	r29
+ 10a:	d0 7f       	andi	r29, 0xF0	; 240
+  x |= hd44780_innibble(rs);
+ 10c:	8c 2f       	mov	r24, r28
+ 10e:	0e 94 59 00 	call	0xb2	; 0xb2 <hd44780_innibble>
+
+  return x;
+}
+ 112:	8d 2b       	or	r24, r29
+ 114:	df 91       	pop	r29
+ 116:	cf 91       	pop	r28
+ 118:	08 95       	ret
+
+0000011a <hd44780_wait_ready>:
+ */
+void
+hd44780_wait_ready(bool longwait)
+{
+#if USE_BUSY_BIT
+  while (hd44780_incmd() & HD44780_BUSYFLAG) ;
+ 11a:	80 e0       	ldi	r24, 0x00	; 0
+ 11c:	0e 94 7e 00 	call	0xfc	; 0xfc <hd44780_inbyte>
+ 120:	87 fd       	sbrc	r24, 7
+ 122:	fb cf       	rjmp	.-10     	; 0x11a <hd44780_wait_ready>
+  if (longwait)
+    _delay_ms(1.52);
+  else
+    _delay_us(37);
+#endif
+}
+ 124:	08 95       	ret
+
+00000126 <hd44780_init>:
+ * the busy flag cannot be probed initially.
+ */
+void
+hd44780_init(void)
+{
+  SET(DDR, HD44780_RS);
+ 126:	54 9a       	sbi	0x0a, 4	; 10
+  SET(DDR, HD44780_RW);
+ 128:	53 9a       	sbi	0x0a, 3	; 10
+  SET(DDR, HD44780_E);
+ 12a:	52 9a       	sbi	0x0a, 2	; 10
+  ASSIGN(DDR, HD44780_D4, 0x0F);
+ 12c:	87 b1       	in	r24, 0x07	; 7
+ 12e:	8f 60       	ori	r24, 0x0F	; 15
+ 130:	87 b9       	out	0x07, r24	; 7
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 132:	8f e5       	ldi	r24, 0x5F	; 95
+ 134:	9a ee       	ldi	r25, 0xEA	; 234
+ 136:	01 97       	sbiw	r24, 0x01	; 1
+ 138:	f1 f7       	brne	.-4      	; 0x136 <hd44780_init+0x10>
+ 13a:	00 c0       	rjmp	.+0      	; 0x13c <hd44780_init+0x16>
+ 13c:	00 00       	nop
+
+  _delay_ms(15);		/* 40 ms needed for Vcc = 2.7 V */
+  hd44780_outnibble(HD44780_FNSET(1, 0, 0) >> 4, 0);
+ 13e:	60 e0       	ldi	r22, 0x00	; 0
+ 140:	83 e0       	ldi	r24, 0x03	; 3
+ 142:	0e 94 48 00 	call	0x90	; 0x90 <hd44780_outnibble>
+ 146:	8f e0       	ldi	r24, 0x0F	; 15
+ 148:	90 e4       	ldi	r25, 0x40	; 64
+ 14a:	01 97       	sbiw	r24, 0x01	; 1
+ 14c:	f1 f7       	brne	.-4      	; 0x14a <hd44780_init+0x24>
+ 14e:	00 c0       	rjmp	.+0      	; 0x150 <hd44780_init+0x2a>
+ 150:	00 00       	nop
+  _delay_ms(4.1);
+  hd44780_outnibble(HD44780_FNSET(1, 0, 0) >> 4, 0);
+ 152:	60 e0       	ldi	r22, 0x00	; 0
+ 154:	83 e0       	ldi	r24, 0x03	; 3
+ 156:	0e 94 48 00 	call	0x90	; 0x90 <hd44780_outnibble>
+ 15a:	8f e8       	ldi	r24, 0x8F	; 143
+ 15c:	91 e0       	ldi	r25, 0x01	; 1
+ 15e:	01 97       	sbiw	r24, 0x01	; 1
+ 160:	f1 f7       	brne	.-4      	; 0x15e <hd44780_init+0x38>
+ 162:	00 c0       	rjmp	.+0      	; 0x164 <hd44780_init+0x3e>
+ 164:	00 00       	nop
+  _delay_ms(0.1);
+  hd44780_outnibble(HD44780_FNSET(1, 0, 0) >> 4, 0);
+ 166:	60 e0       	ldi	r22, 0x00	; 0
+ 168:	83 e0       	ldi	r24, 0x03	; 3
+ 16a:	0e 94 48 00 	call	0x90	; 0x90 <hd44780_outnibble>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 16e:	95 ec       	ldi	r25, 0xC5	; 197
+ 170:	9a 95       	dec	r25
+ 172:	f1 f7       	brne	.-4      	; 0x170 <hd44780_init+0x4a>
+ 174:	00 00       	nop
+  _delay_us(37);
+
+  hd44780_outnibble(HD44780_FNSET(0, 1, 0) >> 4, 0);
+ 176:	60 e0       	ldi	r22, 0x00	; 0
+ 178:	82 e0       	ldi	r24, 0x02	; 2
+ 17a:	0e 94 48 00 	call	0x90	; 0x90 <hd44780_outnibble>
+  hd44780_wait_ready(false);
+ 17e:	80 e0       	ldi	r24, 0x00	; 0
+ 180:	0e 94 8d 00 	call	0x11a	; 0x11a <hd44780_wait_ready>
+  hd44780_outcmd(HD44780_FNSET(0, 1, 0));
+ 184:	60 e0       	ldi	r22, 0x00	; 0
+ 186:	88 e2       	ldi	r24, 0x28	; 40
+ 188:	0e 94 6f 00 	call	0xde	; 0xde <hd44780_outbyte>
+  hd44780_wait_ready(false);
+ 18c:	80 e0       	ldi	r24, 0x00	; 0
+ 18e:	0e 94 8d 00 	call	0x11a	; 0x11a <hd44780_wait_ready>
+  hd44780_outcmd(HD44780_DISPCTL(0, 0, 0));
+ 192:	60 e0       	ldi	r22, 0x00	; 0
+ 194:	88 e0       	ldi	r24, 0x08	; 8
+ 196:	0e 94 6f 00 	call	0xde	; 0xde <hd44780_outbyte>
+  hd44780_wait_ready(false);
+ 19a:	80 e0       	ldi	r24, 0x00	; 0
+ 19c:	0c 94 8d 00 	jmp	0x11a	; 0x11a <hd44780_wait_ready>
+
+000001a0 <lcd_init>:
+#include <util\delay.h>
+
+void lcd_init()
+{
+
+	hd44780_init();				//Podstawowa inicjalizacja modu³u
+ 1a0:	0e 94 93 00 	call	0x126	; 0x126 <hd44780_init>
+	hd44780_outcmd(HD44780_CLR);	//Wyczyœæ pamiêæ DDRAM
+ 1a4:	60 e0       	ldi	r22, 0x00	; 0
+ 1a6:	81 e0       	ldi	r24, 0x01	; 1
+ 1a8:	0e 94 6f 00 	call	0xde	; 0xde <hd44780_outbyte>
+	hd44780_wait_ready(1000);
+ 1ac:	81 e0       	ldi	r24, 0x01	; 1
+ 1ae:	0e 94 8d 00 	call	0x11a	; 0x11a <hd44780_wait_ready>
+	hd44780_outcmd(HD44780_ENTMODE(1, 0));	//Tryb autoinkrementacji AC
+ 1b2:	60 e0       	ldi	r22, 0x00	; 0
+ 1b4:	86 e0       	ldi	r24, 0x06	; 6
+ 1b6:	0e 94 6f 00 	call	0xde	; 0xde <hd44780_outbyte>
+	hd44780_wait_ready(1000);
+ 1ba:	81 e0       	ldi	r24, 0x01	; 1
+ 1bc:	0e 94 8d 00 	call	0x11a	; 0x11a <hd44780_wait_ready>
+	hd44780_outcmd(HD44780_DISPCTL(1, 0, 0));	//W³¹cz wyœwietlacz, wy³¹cz kursor
+ 1c0:	60 e0       	ldi	r22, 0x00	; 0
+ 1c2:	8c e0       	ldi	r24, 0x0C	; 12
+ 1c4:	0e 94 6f 00 	call	0xde	; 0xde <hd44780_outbyte>
+	hd44780_wait_ready(1000);
+ 1c8:	81 e0       	ldi	r24, 0x01	; 1
+ 1ca:	0c 94 8d 00 	jmp	0x11a	; 0x11a <hd44780_wait_ready>
+
+000001ce <lcd_putchar>:
+}
+
+void lcd_putchar(char c)
+{
+ 1ce:	cf 93       	push	r28
+ 1d0:	c8 2f       	mov	r28, r24
+	static bool second_nl_seen;
+	static uint8_t line=0;
+	
+	if ((second_nl_seen) && (c != '\n')&&(line==0))
+ 1d2:	80 91 01 01 	lds	r24, 0x0101
+ 1d6:	88 23       	and	r24, r24
+ 1d8:	99 f0       	breq	.+38     	; 0x200 <lcd_putchar+0x32>
+ 1da:	ca 30       	cpi	r28, 0x0A	; 10
+ 1dc:	99 f0       	breq	.+38     	; 0x204 <lcd_putchar+0x36>
+ 1de:	80 91 00 01 	lds	r24, 0x0100
+ 1e2:	81 11       	cpse	r24, r1
+ 1e4:	20 c0       	rjmp	.+64     	; 0x226 <lcd_putchar+0x58>
+	{//Odebrano pierwszy znak
+		hd44780_wait_ready(40);
+ 1e6:	81 e0       	ldi	r24, 0x01	; 1
+ 1e8:	0e 94 8d 00 	call	0x11a	; 0x11a <hd44780_wait_ready>
+		hd44780_outcmd(HD44780_CLR);
+ 1ec:	60 e0       	ldi	r22, 0x00	; 0
+ 1ee:	81 e0       	ldi	r24, 0x01	; 1
+ 1f0:	0e 94 6f 00 	call	0xde	; 0xde <hd44780_outbyte>
+		hd44780_wait_ready(1600);
+ 1f4:	81 e0       	ldi	r24, 0x01	; 1
+ 1f6:	0e 94 8d 00 	call	0x11a	; 0x11a <hd44780_wait_ready>
+		second_nl_seen=false;
+ 1fa:	10 92 01 01 	sts	0x0101, r1
+ 1fe:	13 c0       	rjmp	.+38     	; 0x226 <lcd_putchar+0x58>
+	}
+	if (c == '\n')
+ 200:	ca 30       	cpi	r28, 0x0A	; 10
+ 202:	89 f4       	brne	.+34     	; 0x226 <lcd_putchar+0x58>
+	{
+		if (line==0)
+ 204:	80 91 00 01 	lds	r24, 0x0100
+ 208:	81 11       	cpse	r24, r1
+ 20a:	06 c0       	rjmp	.+12     	; 0x218 <lcd_putchar+0x4a>
+		{
+			line++;
+ 20c:	81 e0       	ldi	r24, 0x01	; 1
+ 20e:	80 93 00 01 	sts	0x0100, r24
+			hd44780_outcmd(HD44780_DDADDR(64));	//Adres pierwszego znaku drugiej linii
+ 212:	60 e0       	ldi	r22, 0x00	; 0
+ 214:	80 ec       	ldi	r24, 0xC0	; 192
+ 216:	09 c0       	rjmp	.+18     	; 0x22a <lcd_putchar+0x5c>
+			hd44780_wait_ready(1000);
+		}
+		else
+		{
+			second_nl_seen=true;
+ 218:	81 e0       	ldi	r24, 0x01	; 1
+ 21a:	80 93 01 01 	sts	0x0101, r24
+			line=0;
+ 21e:	10 92 00 01 	sts	0x0100, r1
+	else
+	{
+		hd44780_outdata(c);
+		hd44780_wait_ready(40);
+	}
+}
+ 222:	cf 91       	pop	r28
+ 224:	08 95       	ret
+			line=0;
+		}
+	}
+	else
+	{
+		hd44780_outdata(c);
+ 226:	61 e0       	ldi	r22, 0x01	; 1
+ 228:	8c 2f       	mov	r24, r28
+ 22a:	0e 94 6f 00 	call	0xde	; 0xde <hd44780_outbyte>
+		hd44780_wait_ready(40);
+ 22e:	81 e0       	ldi	r24, 0x01	; 1
+	}
+}
+ 230:	cf 91       	pop	r28
+		}
+	}
+	else
+	{
+		hd44780_outdata(c);
+		hd44780_wait_ready(40);
+ 232:	0c 94 8d 00 	jmp	0x11a	; 0x11a <hd44780_wait_ready>
+
+00000236 <lcd_box>:
+		hd44780_wait_ready(40);
+	}
+}
+
+void lcd_box(uint8_t y)
+{
+ 236:	cf 93       	push	r28
+ 238:	df 93       	push	r29
+ 23a:	c8 2f       	mov	r28, r24
+	hd44780_outcmd(HD44780_CGADDR(0)); //Zaczynamy od znaku o kodzie 0
+ 23c:	60 e0       	ldi	r22, 0x00	; 0
+ 23e:	80 e4       	ldi	r24, 0x40	; 64
+ 240:	0e 94 6f 00 	call	0xde	; 0xde <hd44780_outbyte>
+	hd44780_wait_ready(40);
+ 244:	81 e0       	ldi	r24, 0x01	; 1
+ 246:	0e 94 8d 00 	call	0x11a	; 0x11a <hd44780_wait_ready>
+	for(uint8_t c=0;c<y;c++) //Stwórz linie z w³¹czonymi pikselami
+ 24a:	d0 e0       	ldi	r29, 0x00	; 0
+ 24c:	dc 17       	cp	r29, r28
+ 24e:	49 f0       	breq	.+18     	; 0x262 <lcd_box+0x2c>
+	{
+		hd44780_outdata(0xFF);
+ 250:	61 e0       	ldi	r22, 0x01	; 1
+ 252:	8f ef       	ldi	r24, 0xFF	; 255
+ 254:	0e 94 6f 00 	call	0xde	; 0xde <hd44780_outbyte>
+		hd44780_wait_ready(40);
+ 258:	81 e0       	ldi	r24, 0x01	; 1
+ 25a:	0e 94 8d 00 	call	0x11a	; 0x11a <hd44780_wait_ready>
+
+void lcd_box(uint8_t y)
+{
+	hd44780_outcmd(HD44780_CGADDR(0)); //Zaczynamy od znaku o kodzie 0
+	hd44780_wait_ready(40);
+	for(uint8_t c=0;c<y;c++) //Stwórz linie z w³¹czonymi pikselami
+ 25e:	df 5f       	subi	r29, 0xFF	; 255
+ 260:	f5 cf       	rjmp	.-22     	; 0x24c <lcd_box+0x16>
+	{
+		hd44780_outdata(0xFF);
+		hd44780_wait_ready(40);
+	}
+	for(uint8_t c=y;c<8;c++)   //Stwórz linie z wy³¹czonymi pikselami
+ 262:	c8 30       	cpi	r28, 0x08	; 8
+ 264:	48 f4       	brcc	.+18     	; 0x278 <lcd_box+0x42>
+	{
+		hd44780_outdata(0x00);
+ 266:	61 e0       	ldi	r22, 0x01	; 1
+ 268:	80 e0       	ldi	r24, 0x00	; 0
+ 26a:	0e 94 6f 00 	call	0xde	; 0xde <hd44780_outbyte>
+		hd44780_wait_ready(40);
+ 26e:	81 e0       	ldi	r24, 0x01	; 1
+ 270:	0e 94 8d 00 	call	0x11a	; 0x11a <hd44780_wait_ready>
+	for(uint8_t c=0;c<y;c++) //Stwórz linie z w³¹czonymi pikselami
+	{
+		hd44780_outdata(0xFF);
+		hd44780_wait_ready(40);
+	}
+	for(uint8_t c=y;c<8;c++)   //Stwórz linie z wy³¹czonymi pikselami
+ 274:	cf 5f       	subi	r28, 0xFF	; 255
+ 276:	f5 cf       	rjmp	.-22     	; 0x262 <lcd_box+0x2c>
+	{
+		hd44780_outdata(0x00);
+		hd44780_wait_ready(40);
+	}
+}
+ 278:	df 91       	pop	r29
+ 27a:	cf 91       	pop	r28
+ 27c:	08 95       	ret
+
+0000027e <main>:
+
+int main()
+{
+ lcd_init();
+ 27e:	0e 94 d0 00 	call	0x1a0	; 0x1a0 <lcd_init>
+ lcd_putchar(0);
+ 282:	80 e0       	ldi	r24, 0x00	; 0
+ 284:	0e 94 e7 00 	call	0x1ce	; 0x1ce <lcd_putchar>
+ while(1)
+ {
+	 for(uint8_t x=0;x<8;x++)
+ 288:	c0 e0       	ldi	r28, 0x00	; 0
+ 28a:	c8 30       	cpi	r28, 0x08	; 8
+ 28c:	70 f4       	brcc	.+28     	; 0x2aa <main+0x2c>
+	 {
+		 lcd_box(x);
+ 28e:	8c 2f       	mov	r24, r28
+ 290:	0e 94 1b 01 	call	0x236	; 0x236 <lcd_box>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 294:	2f ef       	ldi	r18, 0xFF	; 255
+ 296:	81 ee       	ldi	r24, 0xE1	; 225
+ 298:	94 e0       	ldi	r25, 0x04	; 4
+ 29a:	21 50       	subi	r18, 0x01	; 1
+ 29c:	80 40       	sbci	r24, 0x00	; 0
+ 29e:	90 40       	sbci	r25, 0x00	; 0
+ 2a0:	e1 f7       	brne	.-8      	; 0x29a <main+0x1c>
+ 2a2:	00 c0       	rjmp	.+0      	; 0x2a4 <main+0x26>
+ 2a4:	00 00       	nop
+{
+ lcd_init();
+ lcd_putchar(0);
+ while(1)
+ {
+	 for(uint8_t x=0;x<8;x++)
+ 2a6:	cf 5f       	subi	r28, 0xFF	; 255
+ 2a8:	f0 cf       	rjmp	.-32     	; 0x28a <main+0xc>
+ 2aa:	c7 e0       	ldi	r28, 0x07	; 7
+		 lcd_box(x);
+		 _delay_ms(100);
+	 }
+	 for(int8_t x=7;x>=0;x--)
+	 {
+		 lcd_box(x);
+ 2ac:	8c 2f       	mov	r24, r28
+ 2ae:	0e 94 1b 01 	call	0x236	; 0x236 <lcd_box>
+ 2b2:	2f ef       	ldi	r18, 0xFF	; 255
+ 2b4:	81 ee       	ldi	r24, 0xE1	; 225
+ 2b6:	94 e0       	ldi	r25, 0x04	; 4
+ 2b8:	21 50       	subi	r18, 0x01	; 1
+ 2ba:	80 40       	sbci	r24, 0x00	; 0
+ 2bc:	90 40       	sbci	r25, 0x00	; 0
+ 2be:	e1 f7       	brne	.-8      	; 0x2b8 <main+0x3a>
+ 2c0:	00 c0       	rjmp	.+0      	; 0x2c2 <main+0x44>
+ 2c2:	00 00       	nop
+ 2c4:	c1 50       	subi	r28, 0x01	; 1
+ 2c6:	90 f7       	brcc	.-28     	; 0x2ac <main+0x2e>
+{
+ lcd_init();
+ lcd_putchar(0);
+ while(1)
+ {
+	 for(uint8_t x=0;x<8;x++)
+ 2c8:	c0 e0       	ldi	r28, 0x00	; 0
+ 2ca:	e1 cf       	rjmp	.-62     	; 0x28e <main+0x10>
+
+000002cc <_exit>:
+ 2cc:	f8 94       	cli
+
+000002ce <__stop_program>:
+ 2ce:	ff cf       	rjmp	.-2      	; 0x2ce <__stop_program>

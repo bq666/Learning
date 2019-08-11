@@ -1,0 +1,11 @@
+/home/bq666/Workspace/C_C++/CriterionSample/CMakeFiles/rebuild_cache.dir
+/home/bq666/Workspace/C_C++/CriterionSample/CMakeFiles/edit_cache.dir
+/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/CMakeFiles/rebuild_cache.dir
+/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/CMakeFiles/test_abnormal.dir
+/home/bq666/Workspace/C_C++/CriterionSample/test_abnormal/CMakeFiles/edit_cache.dir
+/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/CMakeFiles/rebuild_cache.dir
+/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/CMakeFiles/test_parameterize.dir
+/home/bq666/Workspace/C_C++/CriterionSample/test_parameterize/CMakeFiles/edit_cache.dir
+/home/bq666/Workspace/C_C++/CriterionSample/test_theory/CMakeFiles/rebuild_cache.dir
+/home/bq666/Workspace/C_C++/CriterionSample/test_theory/CMakeFiles/test_theory.dir
+/home/bq666/Workspace/C_C++/CriterionSample/test_theory/CMakeFiles/edit_cache.dir

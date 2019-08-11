@@ -1,0 +1,1256 @@
+# The DDD Changelog.						-*- text -*-
+# Note that this is a CVS log file; new entries are appended at the bottom.
+# For older changes, see `ChangeLog-98'.
+
+# Changes for bug-fix releases `DDD X.Y.1', `DDD X.Y.2', etc. are
+# maintained in a separate branch, tagged DDD_X_Y_fixes.  Only changes
+# tagged with `Tag: DDD_X_Y_fixes' are contained in these bug-fix
+# releases.  Untagged changes go into the main release `DDD X.Y'.
+
+**************************************
+date: Monday, January 3, 2000 @ 13:12
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	BreakPoint.h DataDisp.C DispValue.C GraphEdit.C SourceView.C 
+	StringBox.C cook.C huffencode.C logplayer.C show.C stringify.C 
+Log Message:
+Last-minute fixes for various C++ compilers (by Tim Mooney)
+
+
+   Repository revision:	1.37	/home/st/local/CVS/ddd/ddd/BreakPoint.h,v
+   Repository revision:	1.362	/home/st/local/CVS/ddd/ddd/DataDisp.C,v
+   Repository revision:	1.115	/home/st/local/CVS/ddd/ddd/DispValue.C,v
+   Repository revision:	1.68	/home/st/local/CVS/ddd/ddd/GraphEdit.C,v
+   Repository revision:	1.441	/home/st/local/CVS/ddd/ddd/SourceView.C,v
+   Repository revision:	1.12	/home/st/local/CVS/ddd/ddd/StringBox.C,v
+   Repository revision:	1.15	/home/st/local/CVS/ddd/ddd/cook.C,v
+   Repository revision:	1.14	/home/st/local/CVS/ddd/ddd/huffencode.C,v
+   Repository revision:	1.16	/home/st/local/CVS/ddd/ddd/logplayer.C,v
+   Repository revision:	1.84	/home/st/local/CVS/ddd/ddd/show.C,v
+   Repository revision:	1.7	/home/st/local/CVS/ddd/ddd/stringify.C,v
+
+**************************************
+date: Monday, January 3, 2000 @ 13:17
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	Ddd.in.m4 show.C 
+Log Message:
+New: copyright year update
+
+
+   Repository revision:	1.397	/home/st/local/CVS/ddd/ddd/Ddd.in.m4,v
+   Repository revision:	1.85	/home/st/local/CVS/ddd/ddd/show.C,v
+
+**************************************
+date: Monday, January 3, 2000 @ 13:28
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	show.C 
+Log Message:
+Fix: include GDB 4.17 option info in usage output
+
+
+   Repository revision:	1.86	/home/st/local/CVS/ddd/ddd/show.C,v
+
+**************************************
+date: Monday, January 3, 2000 @ 13:51
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	ddd.texi 
+Log Message:
+Fix: copyright update
+
+
+   Repository revision:	1.36	/home/st/local/CVS/ddd/ddd/ddd.texi,v
+
+**************************************
+date: Monday, January 3, 2000 @ 13:52
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	show.C 
+Log Message:
+Fix: sort options in usage output alphabetically
+
+
+   Repository revision:	1.87	/home/st/local/CVS/ddd/ddd/show.C,v
+
+**************************************
+date: Monday, January 3, 2000 @ 14:41
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	configure.in 
+Log Message:
+New version: DDD 3.2 "Man Ray"
+
+
+   Repository revision:	1.202	/home/st/local/CVS/ddd/ddd/configure.in,v
+
+**************************************
+date: Friday, January 7, 2000 @ 11:57
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	Makefile.in 
+Log Message:
+Fix: remove old .spec files as well
+
+
+   Repository revision:	1.36	/home/st/local/CVS/ddd/Makefile.in,v
+
+**************************************
+date: Friday, January 7, 2000 @ 11:58
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	GDBAgent.C GDBAgent.h 
+Log Message:
+New: added `write_cmd' method that is invoked for commands only
+New: added simple DBX90 hack that lets DDD use `raw' GDB commands
+     (when in GDB mode)
+
+
+   Repository revision:	1.189	/home/st/local/CVS/ddd/ddd/GDBAgent.C,v
+   Repository revision:	1.111	/home/st/local/CVS/ddd/ddd/GDBAgent.h,v
+
+**************************************
+date: Monday, January 10, 2000 @ 11:06
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd/PICS
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd/PICS
+
+Modified Files:
+	tut-value.fig 
+Log Message:
+Fix: bad caption
+
+
+   Repository revision:	1.2	/home/st/local/CVS/ddd/ddd/PICS/tut-value.fig,v
+
+**************************************
+date: Monday, January 10, 2000 @ 11:07
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	GDBAgent.C 
+Log Message:
+New: removed DBX90-specific code (use GDB directly instead)
+
+
+   Repository revision:	1.190	/home/st/local/CVS/ddd/ddd/GDBAgent.C,v
+
+**************************************
+date: Wednesday, January 12, 2000 @ 16:54
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	configure.in 
+Log Message:
+New: allow --with-readline=DIR, --with-curses=DIR
+
+
+   Repository revision:	1.23	/home/st/local/CVS/ddd/configure.in,v
+
+**************************************
+date: Wednesday, January 12, 2000 @ 16:54
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	configure.in 
+Log Message:
+New: allow --with-readline=DIR, --with-curses=DIR
+
+
+   Repository revision:	1.203	/home/st/local/CVS/ddd/ddd/configure.in,v
+
+**************************************
+date: Wednesday, January 12, 2000 @ 16:55
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	sigName.C 
+Log Message:
+Fix: Work around Sun's Workshop 5.0 CC problem
+
+
+   Repository revision:	1.13	/home/st/local/CVS/ddd/ddd/sigName.C,v
+
+**************************************
+date: Wednesday, January 12, 2000 @ 17:21
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	configure.in 
+Log Message:
+Fix: --with-readline=DIR patch removed again (did not allow specifying
+separate lib and include dirs)
+
+
+   Repository revision:	1.24	/home/st/local/CVS/ddd/configure.in,v
+
+**************************************
+date: Wednesday, January 12, 2000 @ 17:21
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	configure.in 
+Log Message:
+Fix: --with-readline=DIR patch removed again (did not allow specifying
+separate lib and include dirs)
+
+
+   Repository revision:	1.204	/home/st/local/CVS/ddd/ddd/configure.in,v
+
+**************************************
+date: Wednesday, January 12, 2000 @ 17:33
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	tString.C 
+Log Message:
+Fix: adapted to recent C++ <iostream.h>
+
+
+   Repository revision:	1.4	/home/st/local/CVS/ddd/ddd/tString.C,v
+
+**************************************
+date: Wednesday, January 12, 2000 @ 17:34
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	strclass.C 
+Log Message:
+Fix: use ws(s) instead of s.ipfx(0) to eat whitespace from stream
+
+
+   Repository revision:	1.21	/home/st/local/CVS/ddd/ddd/strclass.C,v
+
+**************************************
+date: Wednesday, January 12, 2000 @ 18:38
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	GDBAgent.C file.C file.h regexps.C regexps.h rxscan.L select.C 
+Log Message:
+New: when DBX is invoked without args, and asks for an object file name,
+     allow the user to enter it
+
+
+   Repository revision:	1.191	/home/st/local/CVS/ddd/ddd/GDBAgent.C,v
+   Repository revision:	1.73	/home/st/local/CVS/ddd/ddd/file.C,v
+   Repository revision:	1.18	/home/st/local/CVS/ddd/ddd/file.h,v
+   Repository revision:	1.30	/home/st/local/CVS/ddd/ddd/regexps.C,v
+   Repository revision:	1.25	/home/st/local/CVS/ddd/ddd/regexps.h,v
+   Repository revision:	1.78	/home/st/local/CVS/ddd/ddd/rxscan.L,v
+   Repository revision:	1.12	/home/st/local/CVS/ddd/ddd/select.C,v
+
+**************************************
+date: Wednesday, January 12, 2000 @ 18:38
+author: andreas
+Update of /home/st/local/CVS/ddd/tests
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/tests
+
+Added Files:
+	dbx-prompt 
+Log Message:
+New: when DBX is invoked without args, and asks for an object file name,
+     allow the user to enter it
+
+
+   Repository revision:	1.1	/home/st/local/CVS/ddd/tests/dbx-prompt,v
+
+**************************************
+date: Wednesday, January 12, 2000 @ 18:46
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	ANNOUNCE NEWS 
+Log Message:
+New: when DBX is invoked without args, and asks for an object file name,
+     allow the user to enter it
+
+
+   Repository revision:	1.110	/home/st/local/CVS/ddd/ANNOUNCE,v
+   Repository revision:	1.476	/home/st/local/CVS/ddd/NEWS,v
+
+**************************************
+date: Monday, January 17, 2000 @ 15:53
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	acconfig.h.in acinclude.m4 configure.in logplayer.C 
+Added Files:
+	streampos.h 
+Log Message:
+Fix: some C++ compilers don't know the `streampos' type
+
+
+   Repository revision:	1.1	/home/st/local/CVS/ddd/ddd/streampos.h,v
+   Repository revision:	1.43	/home/st/local/CVS/ddd/ddd/acconfig.h.in,v
+   Repository revision:	1.23	/home/st/local/CVS/ddd/ddd/acinclude.m4,v
+   Repository revision:	1.205	/home/st/local/CVS/ddd/ddd/configure.in,v
+   Repository revision:	1.17	/home/st/local/CVS/ddd/ddd/logplayer.C,v
+
+**************************************
+date: Monday, January 17, 2000 @ 17:21
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	INSTALL configure.in 
+Log Message:
+New: when configuring, allow specifying locations of readline and
+     ncurses libraries.  Contributed by 
+     Albert Chin-A-Young <china@thewrittenword.com>
+
+
+   Repository revision:	1.76	/home/st/local/CVS/ddd/INSTALL,v
+   Repository revision:	1.25	/home/st/local/CVS/ddd/configure.in,v
+
+**************************************
+date: Monday, January 17, 2000 @ 17:21
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	configure.in 
+Log Message:
+New: when configuring, allow specifying locations of readline and
+     ncurses libraries.  Contributed by 
+     Albert Chin-A-Young <china@thewrittenword.com>
+
+
+   Repository revision:	1.206	/home/st/local/CVS/ddd/ddd/configure.in,v
+
+**************************************
+date: Wednesday, January 19, 2000 @ 16:49
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	ANNOUNCE NEWS 
+Log Message:
+Fix: bad mailing list `request' addresses
+
+
+   Repository revision:	1.111	/home/st/local/CVS/ddd/ANNOUNCE,v
+   Repository revision:	1.477	/home/st/local/CVS/ddd/NEWS,v
+
+**************************************
+date: Wednesday, January 19, 2000 @ 16:50
+author: andreas
+Update of /home/st/local/CVS/ddd/etc
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/etc
+
+Added Files:
+	ddd.html 
+Log Message:
+New: DDD WWW page
+
+
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/ddd.html,v
+
+**************************************
+date: Wednesday, January 19, 2000 @ 17:13
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/tmp/ddd5514/ddd
+
+Modified Files:
+	.RELEASE 
+Log Message:
+ddd-3.2 "Man Ray" released
+
+   Repository revision:	1.81	/home/st/local/CVS/ddd/.RELEASE,v
+
+**************************************
+date: Thursday, January 27, 2000 @ 17:08
+author: andreas
+Update of /home/st/local/CVS/ddd/etc/html
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/etc/html
+
+Log Message:
+Directory /home/st/local/CVS/ddd/etc/html added to the repository
+
+
+
+**************************************
+date: Thursday, January 27, 2000 @ 17:08
+author: andreas
+Update of /home/st/local/CVS/ddd/etc
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/etc
+
+Modified Files:
+	NOTIFY 
+Log Message:
+Doc fix
+
+
+   Repository revision:	1.23	/home/st/local/CVS/ddd/etc/NOTIFY,v
+
+**************************************
+date: Thursday, January 27, 2000 @ 17:08
+author: andreas
+Update of /home/st/local/CVS/ddd/etc
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/etc
+
+Modified Files:
+	ddd.lsm 
+Log Message:
+Doc fix
+
+
+   Repository revision:	1.31	/home/st/local/CVS/ddd/etc/ddd.lsm,v
+
+**************************************
+date: Thursday, January 27, 2000 @ 17:09
+author: andreas
+Update of /home/st/local/CVS/ddd/etc
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/etc
+
+Removed Files:
+	ddd.html 
+Log Message:
+New: DDD Web page
+
+
+   Repository revision:	1.2	/home/st/local/CVS/ddd/etc/Attic/ddd.html,v
+
+**************************************
+date: Thursday, January 27, 2000 @ 17:09
+author: andreas
+Update of /home/st/local/CVS/ddd/etc/html
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/etc/html
+
+Added Files:
+	all.jpg all.png ddd.html plots.jpg plots.png registers.jpg 
+	registers.png settings.jpg settings.png signal.jpg signal.png 
+	small-all.jpg small-plots.jpg small-registers.jpg 
+	small-settings.jpg small-signal.jpg style.css 
+Log Message:
+New: DDD Web page
+
+
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/all.jpg,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/all.png,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/ddd.html,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/plots.jpg,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/plots.png,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/registers.jpg,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/registers.png,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/settings.jpg,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/settings.png,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/signal.jpg,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/signal.png,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/small-all.jpg,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/small-plots.jpg,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/small-registers.jpg,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/small-settings.jpg,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/small-signal.jpg,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/html/style.css,v
+
+**************************************
+date: Thursday, January 27, 2000 @ 17:44
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	TIPS 
+Log Message:
+Fix: bad DDD e-mail address
+
+
+   Repository revision:	1.45	/home/st/local/CVS/ddd/TIPS,v
+
+**************************************
+date: Tuesday, February 1, 2000 @ 13:57
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	configure.in 
+Log Message:
+Fortran configure fixes:
+
+Zdenek Sekera <zs@sgi.com> says: Don't use AC_PROG_F77, 
+because this aborts construction if f77 does not work.
+
+Lutz Jaenicke <Lutz.Jaenicke@aet.TU-Cottbus.DE> adds that on HP-UX,
+f77 will fail with the "-L" linker switch on HP-UX. To get the
+BSD compatible f77 options on HP-UX you must call "fort77" instead.
+
+
+
+
+   Repository revision:	1.207	/home/st/local/CVS/ddd/ddd/configure.in,v
+
+**************************************
+date: Friday, February 4, 2000 @ 10:46
+author: andreas
+Update of /home/st/local/CVS/ddd/patches
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/patches
+
+Modified Files:
+	transfig-3.2.1.patch 
+Log Message:
+New: patch for transfig-3.2.1
+
+This patch fixes the following problem:
+
+I downloaded version 3.2 of ddd and after a successful installation I 
+tried to print the documentation ddd.ps.gz. After gzip -d it was not 
+possible to use pstops to generate two pages on one A4 paper. 
+Only the first 18 pages were handled correctly.
+
+To solve the problem I look at the ps file a little closer. The reason 
+of this "bad" ps file is that the eps-file containing the screen shots 
+are a little buggy. Immediately after all lines like
+
+% End Imported PIC File: tut-invoke.xpm
+
+a line like
+
+%%EndDocument
+
+follows. This %%EndDocument command has no corresponding 
+%%BeginDocument. After deleting all these "EndDocument" 
+commands by hand a correct ps file is saved that could be printed 
+two pages on one paper.
+
+
+   Repository revision:	1.3	/home/st/local/CVS/ddd/patches/transfig-3.2.1.patch,v
+
+**************************************
+date: Friday, February 4, 2000 @ 11:11
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	NEWS 
+Log Message:
+Fix: using LessTif, most `print' settings were ignored
+
+
+   Repository revision:	1.478	/home/st/local/CVS/ddd/NEWS,v
+
+**************************************
+date: Friday, February 4, 2000 @ 11:11
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	print.C 
+Log Message:
+Fix: using LessTif, most `print' settings were ignored
+
+
+   Repository revision:	1.50	/home/st/local/CVS/ddd/ddd/print.C,v
+
+**************************************
+date: Friday, February 4, 2000 @ 11:18
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	INSTALL 
+Log Message:
+Doc fix
+
+
+   Repository revision:	1.77	/home/st/local/CVS/ddd/INSTALL,v
+
+**************************************
+date: Friday, February 4, 2000 @ 12:32
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	NEWS 
+Log Message:
+Matthew Persico <Matthew.Persico@lazard.com> wrote:
+
+DDD has problems evaluating Perl hashes and hash references. One of
+the problems is that DDD does not quote the key values. If the key
+leads with a digit or has non-alphanumeric characters in it, the
+inferior perl debugger reports an error and the graph displays do not
+evaluate correctly.
+
+Now fixed.
+
+
+   Repository revision:	1.479	/home/st/local/CVS/ddd/NEWS,v
+
+**************************************
+date: Friday, February 4, 2000 @ 12:32
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	DispValue.C perltest.pl 
+Log Message:
+Matthew Persico <Matthew.Persico@lazard.com> wrote:
+
+DDD has problems evaluating Perl hashes and hash references. One of
+the problems is that DDD does not quote the key values. If the key
+leads with a digit or has non-alphanumeric characters in it, the
+inferior perl debugger reports an error and the graph displays do not
+evaluate correctly.
+
+Now fixed.
+
+
+   Repository revision:	1.116	/home/st/local/CVS/ddd/ddd/DispValue.C,v
+   Repository revision:	1.9	/home/st/local/CVS/ddd/ddd/perltest.pl,v
+
+**************************************
+date: Wednesday, February 9, 2000 @ 8:59
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	ddd.C exit.C settings.C 
+Log Message:
+A couple of patches from Andy Meredith <meredith@mot.com>
+
+
+   Repository revision:	1.583	/home/st/local/CVS/ddd/ddd/ddd.C,v
+   Repository revision:	1.83	/home/st/local/CVS/ddd/ddd/exit.C,v
+   Repository revision:	1.111	/home/st/local/CVS/ddd/ddd/settings.C,v
+
+**************************************
+date: Thursday, February 10, 2000 @ 10:25
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	NEWS 
+Log Message:
+Fix: build on SGI w/ LessTif - by Patrick <jpmg@eng.cam.ac.uk>
+
+
+   Repository revision:	1.480	/home/st/local/CVS/ddd/NEWS,v
+
+**************************************
+date: Thursday, February 10, 2000 @ 10:25
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	GraphEdit.C LabelH.C 
+Log Message:
+Fix: build on SGI w/ LessTif - by Patrick <jpmg@eng.cam.ac.uk>
+
+
+   Repository revision:	1.69	/home/st/local/CVS/ddd/ddd/GraphEdit.C,v
+   Repository revision:	1.9	/home/st/local/CVS/ddd/ddd/LabelH.C,v
+
+**************************************
+date: Friday, February 11, 2000 @ 10:59
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	HelpCB.C 
+Log Message:
+Added yet another quote on DDD :-)
+
+
+   Repository revision:	1.117	/home/st/local/CVS/ddd/ddd/HelpCB.C,v
+
+**************************************
+date: Friday, February 11, 2000 @ 18:21
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	NEWS 
+Log Message:
+Fix: Work around XmTextField problem in LessTif 0.89.9
+
+
+   Repository revision:	1.481	/home/st/local/CVS/ddd/NEWS,v
+
+**************************************
+date: Friday, February 11, 2000 @ 18:21
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	ddd.C 
+Log Message:
+Fix: Work around XmTextField problem in LessTif 0.89.9
+
+
+   Repository revision:	1.584	/home/st/local/CVS/ddd/ddd/ddd.C,v
+
+**************************************
+date: Friday, February 11, 2000 @ 19:40
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	ANNOUNCE NEWS 
+Log Message:
+Doc fixes for DDD 3.2.1
+
+
+   Repository revision:	1.112	/home/st/local/CVS/ddd/ANNOUNCE,v
+   Repository revision:	1.482	/home/st/local/CVS/ddd/NEWS,v
+
+**************************************
+date: Friday, February 11, 2000 @ 20:32
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	configure.in 
+Log Message:
+New version: DDD 3.2.1 "Lush Life"
+
+
+   Repository revision:	1.208	/home/st/local/CVS/ddd/ddd/configure.in,v
+
+**************************************
+date: Friday, February 11, 2000 @ 20:32
+author: andreas
+Update of /home/st/local/CVS/ddd/etc
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/etc
+
+Modified Files:
+	NICKNAMES 
+Log Message:
+New version: DDD 3.2.1 "Lush Life"
+
+
+   Repository revision:	1.14	/home/st/local/CVS/ddd/etc/NICKNAMES,v
+
+**************************************
+date: Friday, February 11, 2000 @ 20:33
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	TIPS 
+Log Message:
+New: some more tips
+
+
+   Repository revision:	1.46	/home/st/local/CVS/ddd/TIPS,v
+
+**************************************
+date: Friday, February 11, 2000 @ 20:33
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	Ddd.in.m4 
+Log Message:
+New: some more tips
+
+
+   Repository revision:	1.398	/home/st/local/CVS/ddd/ddd/Ddd.in.m4,v
+
+**************************************
+date: Friday, February 11, 2000 @ 20:33
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	DataDisp.C 
+Log Message:
+Fix: `graph display 42 clustered' did not work properly
+
+
+   Repository revision:	1.363	/home/st/local/CVS/ddd/ddd/DataDisp.C,v
+
+**************************************
+date: Friday, February 11, 2000 @ 20:44
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	NEWS 
+Log Message:
+Fix: previous fix fixed :-)
+
+
+   Repository revision:	1.483	/home/st/local/CVS/ddd/NEWS,v
+
+**************************************
+date: Friday, February 11, 2000 @ 20:44
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	DataDisp.C 
+Log Message:
+Fix: previous fix fixed :-)
+
+
+   Repository revision:	1.364	/home/st/local/CVS/ddd/ddd/DataDisp.C,v
+
+**************************************
+date: Friday, February 11, 2000 @ 21:13
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	Queue.h 
+Log Message:
+Fix: don't set `last' when inserting in front of the queue
+
+
+   Repository revision:	1.15	/home/st/local/CVS/ddd/ddd/Queue.h,v
+
+**************************************
+date: Friday, February 11, 2000 @ 21:41
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	DispValue.C value-read.C value-read.h 
+Log Message:
+Fix: handle clustered displays beginning with `(' properly
+
+
+   Repository revision:	1.117	/home/st/local/CVS/ddd/ddd/DispValue.C,v
+   Repository revision:	1.92	/home/st/local/CVS/ddd/ddd/value-read.C,v
+   Repository revision:	1.25	/home/st/local/CVS/ddd/ddd/value-read.h,v
+
+**************************************
+date: Saturday, February 12, 2000 @ 0:00
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	ANNOUNCE NEWS 
+Log Message:
+New: make more efforts in locating the initial main function.
+     (especially useful for FORTRAN users.)
+
+
+   Repository revision:	1.113	/home/st/local/CVS/ddd/ANNOUNCE,v
+   Repository revision:	1.484	/home/st/local/CVS/ddd/NEWS,v
+
+**************************************
+date: Saturday, February 12, 2000 @ 0:00
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	AppData.h Ddd.in.m4 comm-manag.C ddd.texi resources.C 
+Log Message:
+New: make more efforts in locating the initial main function.
+     (especially useful for FORTRAN users.)
+
+
+   Repository revision:	1.130	/home/st/local/CVS/ddd/ddd/AppData.h,v
+   Repository revision:	1.399	/home/st/local/CVS/ddd/ddd/Ddd.in.m4,v
+   Repository revision:	1.256	/home/st/local/CVS/ddd/ddd/comm-manag.C,v
+   Repository revision:	1.37	/home/st/local/CVS/ddd/ddd/ddd.texi,v
+   Repository revision:	1.150	/home/st/local/CVS/ddd/ddd/resources.C,v
+
+**************************************
+date: Saturday, February 12, 2000 @ 0:59
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	Makefile.in 
+Log Message:
+Fix: include `ddd-graph.ps' instead of `ddd-graph.eps' 
+     such that `make picsclean' will no longer remove source files
+
+
+   Repository revision:	1.330	/home/st/local/CVS/ddd/ddd/Makefile.in,v
+
+**************************************
+date: Saturday, February 12, 2000 @ 0:59
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd/PICS
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd/PICS
+
+Modified Files:
+	ddd-print-output.fig 
+Added Files:
+	ddd-graph.ps 
+Removed Files:
+	ddd-graph.eps 
+Log Message:
+Fix: include `ddd-graph.ps' instead of `ddd-graph.eps' 
+     such that `make picsclean' will no longer remove source files
+
+
+   Repository revision:	1.1	/home/st/local/CVS/ddd/ddd/PICS/ddd-graph.ps,v
+   Repository revision:	1.3	/home/st/local/CVS/ddd/ddd/PICS/ddd-print-output.fig,v
+   Repository revision:	1.5	/home/st/local/CVS/ddd/ddd/PICS/Attic/ddd-graph.eps,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 12:32
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	strclass.C 
+Log Message:
+Fix: calling common_prefix and common_suffix with startpos = 1 resulted
+     in a bad pointer.  
+     Reported by Philippe Midol-Monnet <midol-monnet@airbus.aeromatra.com>
+Fix: code cleanup
+
+
+   Repository revision:	1.22	/home/st/local/CVS/ddd/ddd/strclass.C,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 12:32
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	CallNode.h LetNode.h LineGraphE.C ListNode.h VSLDef.C VSLLib.C 
+	strclass.h 
+Log Message:
+Fix: code cleanup
+
+
+   Repository revision:	1.14	/home/st/local/CVS/ddd/ddd/CallNode.h,v
+   Repository revision:	1.15	/home/st/local/CVS/ddd/ddd/LetNode.h,v
+   Repository revision:	1.28	/home/st/local/CVS/ddd/ddd/LineGraphE.C,v
+   Repository revision:	1.15	/home/st/local/CVS/ddd/ddd/ListNode.h,v
+   Repository revision:	1.15	/home/st/local/CVS/ddd/ddd/VSLDef.C,v
+   Repository revision:	1.18	/home/st/local/CVS/ddd/ddd/VSLLib.C,v
+   Repository revision:	1.33	/home/st/local/CVS/ddd/ddd/strclass.h,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 12:32
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	GDBAgent.C 
+Log Message:
+Fix: improved program language recognition
+
+
+   Repository revision:	1.192	/home/st/local/CVS/ddd/ddd/GDBAgent.C,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 12:33
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	NEWS TODO 
+Log Message:
+Doc fix
+
+
+   Repository revision:	1.485	/home/st/local/CVS/ddd/NEWS,v
+   Repository revision:	1.467	/home/st/local/CVS/ddd/TODO,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 12:33
+author: andreas
+Update of /home/st/local/CVS/ddd/etc/forth
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/etc/forth
+
+Log Message:
+Directory /home/st/local/CVS/ddd/etc/forth added to the repository
+
+
+
+**************************************
+date: Wednesday, February 16, 2000 @ 12:33
+author: andreas
+Update of /home/st/local/CVS/ddd/etc/forth
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/etc/forth
+
+Added Files:
+	piet vm0.ps vm2.ps vm3.ps vm4.ps vm5.ps vm6.ps vm7.ps vm8.ps 
+Log Message:
+New: Forth docs (for future forth extension)
+
+
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/forth/piet,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/forth/vm0.ps,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/forth/vm2.ps,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/forth/vm3.ps,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/forth/vm4.ps,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/forth/vm5.ps,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/forth/vm6.ps,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/forth/vm7.ps,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/etc/forth/vm8.ps,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 13:19
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	ddd.texi 
+Log Message:
+Fix: new node lacked a reference
+
+
+   Repository revision:	1.38	/home/st/local/CVS/ddd/ddd/ddd.texi,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 13:20
+author: andreas
+Update of /home/st/local/CVS/ddd/tests
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/tests
+
+Added Files:
+	groeneveld-ladebug soeren-ladebug 
+Log Message:
+New: two new ladebug tests
+
+
+   Repository revision:	1.1	/home/st/local/CVS/ddd/tests/groeneveld-ladebug,v
+   Repository revision:	1.1	/home/st/local/CVS/ddd/tests/soeren-ladebug,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 16:25
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	PROBLEMS 
+Log Message:
+Doc fix
+
+
+   Repository revision:	1.100	/home/st/local/CVS/ddd/PROBLEMS,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 16:25
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	ANNOUNCE NEWS 
+Log Message:
+New: Improved Ladebug position parsing
+
+
+   Repository revision:	1.114	/home/st/local/CVS/ddd/ANNOUNCE,v
+   Repository revision:	1.486	/home/st/local/CVS/ddd/NEWS,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 16:25
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	BreakPoint.C comm-manag.C 
+Log Message:
+New: Improved Ladebug position parsing
+
+
+   Repository revision:	1.73	/home/st/local/CVS/ddd/ddd/BreakPoint.C,v
+   Repository revision:	1.257	/home/st/local/CVS/ddd/ddd/comm-manag.C,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 17:09
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	configure.in 
+Log Message:
+New nickname: "Liftoff" (`3..2..1..Liftoff')
+
+
+   Repository revision:	1.210	/home/st/local/CVS/ddd/ddd/configure.in,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 17:09
+author: andreas
+Update of /home/st/local/CVS/ddd/etc
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/etc
+
+Modified Files:
+	NICKNAMES 
+Log Message:
+New nickname: "Liftoff" (`3..2..1..Liftoff')
+
+
+   Repository revision:	1.15	/home/st/local/CVS/ddd/etc/NICKNAMES,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 17:24
+author: andreas
+Update of /home/st/local/CVS/ddd/etc
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/etc
+
+Modified Files:
+	make-current 
+Log Message:
+New: added Changelog for 1999
+
+
+   Repository revision:	1.49	/home/st/local/CVS/ddd/etc/make-current,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 17:26
+author: andreas
+Update of /home/st/local/CVS/ddd/etc
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/etc
+
+Modified Files:
+	make-current 
+Log Message:
+New: use 4-digit dates for ChangeLog files
+
+
+   Repository revision:	1.50	/home/st/local/CVS/ddd/etc/make-current,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 18:50
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	UndoBuffer.C 
+Log Message:
+Fix: bad check for `set confirm' setting
+
+
+   Repository revision:	1.48	/home/st/local/CVS/ddd/ddd/UndoBuffer.C,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 18:50
+author: andreas
+Update of /home/st/local/CVS/ddd/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/ddd
+
+Modified Files:
+	settings.C 
+Log Message:
+New: handle Ladebug output
+
+
+   Repository revision:	1.112	/home/st/local/CVS/ddd/ddd/settings.C,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 18:51
+author: andreas
+Update of /home/st/local/CVS/ddd/tests
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd/tests
+
+Added Files:
+	ladebug-settings 
+Log Message:
+New: handle Ladebug output
+
+
+   Repository revision:	1.1	/home/st/local/CVS/ddd/tests/ladebug-settings,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 18:52
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/ddd
+
+Modified Files:
+	ANNOUNCE NEWS 
+Log Message:
+Doc fixes for DDD 3.2.1
+
+
+   Repository revision:	1.115	/home/st/local/CVS/ddd/ANNOUNCE,v
+   Repository revision:	1.487	/home/st/local/CVS/ddd/NEWS,v
+
+**************************************
+date: Wednesday, February 16, 2000 @ 19:16
+author: andreas
+Update of /home/st/local/CVS/ddd
+In directory keywest.fmi.uni-passau.de:/home/st/andreas/tmp/ddd27324/ddd
+
+Modified Files:
+	.RELEASE 
+Log Message:
+ddd-3.2.1 "Liftoff" released
+
+   Repository revision:	1.83	/home/st/local/CVS/ddd/.RELEASE,v

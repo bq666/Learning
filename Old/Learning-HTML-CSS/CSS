@@ -1,0 +1,34 @@
+Czcionka
+font-size:	wielkość np. 16px
+font-family:	typ czcionki np. Oswald, sans-serif
+font-weight:	grubość czcionki np. bold, normal
+
+Box-model
+width:	rozmiar w px np. 600px
+height:	wysokość np. 300px
+margin-top:	margines górny (na zewnątrz elementu)
+margin-right:	margines prawy (na zewnątrz elementu)
+margin-bottom:	margines dolny (na zewnątrz elementu)
+margin-left:	margines lewy (na zewnątrz elementu)
+padding-top:	odległość od górnej krawędzi (wewnątrz elementu)
+padding-right:	odległość od prawej krawędzi (wewnątrz elementu)
+padding-bottom:	odległość od dolnej krawędzi (wewnątrz elementu)
+padding-left:	odległość od lewej krawędzi (wewnątrz elementu)
+
+Kolory i tła
+color:	kolor tekstu np. #000000 | black | red | blue | pink | #1a1e49
+background-color:	kolor tła np. #000000 | black | red | blue | pink | #1a1e49
+background-image:	obrazek tła np. url('tutaj podajemy sciezke do obrazka')
+background-repeat:	powtarzanie tła np. repeat | no-repeat
+background-position:	położenie obrazka tła np. center | top | bottom | w px
+
+Obramowanie
+border-width	wielkość obramowania
+border-color	kolor obramowania
+border-style	typ obramowania np. none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset
+
+Tekst
+text-transform:	formatowanie tekstu np. none | capitalize | uppercase | lowercase
+text-align:	wyrównanie tekstu np. left | right | center
+text-decoration:	ozdoba tekstu np. none | underline | overline | line-through | blink
+letter-spacing:	odległość między literami np. 1px

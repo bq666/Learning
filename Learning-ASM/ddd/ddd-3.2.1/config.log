@@ -1,0 +1,48 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:620: checking host system type
+configure:641: checking target system type
+configure:659: checking build system type
+configure:693: checking for a BSD compatible install
+configure:746: checking whether build environment is sane
+configure:803: checking whether make sets ${MAKE}
+configure:843: checking for working aclocal
+configure:856: checking for working autoconf
+configure:869: checking for working automake
+configure:882: checking for working autoheader
+configure:895: checking for working makeinfo
+configure:909: checking whether make sets ${MAKE}
+configure:938: checking for gcc
+configure:1051: checking whether the C compiler (gcc  ) works
+configure:1067: gcc -o conftest    conftest.c  1>&5
+configure:1064:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ main(){return(0);}
+ ^~~~
+configure:1093: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:1098: checking whether we are using GNU C
+configure:1107: gcc -E conftest.c
+configure:1126: checking whether gcc accepts -g
+configure:1158: checking for POSIXized ISC
+configure:1182: checking whether the C compiler (gcc) compiles and links a simple C program
+configure:1203: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1235: checking for c++
+configure:1267: checking whether the C++ compiler (c++  ) works
+configure:1283: c++ -o conftest    conftest.C  1>&5
+configure:1309: checking whether the C++ compiler (c++  ) is a cross-compiler
+configure:1314: checking whether we are using GNU C++
+configure:1323: c++ -E conftest.C
+configure:1342: checking whether c++ accepts -g
+configure:1530: checking whether the C++ compiler (c++) compiles a simple program
+configure:1551: c++ -o conftest -g -O2   conftest.C  1>&5
+configure:1545:10: fatal error: iostream.h: No such file or directory
+ #include <iostream.h>
+          ^~~~~~~~~~~~
+compilation terminated.
+configure: failed program was:
+#line 1544 "configure"
+#include "confdefs.h"
+#include <iostream.h>
+int main() {
+cout << "hello, world!";
+; return 0; }

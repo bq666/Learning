@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1494967368 source:c:\users\bq666\desktop\c projekty\00 c\poker\funkcje.c
+
+1494967368 source:c:\users\bq666\desktop\c projekty\00 c\poker\main.c
+	<stdio.h>
+	<time.h>
+	<ctype.h>
+	<stdlib.h>
+

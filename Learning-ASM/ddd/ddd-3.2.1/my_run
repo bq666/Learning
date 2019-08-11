@@ -1,0 +1,7 @@
+#!/bin/bash    
+#export CC=xlC
+#export CXX=xlC
+CFLAGS="-O"
+CXXFLAGS="-O"
+LDFLAGS="-O"
+unset LIBPATH

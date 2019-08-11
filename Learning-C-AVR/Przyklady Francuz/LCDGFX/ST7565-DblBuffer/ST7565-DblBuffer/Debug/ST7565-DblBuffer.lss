@@ -1,0 +1,1421 @@
+
+ST7565-DblBuffer.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00000e4e  00000ee2  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000e4e  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000206  00800100  00800100  00000ee2  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000ee2  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000158  00000000  00000000  00000f12  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00002d81  00000000  00000000  0000106a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000006cb  00000000  00000000  00003deb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000824  00000000  00000000  000044b6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000348  00000000  00000000  00004cdc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000208a  00000000  00000000  00005024  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000f7e  00000000  00000000  000070ae  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000001a0  00000000  00000000  0000802c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 41 05 	jmp	0xa82	; 0xa82 <__ctors_end>
+   4:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+   8:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+   c:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  10:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  14:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  18:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  1c:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  20:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  24:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  28:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  2c:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  30:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  34:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  38:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  3c:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  40:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  44:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  48:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  4c:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  50:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  54:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  58:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  5c:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  60:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+  64:	0c 94 53 05 	jmp	0xaa6	; 0xaa6 <__bad_interrupt>
+
+00000068 <__trampolines_end>:
+  68:	10 00       	.word	0x0010	; ????
+  6a:	5f 00       	.word	0x005f	; ????
+  6c:	58 0a       	sbc	r5, r24
+  6e:	3f 0a       	sbc	r3, r31
+  70:	26 0a       	sbc	r2, r22
+  72:	0d 0a       	sbc	r0, r29
+  74:	f4 09       	sbc	r31, r4
+  76:	db 09       	sbc	r29, r11
+  78:	c2 09       	sbc	r28, r2
+  7a:	a9 09       	sbc	r26, r9
+  7c:	90 09       	sbc	r25, r0
+  7e:	77 09       	sbc	r23, r7
+  80:	5e 09       	sbc	r21, r14
+  82:	45 09       	sbc	r20, r5
+  84:	2c 09       	sbc	r18, r12
+  86:	13 09       	sbc	r17, r3
+  88:	fa 08       	sbc	r15, r10
+  8a:	e1 08       	sbc	r14, r1
+  8c:	c8 08       	sbc	r12, r8
+  8e:	af 08       	sbc	r10, r15
+  90:	96 08       	sbc	r9, r6
+  92:	7d 08       	sbc	r7, r13
+  94:	64 08       	sbc	r6, r4
+  96:	4b 08       	sbc	r4, r11
+  98:	32 08       	sbc	r3, r2
+  9a:	19 08       	sbc	r1, r9
+  9c:	00 08       	sbc	r0, r0
+  9e:	e7 07       	cpc	r30, r23
+  a0:	ce 07       	cpc	r28, r30
+  a2:	b5 07       	cpc	r27, r21
+  a4:	9c 07       	cpc	r25, r28
+  a6:	83 07       	cpc	r24, r19
+  a8:	6a 07       	cpc	r22, r26
+  aa:	51 07       	cpc	r21, r17
+  ac:	38 07       	cpc	r19, r24
+  ae:	1f 07       	cpc	r17, r31
+  b0:	06 07       	cpc	r16, r22
+  b2:	ed 06       	cpc	r14, r29
+  b4:	d4 06       	cpc	r13, r20
+  b6:	bb 06       	cpc	r11, r27
+  b8:	a2 06       	cpc	r10, r18
+  ba:	89 06       	cpc	r8, r25
+  bc:	70 06       	cpc	r7, r16
+  be:	57 06       	cpc	r5, r23
+  c0:	3e 06       	cpc	r3, r30
+  c2:	25 06       	cpc	r2, r21
+  c4:	0c 06       	cpc	r0, r28
+  c6:	f3 05       	cpc	r31, r3
+  c8:	da 05       	cpc	r29, r10
+  ca:	c1 05       	cpc	r28, r1
+  cc:	a8 05       	cpc	r26, r8
+  ce:	8f 05       	cpc	r24, r15
+  d0:	76 05       	cpc	r23, r6
+  d2:	5d 05       	cpc	r21, r13
+  d4:	44 05       	cpc	r20, r4
+  d6:	2b 05       	cpc	r18, r11
+  d8:	12 05       	cpc	r17, r2
+  da:	f9 04       	cpc	r15, r9
+  dc:	e0 04       	cpc	r14, r0
+  de:	c7 04       	cpc	r12, r7
+  e0:	ae 04       	cpc	r10, r14
+  e2:	95 04       	cpc	r9, r5
+  e4:	7c 04       	cpc	r7, r12
+  e6:	63 04       	cpc	r6, r3
+  e8:	4a 04       	cpc	r4, r10
+  ea:	31 04       	cpc	r3, r1
+  ec:	18 04       	cpc	r1, r8
+  ee:	ff 03       	fmulsu	r23, r23
+  f0:	e6 03       	fmuls	r22, r22
+  f2:	cd 03       	fmulsu	r20, r21
+  f4:	b4 03       	fmuls	r19, r20
+  f6:	9b 03       	fmulsu	r17, r19
+  f8:	82 03       	fmuls	r16, r18
+  fa:	69 03       	fmul	r22, r17
+  fc:	50 03       	mulsu	r21, r16
+  fe:	37 03       	mulsu	r19, r23
+ 100:	1e 03       	fmul	r17, r22
+ 102:	05 03       	mulsu	r16, r21
+ 104:	ec 02       	muls	r30, r28
+ 106:	d3 02       	muls	r29, r19
+ 108:	ba 02       	muls	r27, r26
+ 10a:	a1 02       	muls	r26, r17
+ 10c:	88 02       	muls	r24, r24
+ 10e:	6f 02       	muls	r22, r31
+ 110:	56 02       	muls	r21, r22
+ 112:	3d 02       	muls	r19, r29
+ 114:	24 02       	muls	r18, r20
+ 116:	0b 02       	muls	r16, r27
+ 118:	f2 01       	movw	r30, r4
+ 11a:	d9 01       	movw	r26, r18
+ 11c:	c0 01       	movw	r24, r0
+ 11e:	a7 01       	movw	r20, r14
+ 120:	8e 01       	movw	r16, r28
+ 122:	75 01       	movw	r14, r10
+ 124:	5c 01       	movw	r10, r24
+ 126:	43 01       	movw	r8, r6
+ 128:	2a 01       	movw	r4, r20
+
+0000012a <image_data_system16_0x7e>:
+ 12a:	0c 00 00 00 10 00 18 00 0c 00 04 00 0c 00 18 00     ................
+ 13a:	10 00 18 00 0c 00 04 00 00                          .........
+
+00000143 <image_data_system16_0x7d>:
+ 143:	0c 00 00 00 00 60 03 60 03 60 03 70 07 3f 7e 1f     .....`.`.`.p.?~.
+ 153:	fc 01 c0 00 80 00 00 00 00                          .........
+
+0000015c <image_data_system16_0x7c>:
+ 15c:	0c 00 00 00 00 00 00 00 00 00 00 3f bf 3f bf 00     ...........?.?..
+	...
+
+00000175 <image_data_system16_0x7b>:
+ 175:	0c 00 00 00 00 00 80 01 c0 1f fc 3f 7e 70 07 60     ...........?~p.`
+ 185:	03 60 03 60 03 00 00 00 00                          .`.`.....
+
+0000018e <image_data_system16_0x7a>:
+ 18e:	0c 00 00 30 60 38 60 3c 60 36 60 33 60 31 e0 30     ...0`8`<`6`3`1.0
+ 19e:	e0 30 60 30 20 00 00 00 00                          .0`0 ....
+
+000001a7 <image_data_system16_0x79>:
+ 1a7:	0c 00 00 00 00 00 60 81 e0 e7 80 7e 00 1e 00 07     ......`....~....
+ 1b7:	80 01 e0 00 60 00 00 00 00                          ....`....
+
+000001c0 <image_data_system16_0x78>:
+ 1c0:	0c 00 00 30 60 38 e0 1d c0 0f 80 07 00 0f 80 1d     ...0`8..........
+ 1d0:	c0 38 e0 30 60 00 00 00 00                          .8.0`....
+
+000001d9 <image_data_system16_0x77>:
+ 1d9:	0c 00 00 07 e0 1f e0 38 00 1c 00 0f e0 0f e0 1c     .......8........
+ 1e9:	00 38 00 1f e0 07 e0 00 00                          .8.......
+
+000001f2 <image_data_system16_0x76>:
+ 1f2:	0c 00 00 00 60 01 e0 07 80 1e 00 38 00 38 00 1e     ....`......8.8..
+ 202:	00 07 80 01 e0 00 60 00 00                          ......`..
+
+0000020b <image_data_system16_0x75>:
+ 20b:	0c 00 00 0f e0 1f e0 38 00 30 00 30 00 30 00 30     .......8.0.0.0.0
+ 21b:	00 18 00 3f e0 3f e0 00 00                          ...?.?...
+
+00000224 <image_data_system16_0x74>:
+ 224:	0c 00 00 00 60 00 60 1f fe 3f fe 30 60 30 60 30     ....`.`..?.0`0`0
+ 234:	60 30 00 00 00 00 00 00 00                          `0.......
+
+0000023d <image_data_system16_0x73>:
+ 23d:	0c 00 00 11 c0 33 e0 33 60 33 60 33 60 33 60 3f     .....3.3`3`3`3`?
+ 24d:	60 1e 40 00 00 00 00 00 00                          `.@......
+
+00000256 <image_data_system16_0x72>:
+ 256:	0c 00 00 00 00 3f e0 3f e0 00 c0 00 60 00 60 00     .....?.?....`.`.
+ 266:	60 00 60 00 e0 00 c0 00 00                          `.`......
+
+0000026f <image_data_system16_0x71>:
+ 26f:	0c 00 00 07 80 0f c0 1c e0 18 60 18 60 18 60 18     ..........`.`.`.
+ 27f:	60 0c 60 ff e0 ff e0 00 00                          `.`......
+
+00000288 <image_data_system16_0x70>:
+ 288:	0c 00 00 ff e0 ff e0 0c 60 18 60 18 60 18 60 18     ........`.`.`.`.
+ 298:	60 1c e0 0f c0 07 80 00 00                          `........
+
+000002a1 <image_data_system16_0x6f>:
+ 2a1:	0c 00 00 0f 80 1f c0 38 e0 30 60 30 60 30 60 30     .......8.0`0`0`0
+ 2b1:	60 38 e0 1f c0 0f 80 00 00                          `8.......
+
+000002ba <image_data_system16_0x6e>:
+ 2ba:	0c 00 00 00 00 3f e0 3f e0 00 60 00 60 00 60 00     .....?.?..`.`.`.
+ 2ca:	60 00 e0 3f c0 3f 80 00 00                          `..?.?...
+
+000002d3 <image_data_system16_0x6d>:
+ 2d3:	0c 00 00 3f e0 3f c0 00 e0 00 e0 3f c0 3f c0 00     ...?.?.....?.?..
+ 2e3:	e0 00 e0 3f c0 3f 80 00 00                          ...?.?...
+
+000002ec <image_data_system16_0x6c>:
+ 2ec:	0c 00 00 00 00 00 00 30 00 30 03 3f ff 3f ff 30     .......0.0.?.?.0
+ 2fc:	00 30 00 00 00 00 00 00 00                          .0.......
+
+00000305 <image_data_system16_0x6b>:
+ 305:	0c 00 00 00 00 3f ff 3f ff 03 00 07 80 0f c0 1c     .....?.?........
+ 315:	e0 38 60 30 00 00 00 00 00                          .8`0.....
+
+0000031e <image_data_system16_0x6a>:
+ 31e:	0c 00 00 00 00 00 00 60 00 e0 00 c0 00 c0 60 ff     .......`......`.
+ 32e:	ec 7f ec 00 00 00 00 00 00                          .........
+
+00000337 <image_data_system16_0x69>:
+ 337:	0c 00 00 00 00 00 00 30 00 30 60 3f ec 3f ec 30     .......0.0`?.?.0
+ 347:	00 30 00 00 00 00 00 00 00                          .0.......
+
+00000350 <image_data_system16_0x68>:
+ 350:	0c 00 00 3f ff 3f ff 00 c0 00 60 00 60 00 60 00     ...?.?....`.`.`.
+ 360:	e0 3f c0 3f 80 00 00 00 00                          .?.?.....
+
+00000369 <image_data_system16_0x67>:
+ 369:	0c 00 00 03 80 c7 c0 ce e0 cc 60 cc 60 cc 60 cc     ..........`.`.`.
+ 379:	60 e6 60 7f e0 3f e0 00 00                          `.`..?...
+
+00000382 <image_data_system16_0x66>:
+ 382:	0c 00 00 00 c0 00 c0 3f fc 3f fe 00 c7 00 c3 00     .......?.?......
+ 392:	c3 00 03 00 00 00 00 00 00                          .........
+
+0000039b <image_data_system16_0x65>:
+ 39b:	0c 00 00 0f 80 1f c0 3b e0 33 60 33 60 33 60 33     .......;.3`3`3`3
+ 3ab:	60 33 60 13 c0 01 80 00 00                          `3`......
+
+000003b4 <image_data_system16_0x64>:
+ 3b4:	0c 00 00 0f 80 1f c0 38 e0 30 60 30 60 30 60 30     .......8.0`0`0`0
+ 3c4:	e0 30 c0 3f ff 3f ff 00 00                          .0.?.?...
+
+000003cd <image_data_system16_0x63>:
+ 3cd:	0c 00 00 0f 80 1f c0 38 e0 30 60 30 60 30 60 30     .......8.0`0`0`0
+ 3dd:	60 30 60 18 c0 08 80 00 00                          `0`......
+
+000003e6 <image_data_system16_0x62>:
+ 3e6:	0c 00 00 3f ff 3f ff 30 c0 30 60 30 60 30 60 30     ...?.?.0.0`0`0`0
+ 3f6:	60 38 e0 1f c0 0f 80 00 00                          `8.......
+
+000003ff <image_data_system16_0x61>:
+ 3ff:	0c 00 00 1c 00 3e 40 33 60 33 60 33 60 33 60 33     .....>@3`3`3`3`3
+ 40f:	60 33 60 3f e0 3f c0 00 00                          `3`?.?...
+
+00000418 <image_data_system16_0x60>:
+ 418:	0c 00 00 00 00 00 00 00 00 00 00 00 3e 00 7e 00     ............>.~.
+ 428:	4e 00 00 00 00 00 00 00 00                          N........
+
+00000431 <image_data_system16_0x5f>:
+ 431:	0c 00 00 c0 00 c0 00 c0 00 c0 00 c0 00 c0 00 c0     ................
+ 441:	00 c0 00 c0 00 c0 00 c0 00                          .........
+
+0000044a <image_data_system16_0x5e>:
+ 44a:	0c 00 00 00 60 00 70 00 38 00 1c 00 0e 00 07 00     ....`.p.8.......
+ 45a:	0e 00 1c 00 38 00 70 00 60                          ....8.p.`
+
+00000463 <image_data_system16_0x5d>:
+ 463:	0c 00 00 00 00 00 00 30 03 30 03 30 03 30 03 3f     .......0.0.0.0.?
+ 473:	ff 3f ff 00 00 00 00 00 00                          .?.......
+
+0000047c <image_data_system16_0x5c>:
+ 47c:	0c 00 00 00 0e 00 1c 00 38 00 70 00 e0 01 c0 03     ........8.p.....
+ 48c:	80 07 00 0e 00 1c 00 18 00                          .........
+
+00000495 <image_data_system16_0x5b>:
+ 495:	0c 00 00 00 00 00 00 3f ff 3f ff 30 03 30 03 30     .......?.?.0.0.0
+ 4a5:	03 30 03 00 00 00 00 00 00                          .0.......
+
+000004ae <image_data_system16_0x5a>:
+ 4ae:	0c 00 00 30 03 3c 03 3e 03 33 03 31 c3 30 e3 30     ...0.<.>.3.1.0.0
+ 4be:	33 30 1f 30 0f 30 03 00 00                          30.0.0...
+
+000004c7 <image_data_system16_0x59>:
+ 4c7:	0c 00 00 00 03 00 0f 00 3c 00 f0 3f c0 3f c0 00     ........<..?.?..
+ 4d7:	f0 00 3c 00 0f 00 03 00 00                          ..<......
+
+000004e0 <image_data_system16_0x58>:
+ 4e0:	0c 00 00 30 03 3c 0f 0e 1c 03 30 01 e0 01 e0 03     ...0.<....0.....
+ 4f0:	30 0e 1c 3c 0f 30 03 00 00                          0..<.0...
+
+000004f9 <image_data_system16_0x57>:
+ 4f9:	0c 00 00 3f ff 3f ff 1c 00 06 00 03 80 03 80 06     ...?.?..........
+ 509:	00 1c 00 3f ff 3f ff 00 00                          ...?.?...
+
+00000512 <image_data_system16_0x56>:
+ 512:	0c 00 00 00 07 00 3f 01 f8 0f c0 3e 00 3e 00 0f     ......?....>.>..
+ 522:	c0 01 f8 00 3f 00 07 00 00                          ....?....
+
+0000052b <image_data_system16_0x55>:
+ 52b:	0c 00 00 07 ff 1f ff 38 00 30 00 30 00 30 00 30     .......8.0.0.0.0
+ 53b:	00 38 00 1f ff 07 ff 00 00                          .8.......
+
+00000544 <image_data_system16_0x54>:
+ 544:	0c 00 00 00 00 00 03 00 03 00 03 3f ff 3f ff 00     ...........?.?..
+ 554:	03 00 03 00 03 00 00 00 00                          .........
+
+0000055d <image_data_system16_0x53>:
+ 55d:	0c 00 00 0c 3c 1c 7e 38 e7 30 c3 30 c3 30 c3 30     ....<.~8.0.0.0.0
+ 56d:	c3 39 c7 1f 8e 0f 0c 00 00                          .9.......
+
+00000576 <image_data_system16_0x52>:
+ 576:	0c 00 00 3f ff 3f ff 01 83 01 83 03 83 07 83 0f     ...?.?..........
+ 586:	83 1d c7 38 fe 30 7c 00 00                          ...8.0|..
+
+0000058f <image_data_system16_0x51>:
+ 58f:	0c 00 00 03 f0 0f fc 1c 0e 38 07 30 03 36 03 3e     .........8.0.6.>
+ 59f:	07 1c 0e 3f fc 33 f0 00 00                          ...?.3...
+
+000005a8 <image_data_system16_0x50>:
+ 5a8:	0c 00 00 3f ff 3f ff 01 83 01 83 01 83 01 83 01     ...?.?..........
+ 5b8:	83 01 c7 00 fe 00 7c 00 00                          ......|..
+
+000005c1 <image_data_system16_0x4f>:
+ 5c1:	0c 00 00 03 f0 0f fc 1c 0e 38 07 30 03 30 03 38     .........8.0.0.8
+ 5d1:	07 1c 0e 0f fc 03 f0 00 00                          .........
+
+000005da <image_data_system16_0x4e>:
+ 5da:	0c 00 00 3f ff 3f ff 00 0e 00 38 00 f0 03 c0 07     ...?.?....8.....
+ 5ea:	00 1c 00 3f ff 3f ff 00 00                          ...?.?...
+
+000005f3 <image_data_system16_0x4d>:
+ 5f3:	0c 00 00 3f ff 3f ff 00 1e 00 78 01 e0 01 e0 00     ...?.?....x.....
+ 603:	78 00 1e 3f ff 3f ff 00 00                          x..?.?...
+
+0000060c <image_data_system16_0x4c>:
+ 60c:	0c 00 00 3f ff 3f ff 30 00 30 00 30 00 30 00 30     ...?.?.0.0.0.0.0
+ 61c:	00 30 00 30 00 30 00 00 00                          .0.0.0...
+
+00000625 <image_data_system16_0x4b>:
+ 625:	0c 00 00 3f ff 3f ff 00 c0 01 e0 03 f0 07 38 0e     ...?.?........8.
+ 635:	1c 1c 0e 38 07 30 03 00 00                          ...8.0...
+
+0000063e <image_data_system16_0x4a>:
+ 63e:	0c 00 00 0e 00 1e 00 38 00 30 00 30 00 30 00 30     .......8.0.0.0.0
+ 64e:	00 38 00 1f ff 07 ff 00 00                          .8.......
+
+00000657 <image_data_system16_0x49>:
+ 657:	0c 00 00 00 00 00 00 30 03 30 03 3f ff 3f ff 30     .......0.0.?.?.0
+ 667:	03 30 03 00 00 00 00 00 00                          .0.......
+
+00000670 <image_data_system16_0x48>:
+ 670:	0c 00 00 3f ff 3f ff 00 c0 00 c0 00 c0 00 c0 00     ...?.?..........
+ 680:	c0 00 c0 3f ff 3f ff 00 00                          ...?.?...
+
+00000689 <image_data_system16_0x47>:
+ 689:	0c 00 00 03 f0 0f fc 1c 0e 38 07 30 03 30 c3 30     .........8.0.0.0
+ 699:	c3 30 c3 3f c7 3f c6 00 00                          .0.?.?...
+
+000006a2 <image_data_system16_0x46>:
+ 6a2:	0c 00 00 3f ff 3f ff 00 c3 00 c3 00 c3 00 c3 00     ...?.?..........
+ 6b2:	c3 00 c3 00 03 00 03 00 00                          .........
+
+000006bb <image_data_system16_0x45>:
+ 6bb:	0c 00 00 3f ff 3f ff 30 c3 30 c3 30 c3 30 c3 30     ...?.?.0.0.0.0.0
+ 6cb:	c3 30 c3 30 03 30 03 00 00                          .0.0.0...
+
+000006d4 <image_data_system16_0x44>:
+ 6d4:	0c 00 00 3f ff 3f ff 30 03 30 03 30 03 30 03 38     ...?.?.0.0.0.0.8
+ 6e4:	07 1c 0e 0f fc 03 f0 00 00                          .........
+
+000006ed <image_data_system16_0x43>:
+ 6ed:	0c 00 00 03 f0 0f fc 1c 0e 38 07 30 03 30 03 30     .........8.0.0.0
+ 6fd:	03 38 07 1c 0e 0c 0c 00 00                          .8.......
+
+00000706 <image_data_system16_0x42>:
+ 706:	0c 00 00 3f ff 3f ff 30 c3 30 c3 30 c3 30 c3 30     ...?.?.0.0.0.0.0
+ 716:	e7 39 fe 1f bc 0f 00 00 00                          .9.......
+
+0000071f <image_data_system16_0x41>:
+ 71f:	0c 00 00 38 00 3f 00 07 e0 06 fc 06 1f 06 1f 06     ...8.?..........
+ 72f:	fc 07 e0 3f 00 38 00 00 00                          ...?.8...
+
+00000738 <image_data_system16_0x40>:
+ 738:	0c 00 00 0f f8 1f fe 18 07 33 f3 37 fb 36 1b 37     .........3.7.6.7
+ 748:	fb 37 fb 36 07 03 fe 01 f8                          .7.6.....
+
+00000751 <image_data_system16_0x3f>:
+ 751:	0c 00 00 00 1c 00 1e 00 07 00 03 37 83 37 c3 00     ...........7.7..
+ 761:	e3 00 77 00 3e 00 1c 00 00                          ..w.>....
+
+0000076a <image_data_system16_0x3e>:
+ 76a:	0c 00 00 00 00 30 03 38 07 1c 0e 0e 1c 07 38 03     .....0.8......8.
+ 77a:	f0 01 e0 00 c0 00 00 00 00                          .........
+
+00000783 <image_data_system16_0x3d>:
+ 783:	0c 00 00 00 00 06 60 06 60 06 60 06 60 06 60 06     ......`.`.`.`.`.
+ 793:	60 06 60 06 60 06 60 00 00                          `.`.`.`..
+
+0000079c <image_data_system16_0x3c>:
+ 79c:	0c 00 00 00 00 00 c0 01 e0 03 f0 07 38 0e 1c 1c     ............8...
+ 7ac:	0e 38 07 30 03 00 00 00 00                          .8.0.....
+
+000007b5 <image_data_system16_0x3b>:
+ 7b5:	0c 00 00 00 00 00 00 00 00 9c 70 fc 70 7c 70 00     ..........p.p|p.
+	...
+
+000007ce <image_data_system16_0x3a>:
+ 7ce:	0c 00 00 00 00 00 00 00 00 1c 70 1c 70 1c 70 00     ..........p.p.p.
+	...
+
+000007e7 <image_data_system16_0x39>:
+ 7e7:	0c 00 00 00 3c 00 7e 30 e7 30 c3 30 c3 38 c3 1c     ....<.~0.0.0.8..
+ 7f7:	c3 0e c3 07 e7 03 fe 00 fc                          .........
+
+00000800 <image_data_system16_0x38>:
+ 800:	0c 00 00 0f 00 1f bc 39 fe 30 e7 30 c3 30 c3 30     .......9.0.0.0.0
+ 810:	c3 30 e7 39 fe 1f bc 0f 00                          .0.9.....
+
+00000819 <image_data_system16_0x37>:
+ 819:	0c 00 00 00 03 00 03 00 03 30 03 3c 03 0f 03 03     .........0.<....
+ 829:	c3 00 f3 00 3f 00 0f 00 03                          ....?....
+
+00000832 <image_data_system16_0x36>:
+ 832:	0c 00 00 0f c0 1f f0 39 f8 30 dc 30 ce 30 c7 30     .......9.0.0.0.0
+ 842:	c3 30 c3 39 c3 1f 80 0f 00                          .0.9.....
+
+0000084b <image_data_system16_0x35>:
+ 84b:	0c 00 00 0c 3f 1c 7f 38 63 30 63 30 63 30 63 30     ....?..8c0c0c0c0
+ 85b:	63 30 63 38 e3 1f c3 0f 83                          c0c8.....
+
+00000864 <image_data_system16_0x34>:
+ 864:	0c 00 00 03 c0 03 e0 03 70 03 38 03 1c 03 0e 03     ........p.8.....
+ 874:	07 3f ff 3f ff 03 00 03 00                          .?.?.....
+
+0000087d <image_data_system16_0x33>:
+ 87d:	0c 00 00 0c 0c 1c 0e 38 07 30 c3 30 c3 30 c3 30     .......8.0.0.0.0
+ 88d:	c3 30 c3 39 e7 1f 7e 0e 3c                          .0.9..~.<
+
+00000896 <image_data_system16_0x32>:
+ 896:	0c 00 00 30 1c 38 1e 3c 07 3e 03 37 03 33 83 31     ...0.8.<.>.7.3.1
+ 8a6:	c3 30 e3 30 77 30 3e 30 1c                          .0.0w0>0.
+
+000008af <image_data_system16_0x31>:
+ 8af:	0c 00 00 00 00 00 00 30 0c 30 0c 30 0e 3f ff 3f     .......0.0.0.?.?
+ 8bf:	ff 30 00 30 00 30 00 00 00                          .0.0.0...
+
+000008c8 <image_data_system16_0x30>:
+ 8c8:	0c 00 00 07 f8 1f fe 1e 06 33 03 31 83 30 c3 30     .........3.1.0.0
+ 8d8:	63 30 33 18 1e 1f fe 07 f8                          c03......
+
+000008e1 <image_data_system16_0x2f>:
+ 8e1:	0c 00 00 18 00 1c 00 0e 00 07 00 03 80 01 c0 00     ................
+ 8f1:	e0 00 70 00 38 00 1c 00 0e                          ..p.8....
+
+000008fa <image_data_system16_0x2e>:
+ 8fa:	0c 00 00 00 00 00 00 00 00 38 00 38 00 38 00 00     .........8.8.8..
+	...
+
+00000913 <image_data_system16_0x2d>:
+ 913:	0c 00 00 00 00 01 80 01 80 01 80 01 80 01 80 01     ................
+ 923:	80 01 80 01 80 00 00 00 00                          .........
+
+0000092c <image_data_system16_0x2c>:
+ 92c:	0c 00 00 00 00 00 00 00 00 b8 00 f8 00 78 00 00     .............x..
+	...
+
+00000945 <image_data_system16_0x2b>:
+ 945:	0c 00 00 00 00 01 80 01 80 01 80 0f f0 0f f0 01     ................
+ 955:	80 01 80 01 80 00 00 00 00                          .........
+
+0000095e <image_data_system16_0x2a>:
+ 95e:	0c 00 00 00 00 0c 98 0e b8 03 e0 0f f8 0f f8 03     ................
+ 96e:	e0 0e b8 0c 98 00 00 00 00                          .........
+
+00000977 <image_data_system16_0x29>:
+ 977:	0c 00 00 00 00 00 00 20 01 20 01 38 07 1f fe 0f     ....... . .8....
+ 987:	fc 03 f0 00 00 00 00 00 00                          .........
+
+00000990 <image_data_system16_0x28>:
+ 990:	0c 00 00 00 00 00 00 03 f0 0f fc 1f fe 38 07 20     .............8. 
+ 9a0:	01 20 01 00 00 00 00 00 00                          . .......
+
+000009a9 <image_data_system16_0x27>:
+ 9a9:	0c 00 00 00 00 00 00 00 00 00 27 00 3f 00 1f 00     ..........'.?...
+	...
+
+000009c2 <image_data_system16_0x26>:
+ 9c2:	0c 00 00 00 00 1f 00 3f b8 31 fc 21 c6 37 e2 1e     .......?.1.!.7..
+ 9d2:	3e 1c 1c 36 00 22 00 00 00                          >..6."...
+
+000009db <image_data_system16_0x25>:
+ 9db:	0c 00 00 30 00 38 38 1c 38 0e 38 07 00 03 80 01     ...0.88.8.8.....
+ 9eb:	c0 38 e0 38 70 38 38 00 1c                          .8.8p88..
+
+000009f4 <image_data_system16_0x24>:
+ 9f4:	0c 00 00 00 00 04 78 0c fc 0c cc 3f ff 3f ff 0c     ......x....?.?..
+ a04:	cc 0f cc 07 88 00 00 00 00                          .........
+
+00000a0d <image_data_system16_0x23>:
+ a0d:	0c 00 00 02 00 1e 10 1f 90 03 f0 02 7e 1e 1e 1f     ............~...
+ a1d:	90 03 f0 02 7e 00 1e 00 10                          ....~....
+
+00000a26 <image_data_system16_0x22>:
+ a26:	0c 00 00 00 00 00 00 00 3c 00 3c 00 00 00 00 00     ........<.<.....
+ a36:	3c 00 3c 00 00 00 00 00 00                          <.<......
+
+00000a3f <image_data_system16_0x21>:
+ a3f:	0c 00 00 00 00 00 00 00 00 00 7c 33 ff 33 ff 00     ..........|3.3..
+ a4f:	7c 00 00 00 00 00 00 00 00                          |........
+
+00000a58 <image_data_system16_0x20>:
+ a58:	0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00     ................
+	...
+
+00000a71 <__c.1795>:
+ a71:	42 75 66 6f 72 20 32 00                             Bufor 2.
+
+00000a79 <__c.1793>:
+ a79:	42 75 66 6f 72 20 31 00 00                          Bufor 1..
+
+00000a82 <__ctors_end>:
+ a82:	11 24       	eor	r1, r1
+ a84:	1f be       	out	0x3f, r1	; 63
+ a86:	cf ef       	ldi	r28, 0xFF	; 255
+ a88:	d8 e0       	ldi	r29, 0x08	; 8
+ a8a:	de bf       	out	0x3e, r29	; 62
+ a8c:	cd bf       	out	0x3d, r28	; 61
+
+00000a8e <__do_clear_bss>:
+ a8e:	23 e0       	ldi	r18, 0x03	; 3
+ a90:	a0 e0       	ldi	r26, 0x00	; 0
+ a92:	b1 e0       	ldi	r27, 0x01	; 1
+ a94:	01 c0       	rjmp	.+2      	; 0xa98 <.do_clear_bss_start>
+
+00000a96 <.do_clear_bss_loop>:
+ a96:	1d 92       	st	X+, r1
+
+00000a98 <.do_clear_bss_start>:
+ a98:	a6 30       	cpi	r26, 0x06	; 6
+ a9a:	b2 07       	cpc	r27, r18
+ a9c:	e1 f7       	brne	.-8      	; 0xa96 <.do_clear_bss_loop>
+ a9e:	0e 94 67 05 	call	0xace	; 0xace <main>
+ aa2:	0c 94 25 07 	jmp	0xe4a	; 0xe4a <_exit>
+
+00000aa6 <__bad_interrupt>:
+ aa6:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000aaa <SPI_init>:
+#include "SPI.h"
+#include <avr/io.h>
+
+void SPI_init()
+{
+	DDRB=_BV(PB3) | _BV(PB5);      //Piny SCK i MOSI s¹ wyjœciami
+ aaa:	88 e2       	ldi	r24, 0x28	; 40
+ aac:	84 b9       	out	0x04, r24	; 4
+	SPCR=_BV(SPE) | _BV(MSTR)  | _BV(CPOL) | _BV(CPHA);  //Tryb SPI3, taktowanie CLK/2
+ aae:	8c e5       	ldi	r24, 0x5C	; 92
+ ab0:	8c bd       	out	0x2c, r24	; 44
+ ab2:	08 95       	ret
+
+00000ab4 <SPI_RW_Byte>:
+	//SPSR=_BV(SPI2X);        //Taktujemy interfejs dwukrotnie szybciej
+}
+
+void SPI_RW_Byte(uint8_t byte)
+{
+	SPDR=byte;                     //Wyœlij bajt danych
+ ab4:	8e bd       	out	0x2e, r24	; 46
+	while(!(SPSR & (1<<SPIF)));    //Zaczekaj a¿ bajt zostanie wys³any
+ ab6:	0d b4       	in	r0, 0x2d	; 45
+ ab8:	07 fe       	sbrs	r0, 7
+ aba:	fd cf       	rjmp	.-6      	; 0xab6 <SPI_RW_Byte+0x2>
+	SPDR;                          //Odczytaj rejestr odbiornika dla wyzerowania SPIF
+ abc:	8e b5       	in	r24, 0x2e	; 46
+ abe:	08 95       	ret
+
+00000ac0 <LCD_Init>:
+	TCCR1B=_BV(WGM12) | _BV(CS11);   //Preskaler 8, na wyjœciu otrzymamy ok. 2 kHz
+}
+
+void LCD_Init()
+{
+	SET(DDR, ST7565_RESET);   //Pin RESET
+ ac0:	39 9a       	sbi	0x07, 1	; 7
+	SET(DDR, ST7565_A0);
+ ac2:	3a 9a       	sbi	0x07, 2	; 7
+	SET(DDR, ST7565_SCK);
+ ac4:	25 9a       	sbi	0x04, 5	; 4
+	SET(DDR, ST7565_MOSI);
+ ac6:	23 9a       	sbi	0x04, 3	; 4
+	SET(DDR, ST7565_CS);
+ ac8:	38 9a       	sbi	0x07, 0	; 7
+
+	st7565r_init();           //Zainicjuj kontroler
+ aca:	0c 94 da 05 	jmp	0xbb4	; 0xbb4 <st7565r_init>
+
+00000ace <main>:
+extern const __flash uint8_t* const __flash system8_array[];
+
+
+int main(void)
+{
+	SPI_init();
+ ace:	0e 94 55 05 	call	0xaaa	; 0xaaa <SPI_init>
+	LCD_Init();
+ ad2:	0e 94 60 05 	call	0xac0	; 0xac0 <LCD_Init>
+	//LCD_BackLight_Init();  //W³¹cz podœwietlenie
+
+	st7565r_Clear(false);
+ ad6:	80 e0       	ldi	r24, 0x00	; 0
+ ad8:	0e 94 5d 06 	call	0xcba	; 0xcba <st7565r_Clear>
+
+	st7565r_SetText(0, 8, PSTR("Bufor 1"), system16_array);
+ adc:	08 e6       	ldi	r16, 0x68	; 104
+ ade:	10 e0       	ldi	r17, 0x00	; 0
+ ae0:	29 e7       	ldi	r18, 0x79	; 121
+ ae2:	3a e0       	ldi	r19, 0x0A	; 10
+ ae4:	40 e0       	ldi	r20, 0x00	; 0
+ ae6:	68 e0       	ldi	r22, 0x08	; 8
+ ae8:	80 e0       	ldi	r24, 0x00	; 0
+ aea:	0e 94 75 06 	call	0xcea	; 0xcea <st7565r_SetText>
+	st7565r_CpyToPage(0);
+ aee:	80 e0       	ldi	r24, 0x00	; 0
+ af0:	0e 94 fd 05 	call	0xbfa	; 0xbfa <st7565r_CpyToPage>
+	st7565r_SetText(0, 8, PSTR("Bufor 2"), system16_array);
+ af4:	21 e7       	ldi	r18, 0x71	; 113
+ af6:	3a e0       	ldi	r19, 0x0A	; 10
+ af8:	40 e0       	ldi	r20, 0x00	; 0
+ afa:	68 e0       	ldi	r22, 0x08	; 8
+ afc:	80 e0       	ldi	r24, 0x00	; 0
+ afe:	0e 94 75 06 	call	0xcea	; 0xcea <st7565r_SetText>
+	st7565r_CpyToPage(4);
+ b02:	84 e0       	ldi	r24, 0x04	; 4
+ b04:	0e 94 fd 05 	call	0xbfa	; 0xbfa <st7565r_CpyToPage>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ b08:	2f ef       	ldi	r18, 0xFF	; 255
+ b0a:	83 ed       	ldi	r24, 0xD3	; 211
+ b0c:	90 e3       	ldi	r25, 0x30	; 48
+ b0e:	21 50       	subi	r18, 0x01	; 1
+ b10:	80 40       	sbci	r24, 0x00	; 0
+ b12:	90 40       	sbci	r25, 0x00	; 0
+ b14:	e1 f7       	brne	.-8      	; 0xb0e <main+0x40>
+ b16:	00 c0       	rjmp	.+0      	; 0xb18 <main+0x4a>
+ b18:	00 00       	nop
+	while(1)
+	{
+		_delay_ms(1000);
+		st7565r_set_display_start_line_address(32);
+ b1a:	80 e2       	ldi	r24, 0x20	; 32
+ b1c:	0e 94 c6 05 	call	0xb8c	; 0xb8c <st7565r_set_display_start_line_address>
+ b20:	2f ef       	ldi	r18, 0xFF	; 255
+ b22:	83 ed       	ldi	r24, 0xD3	; 211
+ b24:	90 e3       	ldi	r25, 0x30	; 48
+ b26:	21 50       	subi	r18, 0x01	; 1
+ b28:	80 40       	sbci	r24, 0x00	; 0
+ b2a:	90 40       	sbci	r25, 0x00	; 0
+ b2c:	e1 f7       	brne	.-8      	; 0xb26 <main+0x58>
+ b2e:	00 c0       	rjmp	.+0      	; 0xb30 <main+0x62>
+ b30:	00 00       	nop
+		_delay_ms(1000);
+		st7565r_set_display_start_line_address(0);
+ b32:	80 e0       	ldi	r24, 0x00	; 0
+ b34:	0e 94 c6 05 	call	0xb8c	; 0xb8c <st7565r_set_display_start_line_address>
+ b38:	e7 cf       	rjmp	.-50     	; 0xb08 <main+0x3a>
+
+00000b3a <st7565r_wr_cmd>:
+	if(state == ST_High) SET(PORT, ST7565_A0); else CLR(PORT, ST7565_A0);
+}
+
+static inline void st7565r_CS_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_CS); else CLR(PORT, ST7565_CS);
+ b3a:	40 98       	cbi	0x08, 0	; 8
+	if(state == ST_High) SET(PORT, ST7565_RESET); else CLR(PORT, ST7565_RESET);
+}
+
+static inline void st7565r_A0_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_A0); else CLR(PORT, ST7565_A0);
+ b3c:	42 98       	cbi	0x08, 2	; 8
+
+static inline void st7565r_wr_cmd(uint8_t cmd)
+{
+	st7565r_CS_pin(ST_Low);   //Wybierz uk³ad
+	st7565r_A0_pin(ST_Low);   //Wybierz tryb przesy³ania polecenia
+	SPI_RW_Byte(cmd);		  //Wyœlij polecenie
+ b3e:	0e 94 5a 05 	call	0xab4	; 0xab4 <SPI_RW_Byte>
+	if(state == ST_High) SET(PORT, ST7565_A0); else CLR(PORT, ST7565_A0);
+}
+
+static inline void st7565r_CS_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_CS); else CLR(PORT, ST7565_CS);
+ b42:	40 9a       	sbi	0x08, 0	; 8
+ b44:	08 95       	ret
+
+00000b46 <st7565r_set_page_address>:
+	st7565r_CS_pin(ST_High);
+}
+
+static inline void st7565r_set_page_address(uint8_t address)
+{
+	address&=0x0F; //Zadres to tylko 4 bity
+ b46:	8f 70       	andi	r24, 0x0F	; 15
+	st7565r_wr_cmd(ST7565R_CMD_PAGE_ADDRESS_SET | address);
+ b48:	80 6b       	ori	r24, 0xB0	; 176
+ b4a:	0c 94 9d 05 	jmp	0xb3a	; 0xb3a <st7565r_wr_cmd>
+
+00000b4e <st7565r_set_column_address>:
+}
+
+static inline void st7565r_set_column_address(uint8_t address)
+{
+ b4e:	cf 93       	push	r28
+ b50:	c8 2f       	mov	r28, r24
+	address &= 0x7F;   //Adres to 7 najm³odszych bitów
+ b52:	8f 77       	andi	r24, 0x7F	; 127
+	st7565r_wr_cmd(ST7565R_CMD_COLUMN_ADDRESS_SET_MSB | (address >> 4));
+ b54:	82 95       	swap	r24
+ b56:	8f 70       	andi	r24, 0x0F	; 15
+ b58:	80 61       	ori	r24, 0x10	; 16
+ b5a:	0e 94 9d 05 	call	0xb3a	; 0xb3a <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_COLUMN_ADDRESS_SET_LSB | (address & 0x0F));
+ b5e:	8c 2f       	mov	r24, r28
+ b60:	8f 70       	andi	r24, 0x0F	; 15
+}
+ b62:	cf 91       	pop	r28
+
+static inline void st7565r_set_column_address(uint8_t address)
+{
+	address &= 0x7F;   //Adres to 7 najm³odszych bitów
+	st7565r_wr_cmd(ST7565R_CMD_COLUMN_ADDRESS_SET_MSB | (address >> 4));
+	st7565r_wr_cmd(ST7565R_CMD_COLUMN_ADDRESS_SET_LSB | (address & 0x0F));
+ b64:	0c 94 9d 05 	jmp	0xb3a	; 0xb3a <st7565r_wr_cmd>
+
+00000b68 <st7565r_reset>:
+uint8_t LCD_FrameBuffer[GFX_SCREEN_HEIGHT / 8][GFX_SCREEN_WIDTH + 1];  //Bufor obrazu, ostatni bajt wiersza wskazuje na koniecznoœæ przerysowania strony
+uint8_t GLCD_x, GLCD_y;
+
+static inline void st7565r_Reset_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_RESET); else CLR(PORT, ST7565_RESET);
+ b68:	41 98       	cbi	0x08, 1	; 8
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ b6a:	85 e3       	ldi	r24, 0x35	; 53
+ b6c:	8a 95       	dec	r24
+ b6e:	f1 f7       	brne	.-4      	; 0xb6c <st7565r_reset+0x4>
+ b70:	00 00       	nop
+ b72:	41 9a       	sbi	0x08, 1	; 8
+ b74:	85 e3       	ldi	r24, 0x35	; 53
+ b76:	8a 95       	dec	r24
+ b78:	f1 f7       	brne	.-4      	; 0xb76 <st7565r_reset+0xe>
+ b7a:	00 00       	nop
+ b7c:	08 95       	ret
+
+00000b7e <st7565r_wr_data>:
+	if(state == ST_High) SET(PORT, ST7565_A0); else CLR(PORT, ST7565_A0);
+}
+
+static inline void st7565r_CS_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_CS); else CLR(PORT, ST7565_CS);
+ b7e:	40 98       	cbi	0x08, 0	; 8
+	if(state == ST_High) SET(PORT, ST7565_RESET); else CLR(PORT, ST7565_RESET);
+}
+
+static inline void st7565r_A0_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_A0); else CLR(PORT, ST7565_A0);
+ b80:	42 9a       	sbi	0x08, 2	; 8
+
+void st7565r_wr_data(uint8_t data)
+{
+	st7565r_CS_pin(ST_Low);   //Wybierz uk³ad
+	st7565r_A0_pin(ST_High);  //Wybierz tryb przesy³ania danych
+	SPI_RW_Byte(data);
+ b82:	0e 94 5a 05 	call	0xab4	; 0xab4 <SPI_RW_Byte>
+	if(state == ST_High) SET(PORT, ST7565_RESET); else CLR(PORT, ST7565_RESET);
+}
+
+static inline void st7565r_A0_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_A0); else CLR(PORT, ST7565_A0);
+ b86:	42 98       	cbi	0x08, 2	; 8
+}
+
+static inline void st7565r_CS_pin(enum st7565r state)
+{
+	if(state == ST_High) SET(PORT, ST7565_CS); else CLR(PORT, ST7565_CS);
+ b88:	40 9a       	sbi	0x08, 0	; 8
+ b8a:	08 95       	ret
+
+00000b8c <st7565r_set_display_start_line_address>:
+	st7565r_wr_data(data);
+}
+
+void st7565r_set_display_start_line_address(uint8_t address)
+{
+	address &= 0x3F;
+ b8c:	8f 73       	andi	r24, 0x3F	; 63
+	st7565r_wr_cmd(ST7565R_CMD_START_LINE_SET | address);
+ b8e:	80 64       	ori	r24, 0x40	; 64
+ b90:	0c 94 9d 05 	jmp	0xb3a	; 0xb3a <st7565r_wr_cmd>
+
+00000b94 <st7565r_set_contrast>:
+	if (onoff) st7565r_wr_cmd(ST7565R_CMD_DISPLAY_ALL_POINTS_ON);
+	 else st7565r_wr_cmd(ST7565R_CMD_DISPLAY_ALL_POINTS_OFF);
+}
+
+void st7565r_set_contrast(uint8_t contrast) //Uwaga - Ÿle dobrany kontrast (przekroczenie napiêcia) mo¿e uszkodziæ LCD
+{
+ b94:	cf 93       	push	r28
+ b96:	c8 2f       	mov	r28, r24
+	if (contrast < ST7565R_DISPLAY_CONTRAST_MIN)  contrast=ST7565R_DISPLAY_CONTRAST_MIN;
+ b98:	85 30       	cpi	r24, 0x05	; 5
+ b9a:	20 f0       	brcs	.+8      	; 0xba4 <st7565r_set_contrast+0x10>
+	if (contrast > ST7565R_DISPLAY_CONTRAST_MAX)  contrast=ST7565R_DISPLAY_CONTRAST_MAX;
+ b9c:	89 32       	cpi	r24, 0x29	; 41
+ b9e:	18 f0       	brcs	.+6      	; 0xba6 <st7565r_set_contrast+0x12>
+ ba0:	c8 e2       	ldi	r28, 0x28	; 40
+ ba2:	01 c0       	rjmp	.+2      	; 0xba6 <st7565r_set_contrast+0x12>
+	 else st7565r_wr_cmd(ST7565R_CMD_DISPLAY_ALL_POINTS_OFF);
+}
+
+void st7565r_set_contrast(uint8_t contrast) //Uwaga - Ÿle dobrany kontrast (przekroczenie napiêcia) mo¿e uszkodziæ LCD
+{
+	if (contrast < ST7565R_DISPLAY_CONTRAST_MIN)  contrast=ST7565R_DISPLAY_CONTRAST_MIN;
+ ba4:	c5 e0       	ldi	r28, 0x05	; 5
+	if (contrast > ST7565R_DISPLAY_CONTRAST_MAX)  contrast=ST7565R_DISPLAY_CONTRAST_MAX;
+	st7565r_wr_cmd(ST7565R_CMD_ELECTRONIC_VOLUME_MODE_SET);
+ ba6:	81 e8       	ldi	r24, 0x81	; 129
+ ba8:	0e 94 9d 05 	call	0xb3a	; 0xb3a <st7565r_wr_cmd>
+	st7565r_wr_cmd(contrast);
+ bac:	8c 2f       	mov	r24, r28
+}
+ bae:	cf 91       	pop	r28
+void st7565r_set_contrast(uint8_t contrast) //Uwaga - Ÿle dobrany kontrast (przekroczenie napiêcia) mo¿e uszkodziæ LCD
+{
+	if (contrast < ST7565R_DISPLAY_CONTRAST_MIN)  contrast=ST7565R_DISPLAY_CONTRAST_MIN;
+	if (contrast > ST7565R_DISPLAY_CONTRAST_MAX)  contrast=ST7565R_DISPLAY_CONTRAST_MAX;
+	st7565r_wr_cmd(ST7565R_CMD_ELECTRONIC_VOLUME_MODE_SET);
+	st7565r_wr_cmd(contrast);
+ bb0:	0c 94 9d 05 	jmp	0xb3a	; 0xb3a <st7565r_wr_cmd>
+
+00000bb4 <st7565r_init>:
+}
+
+void st7565r_init()
+{
+	st7565r_reset();
+ bb4:	0e 94 b4 05 	call	0xb68	; 0xb68 <st7565r_reset>
+	st7565r_wr_cmd(ST7565R_CMD_ADC_NORMAL);              //Zwiêkszaj adres kolumny
+ bb8:	80 ea       	ldi	r24, 0xA0	; 160
+ bba:	0e 94 9d 05 	call	0xb3a	; 0xb3a <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_DISPLAY_NORMAL);          //W³¹cz normalny tryb wyœwietlania (nie testowy)
+ bbe:	86 ea       	ldi	r24, 0xA6	; 166
+ bc0:	0e 94 9d 05 	call	0xb3a	; 0xb3a <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_REVERSE_SCAN_DIRECTION);  //Tryb sterowania elektrodami
+ bc4:	88 ec       	ldi	r24, 0xC8	; 200
+ bc6:	0e 94 9d 05 	call	0xb3a	; 0xb3a <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_LCD_BIAS_1_DIV_6_DUTY33); //Ustaw bias voltage na 1/6
+ bca:	82 ea       	ldi	r24, 0xA2	; 162
+ bcc:	0e 94 9d 05 	call	0xb3a	; 0xb3a <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_POWER_CTRL_ALL_ON);       //W³¹cz wszystkie elementy sterownika
+ bd0:	8f e2       	ldi	r24, 0x2F	; 47
+ bd2:	0e 94 9d 05 	call	0xb3a	; 0xb3a <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_BOOSTER_RATIO_SET);       //Konfiguracja boostera
+ bd6:	88 ef       	ldi	r24, 0xF8	; 248
+ bd8:	0e 94 9d 05 	call	0xb3a	; 0xb3a <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_BOOSTER_RATIO_2X_3X_4X);
+ bdc:	80 e0       	ldi	r24, 0x00	; 0
+ bde:	0e 94 9d 05 	call	0xb3a	; 0xb3a <st7565r_wr_cmd>
+	st7565r_wr_cmd(ST7565R_CMD_VOLTAGE_RESISTOR_RATIO_7);
+ be2:	87 e2       	ldi	r24, 0x27	; 39
+ be4:	0e 94 9d 05 	call	0xb3a	; 0xb3a <st7565r_wr_cmd>
+	st7565r_set_contrast(0x10);
+ be8:	80 e1       	ldi	r24, 0x10	; 16
+ bea:	0e 94 ca 05 	call	0xb94	; 0xb94 <st7565r_set_contrast>
+}
+
+void st7565r_set_display_start_line_address(uint8_t address)
+{
+	address &= 0x3F;
+	st7565r_wr_cmd(ST7565R_CMD_START_LINE_SET | address);
+ bee:	80 e4       	ldi	r24, 0x40	; 64
+ bf0:	0e 94 9d 05 	call	0xb3a	; 0xb3a <st7565r_wr_cmd>
+}
+
+static inline void st7565r_display_on(_Bool onoff)
+{
+	if(onoff) st7565r_wr_cmd(ST7565R_CMD_DISPLAY_ON);
+ bf4:	8f ea       	ldi	r24, 0xAF	; 175
+ bf6:	0c 94 9d 05 	jmp	0xb3a	; 0xb3a <st7565r_wr_cmd>
+
+00000bfa <st7565r_CpyToPage>:
+		ptr++; //Synchronizacja ze wzglêdu na bajt Dirty w buforze
+	}
+}
+
+void st7565r_CpyToPage(uint8_t Page)
+{
+ bfa:	ef 92       	push	r14
+ bfc:	ff 92       	push	r15
+ bfe:	0f 93       	push	r16
+ c00:	1f 93       	push	r17
+ c02:	cf 93       	push	r28
+ c04:	df 93       	push	r29
+ c06:	e8 2e       	mov	r14, r24
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+	for(uint8_t y=0; y < (GFX_SCREEN_HEIGHT >> 3); y++)
+ c08:	f1 2c       	mov	r15, r1
+	}
+}
+
+void st7565r_CpyToPage(uint8_t Page)
+{
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+ c0a:	c2 e0       	ldi	r28, 0x02	; 2
+ c0c:	d1 e0       	ldi	r29, 0x01	; 1
+	for(uint8_t y=0; y < (GFX_SCREEN_HEIGHT >> 3); y++)
+	{
+		st7565r_set_page_address(y + Page);
+ c0e:	8f 2d       	mov	r24, r15
+ c10:	8e 0d       	add	r24, r14
+ c12:	0e 94 a3 05 	call	0xb46	; 0xb46 <st7565r_set_page_address>
+		st7565r_set_column_address(0);
+ c16:	80 e0       	ldi	r24, 0x00	; 0
+ c18:	0e 94 a7 05 	call	0xb4e	; 0xb4e <st7565r_set_column_address>
+ c1c:	8e 01       	movw	r16, r28
+ c1e:	00 58       	subi	r16, 0x80	; 128
+ c20:	1f 4f       	sbci	r17, 0xFF	; 255
+ c22:	fe 01       	movw	r30, r28
+ c24:	21 96       	adiw	r28, 0x01	; 1
+		for(uint8_t x=0; x < GFX_SCREEN_WIDTH; x++) st7565r_wr_data(*ptr++);
+ c26:	e0 17       	cp	r30, r16
+ c28:	f1 07       	cpc	r31, r17
+ c2a:	21 f0       	breq	.+8      	; 0xc34 <st7565r_CpyToPage+0x3a>
+ c2c:	80 81       	ld	r24, Z
+ c2e:	0e 94 bf 05 	call	0xb7e	; 0xb7e <st7565r_wr_data>
+ c32:	f7 cf       	rjmp	.-18     	; 0xc22 <st7565r_CpyToPage+0x28>
+}
+
+void st7565r_CpyToPage(uint8_t Page)
+{
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+	for(uint8_t y=0; y < (GFX_SCREEN_HEIGHT >> 3); y++)
+ c34:	f3 94       	inc	r15
+ c36:	84 e0       	ldi	r24, 0x04	; 4
+ c38:	f8 12       	cpse	r15, r24
+ c3a:	e9 cf       	rjmp	.-46     	; 0xc0e <st7565r_CpyToPage+0x14>
+		st7565r_set_page_address(y + Page);
+		st7565r_set_column_address(0);
+		for(uint8_t x=0; x < GFX_SCREEN_WIDTH; x++) st7565r_wr_data(*ptr++);
+		ptr++; //Synchronizacja ze wzglêdu na bajt Dirty w buforze
+	}
+}
+ c3c:	df 91       	pop	r29
+ c3e:	cf 91       	pop	r28
+ c40:	1f 91       	pop	r17
+ c42:	0f 91       	pop	r16
+ c44:	ff 90       	pop	r15
+ c46:	ef 90       	pop	r14
+ c48:	08 95       	ret
+
+00000c4a <st7565r_CpyDirtyPages>:
+
+void st7565r_CpyDirtyPages()
+{
+ c4a:	cf 92       	push	r12
+ c4c:	df 92       	push	r13
+ c4e:	ef 92       	push	r14
+ c50:	ff 92       	push	r15
+ c52:	0f 93       	push	r16
+ c54:	1f 93       	push	r17
+ c56:	cf 93       	push	r28
+ c58:	df 93       	push	r29
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+	for(uint8_t y=0; y < (GFX_SCREEN_HEIGHT >> 3); y++)
+ c5a:	d1 2c       	mov	r13, r1
+	}
+}
+
+void st7565r_CpyDirtyPages()
+{
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+ c5c:	c2 e0       	ldi	r28, 0x02	; 2
+ c5e:	d1 e0       	ldi	r29, 0x01	; 1
+		if(ptr[GFX_SCREEN_WIDTH] == BufferDirty)  //Wysy³amy dane tylko jeœli dana strona by³a zmieniona
+		{
+			st7565r_set_page_address(y);
+			st7565r_set_column_address(0);
+			for(uint8_t x=0; x < GFX_SCREEN_WIDTH; x++) st7565r_wr_data(*ptr++);
+			*ptr++=BufferClean;                //Skasuj flagê Dirty
+ c60:	83 e0       	ldi	r24, 0x03	; 3
+ c62:	c8 2e       	mov	r12, r24
+void st7565r_CpyDirtyPages()
+{
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+	for(uint8_t y=0; y < (GFX_SCREEN_HEIGHT >> 3); y++)
+	{
+		if(ptr[GFX_SCREEN_WIDTH] == BufferDirty)  //Wysy³amy dane tylko jeœli dana strona by³a zmieniona
+ c64:	7e 01       	movw	r14, r28
+ c66:	80 e8       	ldi	r24, 0x80	; 128
+ c68:	e8 0e       	add	r14, r24
+ c6a:	f1 1c       	adc	r15, r1
+ c6c:	f7 01       	movw	r30, r14
+ c6e:	80 81       	ld	r24, Z
+ c70:	82 30       	cpi	r24, 0x02	; 2
+ c72:	a1 f4       	brne	.+40     	; 0xc9c <st7565r_CpyDirtyPages+0x52>
+		{
+			st7565r_set_page_address(y);
+ c74:	8d 2d       	mov	r24, r13
+ c76:	0e 94 a3 05 	call	0xb46	; 0xb46 <st7565r_set_page_address>
+			st7565r_set_column_address(0);
+ c7a:	80 e0       	ldi	r24, 0x00	; 0
+ c7c:	0e 94 a7 05 	call	0xb4e	; 0xb4e <st7565r_set_column_address>
+ c80:	8e 01       	movw	r16, r28
+ c82:	f8 01       	movw	r30, r16
+ c84:	e8 01       	movw	r28, r16
+ c86:	21 96       	adiw	r28, 0x01	; 1
+			for(uint8_t x=0; x < GFX_SCREEN_WIDTH; x++) st7565r_wr_data(*ptr++);
+ c88:	0e 15       	cp	r16, r14
+ c8a:	1f 05       	cpc	r17, r15
+ c8c:	29 f0       	breq	.+10     	; 0xc98 <st7565r_CpyDirtyPages+0x4e>
+ c8e:	8e 01       	movw	r16, r28
+ c90:	80 81       	ld	r24, Z
+ c92:	0e 94 bf 05 	call	0xb7e	; 0xb7e <st7565r_wr_data>
+ c96:	f5 cf       	rjmp	.-22     	; 0xc82 <st7565r_CpyDirtyPages+0x38>
+			*ptr++=BufferClean;                //Skasuj flagê Dirty
+ c98:	c0 82       	st	Z, r12
+ c9a:	02 c0       	rjmp	.+4      	; 0xca0 <st7565r_CpyDirtyPages+0x56>
+		} else ptr+=GFX_SCREEN_WIDTH+1;
+ c9c:	cf 57       	subi	r28, 0x7F	; 127
+ c9e:	df 4f       	sbci	r29, 0xFF	; 255
+}
+
+void st7565r_CpyDirtyPages()
+{
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+	for(uint8_t y=0; y < (GFX_SCREEN_HEIGHT >> 3); y++)
+ ca0:	d3 94       	inc	r13
+ ca2:	f4 e0       	ldi	r31, 0x04	; 4
+ ca4:	df 12       	cpse	r13, r31
+ ca6:	de cf       	rjmp	.-68     	; 0xc64 <st7565r_CpyDirtyPages+0x1a>
+			st7565r_set_column_address(0);
+			for(uint8_t x=0; x < GFX_SCREEN_WIDTH; x++) st7565r_wr_data(*ptr++);
+			*ptr++=BufferClean;                //Skasuj flagê Dirty
+		} else ptr+=GFX_SCREEN_WIDTH+1;
+	}
+}
+ ca8:	df 91       	pop	r29
+ caa:	cf 91       	pop	r28
+ cac:	1f 91       	pop	r17
+ cae:	0f 91       	pop	r16
+ cb0:	ff 90       	pop	r15
+ cb2:	ef 90       	pop	r14
+ cb4:	df 90       	pop	r13
+ cb6:	cf 90       	pop	r12
+ cb8:	08 95       	ret
+
+00000cba <st7565r_Clear>:
+
+void st7565r_Clear(_Bool color)
+{
+	uint8_t pix=0;
+	if(color) pix=0xff;
+ cba:	81 95       	neg	r24
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+ cbc:	22 e0       	ldi	r18, 0x02	; 2
+ cbe:	31 e0       	ldi	r19, 0x01	; 1
+	for(uint8_t y=0; y < (GFX_SCREEN_HEIGHT >> 3); y++)
+	{
+		for(uint16_t i=0; i < GFX_SCREEN_WIDTH; i++) *ptr++=pix;
+		*ptr++=BufferDirty; //Bajt dirty
+ cc0:	92 e0       	ldi	r25, 0x02	; 2
+		} else ptr+=GFX_SCREEN_WIDTH+1;
+	}
+}
+
+void st7565r_Clear(_Bool color)
+{
+ cc2:	f9 01       	movw	r30, r18
+ cc4:	40 e0       	ldi	r20, 0x00	; 0
+ cc6:	50 e0       	ldi	r21, 0x00	; 0
+	uint8_t pix=0;
+	if(color) pix=0xff;
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+	for(uint8_t y=0; y < (GFX_SCREEN_HEIGHT >> 3); y++)
+	{
+		for(uint16_t i=0; i < GFX_SCREEN_WIDTH; i++) *ptr++=pix;
+ cc8:	81 93       	st	Z+, r24
+ cca:	4f 5f       	subi	r20, 0xFF	; 255
+ ccc:	5f 4f       	sbci	r21, 0xFF	; 255
+ cce:	40 38       	cpi	r20, 0x80	; 128
+ cd0:	51 05       	cpc	r21, r1
+ cd2:	d1 f7       	brne	.-12     	; 0xcc8 <st7565r_Clear+0xe>
+ cd4:	2f 57       	subi	r18, 0x7F	; 127
+ cd6:	3f 4f       	sbci	r19, 0xFF	; 255
+ cd8:	f9 01       	movw	r30, r18
+ cda:	31 97       	sbiw	r30, 0x01	; 1
+		*ptr++=BufferDirty; //Bajt dirty
+ cdc:	90 83       	st	Z, r25
+void st7565r_Clear(_Bool color)
+{
+	uint8_t pix=0;
+	if(color) pix=0xff;
+	uint8_t *ptr=(uint8_t*)LCD_FrameBuffer;
+	for(uint8_t y=0; y < (GFX_SCREEN_HEIGHT >> 3); y++)
+ cde:	43 e0       	ldi	r20, 0x03	; 3
+ ce0:	26 30       	cpi	r18, 0x06	; 6
+ ce2:	34 07       	cpc	r19, r20
+ ce4:	71 f7       	brne	.-36     	; 0xcc2 <st7565r_Clear+0x8>
+	{
+		for(uint16_t i=0; i < GFX_SCREEN_WIDTH; i++) *ptr++=pix;
+		*ptr++=BufferDirty; //Bajt dirty
+	}
+	st7565r_CpyDirtyPages();
+ ce6:	0c 94 25 06 	jmp	0xc4a	; 0xc4a <st7565r_CpyDirtyPages>
+
+00000cea <st7565r_SetText>:
+        }
+    }
+}
+
+void st7565r_SetText(uint8_t x, uint8_t y, const __memx char *tekst, const uint8_t __flash * const __flash font[])
+{
+ cea:	3f 92       	push	r3
+ cec:	4f 92       	push	r4
+ cee:	5f 92       	push	r5
+ cf0:	6f 92       	push	r6
+ cf2:	7f 92       	push	r7
+ cf4:	8f 92       	push	r8
+ cf6:	9f 92       	push	r9
+ cf8:	af 92       	push	r10
+ cfa:	bf 92       	push	r11
+ cfc:	cf 92       	push	r12
+ cfe:	df 92       	push	r13
+ d00:	ef 92       	push	r14
+ d02:	ff 92       	push	r15
+ d04:	0f 93       	push	r16
+ d06:	1f 93       	push	r17
+ d08:	cf 93       	push	r28
+ d0a:	df 93       	push	r29
+ d0c:	00 d0       	rcall	.+0      	; 0xd0e <st7565r_SetText+0x24>
+ d0e:	00 d0       	rcall	.+0      	; 0xd10 <st7565r_SetText+0x26>
+ d10:	cd b7       	in	r28, 0x3d	; 61
+ d12:	de b7       	in	r29, 0x3e	; 62
+	uint8_t rows=(uint8_t)(uint16_t)font[0]; //Pobierz wysokoœæ fontu
+ d14:	f8 01       	movw	r30, r16
+ d16:	a5 91       	lpm	r26, Z+
+ d18:	b5 91       	lpm	r27, Z+
+ d1a:	7a 2e       	mov	r7, r26
+	y+=rows-1;
+ d1c:	61 50       	subi	r22, 0x01	; 1
+ d1e:	6a 0f       	add	r22, r26
+		uint8_t col=*znak++;                     //Szerokoœæ znaku w pikselach
+		uint8_t page=0, coldesc=0, colmask=0;
+
+		for(uint8_t ox=0; ox < col; ox++)        //Wyœwietlamy kolejne kolumny tworz¹ce znak
+		{
+			uint8_t dispmask=1 << (y % 8);
+ d20:	96 2f       	mov	r25, r22
+ d22:	97 70       	andi	r25, 0x07	; 7
+ d24:	51 e0       	ldi	r21, 0x01	; 1
+ d26:	a5 2e       	mov	r10, r21
+ d28:	01 c0       	rjmp	.+2      	; 0xd2c <st7565r_SetText+0x42>
+ d2a:	aa 0c       	add	r10, r10
+ d2c:	9a 95       	dec	r25
+ d2e:	ea f7       	brpl	.-6      	; 0xd2a <st7565r_SetText+0x40>
+ d30:	69 01       	movw	r12, r18
+ d32:	e4 2e       	mov	r14, r20
+ d34:	70 e0       	ldi	r23, 0x00	; 0
+				{
+					colmask=0x80;
+					coldesc=*znak++;             //Pobierz bajt opisu znaku
+				}
+				page=((y - oy) >> 3) & 0b111;    //Zabezpieczenie przed zapisem poza bufor
+				LCD_FrameBuffer[page][x]&=~dispmask;
+ d36:	a1 e8       	ldi	r26, 0x81	; 129
+ d38:	fa 2e       	mov	r15, r26
+				if(coldesc & colmask) LCD_FrameBuffer[page][x]|=dispmask;
+				colmask>>=1;
+				dispmask>>=1;
+				if(dispmask == 0)   //Przekraczamy stronê - nale¿y zapisaæ kompletny bajt
+				{
+					LCD_FrameBuffer[page][GFX_SCREEN_WIDTH]=BufferDirty;
+ d3a:	b2 e0       	ldi	r27, 0x02	; 2
+ d3c:	bb 2e       	mov	r11, r27
+{
+	uint8_t rows=(uint8_t)(uint16_t)font[0]; //Pobierz wysokoœæ fontu
+	y+=rows-1;
+	char ch;
+
+	while((ch=*tekst++))  //Wyœwietl kolejne znaki a¿ do koñca tekstu (znaku NUL)
+ d3e:	f6 01       	movw	r30, r12
+ d40:	94 91       	lpm	r25, Z
+ d42:	e7 fc       	sbrc	r14, 7
+ d44:	90 81       	ld	r25, Z
+ d46:	99 23       	and	r25, r25
+ d48:	09 f4       	brne	.+2      	; 0xd4c <st7565r_SetText+0x62>
+ d4a:	69 c0       	rjmp	.+210    	; 0xe1e <st7565r_SetText+0x134>
+	{
+		const uint8_t __flash *znak=font[ch-30]; //Adres pocz¹tku opisu znaku
+ d4c:	f8 01       	movw	r30, r16
+ d4e:	e9 0f       	add	r30, r25
+ d50:	f1 1d       	adc	r31, r1
+ d52:	e9 0f       	add	r30, r25
+ d54:	f1 1d       	adc	r31, r1
+ d56:	fc 97       	sbiw	r30, 0x3c	; 60
+ d58:	05 90       	lpm	r0, Z+
+ d5a:	f4 91       	lpm	r31, Z
+ d5c:	e0 2d       	mov	r30, r0
+		uint8_t col=*znak++;                     //Szerokoœæ znaku w pikselach
+ d5e:	af 01       	movw	r20, r30
+ d60:	4f 5f       	subi	r20, 0xFF	; 255
+ d62:	5f 4f       	sbci	r21, 0xFF	; 255
+ d64:	94 90       	lpm	r9, Z
+ d66:	98 0e       	add	r9, r24
+		uint8_t page=0, coldesc=0, colmask=0;
+ d68:	90 e0       	ldi	r25, 0x00	; 0
+ d6a:	81 2c       	mov	r8, r1
+ d6c:	61 2c       	mov	r6, r1
+
+		for(uint8_t ox=0; ox < col; ox++)        //Wyœwietlamy kolejne kolumny tworz¹ce znak
+ d6e:	89 15       	cp	r24, r9
+ d70:	09 f4       	brne	.+2      	; 0xd74 <st7565r_SetText+0x8a>
+ d72:	50 c0       	rjmp	.+160    	; 0xe14 <st7565r_SetText+0x12a>
+		{
+			uint8_t dispmask=1 << (y % 8);
+ d74:	5a 2c       	mov	r5, r10
+			for(uint8_t oy=0; oy < rows; oy++)   //Narysuj jedn¹ kolumnê znaku
+ d76:	20 e0       	ldi	r18, 0x00	; 0
+ d78:	30 e0       	ldi	r19, 0x00	; 0
+				{
+					colmask=0x80;
+					coldesc=*znak++;             //Pobierz bajt opisu znaku
+				}
+				page=((y - oy) >> 3) & 0b111;    //Zabezpieczenie przed zapisem poza bufor
+				LCD_FrameBuffer[page][x]&=~dispmask;
+ d7a:	a8 2f       	mov	r26, r24
+ d7c:	b0 e0       	ldi	r27, 0x00	; 0
+ d7e:	ba 83       	std	Y+2, r27	; 0x02
+ d80:	a9 83       	std	Y+1, r26	; 0x01
+		uint8_t page=0, coldesc=0, colmask=0;
+
+		for(uint8_t ox=0; ox < col; ox++)        //Wyœwietlamy kolejne kolumny tworz¹ce znak
+		{
+			uint8_t dispmask=1 << (y % 8);
+			for(uint8_t oy=0; oy < rows; oy++)   //Narysuj jedn¹ kolumnê znaku
+ d82:	27 15       	cp	r18, r7
+ d84:	c8 f5       	brcc	.+114    	; 0xdf8 <st7565r_SetText+0x10e>
+			{
+				if(colmask == 0)
+ d86:	91 11       	cpse	r25, r1
+ d88:	05 c0       	rjmp	.+10     	; 0xd94 <st7565r_SetText+0xaa>
+				{
+					colmask=0x80;
+					coldesc=*znak++;             //Pobierz bajt opisu znaku
+ d8a:	fa 01       	movw	r30, r20
+ d8c:	84 90       	lpm	r8, Z
+ d8e:	4f 5f       	subi	r20, 0xFF	; 255
+ d90:	5f 4f       	sbci	r21, 0xFF	; 255
+			uint8_t dispmask=1 << (y % 8);
+			for(uint8_t oy=0; oy < rows; oy++)   //Narysuj jedn¹ kolumnê znaku
+			{
+				if(colmask == 0)
+				{
+					colmask=0x80;
+ d92:	90 e8       	ldi	r25, 0x80	; 128
+ d94:	db 01       	movw	r26, r22
+ d96:	a2 1b       	sub	r26, r18
+ d98:	b3 0b       	sbc	r27, r19
+					coldesc=*znak++;             //Pobierz bajt opisu znaku
+				}
+				page=((y - oy) >> 3) & 0b111;    //Zabezpieczenie przed zapisem poza bufor
+ d9a:	f3 e0       	ldi	r31, 0x03	; 3
+ d9c:	b5 95       	asr	r27
+ d9e:	a7 95       	ror	r26
+ da0:	fa 95       	dec	r31
+ da2:	e1 f7       	brne	.-8      	; 0xd9c <st7565r_SetText+0xb2>
+ da4:	fa 2f       	mov	r31, r26
+ da6:	f7 70       	andi	r31, 0x07	; 7
+ da8:	6f 2e       	mov	r6, r31
+				LCD_FrameBuffer[page][x]&=~dispmask;
+ daa:	45 2c       	mov	r4, r5
+ dac:	40 94       	com	r4
+ dae:	af 2f       	mov	r26, r31
+ db0:	b0 e0       	ldi	r27, 0x00	; 0
+ db2:	bc 83       	std	Y+4, r27	; 0x04
+ db4:	ab 83       	std	Y+3, r26	; 0x03
+ db6:	a9 81       	ldd	r26, Y+1	; 0x01
+ db8:	ba 81       	ldd	r27, Y+2	; 0x02
+ dba:	ff 9e       	mul	r15, r31
+ dbc:	a0 0d       	add	r26, r0
+ dbe:	b1 1d       	adc	r27, r1
+ dc0:	11 24       	eor	r1, r1
+ dc2:	ae 5f       	subi	r26, 0xFE	; 254
+ dc4:	be 4f       	sbci	r27, 0xFE	; 254
+ dc6:	3c 90       	ld	r3, X
+ dc8:	43 20       	and	r4, r3
+				if(coldesc & colmask) LCD_FrameBuffer[page][x]|=dispmask;
+ dca:	39 2e       	mov	r3, r25
+ dcc:	38 20       	and	r3, r8
+ dce:	09 f0       	breq	.+2      	; 0xdd2 <st7565r_SetText+0xe8>
+ dd0:	45 28       	or	r4, r5
+ dd2:	4c 92       	st	X, r4
+				colmask>>=1;
+ dd4:	96 95       	lsr	r25
+				dispmask>>=1;
+ dd6:	56 94       	lsr	r5
+				if(dispmask == 0)   //Przekraczamy stronê - nale¿y zapisaæ kompletny bajt
+ dd8:	61 f4       	brne	.+24     	; 0xdf2 <st7565r_SetText+0x108>
+				{
+					LCD_FrameBuffer[page][GFX_SCREEN_WIDTH]=BufferDirty;
+ dda:	eb 81       	ldd	r30, Y+3	; 0x03
+ ddc:	fc 81       	ldd	r31, Y+4	; 0x04
+ dde:	fe 9e       	mul	r15, r30
+ de0:	d0 01       	movw	r26, r0
+ de2:	ff 9e       	mul	r15, r31
+ de4:	b0 0d       	add	r27, r0
+ de6:	11 24       	eor	r1, r1
+ de8:	ae 57       	subi	r26, 0x7E	; 126
+ dea:	be 4f       	sbci	r27, 0xFE	; 254
+ dec:	bc 92       	st	X, r11
+					dispmask=0x80;
+ dee:	e0 e8       	ldi	r30, 0x80	; 128
+ df0:	5e 2e       	mov	r5, r30
+ df2:	2f 5f       	subi	r18, 0xFF	; 255
+ df4:	3f 4f       	sbci	r19, 0xFF	; 255
+ df6:	c5 cf       	rjmp	.-118    	; 0xd82 <st7565r_SetText+0x98>
+				}
+			}
+			if(dispmask != 0x80) //st7565r_write_data_at(x, page, LCD_FrameBuffer[page][x]);
+ df8:	f0 e8       	ldi	r31, 0x80	; 128
+ dfa:	5f 16       	cp	r5, r31
+ dfc:	31 f0       	breq	.+12     	; 0xe0a <st7565r_SetText+0x120>
+					LCD_FrameBuffer[page][GFX_SCREEN_WIDTH]=BufferDirty;
+ dfe:	f6 9c       	mul	r15, r6
+ e00:	d0 01       	movw	r26, r0
+ e02:	11 24       	eor	r1, r1
+ e04:	ae 57       	subi	r26, 0x7E	; 126
+ e06:	be 4f       	sbci	r27, 0xFE	; 254
+ e08:	bc 92       	st	X, r11
+			x++;
+ e0a:	8f 5f       	subi	r24, 0xFF	; 255
+			if(x == GFX_SCREEN_WIDTH) return; //Wychodzimy za LCD
+ e0c:	80 38       	cpi	r24, 0x80	; 128
+ e0e:	09 f0       	breq	.+2      	; 0xe12 <st7565r_SetText+0x128>
+ e10:	ae cf       	rjmp	.-164    	; 0xd6e <st7565r_SetText+0x84>
+ e12:	05 c0       	rjmp	.+10     	; 0xe1e <st7565r_SetText+0x134>
+ e14:	2f ef       	ldi	r18, 0xFF	; 255
+ e16:	c2 1a       	sub	r12, r18
+ e18:	d2 0a       	sbc	r13, r18
+ e1a:	e2 0a       	sbc	r14, r18
+ e1c:	90 cf       	rjmp	.-224    	; 0xd3e <st7565r_SetText+0x54>
+		}
+	}
+ e1e:	0f 90       	pop	r0
+ e20:	0f 90       	pop	r0
+ e22:	0f 90       	pop	r0
+ e24:	0f 90       	pop	r0
+ e26:	df 91       	pop	r29
+ e28:	cf 91       	pop	r28
+ e2a:	1f 91       	pop	r17
+ e2c:	0f 91       	pop	r16
+ e2e:	ff 90       	pop	r15
+ e30:	ef 90       	pop	r14
+ e32:	df 90       	pop	r13
+ e34:	cf 90       	pop	r12
+ e36:	bf 90       	pop	r11
+ e38:	af 90       	pop	r10
+ e3a:	9f 90       	pop	r9
+ e3c:	8f 90       	pop	r8
+ e3e:	7f 90       	pop	r7
+ e40:	6f 90       	pop	r6
+ e42:	5f 90       	pop	r5
+ e44:	4f 90       	pop	r4
+ e46:	3f 90       	pop	r3
+ e48:	08 95       	ret
+
+00000e4a <_exit>:
+ e4a:	f8 94       	cli
+
+00000e4c <__stop_program>:
+ e4c:	ff cf       	rjmp	.-2      	; 0xe4c <__stop_program>

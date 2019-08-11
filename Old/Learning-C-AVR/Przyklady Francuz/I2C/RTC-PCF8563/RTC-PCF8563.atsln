@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "RTC-PCF8563", "RTC-PCF8563\RTC-PCF8563.cproj", "{F235FF7C-93B1-49E4-94C3-0D7BA9E8E263}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F235FF7C-93B1-49E4-94C3-0D7BA9E8E263}.Debug|AVR.ActiveCfg = Debug|AVR
+		{F235FF7C-93B1-49E4-94C3-0D7BA9E8E263}.Debug|AVR.Build.0 = Debug|AVR
+		{F235FF7C-93B1-49E4-94C3-0D7BA9E8E263}.Release|AVR.ActiveCfg = Release|AVR
+		{F235FF7C-93B1-49E4-94C3-0D7BA9E8E263}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

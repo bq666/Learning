@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SPI-595-LED", "SPI-595-LED\SPI-595-LED.cproj", "{AEF7E616-68BF-44D2-9455-BC432EBA8BFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEF7E616-68BF-44D2-9455-BC432EBA8BFE}.Debug|AVR.ActiveCfg = Debug|AVR
+		{AEF7E616-68BF-44D2-9455-BC432EBA8BFE}.Debug|AVR.Build.0 = Debug|AVR
+		{AEF7E616-68BF-44D2-9455-BC432EBA8BFE}.Release|AVR.ActiveCfg = Release|AVR
+		{AEF7E616-68BF-44D2-9455-BC432EBA8BFE}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

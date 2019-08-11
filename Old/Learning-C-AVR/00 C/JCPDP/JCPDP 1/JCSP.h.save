@@ -1,0 +1,6 @@
+#ifndef JCSP_H_INCLUDED
+#define JCSP_H_INCLUDED
+
+void JCSP(void);
+
+#endif // JCSP_H_INCLUDED
