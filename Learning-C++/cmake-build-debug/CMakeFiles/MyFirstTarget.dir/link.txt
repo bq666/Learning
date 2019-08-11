@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/MyFirstTarget.dir/whale.cpp.o CMakeFiles/MyFirstTarget.dir/Bleep/bleep.cpp.o CMakeFiles/MyFirstTarget.dir/Bleep/functions.cpp.o  -o MyFirstTarget 
