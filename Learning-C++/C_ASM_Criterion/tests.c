@@ -6,7 +6,7 @@
 int my_strlen(char *);
 int summation(int);
 
-
+//todo gcc -o test tests.c my_strlen.o sum.o -lcriterion
 
 Test(simple, test){
     cr_assert(strlen("1") == 1, "Hello world");
@@ -17,3 +17,6 @@ Test(simple, test){
     cr_assert_eq(summation(5), 15);
     cr_assert_eq(summation(8), 36);
 }
+
+
+

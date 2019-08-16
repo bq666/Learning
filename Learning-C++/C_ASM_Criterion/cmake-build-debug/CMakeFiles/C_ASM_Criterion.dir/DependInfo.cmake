@@ -5,8 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM_NASM
-  "/home/bq666/Workspace/C_C++/C_ASM_Criterion/my_strlen.asm" "/home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles/C_ASM_Criterion.dir/my_strlen.asm.o"
-  "/home/bq666/Workspace/C_C++/C_ASM_Criterion/sum.asm" "/home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles/C_ASM_Criterion.dir/sum.asm.o"
+  "/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/my_strlen.asm" "/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles/C_ASM_Criterion.dir/my_strlen.asm.o"
+  "/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/sum.asm" "/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles/C_ASM_Criterion.dir/sum.asm.o"
   )
 set(CMAKE_ASM_NASM_COMPILER_ID "NASM")
 
@@ -14,8 +14,8 @@ set(CMAKE_ASM_NASM_COMPILER_ID "NASM")
 set(CMAKE_ASM_NASM_TARGET_INCLUDE_PATH
   )
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/bq666/Workspace/C_C++/C_ASM_Criterion/main.c" "/home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles/C_ASM_Criterion.dir/main.c.o"
-  "/home/bq666/Workspace/C_C++/C_ASM_Criterion/tests.c" "/home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles/C_ASM_Criterion.dir/tests.c.o"
+  "/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/main.c" "/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles/C_ASM_Criterion.dir/main.c.o"
+  "/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/tests.c" "/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles/C_ASM_Criterion.dir/tests.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

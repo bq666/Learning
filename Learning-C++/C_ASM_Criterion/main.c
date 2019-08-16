@@ -7,9 +7,9 @@ int forTests(char str[]){
 }
 
 int main() {
-    printf("Hello, World!\n");
+//    printf("Hello, World!\n");
     printf("%d\n", my_strlen("test"));
-    printf("%d <--- last", forTests("bq666\n"));
+//    printf("%d <--- last", forTests("bq666\n"));
     
     return 0;
 }

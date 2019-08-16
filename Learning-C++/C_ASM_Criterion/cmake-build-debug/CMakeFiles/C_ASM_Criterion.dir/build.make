@@ -43,10 +43,10 @@ RM = /opt/clion-2019.1.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bq666/Workspace/C_C++/C_ASM_Criterion
+CMAKE_SOURCE_DIR = /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug
+CMAKE_BINARY_DIR = /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/C_ASM_Criterion.dir/depend.make
@@ -59,39 +59,39 @@ include CMakeFiles/C_ASM_Criterion.dir/flags.make
 
 CMakeFiles/C_ASM_Criterion.dir/main.c.o: CMakeFiles/C_ASM_Criterion.dir/flags.make
 CMakeFiles/C_ASM_Criterion.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/C_ASM_Criterion.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C_ASM_Criterion.dir/main.c.o   -c /home/bq666/Workspace/C_C++/C_ASM_Criterion/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/C_ASM_Criterion.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C_ASM_Criterion.dir/main.c.o   -c /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/main.c
 
 CMakeFiles/C_ASM_Criterion.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C_ASM_Criterion.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bq666/Workspace/C_C++/C_ASM_Criterion/main.c > CMakeFiles/C_ASM_Criterion.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/main.c > CMakeFiles/C_ASM_Criterion.dir/main.c.i
 
 CMakeFiles/C_ASM_Criterion.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C_ASM_Criterion.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bq666/Workspace/C_C++/C_ASM_Criterion/main.c -o CMakeFiles/C_ASM_Criterion.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/main.c -o CMakeFiles/C_ASM_Criterion.dir/main.c.s
 
 CMakeFiles/C_ASM_Criterion.dir/tests.c.o: CMakeFiles/C_ASM_Criterion.dir/flags.make
 CMakeFiles/C_ASM_Criterion.dir/tests.c.o: ../tests.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/C_ASM_Criterion.dir/tests.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C_ASM_Criterion.dir/tests.c.o   -c /home/bq666/Workspace/C_C++/C_ASM_Criterion/tests.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/C_ASM_Criterion.dir/tests.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C_ASM_Criterion.dir/tests.c.o   -c /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/tests.c
 
 CMakeFiles/C_ASM_Criterion.dir/tests.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C_ASM_Criterion.dir/tests.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bq666/Workspace/C_C++/C_ASM_Criterion/tests.c > CMakeFiles/C_ASM_Criterion.dir/tests.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/tests.c > CMakeFiles/C_ASM_Criterion.dir/tests.c.i
 
 CMakeFiles/C_ASM_Criterion.dir/tests.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C_ASM_Criterion.dir/tests.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bq666/Workspace/C_C++/C_ASM_Criterion/tests.c -o CMakeFiles/C_ASM_Criterion.dir/tests.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/tests.c -o CMakeFiles/C_ASM_Criterion.dir/tests.c.s
 
 CMakeFiles/C_ASM_Criterion.dir/my_strlen.asm.o: CMakeFiles/C_ASM_Criterion.dir/flags.make
 CMakeFiles/C_ASM_Criterion.dir/my_strlen.asm.o: ../my_strlen.asm
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building ASM_NASM object CMakeFiles/C_ASM_Criterion.dir/my_strlen.asm.o"
-	/usr/bin/nasm $(ASM_NASM_INCLUDES) $(ASM_NASM_FLAGS) -f elf64 -o CMakeFiles/C_ASM_Criterion.dir/my_strlen.asm.o /home/bq666/Workspace/C_C++/C_ASM_Criterion/my_strlen.asm
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building ASM_NASM object CMakeFiles/C_ASM_Criterion.dir/my_strlen.asm.o"
+	/usr/bin/nasm $(ASM_NASM_INCLUDES) $(ASM_NASM_FLAGS) -f elf64 -o CMakeFiles/C_ASM_Criterion.dir/my_strlen.asm.o /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/my_strlen.asm
 
 CMakeFiles/C_ASM_Criterion.dir/sum.asm.o: CMakeFiles/C_ASM_Criterion.dir/flags.make
 CMakeFiles/C_ASM_Criterion.dir/sum.asm.o: ../sum.asm
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building ASM_NASM object CMakeFiles/C_ASM_Criterion.dir/sum.asm.o"
-	/usr/bin/nasm $(ASM_NASM_INCLUDES) $(ASM_NASM_FLAGS) -f elf64 -o CMakeFiles/C_ASM_Criterion.dir/sum.asm.o /home/bq666/Workspace/C_C++/C_ASM_Criterion/sum.asm
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building ASM_NASM object CMakeFiles/C_ASM_Criterion.dir/sum.asm.o"
+	/usr/bin/nasm $(ASM_NASM_INCLUDES) $(ASM_NASM_FLAGS) -f elf64 -o CMakeFiles/C_ASM_Criterion.dir/sum.asm.o /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/sum.asm
 
 # Object files for target C_ASM_Criterion
 C_ASM_Criterion_OBJECTS = \
@@ -109,7 +109,7 @@ C_ASM_Criterion: CMakeFiles/C_ASM_Criterion.dir/my_strlen.asm.o
 C_ASM_Criterion: CMakeFiles/C_ASM_Criterion.dir/sum.asm.o
 C_ASM_Criterion: CMakeFiles/C_ASM_Criterion.dir/build.make
 C_ASM_Criterion: CMakeFiles/C_ASM_Criterion.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable C_ASM_Criterion"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable C_ASM_Criterion"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/C_ASM_Criterion.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -122,6 +122,6 @@ CMakeFiles/C_ASM_Criterion.dir/clean:
 .PHONY : CMakeFiles/C_ASM_Criterion.dir/clean
 
 CMakeFiles/C_ASM_Criterion.dir/depend:
-	cd /home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bq666/Workspace/C_C++/C_ASM_Criterion /home/bq666/Workspace/C_C++/C_ASM_Criterion /home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug /home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug /home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles/C_ASM_Criterion.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug/CMakeFiles/C_ASM_Criterion.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/C_ASM_Criterion.dir/depend
 

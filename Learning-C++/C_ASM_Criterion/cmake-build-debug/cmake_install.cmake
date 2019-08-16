@@ -1,4 +1,4 @@
-# Install script for directory: /home/bq666/Workspace/C_C++/C_ASM_Criterion
+# Install script for directory: /home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/bq666/Workspace/C_C++/C_ASM_Criterion/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bq666/Workspace/Learning/Learning-C++/C_ASM_Criterion/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
