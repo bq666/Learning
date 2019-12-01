@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
+using static System.Math;
 
 namespace Snipets
 {
@@ -26,6 +28,17 @@ namespace Snipets
                 registers[registers.IndexOf(registers.Min())] += cust;
             }
             return registers.Max();
+        }
+
+        public static string isSumOfCubes(string s)
+        {
+            var cubic = Regex.Matches(s, @"\d{1,3}").Cast<Match>()
+                .Select(x => x.Value)
+                .Where(x => Math.Abs(x.Select(c => Pow((int)char.GetNumericValue(c), 3)).Sum() - int.Parse(x)) < 0.001)
+                .Select(x => int.Parse(x))
+                .ToArray();
+
+            return !cubic.Any() ? "Unlucky" : cubic.Aggregate(string.Empty, (a, b) => a + b + ' ') + cubic.Sum() + " Lucky";
         }
     }
 //todo    C# is strongly-typed, so it requires us to specify the data types that we’re using.
