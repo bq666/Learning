@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Strona główna</title>
+    <script th:src="@{/webjars/sockjs-client/0.3.4/sockjs.min.js}"></script>
+    <script th:src="@{/webjars/jquery/2.0.3/jquery.min.js}"></script>
+  </head>
+  <body>
+    <button id="stop">Zatrzymaj</button>
+  
+    <script th:inline="javascript">
+      var sock = new SockJS([[@{/marco}]]);
+
+      sock.onopen = function() {
+    	  console.log('Otwieranie połączenia');
+    	  sayMarco();
+      }
+      
+      sock.onmessage = function(e) {
+    	  console.log('Odebrano komunikat: ', e.data);
+    	  $('#output').append('Odebrano komunikat "' + e.data + '"<br/>');
+    	  setTimeout(function(){sayMarco()}, 2000);
+      }
+      
+      sock.onclose = function() {
+    	  console.log('Zamykanie połączenia');
+      }
+      
+      function sayMarco() {
+    	  console.log('Wysyłanie komunikatu Marco!');
+    	  $('#output').append('Wysyłanie komunikatu Marco!"<br/>');
+    	  sock.send("Marco!");
+      }
+
+      $('#stop').click(function() {sock.close()});
+      </script>
+    
+    <div id="output"></div>
+  </body>
+</html>

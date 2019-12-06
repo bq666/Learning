@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Strona główna</title>
+    <script th:src="@{/webjars/sockjs-client/0.3.4/sockjs.min.js}"></script>
+    <script th:src="@{/webjars/stomp-websocket/2.3.0/stomp.min.js}"></script>
+    <script th:src="@{/webjars/jquery/2.0.3/jquery.min.js}"></script>
+  </head>
+  <body>
+  	<p>
+    Spróbuj otworzyć tę aplikację w dwóch niezależnych przeglądarkach.
+    Następnie w każdej z nich spróbuj wysyłać komunikaty, by przekonać się, 
+    że zostaną one przesłane do pozostałych.
+    Spróbuj wspomnieć o każdym z użytkowników (@franek i @romek) by przekonać się, 
+    że w odpowiednim oknie przeglądarki zostanie wyświetlony skierowany do danego 
+    użytkownika komunikat "Właśnie o Tobie wspomniano!".
+  	</p>
+  
+  	<form id="spittleForm">
+  		<textarea rows="4" cols="60" name="text"></textarea>
+  		<input type="submit"/>
+  	</form>
+  
+    <script th:inline="javascript">
+    	$('#spittleForm').submit(function(e){
+    		e.preventDefault();
+    		var text = $('#spittleForm').find('textarea[name="text"]').val();
+    		sendSpittle(text);
+    	});
+    
+      var sock = new SockJS([[@{/spittr}]]);
+      var stomp = Stomp.over(sock);
+
+      stomp.connect('guest', 'guest', function(frame) {
+        console.log('*****  Nawiązano połączenie  *****');
+        stomp.subscribe("/topic/spittlefeed", handleSpittle);
+        stomp.subscribe("/user/queue/notifications", handleNotification);
+      });
+      
+      function handleSpittle(message) {
+    	  console.log('Spittle:', message);
+    	  $('#output').append("<b>Odebrano spittle'a: " + JSON.parse(message.body).message + "</b><br/>");
+      }
+      
+      function handleNotification(message) {
+        console.log('Powiadomienie: ', message);
+        $('#output').append("<b>Odebrano komunikat: " + 
+            JSON.parse(message.body).message + "</b><br/>")
+      }
+      
+      function sendSpittle(text) {
+        console.log("Wysyłanie spittle'a");
+        stomp.send("/app/spittle", {}, 
+            JSON.stringify({ 'text': text }));
+      }
+
+      $('#stop').click(function() {sock.close()});
+      </script>
+    
+    <div id="output"></div>
+  </body>
+</html>
