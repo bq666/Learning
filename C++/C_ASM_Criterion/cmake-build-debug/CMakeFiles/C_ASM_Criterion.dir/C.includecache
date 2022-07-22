@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bq666/Workspace/Learning/C++/C_ASM_Criterion/main.c
+stdio.h
+-
+
+/home/bq666/Workspace/Learning/C++/C_ASM_Criterion/tests.c
+criterion/criterion.h
+-
+

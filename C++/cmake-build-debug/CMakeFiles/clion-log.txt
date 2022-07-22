@@ -1,0 +1,31 @@
+/home/bq666/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/bq666/Workspace/Learning/Learning-C++
+-- The C compiler identification is GNU 9.2.1
+-- The CXX compiler identification is GNU 9.2.1
+-- Check for working C compiler: /usr/bin/cc
+CMake Error: Generator: execution of make failed. Make command was: /usr/bin/gmake cmTC_ce6ff/fast && 
+-- Check for working C compiler: /usr/bin/cc -- broken
+CMake Error at /home/bq666/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/share/cmake-3.15/Modules/CMakeTestCCompiler.cmake:60 (message):
+  The C compiler
+
+    "/usr/bin/cc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: /home/bq666/Workspace/Learning/Learning-C++/cmake-build-debug/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):/usr/bin/gmake cmTC_ce6ff/fast && No such file or directory
+    Generator: execution of make failed. Make command was: /usr/bin/gmake cmTC_ce6ff/fast && 
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/bq666/Workspace/Learning/Learning-C++/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/bq666/Workspace/Learning/Learning-C++/cmake-build-debug/CMakeFiles/CMakeError.log".

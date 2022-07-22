@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/C_ASM_Criterion.dir/main.c.o CMakeFiles/C_ASM_Criterion.dir/tests.c.o CMakeFiles/C_ASM_Criterion.dir/my_strlen.asm.o CMakeFiles/C_ASM_Criterion.dir/sum.asm.o  -o C_ASM_Criterion  -lcriterion 
