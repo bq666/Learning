@@ -13,8 +13,8 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>observer</module>
         <module>0others</module>
+        <module>observer</module>
         <module>strategy</module>
         <module>decorator</module>
         <module>factory</module>
