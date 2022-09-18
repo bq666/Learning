@@ -2,9 +2,7 @@ package functions;
 
 import java.util.Random;
 import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
-import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.IntBinaryOperator;
 import java.util.function.IntPredicate;
@@ -14,7 +12,7 @@ import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-class Functions {
+class Functions implements A{
 
 	private static final Logger LOGGER = Logger.getLogger(Functions.class.getName());
 
@@ -43,8 +41,14 @@ class Functions {
 		LOGGER.log(Level.INFO, "{0}", biFunction.applyAsInt(1, 2));
 
 		BiConsumer<Integer, Integer> biConsumer = (i, j) -> LOGGER.log(Level.INFO, "{0}", (i + j) % 2);
-		biConsumer.accept(1,2);
+		biConsumer.accept(1, 2);
 
+		A.m1();
+	}
+}
 
+interface A {
+	public static void m1() {
+		System.out.println("interface static method");
 	}
 }
