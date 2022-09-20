@@ -44,11 +44,7 @@ class Functions implements A{
 		biConsumer.accept(1, 2);
 
 		A.m1();
-	}
-}
 
-interface A {
-	public static void m1() {
-		System.out.println("interface static method");
+		B a = System.out::println;
 	}
 }
