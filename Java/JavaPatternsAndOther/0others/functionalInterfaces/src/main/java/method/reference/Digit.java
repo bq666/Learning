@@ -1,5 +1,7 @@
 package method.reference;
 
+import method.reference.interfaces.A;
+
 class Digit {
 	public static boolean isSingleDigit(int value) {
 		return value >= -10 && value <= 10;
