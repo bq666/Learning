@@ -1,0 +1,15 @@
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/Demo.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/model/Publisher.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/model/projection/AddressDTO.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/service/AuthorService.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/model/repository/AuthorRepository.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/model/projection/AuthorDTO.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/model/repository/AddressRepository.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/bootstrap/Bootstrap.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/model/repository/BookRepository.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/controller/AuthorController.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/model/projection/PublisherDTO.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/model/Author.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/model/Book.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/model/repository/PublisherRepository.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/0others/JPQL/src/main/java/demo/model/Address.java

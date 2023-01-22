@@ -1,0 +1,13 @@
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/single/dispatch/Product.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/single/dispatch/OrderLine.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/visitor/Visitable.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/double_dispatch/SpecialOrder.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/double_dispatch/SpecialDiscountPolicy.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/single/dispatch/AmountBasedDiscountPolicy.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/double_dispatch/Visitable.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/single/dispatch/FlatDiscountPolicy.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/single/dispatch/DiscountPolicy.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/single/dispatch/Order.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/visitor/OrderVisitor.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/visitor/HtmlOrderViewCreator.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/doubleDispatch/src/main/java/double_dispatch/Order.java

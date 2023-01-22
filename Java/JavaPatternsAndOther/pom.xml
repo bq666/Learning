@@ -7,9 +7,10 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
         <version>2.5.2</version>
+        <relativePath/>
     </parent>
     <groupId>dev.gaudnik</groupId>
-    <artifactId>JavaPatterns</artifactId>
+    <artifactId>JavaPatternsAndOther</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -26,12 +27,13 @@
         <module>iterator_and_container</module>
         <module>composite</module>
         <module>state</module>
-        <module>Java_16</module>
+        <module>json</module>
+        <module>module-project</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
 </project>

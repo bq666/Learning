@@ -1,0 +1,13 @@
+single/dispatch/OrderLine.class
+double_dispatch/SpecialOrder.class
+single/dispatch/AmountBasedDiscountPolicy.class
+double_dispatch/SpecialDiscountPolicy.class
+double_dispatch/Visitable.class
+single/dispatch/Order.class
+single/dispatch/DiscountPolicy.class
+single/dispatch/FlatDiscountPolicy.class
+single/dispatch/Product.class
+double_dispatch/Order.class
+visitor/HtmlOrderViewCreator.class
+visitor/OrderVisitor.class
+visitor/Visitable.class

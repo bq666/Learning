@@ -1,12 +1,12 @@
-comands/NoOpCommand.class
 Main.class
+comands/NoOpCommand.class
 comands/EverythingOnCommand.class
 comands/KitchenLightsOffCommand.class
 comands/MusicOnCommand.class
+hardware/AlexaDevice.class
 comands/KitchenLightsOnCommand.class
 comands/EverythingOffCommand.class
-hardware/AlexaDevice.class
-comands/Command.class
-hardware/KitchenLights.class
 hardware/Music.class
+hardware/KitchenLights.class
+comands/Command.class
 comands/MusicOffCommand.class

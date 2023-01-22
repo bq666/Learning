@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>JavaPatterns</artifactId>
+        <artifactId>JavaPatternsAndOther</artifactId>
         <groupId>dev.gaudnik</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -13,8 +13,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <modules>
@@ -25,6 +25,12 @@
         <module>vavr</module>
         <module>JPQL</module>
         <module>functionalInterfaces</module>
+        <module>java_14</module>
+        <module>java_15</module>
+        <module>java_16</module>
+        <module>static</module>
+        <module>interface</module>
+        <module>creatingInstances</module>
     </modules>
 
     <packaging>pom</packaging>

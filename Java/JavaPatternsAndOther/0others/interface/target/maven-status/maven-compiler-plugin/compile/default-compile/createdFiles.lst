@@ -1,0 +1,8 @@
+InterfaceInheritanceRules.class
+InterfaceJdk9Onward.class
+InterfaceA.class
+OuterInterface.class
+TestInterface.class
+InterfaceJdk8Onward.class
+OuterInterface$NestedInterface.class
+InterfaceB.class

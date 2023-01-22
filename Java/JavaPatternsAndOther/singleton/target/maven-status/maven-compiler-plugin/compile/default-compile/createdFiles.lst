@@ -1,1 +1,14 @@
+dev/gaudnik/singleton/SingletonViolationBySerializationFix.class
+dev/gaudnik/singleton/SingletonViolationBySerialization.class
+dev/gaudnik/singleton/SingletonEnum.class
+dev/gaudnik/singleton/SingletonLazyThread.class
+dev/gaudnik/singleton/SingletonViolationByReflection.class
+dev/gaudnik/singleton/SingletonViolationByReflectionFix.class
+dev/gaudnik/singleton/SingletonViolationByCloning.class
 dev/gaudnik/singleton/Singleton.class
+dev/gaudnik/singleton/SingletonHolderClass$Holder.class
+dev/gaudnik/singleton/SingletonHolderClass.class
+dev/gaudnik/singleton/SingletonEagerInitialization.class
+dev/gaudnik/singleton/SingletonLazyThreadFix.class
+DoubleCheckedLockingSingleton.class
+dev/gaudnik/singleton/SingletonViolationByCloningFix.class

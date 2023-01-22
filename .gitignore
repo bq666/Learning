@@ -1,1 +1,8 @@
 /Qt/.idea/
+*/.idea
+/.idea/
+/C#/Snipets/.idea/
+**/.idea
+/C#/Snipets/.idea/
+/C++/.idea/
+/LUA/.idea/

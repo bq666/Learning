@@ -1,0 +1,15 @@
+test/record/with/sealed/AddOperation.class
+test/sealed/JDK15/Dog2.class
+test/sealed/JDK15/Tiger.class
+test/sealed/JDK15/Cat1.class
+test/sealed/JDK15/Dog.class
+test/sealed/JDK15/TestSealedJDK15.class
+test/sealed/JDK15/Tiger1.class
+test/record/with/sealed/SubtractOperation.class
+test/record/with/sealed/TestRecordWithSealed.class
+test/record/with/sealed/MathematicalOperation.class
+test/sealed/JDK15/Animal.class
+test/record/with/sealed/OtherOperation.class
+AllAnimals.class
+test/record/with/sealed/MyOperation.class
+test/sealed/JDK15/Cat.class

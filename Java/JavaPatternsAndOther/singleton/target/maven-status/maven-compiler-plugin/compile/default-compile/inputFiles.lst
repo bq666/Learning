@@ -1,1 +1,13 @@
-/home/bq666/Workspace/CodeWars/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/Singleton.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/SingletonEnum.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/SingletonLazyThreadFix.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/DoubleCheckedLockingSingleton.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/SingletonViolationBySerialization.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/SingletonViolationByCloning.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/SingletonEagerInitialization.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/SingletonViolationByReflection.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/SingletonLazyThread.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/SingletonViolationByReflectionFix.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/SingletonViolationByCloningFix.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/SingletonViolationBySerializationFix.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/Singleton.java
+/home/bq666/Workspace/Learning/Java/JavaPatternsAndOther/singleton/src/main/java/dev/gaudnik/singleton/SingletonHolderClass.java
